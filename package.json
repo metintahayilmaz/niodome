@@ -1,0 +1,47 @@
+{
+  "name": "azuris-nextjs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "seed": "tsx scripts/seed.ts"
+  },
+  "dependencies": {
+    "@phosphor-icons/web": "^2.1.2",
+    "@portabletext/react": "^6.2.0",
+    "@sanity/image-url": "^2.1.1",
+    "@sanity/vision": "^6.0.0",
+    "@types/matter-js": "^0.20.2",
+    "bootstrap": "^5.3.8",
+    "gsap": "^3.14.2",
+    "imagesloaded": "^5.0.0",
+    "lenis": "^1.3.21",
+    "matter-js": "^0.20.0",
+    "next": "16.2.3",
+    "next-intl": "^4.13.0",
+    "next-sanity": "^13.1.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "sanity": "^6.0.0",
+    "split-type": "^0.3.4",
+    "styled-components": "^6.4.2",
+    "swiper": "^12.1.3",
+    "typed.js": "^3.0.0",
+    "ukiyojs": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/imagesloaded": "^4.1.7",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.3",
+    "prettier": "^3.5.3",
+    "typescript": "^5"
+  }
+}

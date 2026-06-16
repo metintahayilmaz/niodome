@@ -1,0 +1,96 @@
+{
+  "nav": {
+    "home": "Anasayfa",
+    "works": "Çalışmalar",
+    "pages": "Sayfalar",
+    "insights": "İçgörüler",
+    "contact": "İletişim",
+    "captionLine1": "🦄 Yenilikçi tasarım",
+    "captionLine2": "ve güçlü geliştirme"
+  },
+  "header": {
+    "cta": "Merhaba de"
+  },
+  "footer": {
+    "discover": "/ Keşfet",
+    "contactSection": "/ İletişim",
+    "info": "/ Bilgi",
+    "ecosystem": "/ Ekosistem",
+    "linkHome": "Anasayfa",
+    "linkAboutUs": "Hakkımızda",
+    "linkCaseStudies": "Vaka Çalışmaları",
+    "linkServices": "Hizmetler",
+    "linkOurTeam": "Ekibimiz",
+    "linkInsights": "İçgörüler",
+    "linkContact": "İletişim",
+    "linkPricing": "Fiyatlandırma",
+    "linkFaq": "SSS"
+  },
+  "menu": {
+    "aboutMe": "Hakkımda",
+    "aboutUs": "Hakkımızda",
+    "services": "Hizmetler",
+    "team": "Ekibimiz",
+    "pricing": "Fiyatlandırma",
+    "faq": "SSS",
+    "notFoundPage": "404 Hata Sayfası",
+    "landingPage": "Anasayfa"
+  },
+  "contact": {
+    "breadcrumbHome": "Anasayfa",
+    "breadcrumbCurrent": "İletişim",
+    "title": "Hadi hayata geçirelim",
+    "captionPart1": "Sorularınız mı var? Yanıtları burada. Hizmetlerimiz, sürecimiz ve birlikte çalışırken sizi neyin beklediğine dair",
+    "captionPart2": "açık ve net bilgiyi burada bulacaksınız. Daha fazla ayrıntıya ihtiyacınız olursa, çekinmeden bize ulaşın!",
+    "sectionTitle": "Ofisimize hoş geldiniz",
+    "sectionBodyPart1": "İlham veren fikirler, yaratıcı içgörüler ve tasarım ile teknolojide en yeniler.",
+    "sectionBodyPart2": "Dijital yolculuğunuz için yeniliği besliyoruz.",
+    "namePlaceholder": "Adınız*",
+    "companyPlaceholder": "Şirket adı",
+    "emailPlaceholder": "E-posta*",
+    "phonePlaceholder": "Telefon",
+    "messagePlaceholder": "Projeniz hakkında birkaç kelime*",
+    "submit": "Gönder",
+    "sending": "Gönderiliyor…",
+    "successTitle": "Tamam!",
+    "successMessage": "Mesajınız için teşekkürler. En kısa sürede size döneceğiz.",
+    "errorGeneric": "Bir şeyler ters gitti. Lütfen birazdan tekrar deneyin.",
+    "errorNetwork": "İstek başarısız oldu. Bağlantınızı ve reklam engelleyicilerinizi kontrol edip tekrar deneyin.",
+    "emailSubject": "İletişim sayfasından yeni mesaj",
+    "ctaButton": "Bize yazın",
+    "ctaTitle": "Projenizi konuşalım",
+    "ctaCursor": "İletişime Geçin"
+  },
+  "notFound": {
+    "marquee": "Burada bir şey yok/",
+    "caption": "Bu sayfa mevcut değil.",
+    "sorry": "Üzgünüz.",
+    "goHome": "Anasayfaya Dön"
+  },
+  "meta": {
+    "home": {
+      "title": "Niodome — Strateji, Tasarım ve Teknoloji",
+      "description": "Markanızı büyütecek dijital deneyimler tasarlıyoruz. Grafik tasarım, web geliştirme ve marka kimliği."
+    },
+    "aboutUs": {
+      "title": "Hakkımızda",
+      "description": "Niodome ekibi, markaların dijital dünyada güçlü bir kimlik kazanması için strateji, tasarım ve teknoloji alanlarında birlikte çalışır."
+    },
+    "services": {
+      "title": "Hizmetler",
+      "description": "Grafik tasarım, web geliştirme, marka kimliği ve dijital strateji hizmetleriyle markanızı bir üst seviyeye taşıyoruz."
+    },
+    "contact": {
+      "title": "İletişim",
+      "description": "Projenizi konuşmaya hazır mısınız? Niodome ekibiyle iletişime geçin; size özel çözümler tasarlayalım."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Tasarım, teknoloji ve marka dünyasından içgörüler. Niodome Blog ile sektörün nabzını tutun."
+    },
+    "works": {
+      "title": "Projeler",
+      "description": "Marka kimliği, web tasarımı ve dijital strateji alanlarındaki seçkin Niodome projelerini keşfedin."
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "nav": {
+    "home": "Home",
+    "works": "Works",
+    "pages": "Pages",
+    "insights": "Insights",
+    "contact": "Contact",
+    "captionLine1": "🦄 Innovative design",
+    "captionLine2": "and cutting-edge development"
+  },
+  "header": {
+    "cta": "Say Hello"
+  },
+  "footer": {
+    "discover": "/ Discover",
+    "contactSection": "/ Contact",
+    "info": "/ Info",
+    "ecosystem": "/ Ecosystem",
+    "linkHome": "Home",
+    "linkAboutUs": "About us",
+    "linkCaseStudies": "Case studies",
+    "linkServices": "Services",
+    "linkOurTeam": "Our team",
+    "linkInsights": "Insights",
+    "linkContact": "Contact",
+    "linkPricing": "Pricing",
+    "linkFaq": "FAQ"
+  },
+  "menu": {
+    "aboutMe": "About me",
+    "aboutUs": "About us",
+    "services": "Services",
+    "team": "Our team",
+    "pricing": "Pricing",
+    "faq": "FAQ page",
+    "notFoundPage": "404 error page",
+    "landingPage": "Landing page"
+  },
+  "contact": {
+    "breadcrumbHome": "Home",
+    "breadcrumbCurrent": "Contact",
+    "title": "Let's make it happen",
+    "captionPart1": "Have questions? We've got the answers! Here, you'll find clear and concise information",
+    "captionPart2": "about our services, process, and what to expect when working with us. If you need more details, feel free to reach out!",
+    "sectionTitle": "Welcome to our office",
+    "sectionBodyPart1": "Inspiring ideas, creative insights, and the latest in design and tech.",
+    "sectionBodyPart2": "Fueling innovation for your digital journey.",
+    "namePlaceholder": "Your name*",
+    "companyPlaceholder": "Company name",
+    "emailPlaceholder": "Email*",
+    "phonePlaceholder": "Phone",
+    "messagePlaceholder": "A few words about your project*",
+    "submit": "Submit",
+    "sending": "Sending…",
+    "successTitle": "Done!",
+    "successMessage": "Thanks for your message. We'll get back as soon as possible.",
+    "errorGeneric": "Something went wrong. Please try again in a moment.",
+    "errorNetwork": "Request failed. Check your connection, ad-blockers, and try again.",
+    "emailSubject": "New message from contact page",
+    "ctaButton": "Write a line",
+    "ctaTitle": "Let's talk about your project",
+    "ctaCursor": "Contact Us"
+  },
+  "notFound": {
+    "marquee": "Nothing here/",
+    "caption": "This page doesn't exist.",
+    "sorry": "Sorry.",
+    "goHome": "Go Home"
+  },
+  "meta": {
+    "home": {
+      "title": "Niodome — Strategy, Design & Technology",
+      "description": "We craft digital experiences that grow your brand. Graphic design, web development, and brand identity."
+    },
+    "aboutUs": {
+      "title": "About Us",
+      "description": "The Niodome team works together in strategy, design, and technology to help brands build a strong digital identity."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Graphic design, web development, brand identity, and digital strategy — we take your brand to the next level."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Ready to talk about your project? Get in touch with the Niodome team and let's design solutions tailored for you."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Insights from the world of design, technology, and branding. Stay ahead with the Niodome Blog."
+    },
+    "works": {
+      "title": "Projects",
+      "description": "Discover select Niodome projects in brand identity, web design, and digital strategy."
+    }
+  }
+}
