@@ -1,7 +1,20 @@
 import createMiddleware from "next-intl/middleware";
 import { routing } from "./i18n/routing";
+import { NextRequest } from "next/server";
 
-export default createMiddleware(routing);
+const intlMiddleware = createMiddleware(routing);
+
+const PRODUCTION_HOST = "niodome.com";
+
+export default function middleware(req: NextRequest) {
+  const res = intlMiddleware(req);
+  const host = req.headers.get("host") ?? "";
+  // niodome.com veya www.niodome.com dışındaki her domain'e (vercel.app preview'lar dahil) noindex ekle
+  if (!host.endsWith(PRODUCTION_HOST)) {
+    res.headers.set("X-Robots-Tag", "noindex, nofollow");
+  }
+  return res;
+}
 
 export const config = {
   matcher: [
