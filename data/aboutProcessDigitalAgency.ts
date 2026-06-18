@@ -2,9 +2,9 @@ import type { AboutProcessData } from "@/types/aboutProcess";
 
 export const aboutProcessDigitalAgencyData: AboutProcessData = {
   manifestLead:
-    "We are a creative web agency specializing in innovative design and cutting-edge development.",
+    "Dijital kodlardan basılı materyallere, vizyoner video projelerinden SEO/GEO algoritmalarına kadar markanızın tüm yaratıcı evrenini Nio Dome çatısı altında, 360 derece ve uçtan uca tasarlıyoruz.",
   manifestSpan:
-    "We help businesses stand out and thrive in the modern landscape.",
+    "Biz, işletmeleri modern pazarda zirveye taşıyan yüksek performanslı bir creative ajansız.",
   manifestHref: "/about-me",
 
   steps: [
