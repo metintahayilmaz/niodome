@@ -1,31 +1,29 @@
 import type { SiteSettingsData } from "@/types/siteSettings";
 
 export const siteSettings: SiteSettingsData = {
-  logotype: "Azurio",
+  logotype: "Niodome",
 
-  email: "hello@azurio.com",
-  emailHref: "mailto:hello@azurio.com?subject=Message%20from%20your%20site",
+  email: "hello@niodome.com",
+  emailHref: "mailto:hello@niodome.com?subject=Web%20Sitesinden%20Mesaj",
 
-  phone: "+1 212-708-9400",
-  phoneHref: "tel:+12127089400",
+  phone: "+90 530 000 00 00",
+  phoneHref: "tel:+905300000000",
 
-  address: "11 West 53 Street, New York, NY 10019",
+  address: "İstanbul, Türkiye",
 
-  copyrightText: "Copyright Azurio. All rights reserved",
+  copyrightText: "© Niodome. Tüm hakları saklıdır.",
 
   navLinks: [
-    { href: "/", label: "Home" },
-    { href: "/works-default", label: "Works" },
-    { href: "/about-us", label: "Studio" },
-    { href: "/services", label: "Services" },
-    { href: "/contact", label: "Contact" },
+    { href: "/", label: "Anasayfa" },
+    { href: "/works-default", label: "Projeler" },
+    { href: "/about-us", label: "Hakkımızda" },
+    { href: "/services", label: "Hizmetler" },
+    { href: "/contact", label: "İletişim" },
   ],
 
   socials: [
-    { href: "https://dribbble.com/", label: "Dribbble" },
-    { href: "https://www.behance.net/", label: "Behance" },
-    { href: "https://github.com/", label: "Github" },
-    { href: "https://codepen.io/", label: "Codepen" },
-    { href: "https://www.figma.com/community", label: "Figma Community" },
+    { href: "https://instagram.com/niodome", label: "Instagram" },
+    { href: "https://linkedin.com/company/niodome", label: "LinkedIn" },
+    { href: "https://behance.net/niodome", label: "Behance" },
   ],
 };

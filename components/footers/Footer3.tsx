@@ -115,23 +115,6 @@ export default function Footer3({ name, settings }: Props) {
                     {s.copyrightText}
                   </span>
                 </CommonScrollAnimated>
-                <CommonScrollAnimated
-                  className="footer-data anim-uni-slide-down"
-                  as="p"
-                  animation="slideDownLine"
-                >
-                  <span className="mxd-slide-down">
-                    React Nextjs Template by&nbsp;
-                    <a
-                      href="https://themeforest.net/user/ib-themes"
-                      target="_blank"
-                    >
-                      <TextScramble className="mxd-scramble">
-                        IB Themes
-                      </TextScramble>
-                    </a>
-                  </span>
-                </CommonScrollAnimated>
               </div>
             </div>
           </div>

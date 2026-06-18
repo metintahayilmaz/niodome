@@ -10,24 +10,24 @@ export const aboutProcessDigitalAgencyData: AboutProcessData = {
   steps: [
     {
       stepNumber: "01",
-      title: "Strategy",
+      title: "Strateji",
       description:
-        "Discover how artificial intelligence is transforming artistic processes, pushing boundaries, and inspiring new possibilities in digital design.",
-      durationLabel: "1-2 weeks timeline",
+        "Markanızın hedeflerini, rakip konumlandırmayı ve hedef kitleyi derinlemesine analiz ederek projenin temel yol haritasını çıkarıyoruz.",
+      durationLabel: "1-2 hafta",
     },
     {
       stepNumber: "02",
-      title: "Design",
+      title: "Tasarım",
       description:
-        "Discover how artificial intelligence is transforming artistic processes, pushing boundaries, and inspiring new possibilities in digital design.",
-      durationLabel: "~2 weeks timeline",
+        "Stratejiden beslenen yaratıcı konseptleri görsel dile dönüştürüyor; kullanıcı deneyimini ve marka kimliğini tek bir tasarım sisteminde birleştiriyoruz.",
+      durationLabel: "~2 hafta",
     },
     {
       stepNumber: "03",
-      title: "Development",
+      title: "Geliştirme",
       description:
-        "Discover how artificial intelligence is transforming artistic processes, pushing boundaries, and inspiring new possibilities in digital design.",
-      durationLabel: "3-4 weeks timeline",
+        "Tasarlananı hızlı, erişilebilir ve ölçeklenebilir bir ürüne dönüştürüyoruz. Teslim sonrasında da performans ve büyüme süreçlerini birlikte takip ediyoruz.",
+      durationLabel: "3-4 hafta",
     },
   ],
 };
