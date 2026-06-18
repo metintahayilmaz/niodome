@@ -134,8 +134,8 @@ export default function Nav({
               </svg>
               {/* logo text */}
               <div className="menu-logo__text">
-                <span ref={headerSlots[0]}>Azurio</span>
-                <span ref={headerSlots[1]}>Template</span>
+                <span ref={headerSlots[0]}>NIO</span>
+                <span ref={headerSlots[1]}>DOME</span>
               </div>
             </Link>
           </div>
@@ -360,13 +360,13 @@ export default function Nav({
                         <a
                           ref={contactSlots[0]}
                           className="tag tag-m"
-                          href="mailto:hello@azurio.com?subject=Message%20from%20your%20site"
+                          href="mailto:hello@niodome.com?subject=Web%20Sitesinden%20Mesaj"
                         >
                           <TextScramble
                             ref={contactRevealSlots[0]}
                             className="mxd-scramble"
                           >
-                            hello@azurio.com
+                            hello@niodome.com
                           </TextScramble>
                         </a>
                       </li>
@@ -374,13 +374,13 @@ export default function Nav({
                         <a
                           ref={contactSlots[1]}
                           className="tag tag-m"
-                          href="tel:+12127089400"
+                          href="tel:+905300000000"
                         >
                           <TextScramble
                             ref={contactRevealSlots[1]}
                             className="mxd-scramble"
                           >
-                            +1 212-708-9400
+                            +90 530 000 00 00
                           </TextScramble>
                         </a>
                       </li>
@@ -392,15 +392,13 @@ export default function Nav({
                         <a
                           ref={contactSlots[2]}
                           className="tag tag-m"
-                          href="https://goo.gl/maps/nWXKpGaDPuyH6gxRA"
+                          href="https://maps.google.com/?q=Istanbul,Turkey"
                           target="_blank"
                         >
                           <span ref={contactRevealSlots[2]}>
-                            11 West 53 Street,
+                            İstanbul,
                             <br />
-                            New York, NY
-                            <br />
-                            10019
+                            Türkiye
                           </span>
                         </a>
                       </li>
@@ -412,14 +410,14 @@ export default function Nav({
                         <a
                           ref={contactSlots[3]}
                           className="tag tag-m"
-                          href="https://dribbble.com/"
+                          href="https://instagram.com/niodome"
                           target="_blank"
                         >
                           <TextScramble
                             ref={contactRevealSlots[3]}
                             className="mxd-scramble"
                           >
-                            Dribbble
+                            Instagram
                           </TextScramble>
                         </a>
                       </li>
@@ -427,14 +425,14 @@ export default function Nav({
                         <a
                           ref={contactSlots[4]}
                           className="tag tag-m"
-                          href="https://www.behance.net/"
+                          href="https://linkedin.com/company/niodome"
                           target="_blank"
                         >
                           <TextScramble
                             ref={contactRevealSlots[4]}
                             className="mxd-scramble"
                           >
-                            Behance
+                            LinkedIn
                           </TextScramble>
                         </a>
                       </li>
@@ -442,44 +440,14 @@ export default function Nav({
                         <a
                           ref={contactSlots[5]}
                           className="tag tag-m"
-                          href="https://github.com/"
+                          href="https://behance.net/niodome"
                           target="_blank"
                         >
                           <TextScramble
                             ref={contactRevealSlots[5]}
                             className="mxd-scramble"
                           >
-                            Github
-                          </TextScramble>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          ref={contactSlots[6]}
-                          className="tag tag-m"
-                          href="https://www.figma.com/community"
-                          target="_blank"
-                        >
-                          <TextScramble
-                            ref={contactRevealSlots[6]}
-                            className="mxd-scramble"
-                          >
-                            Figma Community
-                          </TextScramble>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          ref={contactSlots[7]}
-                          className="tag tag-m"
-                          href="https://codepen.io/"
-                          target="_blank"
-                        >
-                          <TextScramble
-                            ref={contactRevealSlots[7]}
-                            className="mxd-scramble"
-                          >
-                            Codepen
+                            Behance
                           </TextScramble>
                         </a>
                       </li>
@@ -492,30 +460,12 @@ export default function Nav({
               <div className="mxd-menu__data">
                 <div className="menu-data__left">
                   <p ref={footerSlots[0]} className="menu-data__text">
-                    Made with{" "}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      viewBox="0 0 18 18"
-                    >
-                      <path d="M2.6,6.4v2.6H0V3.9h2.6v2.6ZM15.4,3.9v5.1h2.6V3.9h-2.6ZM12.9,11.6h2.6v-2.6h-2.6v2.6ZM2.6,9v2.6h2.6v-2.6h-2.6ZM10.3,14.1h2.6v-2.6h-2.6v2.6ZM5.1,11.6v2.6h2.6v-2.6h-2.6ZM7.7,3.9V1.3H2.6v2.6h5.1ZM15.4,3.9V1.3h-5.1v2.6h5.1ZM10.3,6.4v-2.6h-2.6v2.6h2.6ZM7.7,16.7h2.6v-2.6h-2.6v2.6Z" />
-                    </svg>{" "}
-                    {/* <i class="ph-fill ph-heart t-additional"></i> */}
-                    by{" "}
-                    <a
-                      ref={footerSlots[1]}
-                      href="https://themeforest.net/user/ib-themes"
-                      target="_blank"
-                    >
-                      <TextScramble className="mxd-scramble">
-                        IB Themes
-                      </TextScramble>
-                    </a>
+                    hello@niodome.com
                   </p>
                 </div>
                 <div className="menu-data__right">
                   <p ref={footerSlots[2]} className="menu-data__text">
-                    Copyright Azurio
+                    © Niodome
                   </p>
                   <p ref={footerSlots[3]} className="menu-data__text">
                     ©{new Date().getFullYear()}
