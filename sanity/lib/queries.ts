@@ -195,6 +195,8 @@ export const heroSettingsQuery = groq`
     coverImage {
       src,
       "alt": coalesce(alt[$locale], alt.tr),
+      "assetWidth": src.asset->metadata.dimensions.width,
+      "assetHeight": src.asset->metadata.dimensions.height,
       width,
       height
     },
@@ -206,6 +208,8 @@ export const heroSettingsQuery = groq`
       _key,
       src,
       "alt": coalesce(alt[$locale], alt.tr),
+      "assetWidth": src.asset->metadata.dimensions.width,
+      "assetHeight": src.asset->metadata.dimensions.height,
       width,
       height,
       href
