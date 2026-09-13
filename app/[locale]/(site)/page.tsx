@@ -120,6 +120,8 @@ export default async function HomePage() {
       coverImage: {
         src: Parameters<typeof urlFor>[0] | null;
         alt: string | null;
+        assetWidth: number | null;
+        assetHeight: number | null;
         width: number | null;
         height: number | null;
       } | null;
@@ -131,22 +133,24 @@ export default async function HomePage() {
         _key: string;
         src: Parameters<typeof urlFor>[0] | null;
         alt: string | null;
+        assetWidth: number | null;
+        assetHeight: number | null;
         width: number | null;
         height: number | null;
         href?: string | null;
       }[] | null;
     } | null>(heroSettingsQuery, { locale });
 
-    if (raw && raw.galleryImages && raw.galleryImages.length >= 20) {
-      const galleryImages: HeroGalleryImage[] = raw.galleryImages.map(
+    if (raw) {
+      const galleryImages: HeroGalleryImage[] = (raw.galleryImages ?? []).map(
         (img) => ({
           _key: img._key,
           src: img.src
-            ? urlFor(img.src).width(1280).height(800).quality(80).auto("format").url()
+            ? urlFor(img.src).width(1280).quality(85).auto("format").url()
             : "",
           alt: img.alt ?? "",
-          width: img.width ?? 1280,
-          height: img.height ?? 800,
+          width: img.width ?? img.assetWidth ?? 1280,
+          height: img.height ?? img.assetHeight ?? 800,
           ...(img.href ? { href: img.href } : {}),
         })
       );
@@ -157,21 +161,17 @@ export default async function HomePage() {
         scrollLabel: raw.scrollLabel ?? "",
         coverImage: raw.coverImage?.src
           ? {
-              src: urlFor(raw.coverImage.src)
-                .width(1920)
-                .height(1200)
-                .auto("format")
-                .url(),
+              src: urlFor(raw.coverImage.src).width(1920).auto("format").url(),
               alt: raw.coverImage.alt ?? "",
-              width: raw.coverImage.width ?? 1920,
-              height: raw.coverImage.height ?? 1200,
+              width: raw.coverImage.width ?? raw.coverImage.assetWidth ?? 1920,
+              height: raw.coverImage.height ?? raw.coverImage.assetHeight ?? 1200,
             }
           : { src: "", alt: "", width: 1920, height: 1200 },
         galleryImages,
       };
     }
   } catch {
-    // Sanity erişilemez → Hero tamamen local data'ya döner
+    // Sanity erişilemez → Hero local data'ya döner
   }
 
   // --- process steps ---
