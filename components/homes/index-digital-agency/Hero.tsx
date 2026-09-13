@@ -44,6 +44,25 @@ type Props = {
   heroSettings?: HeroSettings;
 };
 
+function getGalleryItemStyle(img: HeroGalleryImage) {
+  const width = Math.max(1, img.width || 1);
+  const height = Math.max(1, img.height || 1);
+  const isPortrait = height > width;
+
+  return {
+    width: isPortrait ? "min(62vw, 312px)" : "min(78vw, 500px)",
+    height: "auto",
+    aspectRatio: `${width} / ${height}`,
+  };
+}
+
+const galleryImageStyle = {
+  display: "block",
+  width: "100%",
+  height: "auto",
+  objectFit: "contain" as const,
+};
+
 export default function Hero({ socials, heroSettings }: Props) {
   const resolvedSocials = socials && socials.length > 0 ? socials : siteSettings.socials;
   const local = heroDigitalAgencyData;
@@ -94,12 +113,14 @@ export default function Hero({ socials, heroSettings }: Props) {
                     index={index}
                     className="hero-02__img"
                     href={img.href}
+                    style={getGalleryItemStyle(img)}
                   >
                     <Image
                       alt={img.alt}
                       src={img.src}
                       width={img.width}
                       height={img.height}
+                      style={galleryImageStyle}
                     />
                   </CommonHero3DImage>
                 ) : (
@@ -107,12 +128,14 @@ export default function Hero({ socials, heroSettings }: Props) {
                     key={img._key ?? `gallery-${index}`}
                     index={index}
                     className="hero-02__img"
+                    style={getGalleryItemStyle(img)}
                   >
                     <Image
                       alt={img.alt}
                       src={img.src}
                       width={img.width}
                       height={img.height}
+                      style={galleryImageStyle}
                     />
                   </CommonHero3DImage>
                 )
