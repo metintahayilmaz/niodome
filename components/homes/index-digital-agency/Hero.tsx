@@ -44,6 +44,17 @@ type Props = {
   heroSettings?: HeroSettings;
 };
 
+function getIntrinsicDimensionsFromSrc(src: string) {
+  const match = src.match(/-(\d+)x(\d+)\.(?:png|jpe?g|webp)(?:\?|$)/i);
+  if (!match) return null;
+
+  const width = Number(match[1]);
+  const height = Number(match[2]);
+  if (!width || !height) return null;
+
+  return { width, height };
+}
+
 function getGalleryItemStyle(img: HeroGalleryImage) {
   const width = Math.max(1, img.width || 1);
   const height = Math.max(1, img.height || 1);
@@ -86,16 +97,19 @@ export default function Hero({ socials, heroSettings }: Props) {
   });
 
   // İlk 20 slot sabit: ilgili gal-N varsa Sanity'den, yoksa yalnızca o slot local fallback'ten gelir.
+  // Sanity'deki elle girilmiş width/height yanlışsa CDN dosya adındaki gerçek asset ölçüsünü kullan.
   const galleryImages = local.galleryImages.map((fallback, index) => {
     const sanityImage = sanityGalleryBySlot.get(index);
     if (!sanityImage?.src) return fallback;
+
+    const intrinsic = getIntrinsicDimensionsFromSrc(sanityImage.src);
 
     return {
       ...fallback,
       ...sanityImage,
       alt: sanityImage.alt || fallback.alt,
-      width: sanityImage.width || fallback.width,
-      height: sanityImage.height || fallback.height,
+      width: intrinsic?.width || sanityImage.width || fallback.width,
+      height: intrinsic?.height || sanityImage.height || fallback.height,
     };
   });
 
