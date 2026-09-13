@@ -38,8 +38,7 @@ type Props = {
    */
   socials?: SocialLinkItem[];
   /**
-   * Sanity heroSettings: headline, subline, scrollLabel, coverImage, galleryImages.
-   * Verilmezse (≥20 galeri gelmezse) tüm hero local data'ya döner.
+   * Sanity heroSettings. Eksik alanlar ve eksik galeri slotları local veriden tamamlanır.
    * Video her zaman local'dan gelir.
    */
   heroSettings?: HeroSettings;
@@ -47,10 +46,31 @@ type Props = {
 
 export default function Hero({ socials, heroSettings }: Props) {
   const resolvedSocials = socials && socials.length > 0 ? socials : siteSettings.socials;
+  const local = heroDigitalAgencyData;
+  const sanityGallery = heroSettings?.galleryImages ?? [];
 
-  // Sanity'den tam veri geldiyse kullan; yoksa local data'ya düş
-  const d = heroSettings ?? heroDigitalAgencyData;
-  const { headline, subline, scrollLabel, coverImage, galleryImages } = d;
+  // İlk 20 slotu sabit tut: Sanity'de dolu olan slot Sanity'den,
+  // boş/eksik olan slot local fallback'ten gelir.
+  const galleryImages = local.galleryImages.map((fallback, index) => {
+    const sanityImage = sanityGallery[index];
+    if (!sanityImage?.src) return fallback;
+
+    return {
+      ...fallback,
+      ...sanityImage,
+      alt: sanityImage.alt || fallback.alt,
+      width: sanityImage.width || fallback.width,
+      height: sanityImage.height || fallback.height,
+    };
+  });
+
+  const headline = heroSettings?.headline || local.headline;
+  const subline = heroSettings?.subline || local.subline;
+  const scrollLabel = heroSettings?.scrollLabel || local.scrollLabel;
+  const coverImage = heroSettings?.coverImage?.src
+    ? heroSettings.coverImage
+    : local.coverImage;
+
   return (
     <CommonLoadAnimation>
       <>
