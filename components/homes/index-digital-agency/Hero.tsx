@@ -68,10 +68,26 @@ export default function Hero({ socials, heroSettings }: Props) {
   const local = heroDigitalAgencyData;
   const sanityGallery = heroSettings?.galleryImages ?? [];
 
-  // İlk 20 slotu sabit tut: Sanity'de dolu olan slot Sanity'den,
-  // boş/eksik olan slot local fallback'ten gelir.
+  // Sanity dizisi eksik bir öğe içerdiğinde sonraki tüm görsellerin sola kaymasını
+  // önlemek için gal-N anahtarını gerçek slot numarası olarak kullan.
+  const sanityGalleryBySlot = new Map<number, HeroGalleryImage>();
+  sanityGallery.forEach((img, arrayIndex) => {
+    const keyMatch = img._key?.match(/^gal-(\d+)$/);
+    const slotIndex = keyMatch ? Number(keyMatch[1]) : arrayIndex;
+
+    if (
+      Number.isInteger(slotIndex) &&
+      slotIndex >= 0 &&
+      slotIndex < local.galleryImages.length &&
+      !sanityGalleryBySlot.has(slotIndex)
+    ) {
+      sanityGalleryBySlot.set(slotIndex, img);
+    }
+  });
+
+  // İlk 20 slot sabit: ilgili gal-N varsa Sanity'den, yoksa yalnızca o slot local fallback'ten gelir.
   const galleryImages = local.galleryImages.map((fallback, index) => {
-    const sanityImage = sanityGallery[index];
+    const sanityImage = sanityGalleryBySlot.get(index);
     if (!sanityImage?.src) return fallback;
 
     return {
