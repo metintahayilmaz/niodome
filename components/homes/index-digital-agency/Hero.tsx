@@ -79,34 +79,16 @@ export default function Hero({ socials, heroSettings }: Props) {
   const local = heroDigitalAgencyData;
   const sanityGallery = heroSettings?.galleryImages ?? [];
 
-  // Sanity dizisi eksik bir öğe içerdiğinde sonraki tüm görsellerin sola kaymasını
-  // önlemek için gal-N anahtarını gerçek slot numarası olarak kullan.
-  const sanityGalleryBySlot = new Map<number, HeroGalleryImage>();
-  sanityGallery.forEach((img, arrayIndex) => {
-    const keyMatch = img._key?.match(/^gal-(\d+)$/);
-    const slotIndex = keyMatch ? Number(keyMatch[1]) : arrayIndex;
-
-    if (
-      Number.isInteger(slotIndex) &&
-      slotIndex >= 0 &&
-      slotIndex < local.galleryImages.length &&
-      !sanityGalleryBySlot.has(slotIndex)
-    ) {
-      sanityGalleryBySlot.set(slotIndex, img);
-    }
-  });
-
-  // İlk 20 slot sabit: ilgili gal-N varsa Sanity'den, yoksa yalnızca o slot local fallback'ten gelir.
+  // Slot numarası olarak Sanity dizisindeki gerçek sırayı (array position)
+  // kullan. Daha önce "gal-N" anahtarındaki N sayısına güveniliyordu, ama bir
+  // öğe silindiğinde anahtar numaralandırmasında boşluk kalıyor (ör. gal-1
+  // hiç yok) ve o slot gereksiz yere local fallback'e düşüyordu — halbuki
+  // Sanity'de tam 20 görsel sırayla duruyor. Studio'daki liste sırası zaten
+  // kullanıcının sürükle-bırakla belirlediği gerçek sıra olduğu için array
+  // pozisyonu kullanmak daha güvenilir.
   // Sanity'deki elle girilmiş width/height yanlışsa CDN dosya adındaki gerçek asset ölçüsünü kullan.
-  if (typeof window !== "undefined") {
-    console.error("DEBUG sanityGallery length:", sanityGallery.length);
-    console.error("DEBUG sanityGalleryBySlot keys:", Array.from(sanityGalleryBySlot.keys()));
-    console.error("DEBUG slot0 src:", sanityGalleryBySlot.get(0)?.src);
-    console.error("DEBUG slot1 src:", sanityGalleryBySlot.get(1)?.src);
-    console.error("DEBUG slot2 src:", sanityGalleryBySlot.get(2)?.src);
-  }
   const galleryImages = local.galleryImages.map((fallback, index) => {
-    const sanityImage = sanityGalleryBySlot.get(index);
+    const sanityImage = sanityGallery[index];
     if (!sanityImage?.src) return fallback;
 
     const intrinsic = getIntrinsicDimensionsFromSrc(sanityImage.src);
