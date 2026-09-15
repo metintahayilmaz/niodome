@@ -98,6 +98,13 @@ export default function Hero({ socials, heroSettings }: Props) {
 
   // İlk 20 slot sabit: ilgili gal-N varsa Sanity'den, yoksa yalnızca o slot local fallback'ten gelir.
   // Sanity'deki elle girilmiş width/height yanlışsa CDN dosya adındaki gerçek asset ölçüsünü kullan.
+  if (typeof window !== "undefined") {
+    console.error("DEBUG sanityGallery length:", sanityGallery.length);
+    console.error("DEBUG sanityGalleryBySlot keys:", Array.from(sanityGalleryBySlot.keys()));
+    console.error("DEBUG slot0 src:", sanityGalleryBySlot.get(0)?.src);
+    console.error("DEBUG slot1 src:", sanityGalleryBySlot.get(1)?.src);
+    console.error("DEBUG slot2 src:", sanityGalleryBySlot.get(2)?.src);
+  }
   const galleryImages = local.galleryImages.map((fallback, index) => {
     const sanityImage = sanityGalleryBySlot.get(index);
     if (!sanityImage?.src) return fallback;
