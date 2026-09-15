@@ -46,7 +46,6 @@ export default function ImagesGrid({ images }: Props) {
                   <div className="col-12 col-xl-6 mxd-grid-item mxd-images-grid__item">
                     <div className="mxd-images-grid__inner">
                       <Image
-                        className="transparent"
                         alt="Project image"
                         src={img(1)}
                         width={LOCAL_IMAGES[1].w}
