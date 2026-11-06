@@ -120,5 +120,10 @@
         "durationLabel": "3–4 weeks"
       }
     ]
+  },
+  "content": {
+    "blogTitle": "Blog",
+    "blogDescription": "Niodome insights on design, technology and branding.",
+    "emptyBlog": "No articles have been published yet. Check back soon for new content."
   }
 }

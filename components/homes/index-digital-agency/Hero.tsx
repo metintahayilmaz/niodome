@@ -89,13 +89,14 @@ export default function Hero({ socials, heroSettings }: Props) {
   // Sanity'deki elle girilmiş width/height yanlışsa CDN dosya adındaki gerçek asset ölçüsünü kullan.
   const galleryImages = local.galleryImages.map((fallback, index) => {
     const sanityImage = sanityGallery[index];
-    if (!sanityImage?.src) return fallback;
+    if (!sanityImage?.src) return { ...fallback, href: undefined };
 
     const intrinsic = getIntrinsicDimensionsFromSrc(sanityImage.src);
 
     return {
       ...fallback,
       ...sanityImage,
+      href: sanityImage.href?.includes("/project-details") ? undefined : sanityImage.href,
       alt: sanityImage.alt || fallback.alt,
       width: intrinsic?.width || sanityImage.width || fallback.width,
       height: intrinsic?.height || sanityImage.height || fallback.height,

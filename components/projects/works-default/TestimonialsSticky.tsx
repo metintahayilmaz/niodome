@@ -3,7 +3,6 @@ import Image from "next/image";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import TextScramble from "@/components/animations/TextScramble";
-import { digitalAgencyStickyTestimonials } from "@/data/testimonials";
 import type { TestimonialStickyCard } from "@/types/testimonials";
 
 type Props = {
@@ -13,11 +12,8 @@ type Props = {
 };
 
 export default function TestimonialsSticky({ testimonials }: Props) {
-  // 5 slot gerekiyor — Sanity tam 5 kayıt döndürmediyse local data'ya dön
-  const t =
-    testimonials && testimonials.length >= 5
-      ? testimonials
-      : digitalAgencyStickyTestimonials;
+  if (!testimonials || testimonials.length < 5) return null;
+  const t = testimonials;
   return (
     <>
       <BlurSection id="testimonials" className="mxd-section padding-top-title padding-bottom-default">

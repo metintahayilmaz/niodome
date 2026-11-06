@@ -6,6 +6,20 @@ export const project = defineType({
   title: "Project",
   type: "document",
   fields: [
+    defineField({
+      name: "isDemo",
+      title: "Demo / örnek içerik",
+      description: "Açıksa bu kayıt ziyaretçi sayfalarında gösterilmez.",
+      type: "boolean",
+      initialValue: false,
+    }),
+    defineField({
+      name: "feedbackApproved",
+      title: "Müşteri yorumu onaylandı",
+      description: "Yalnızca doğrulanmış ve yayımlama izni olan yorumlarda açın.",
+      type: "boolean",
+      initialValue: false,
+    }),
     // ── Ortak / ProjectStackItem ─────────────────────────────────────────────
     localeString("title", "Title"),
     defineField({

@@ -16,7 +16,10 @@ const queries = Object.fromEntries(
 
 async function run(name, dataset, params = {}) {
   assert.ok(queries[name], `Missing query: ${name}`);
-  const value = await evaluate(parse(queries[name], { params }), { dataset, params });
+  const value = await evaluate(parse(queries[name], { params }), {
+    dataset,
+    params,
+  });
   return value.get();
 }
 
@@ -108,4 +111,20 @@ test("nested navigation labels use the same empty-value fallback", async () => {
   assert.deepEqual(result.navLinks, [
     { label: "Hizmetler", href: "/services" },
   ]);
+});
+
+test("demo articles are absent from lists, slugs and detail routes", async () => {
+  const demo = { ...post, isDemo: true };
+  for (const name of [
+    "postsListQuery",
+    "postsPreviewQuery",
+    "postSlugsQuery",
+  ]) {
+    if (queries[name])
+      assert.deepEqual(await run(name, [demo], { locale: "en" }), []);
+  }
+  assert.equal(
+    await run("postBySlugQuery", [demo], { locale: "en", slug: "sample" }),
+    null,
+  );
 });

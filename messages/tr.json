@@ -120,5 +120,10 @@
         "durationLabel": "3-4 hafta"
       }
     ]
+  },
+  "content": {
+    "blogTitle": "Blog",
+    "blogDescription": "Tasarım, teknoloji ve marka dünyasından Niodome içerikleri.",
+    "emptyBlog": "Henüz yazı yayımlanmadı. Yeni içerikler için yakında tekrar ziyaret edin."
   }
 }

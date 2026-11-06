@@ -9,51 +9,15 @@ import SmoothAnchorLink from "@/components/common/SmoothAnchorLink";
 import type { ProjectListItem } from "@/types/project";
 
 // Yerel fallback veri — Sanity boşken kullanılır
-const LOCAL_PROJECTS: ProjectListItem[] = [
-  {
-    _id: "local-pr01",
-    titleLines: ["Creative", "studio template"],
-    tags: ["Tech", "Brand", "Marketing", "Website"],
-    cardImageSrc: "/img/works/showcase-archive/500x500_pr01.webp",
-    href: "/works/creative-studio-template",
-  },
-  {
-    _id: "local-pr02",
-    titleLines: ["Editorial", "illustrations set"],
-    tags: ["Fashion", "Midjourney", "Illustrations", "Design"],
-    cardImageSrc: "/img/works/showcase-archive/500x500_pr02.webp",
-    href: "/works/editorial-illustrations-set",
-  },
-  {
-    _id: "local-pr03",
-    titleLines: ["Interactive", "concept"],
-    tags: ["Pets", "Brand", "Social Media", "Packaging"],
-    cardImageSrc: "/img/works/showcase-archive/500x500_pr03.webp",
-    href: "/works/interactive-concept",
-  },
-  {
-    _id: "local-pr04",
-    titleLines: ["Mobile", "app design"],
-    tags: ["Mobile", "UI/UX", "Design", "Android"],
-    cardImageSrc: "/img/works/showcase-archive/500x500_pr04.webp",
-    href: "/project-details",
-  },
-  {
-    _id: "local-pr05",
-    titleLines: ["Illustrations", "set for print"],
-    tags: ["Pets", "Illustration", "Design", "Packaging"],
-    cardImageSrc: "/img/works/showcase-archive/500x500_pr05.webp",
-    href: "/project-details",
-  },
-];
-
 type Props = {
   /** Sanity'den gelen proje listesi. Verilmezse yerel LOCAL_PROJECTS kullanılır. */
   projects?: ProjectListItem[];
 };
 
 export default function ProjectsList({ projects }: Props) {
-  const resolvedProjects = projects && projects.length > 0 ? projects : LOCAL_PROJECTS;
+  const resolvedProjects = projects ?? [];
+
+  if (!resolvedProjects.length) return null;
 
   return (
     <>

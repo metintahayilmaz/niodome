@@ -7,6 +7,13 @@ export const testimonial = defineType({
   type: "document",
   fields: [
     defineField({
+      name: "isDemo",
+      title: "Demo / örnek içerik",
+      description: "Açıksa bu kayıt ziyaretçi sayfalarında gösterilmez.",
+      type: "boolean",
+      initialValue: false,
+    }),
+    defineField({
       name: "order",
       title: "Display Order",
       description: "Sticky testimonials layout sırası (1 = en üst).",

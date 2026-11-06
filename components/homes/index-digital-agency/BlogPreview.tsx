@@ -43,7 +43,6 @@ const {
   sectionTitle,
   overviewLabel,
   overviewHref,
-  items: localItems,
 } = blogPreviewDigitalAgencyData;
 
 const [titleLine1, titleLine2] = sectionTitle.split("\n");
@@ -56,7 +55,8 @@ type Props = {
 
 export default function BlogPreview({ posts }: Props) {
   const locale = useLocale() as Locale;
-  const resolvedItems = posts && posts.length >= 2 ? posts : localItems;
+  const resolvedItems = posts ?? [];
+  if (!resolvedItems.length) return null;
   return (
     <>
       <PinnedSection

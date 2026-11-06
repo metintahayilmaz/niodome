@@ -34,64 +34,15 @@ const LOCAL_SLOT_IMAGES = [
 ];
 
 // Fallback: Sanity boşsa local data
-const LOCAL_BLOG_POSTS: PostListItem[] = [
-  {
-    _id: "local-ab-1",
-    title: "Frontend innovations and user journeys",
-    slug: "",
-    categories: ["Design"],
-    readTime: "5 min",
-    author: "Studio",
-    date: "03 January, 2026",
-    excerpt: "",
-    cursorImageSrc: "",
-    href: "/blog-article",
-  },
-  {
-    _id: "local-ab-2",
-    title: "Branding in creating digital experiences",
-    slug: "",
-    categories: ["Branding"],
-    readTime: "4 min",
-    author: "Studio",
-    date: "15 January, 2026",
-    excerpt: "",
-    cursorImageSrc: "",
-    href: "/blog-article",
-  },
-  {
-    _id: "local-ab-3",
-    title: "Elevating digital workshops with engaging design",
-    slug: "",
-    categories: ["Strategy"],
-    readTime: "6 min",
-    author: "Studio",
-    date: "28 January, 2026",
-    excerpt: "",
-    cursorImageSrc: "",
-    href: "/blog-article",
-  },
-  {
-    _id: "local-ab-4",
-    title: "Designing for the future of interactive digital spaces",
-    slug: "",
-    categories: ["Development"],
-    readTime: "7 min",
-    author: "Studio",
-    date: "02 February, 2026",
-    excerpt: "",
-    cursorImageSrc: "",
-    href: "/blog-article",
-  },
-];
-
 type Props = {
   posts?: PostListItem[];
 };
 
 export default function BlogPreview({ posts }: Props) {
   const resolvedPosts =
-    posts && posts.length > 0 ? posts.slice(0, 4) : LOCAL_BLOG_POSTS;
+    posts?.slice(0, 4) ?? [];
+
+  if (!resolvedPosts.length) return null;
 
   return (
     <>

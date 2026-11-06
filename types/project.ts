@@ -43,6 +43,7 @@ export type NextProjectRef = {
 
 /** Tam vaka çalışması — /works/[slug] sayfası için. */
 export type ProjectDetail = {
+  feedbackApproved?: boolean;
   _id: string;
   slug: string;
   title: string;

@@ -17,7 +17,8 @@ const LOCAL_NEXT: NextProjectRef = {
 };
 
 export default function NextProjectLink({ nextProject }: Props) {
-  const next = nextProject ?? LOCAL_NEXT;
+  if (!nextProject) return null;
+  const next = nextProject;
   const href = next.slug ? `/works/${next.slug}` : "#";
   const cursorText = next.cursorText ?? next.title;
   const imageSrc = next.imageSrc ?? LOCAL_NEXT.imageSrc!;

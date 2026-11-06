@@ -17,43 +17,15 @@ const LOCAL_AVATARS = [
 ];
 
 // Fallback: Sanity boşsa local data
-const LOCAL_MEMBERS: TeamMember[] = [
-  {
-    _id: "local-tm-1",
-    name: "Helen Pineapple",
-    role: "Co-founder & head of design",
-    socials: [
-      { platform: "Linkedin", href: "https://www.linkedin.com/" },
-      { platform: "Behance",  href: "https://www.behance.net/" },
-    ],
-  },
-  {
-    _id: "local-tm-2",
-    name: "Alex Tomato",
-    role: "SEO, Brand manager",
-    socials: [
-      { platform: "Linkedin", href: "https://www.linkedin.com/" },
-      { platform: "Behance",  href: "https://www.behance.net/" },
-    ],
-  },
-  {
-    _id: "local-tm-3",
-    name: "Jenny Berry",
-    role: "Frontend Developer",
-    socials: [
-      { platform: "Linkedin", href: "https://www.linkedin.com/" },
-      { platform: "Behance",  href: "https://www.behance.net/" },
-    ],
-  },
-];
-
 type Props = {
   members?: TeamMember[];
 };
 
 export default function TeamGrid({ members }: Props) {
   const resolvedMembers =
-    members && members.length > 0 ? members : LOCAL_MEMBERS;
+    members ?? [];
+
+  if (!resolvedMembers.length) return null;
 
   return (
     <>

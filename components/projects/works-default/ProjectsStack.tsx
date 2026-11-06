@@ -100,7 +100,7 @@ type Props = {
 export default function ProjectsStack({ projects }: Props) {
   // Sanity veri yoksa yerel sabit veri kullan
   const resolvedProjects: { key: string; title: string; media: "image" | "video"; imageSrc?: string; imageWidth?: number; imageHeight?: number; imageAlt?: string; coverClassName?: string; tags: string[]; poster?: string; sources?: VideoSources; href?: string; }[] =
-    projects && projects.length > 0
+    projects
       ? projects.map((p) => ({
           key: p._id ?? p.title,
           title: p.title,
