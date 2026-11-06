@@ -1,7 +1,7 @@
 import BlurSection from "@/components/animations/BlurSection";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import Link from "@/components/common/LocalizedLink";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import Image from "next/image";
 import {
   CommonScrollAnimated,
@@ -20,6 +20,7 @@ export default async function TeamGrid({ members }: Props) {
 
   if (!resolvedMembers.length) return null;
   const t = await getTranslations("restoredSections");
+  const locale = await getLocale();
 
   return (
     <>
@@ -115,7 +116,7 @@ export default async function TeamGrid({ members }: Props) {
                               <p className="project-name-m">{member.name}</p>
                             </div>
                             <div className="mxd-team-grid__position">
-                              <span className="tag tag-m tag-medium">
+                              <span lang={locale} className="tag tag-m tag-medium">
                                 {member.role}
                               </span>
                             </div>
