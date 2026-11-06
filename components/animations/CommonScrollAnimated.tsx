@@ -10,6 +10,9 @@ import {
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link, { type LinkProps } from "next/link";
+import { useLocale } from "next-intl";
+import { localizeHref } from "@/i18n/localizeHref";
+import type { Locale } from "@/i18n/routing";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -236,10 +239,19 @@ type CommonScrollAnimatedLinkProps = Omit<LinkProps, "as"> &
 export function CommonScrollAnimatedLink({
   animation = "none",
   children,
+  href,
   ...rest
 }: CommonScrollAnimatedLinkProps) {
+  const locale = useLocale() as Locale;
+  const localizedHref =
+    typeof href === "string" ? localizeHref(href, locale) : href;
   return (
-    <CommonScrollAnimated as={Link} animation={animation} {...rest}>
+    <CommonScrollAnimated
+      as={Link}
+      animation={animation}
+      href={localizedHref}
+      {...rest}
+    >
       {children}
     </CommonScrollAnimated>
   );

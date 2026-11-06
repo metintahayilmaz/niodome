@@ -15,7 +15,7 @@ export const siteSettings: SiteSettingsData = {
 
   navLinks: [
     { href: "/", label: "Anasayfa" },
-    { href: "/works-default", label: "Projeler" },
+    { href: "/works", label: "Projeler" },
     { href: "/about-us", label: "Hakkımızda" },
     { href: "/services", label: "Hizmetler" },
     { href: "/contact", label: "İletişim" },

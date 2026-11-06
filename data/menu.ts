@@ -1,11 +1,9 @@
 import type { MenuLinkItem } from "@/types/menu";
 
-export const homeLinks: MenuLinkItem[] = [
-  { href: "/", label: "Anasayfa" },
-];
+export const homeLinks: MenuLinkItem[] = [{ href: "/", label: "Anasayfa" }];
 
 export const worksLinks: MenuLinkItem[] = [
-  { href: "/works-default", label: "Projeler" },
+  { href: "/works", label: "Projeler" },
 ];
 
 export const pageLinks: MenuLinkItem[] = [
@@ -13,6 +11,4 @@ export const pageLinks: MenuLinkItem[] = [
   { href: "/services", label: "Hizmetler" },
 ];
 
-export const insightLinks: MenuLinkItem[] = [
-  { href: "/blog-standard", label: "Blog" },
-];
+export const insightLinks: MenuLinkItem[] = [{ href: "/blog", label: "Blog" }];

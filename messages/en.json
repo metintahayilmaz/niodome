@@ -34,7 +34,9 @@
     "pricing": "Pricing",
     "faq": "FAQ page",
     "notFoundPage": "404 error page",
-    "landingPage": "Landing page"
+    "landingPage": "Home",
+    "works": "Projects",
+    "blog": "Blog"
   },
   "contact": {
     "breadcrumbHome": "Home",

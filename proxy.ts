@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
 const intlMiddleware = createMiddleware(routing);
 
 const PRODUCTION_HOST = "niodome.com";
-const BYPASS_KEY = process.env.MAINTENANCE_BYPASS_KEY ?? "eaf1efe6e65b938290a98b389808a7dc9c79c11b";
+const BYPASS_KEY = process.env.MAINTENANCE_BYPASS_KEY?.trim();
 const BYPASS_COOKIE = "nio_preview";
 const MAINTENANCE_ON = process.env.MAINTENANCE_MODE === "true";
 
@@ -13,25 +13,27 @@ const MAINTENANCE_ON = process.env.MAINTENANCE_MODE === "true";
 const EXEMPT_PREFIXES = ["/maintenance", "/studio", "/_next", "/api"];
 
 function isExempt(pathname: string): boolean {
-  return EXEMPT_PREFIXES.some((p) => pathname === p || pathname.startsWith(p + "/"));
+  return EXEMPT_PREFIXES.some(
+    (p) => pathname === p || pathname.startsWith(p + "/"),
+  );
 }
 
 export default function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
-  const host = req.headers.get("host") ?? "";
-  const isProduction = host.endsWith(PRODUCTION_HOST);
+  const isProduction = req.nextUrl.hostname.toLowerCase() === PRODUCTION_HOST;
 
   // ── Bakım modu ──────────────────────────────────────────────────────────────
   if (MAINTENANCE_ON && !isExempt(pathname)) {
     // Bypass query: ?preview=ANAHTAR
     const queryKey = req.nextUrl.searchParams.get("preview");
-    if (queryKey === BYPASS_KEY) {
+    if (BYPASS_KEY && queryKey === BYPASS_KEY) {
       // Bypass cookie set et, sonra temiz URL'ye yönlendir (query'yi kaldır)
       const cleanUrl = new URL(req.url);
       cleanUrl.searchParams.delete("preview");
       const res = NextResponse.redirect(cleanUrl);
       res.cookies.set(BYPASS_COOKIE, BYPASS_KEY, {
         httpOnly: true,
+        secure: req.nextUrl.protocol === "https:",
         sameSite: "lax",
         maxAge: 60 * 60 * 24, // 24 saat
         path: "/",
@@ -41,7 +43,7 @@ export default function middleware(req: NextRequest) {
 
     // Bypass cookie kontrolü
     const cookie = req.cookies.get(BYPASS_COOKIE);
-    if (cookie?.value === BYPASS_KEY) {
+    if (BYPASS_KEY && cookie?.value === BYPASS_KEY) {
       // Bypass aktif — normal akışa devam et (aşağıda intlMiddleware çalışır)
     } else {
       // Bakım sayfasına rewrite (URL değişmez)
@@ -65,7 +67,5 @@ export default function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: [
-    "/((?!studio|api|_next|[^?]*\\.[^?]+).*)",
-  ],
+  matcher: ["/((?!studio|api|_next|[^?]*\\.[^?]+).*)"],
 };

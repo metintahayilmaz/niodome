@@ -34,7 +34,9 @@
     "pricing": "Fiyatlandırma",
     "faq": "SSS",
     "notFoundPage": "404 Hata Sayfası",
-    "landingPage": "Anasayfa"
+    "landingPage": "Anasayfa",
+    "works": "Projeler",
+    "blog": "Blog"
   },
   "contact": {
     "breadcrumbHome": "Anasayfa",

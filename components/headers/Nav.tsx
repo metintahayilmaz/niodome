@@ -24,7 +24,10 @@ function pathMatches(pathname: string, href: string): boolean {
   return normalizePath(pathname) === normalizePath(href);
 }
 
-function sectionHasActiveRoute(pathname: string, links: MenuLinkItem[]): boolean {
+function sectionHasActiveRoute(
+  pathname: string,
+  links: MenuLinkItem[],
+): boolean {
   return links.some((l) => pathMatches(pathname, l.href));
 }
 
@@ -74,16 +77,17 @@ export default function Nav({
     "/faq": "faq",
     "/404": "notFoundPage",
     "/": "landingPage",
+    "/works": "works",
+    "/blog": "blog",
   };
 
-  const renderSubmenuLinks = (links: MenuLinkItem[], translateLabel?: boolean) =>
+  const renderSubmenuLinks = (links: MenuLinkItem[], translateLabel = true) =>
     links.map((link) => (
       <li
         key={link.href}
         className={`submenu__item ${pathMatches(pathname, link.href) ? "active" : ""}`}
       >
-        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-        <Link href={link.href as any}>
+        <Link href={link.href as Parameters<typeof Link>[0]["href"]}>
           {translateLabel && PAGE_MENU_KEYS[link.href]
             ? tMenu(PAGE_MENU_KEYS[link.href])
             : link.label}
