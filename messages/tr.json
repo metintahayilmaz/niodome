@@ -157,5 +157,19 @@
     "worksSpan": "şekil bulduğu yer",
     "servicesLead": "Dijital mükemmellikte",
     "servicesSpan": "yeni standartlar"
+  },
+  "aboutContent": {
+    "lead": "Markanız için",
+    "experiences": "kullanıcı deneyimleri",
+    "and": "ve",
+    "solutions": "tasarım çözümleri üretiyoruz",
+    "studio": "Stüdyo",
+    "home": "Anasayfa",
+    "about": "Hakkımızda",
+    "scroll": "Keşfetmek için kaydırın",
+    "viewWorks": "Çalışmalarımız",
+    "approach": "Yaklaşımımız",
+    "approachLead": "Tasarımı, teknolojiyi ve marka stratejisini aynı hedef etrafında bir araya getiriyoruz.",
+    "approachSpan": "İhtiyaçları birlikte netleştiriyor, tasarımdan geliştirmeye kadar her adımda anlaşılır ve tutarlı çözümler üretiyoruz."
   }
 }

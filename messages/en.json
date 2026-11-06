@@ -157,5 +157,19 @@
     "worksSpan": "take shape",
     "servicesLead": "New standards in",
     "servicesSpan": "digital excellence"
+  },
+  "aboutContent": {
+    "lead": "Creating engaging",
+    "experiences": "user experiences",
+    "and": "and",
+    "solutions": "design solutions",
+    "studio": "Studio",
+    "home": "Home",
+    "about": "About us",
+    "scroll": "Scroll to explore",
+    "viewWorks": "View works",
+    "approach": "Our approach",
+    "approachLead": "We bring design, technology and brand strategy together around a shared goal.",
+    "approachSpan": "We clarify needs together and create clear, consistent solutions at every step, from design through development."
   }
 }
