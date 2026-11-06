@@ -56,6 +56,7 @@
     "sending": "Gönderiliyor…",
     "successTitle": "Tamam!",
     "successMessage": "Mesajınız için teşekkürler. En kısa sürede size döneceğiz.",
+    "formUnavailable": "İletişim formu şu anda kullanılamıyor. Bize e-posta ile ulaşabilirsiniz.",
     "errorGeneric": "Bir şeyler ters gitti. Lütfen birazdan tekrar deneyin.",
     "errorNetwork": "İstek başarısız oldu. Bağlantınızı ve reklam engelleyicilerinizi kontrol edip tekrar deneyin.",
     "emailSubject": "İletişim sayfasından yeni mesaj",

@@ -1,7 +1,7 @@
 "use client";
 
 import BlurSection from "@/components/animations/BlurSection";
-import Link from "next/link";
+import Link from "@/components/common/LocalizedLink";
 import Image from "next/image";
 import CommonLoadAnimation, {
   CommonLoadFade,

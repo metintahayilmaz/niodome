@@ -1,3 +1,4 @@
+import Link from "@/components/common/LocalizedLink";
 import UkiyoParallax from "@/components/animations/UkiyoParallax";
 import BlurSection from "@/components/animations/BlurSection";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
@@ -32,7 +33,7 @@ export default function NextProjectLink({ nextProject }: Props) {
         <div className="mxd-container fullwidth-container">
           <div className="mxd-block">
             <div className="mxd-next-prj">
-              <a
+              <Link
                 className="mxd-next-prj__data active-cursor-accent"
                 data-cursor-text={cursorText}
                 href={href}
@@ -57,8 +58,8 @@ export default function NextProjectLink({ nextProject }: Props) {
                   </div>
                   <div className="arrow-container-2" />
                 </div>
-              </a>
-              <a
+              </Link>
+              <Link
                 className="mxd-next-prj__media active-cursor-permanent"
                 data-cursor-text={cursorText}
                 href={href}
@@ -73,7 +74,7 @@ export default function NextProjectLink({ nextProject }: Props) {
                     />
                   </UkiyoParallax>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -56,6 +56,7 @@
     "sending": "Sending…",
     "successTitle": "Done!",
     "successMessage": "Thanks for your message. We'll get back as soon as possible.",
+    "formUnavailable": "The contact form is currently unavailable. You can reach us by email.",
     "errorGeneric": "Something went wrong. Please try again in a moment.",
     "errorNetwork": "Request failed. Check your connection, ad-blockers, and try again.",
     "emailSubject": "New message from contact page",

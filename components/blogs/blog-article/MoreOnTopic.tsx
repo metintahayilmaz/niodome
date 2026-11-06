@@ -1,7 +1,7 @@
 "use client";
 
 import PinnedSection from "@/components/animations/PinnedSection";
-import Link from "next/link";
+import Link from "@/components/common/LocalizedLink";
 import Image from "next/image";
 import {
   CommonScrollAnimated,

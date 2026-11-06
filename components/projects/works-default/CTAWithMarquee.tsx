@@ -2,7 +2,7 @@
 
 import BlurSection from "@/components/animations/BlurSection";
 import { initCtaMarqueeToLeft } from "@/lib/template/ctaMarqueeEffects";
-import Link from "next/link";
+import Link from "@/components/common/LocalizedLink";
 import Image from "next/image";
 import { useLayoutEffect, useRef } from "react";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";

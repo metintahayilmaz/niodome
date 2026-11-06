@@ -2,7 +2,7 @@
 
 import AutoplayLoopVideo from "@/components/media/AutoplayLoopVideo";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/common/LocalizedLink";
 import { useLayoutEffect, useRef } from "react";
 import TextScramble from "@/components/animations/TextScramble";
 import {

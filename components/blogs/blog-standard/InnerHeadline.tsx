@@ -1,5 +1,5 @@
 import BlurSection from "@/components/animations/BlurSection";
-import Link from "next/link";
+import Link from "@/components/common/LocalizedLink";
 import CommonLoadAnimation, {
   CommonLoadFade,
   CommonLoadItem,

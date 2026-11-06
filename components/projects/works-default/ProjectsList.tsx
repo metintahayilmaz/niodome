@@ -1,7 +1,7 @@
 "use client";
 
 import PinnedSection from "@/components/animations/PinnedSection";
-import Link from "next/link";
+import Link from "@/components/common/LocalizedLink";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import TextScramble from "@/components/animations/TextScramble";
