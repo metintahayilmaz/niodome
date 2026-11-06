@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "@/components/common/LocalizedLink";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import PinnedSection from "@/components/animations/PinnedSection";
 import CommonLoadAnimation, {
@@ -11,6 +12,7 @@ import TextScramble from "@/components/animations/TextScramble";
 import SmoothAnchorLink from "@/components/common/SmoothAnchorLink";
 
 export default function InnerHeadline() {
+  const t = useTranslations("innerContent");
   return (
     <CommonLoadAnimation>
       <>
@@ -40,11 +42,11 @@ export default function InnerHeadline() {
                                 <span>
                                   <Link href={`/`}>
                                     <TextScramble className="mxd-scramble">
-                                      Home
+                                      {t("home")}
                                     </TextScramble>
                                   </Link>
                                 </span>
-                                <span className="current-item">Works </span>
+                                <span className="current-item">{t("works")} </span>
                               </div>
                             </div>
                           </CommonLoadFade>
@@ -70,7 +72,7 @@ export default function InnerHeadline() {
                                           targetId="portfolio"
                                         >
                                           <TextScramble className="btn-caption mxd-scramble">
-                                            Portfolio
+                                            {t("portfolio")}
                                           </TextScramble>
                                         </SmoothAnchorLink>
                                       </div>
@@ -81,7 +83,7 @@ export default function InnerHeadline() {
                                         className="medium permanent loading-split"
                                         animation="splitLinesLoad"
                                       >
-                                        Where bold ideas <span>take shape</span>
+                                        {t("worksLead")} <span>{t("worksSpan")}</span>
                                       </CommonAnimatedText>
                                     </div>
                                   </div>
@@ -93,7 +95,7 @@ export default function InnerHeadline() {
                                           targetId="portfolio"
                                         >
                                           <TextScramble className="btn-caption mxd-scramble">
-                                            Scroll to explore
+                                            {t("scroll")}
                                           </TextScramble>
                                           <i>
                                             <svg

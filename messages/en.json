@@ -24,7 +24,9 @@
     "linkInsights": "Insights",
     "linkContact": "Contact",
     "linkPricing": "Pricing",
-    "linkFaq": "FAQ"
+    "linkFaq": "FAQ",
+    "requestQuote": "Request a quote",
+    "services": "Services"
   },
   "menu": {
     "aboutMe": "About me",
@@ -132,5 +134,28 @@
     "contact": "Contact",
     "letsTalk": "Let’s talk",
     "projectCta": "Ready for a game changing project?"
+  },
+  "innerContent": {
+    "write": "Write a line",
+    "projectCta": "Let’s talk about your project",
+    "contact": "Contact us",
+    "photography": "Photography",
+    "models": "3D models",
+    "development": "Development",
+    "illustrations": "Illustrations",
+    "fashion": "Fashion",
+    "digitalArt": "Digital art",
+    "packaging": "Packaging",
+    "motion": "Motion",
+    "video": "Video production",
+    "home": "Home",
+    "works": "Works",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "scroll": "Scroll to explore",
+    "worksLead": "Where bold ideas",
+    "worksSpan": "take shape",
+    "servicesLead": "New standards in",
+    "servicesSpan": "digital excellence"
   }
 }

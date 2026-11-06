@@ -31,7 +31,7 @@ export default function Header1({ initialTheme }: Header1Props) {
       <header
         id="header"
         ref={headerRef}
-        className={`mxd-header ${isPermanent ? "mxd-header-permanent" : ""} ${p === "/" ? "mxd-header-on-dark" : ""}`}
+        className={`mxd-header ${isPermanent ? "mxd-header-permanent" : ""} ${["/", "/works", "/services"].includes(p) ? "mxd-header-on-dark" : ""}`}
       >
         <CommonLoadFade index={0}>
           <div className="mxd-header__logo loading-fade">

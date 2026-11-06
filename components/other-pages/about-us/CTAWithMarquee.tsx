@@ -1,14 +1,16 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import BlurSection from "@/components/animations/BlurSection";
 import { initCtaMarqueeToLeft } from "@/lib/template/ctaMarqueeEffects";
-import Link from "next/link";
+import Link from "@/components/common/LocalizedLink";
 import Image from "next/image";
 import { useLayoutEffect, useRef } from "react";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import TextScramble from "@/components/animations/TextScramble";
 export default function CTAWithMarquee() {
+  const t = useTranslations("innerContent");
   const marqueeTrackRef = useRef<HTMLDivElement | null>(null);
   useLayoutEffect(() => {
     return initCtaMarqueeToLeft(marqueeTrackRef.current);
@@ -33,14 +35,14 @@ export default function CTAWithMarquee() {
                       href={`/contact`}
                     >
                       <TextScramble className="btn-caption mxd-scramble">
-                        Write a line
+                        {t("write")}
                       </TextScramble>
                     </Link>
                   </CommonScrollAnimated>
                   <div className="mxd-promo__caption">
                     <Link
                       className="active-cursor-accent"
-                      data-cursor-text="Contact Us"
+                      data-cursor-text={t("contact")}
                       href={`/contact`}
                     >
                       <CommonAnimatedText
@@ -48,7 +50,7 @@ export default function CTAWithMarquee() {
                         className="reveal-type opposite"
                         animation="revealType"
                       >
-                        Let&apos;s talk about your project
+                        {t("projectCta")}
                       </CommonAnimatedText>
                     </Link>
                   </div>
@@ -65,7 +67,7 @@ export default function CTAWithMarquee() {
                       <div className="marquee__item item-imageblock">
                         <div className="marquee__tags">
                           <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            Photography
+                            {t("photography")}
                           </TextScramble>
                         </div>
                         <div className="marquee__image">
@@ -81,7 +83,7 @@ export default function CTAWithMarquee() {
                       <div className="marquee__item item-imageblock">
                         <div className="marquee__tags">
                           <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            3D Models
+                            {t("models")}
                           </TextScramble>
                         </div>
                         <div className="marquee__image">
@@ -97,7 +99,7 @@ export default function CTAWithMarquee() {
                       <div className="marquee__item item-imageblock">
                         <div className="marquee__tags">
                           <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            Development
+                            {t("development")}
                           </TextScramble>
                         </div>
                         <div className="marquee__image">
@@ -113,7 +115,7 @@ export default function CTAWithMarquee() {
                       <div className="marquee__item item-imageblock">
                         <div className="marquee__tags">
                           <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            Illustrations
+                            {t("illustrations")}
                           </TextScramble>
                         </div>
                         <div className="marquee__image">
@@ -129,7 +131,7 @@ export default function CTAWithMarquee() {
                       <div className="marquee__item item-imageblock">
                         <div className="marquee__tags">
                           <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            Fashion
+                            {t("fashion")}
                           </TextScramble>
                         </div>
                         <div className="marquee__image">
@@ -145,7 +147,7 @@ export default function CTAWithMarquee() {
                       <div className="marquee__item item-imageblock">
                         <div className="marquee__tags">
                           <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            Digital Art
+                            {t("digitalArt")}
                           </TextScramble>
                         </div>
                         <div className="marquee__image">
@@ -161,7 +163,7 @@ export default function CTAWithMarquee() {
                       <div className="marquee__item item-imageblock">
                         <div className="marquee__tags">
                           <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            Packaging
+                            {t("packaging")}
                           </TextScramble>
                         </div>
                         <div className="marquee__image">
@@ -177,7 +179,7 @@ export default function CTAWithMarquee() {
                       <div className="marquee__item item-imageblock">
                         <div className="marquee__tags">
                           <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            Motion
+                            {t("motion")}
                           </TextScramble>
                         </div>
                         <div className="marquee__image">
@@ -193,7 +195,7 @@ export default function CTAWithMarquee() {
                       <div className="marquee__item item-imageblock">
                         <div className="marquee__tags">
                           <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            Illustrations
+                            {t("illustrations")}
                           </TextScramble>
                         </div>
                         <div className="marquee__image">
@@ -209,7 +211,7 @@ export default function CTAWithMarquee() {
                       <div className="marquee__item item-imageblock">
                         <div className="marquee__tags">
                           <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            Video Production
+                            {t("video")}
                           </TextScramble>
                         </div>
                         <div className="marquee__image">
@@ -225,7 +227,7 @@ export default function CTAWithMarquee() {
                       <div className="marquee__item item-imageblock">
                         <div className="marquee__tags">
                           <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            Photography
+                            {t("photography")}
                           </TextScramble>
                         </div>
                         <div className="marquee__image">
@@ -241,7 +243,7 @@ export default function CTAWithMarquee() {
                       <div className="marquee__item item-imageblock">
                         <div className="marquee__tags">
                           <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            3D Models
+                            {t("models")}
                           </TextScramble>
                         </div>
                         <div className="marquee__image">
@@ -257,7 +259,7 @@ export default function CTAWithMarquee() {
                       <div className="marquee__item item-imageblock">
                         <div className="marquee__tags">
                           <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            Development
+                            {t("development")}
                           </TextScramble>
                         </div>
                         <div className="marquee__image">
@@ -273,7 +275,7 @@ export default function CTAWithMarquee() {
                       <div className="marquee__item item-imageblock">
                         <div className="marquee__tags">
                           <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            Illustrations
+                            {t("illustrations")}
                           </TextScramble>
                         </div>
                         <div className="marquee__image">
@@ -289,7 +291,7 @@ export default function CTAWithMarquee() {
                       <div className="marquee__item item-imageblock">
                         <div className="marquee__tags">
                           <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            Fashion
+                            {t("fashion")}
                           </TextScramble>
                         </div>
                         <div className="marquee__image">

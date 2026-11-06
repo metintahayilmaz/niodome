@@ -24,7 +24,9 @@
     "linkInsights": "İçgörüler",
     "linkContact": "İletişim",
     "linkPricing": "Fiyatlandırma",
-    "linkFaq": "SSS"
+    "linkFaq": "SSS",
+    "requestQuote": "Teklif isteyin",
+    "services": "Hizmetler"
   },
   "menu": {
     "aboutMe": "Hakkımda",
@@ -132,5 +134,28 @@
     "contact": "İletişim",
     "letsTalk": "Konuşalım",
     "projectCta": "Fark yaratacak projenize hazır mısınız?"
+  },
+  "innerContent": {
+    "write": "Bize yazın",
+    "projectCta": "Projeniz hakkında konuşalım",
+    "contact": "İletişim",
+    "photography": "Fotoğraf",
+    "models": "3B modeller",
+    "development": "Geliştirme",
+    "illustrations": "İllüstrasyon",
+    "fashion": "Moda",
+    "digitalArt": "Dijital sanat",
+    "packaging": "Ambalaj",
+    "motion": "Hareketli tasarım",
+    "video": "Video prodüksiyon",
+    "home": "Anasayfa",
+    "works": "Çalışmalar",
+    "services": "Hizmetler",
+    "portfolio": "Projeler",
+    "scroll": "Keşfetmek için kaydırın",
+    "worksLead": "Cesur fikirlerin",
+    "worksSpan": "şekil bulduğu yer",
+    "servicesLead": "Dijital mükemmellikte",
+    "servicesSpan": "yeni standartlar"
   }
 }

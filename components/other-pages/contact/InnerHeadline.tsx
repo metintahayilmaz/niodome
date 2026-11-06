@@ -1,7 +1,7 @@
 "use client";
 
 import BlurSection from "@/components/animations/BlurSection";
-import Link from "next/link";
+import Link from "@/components/common/LocalizedLink";
 import { useTranslations } from "next-intl";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import CommonLoadAnimation, { CommonLoadFade } from "@/components/animations/CommonLoadAnimation";
@@ -14,10 +14,10 @@ type Props = {
   emailHref?: string;
 };
 
-export default function InnerHeadline({ email, emailHref }: Props) {
+export default function InnerHeadline({ email }: Props) {
   const t = useTranslations("contact");
   const resolvedEmail = email || localSettings.email;
-  const resolvedEmailHref = emailHref || localSettings.emailHref;
+  const resolvedEmailHref = `mailto:${resolvedEmail}`;
   return (
     <CommonLoadAnimation>
       <>
