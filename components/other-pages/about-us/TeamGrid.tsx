@@ -76,9 +76,9 @@ export default async function TeamGrid({ members }: Props) {
           {/* Block - Section Title v02 End */}
           {/* Block - Team Grid x3 Start */}
           <div className="mxd-block">
-            <div className="mxd-team-grid">
+            <div className="mxd-team-grid niodome-management-grid">
               <div className="container-fluid p-0">
-                <div className="row g-0">
+                <div className="row g-0 niodome-management-grid__rows">
                   {resolvedMembers.map((member) => {
                     return (
                       <CommonCardBatchAnimated
@@ -88,9 +88,9 @@ export default async function TeamGrid({ members }: Props) {
                         columns={3}
                       >
                         <div className="mxd-team-grid__inner">
-                          <div className="mxd-team-grid__media">
+                          <div className={`mxd-team-grid__media ${member.socials.length ? "has-socials" : ""}`}>
                             <div className="mxd-team-grid__photo">
-                              {member.photo ? <Image alt={member.name} src={member.photo} width={800} height={800} /> :
+                              {member.photo ? <Image alt={member.name} src={member.photo} width={800} height={800} sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw" /> :
                                 <div aria-hidden="true" style={{ aspectRatio: "1", display: "grid", placeItems: "center", background: "var(--base-tint)", fontSize: "6rem" }}>
                                   {member.name.split(/\s+/).map(part => part[0]).slice(0, 2).join("")}
                                 </div>}
