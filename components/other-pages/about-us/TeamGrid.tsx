@@ -1,6 +1,7 @@
 import BlurSection from "@/components/animations/BlurSection";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
-import Link from "next/link";
+import Link from "@/components/common/LocalizedLink";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import {
   CommonScrollAnimated,
@@ -9,23 +10,16 @@ import {
 import TextScramble from "@/components/animations/TextScramble";
 import type { TeamMember } from "@/types/teamMember";
 
-// Slot başına yerel avatar görseli (Sanity photo yoksa fallback)
-const LOCAL_AVATARS = [
-  "/img/avatars/800x800_ava-05.webp",
-  "/img/avatars/800x800_ava-06.webp",
-  "/img/avatars/800x800_ava-07.webp",
-];
-
-// Fallback: Sanity boşsa local data
 type Props = {
   members?: TeamMember[];
 };
 
-export default function TeamGrid({ members }: Props) {
+export default async function TeamGrid({ members }: Props) {
   const resolvedMembers =
     members ?? [];
 
   if (!resolvedMembers.length) return null;
+  const t = await getTranslations("restoredSections");
 
   return (
     <>
@@ -43,9 +37,7 @@ export default function TeamGrid({ members }: Props) {
                         className="reveal-type"
                         animation="revealType"
                       >
-                        Creative
-                        <br />
-                        leaders
+                        {t("team")}
                       </CommonAnimatedText>
                     </div>
                   </div>
@@ -58,10 +50,10 @@ export default function TeamGrid({ members }: Props) {
                       >
                         <Link
                           className="btn btn-line btn-line-default"
-                          href={`/team`}
+                          href="/contact"
                         >
                           <TextScramble className="btn-caption mxd-scramble">
-                            Our Team
+                            {t("workTogether")}
                           </TextScramble>
                         </Link>
                       </CommonScrollAnimated>
@@ -71,10 +63,7 @@ export default function TeamGrid({ members }: Props) {
                           className="t-bold t-large mxd-split-lines"
                           animation="splitLines"
                         >
-                          Technical experts dedicated to delivering{" "}
-                          <span>
-                            flawless, high-performing digital experiences.
-                          </span>
+                          {t("teamIntro")}
                         </CommonAnimatedText>
                       </div>
                     </div>
@@ -89,8 +78,7 @@ export default function TeamGrid({ members }: Props) {
             <div className="mxd-team-grid">
               <div className="container-fluid p-0">
                 <div className="row g-0">
-                  {resolvedMembers.map((member, i) => {
-                    const avatarSrc = member.photo ?? LOCAL_AVATARS[i % LOCAL_AVATARS.length];
+                  {resolvedMembers.map((member) => {
                     return (
                       <CommonCardBatchAnimated
                         key={member._id}
@@ -101,12 +89,10 @@ export default function TeamGrid({ members }: Props) {
                         <div className="mxd-team-grid__inner">
                           <div className="mxd-team-grid__media">
                             <div className="mxd-team-grid__photo">
-                              <Image
-                                alt={member.name}
-                                src={avatarSrc}
-                                width={800}
-                                height={800}
-                              />
+                              {member.photo ? <Image alt={member.name} src={member.photo} width={800} height={800} /> :
+                                <div aria-hidden="true" style={{ aspectRatio: "1", display: "grid", placeItems: "center", background: "var(--base-tint)", fontSize: "6rem" }}>
+                                  {member.name.split(/\s+/).map(part => part[0]).slice(0, 2).join("")}
+                                </div>}
                             </div>
                             <div className="mxd-team-grid__socials">
                               {member.socials.map((s) => (

@@ -128,3 +128,14 @@ test("demo articles are absent from lists, slugs and detail routes", async () =>
     null,
   );
 });
+
+test("statistics require explicit approval and use localized labels", async () => {
+  const dataset = [{ _type: "siteSettings", verifiedStats: [
+    { _key: "yes", value: "12+", approved: true, label: { tr: "Proje", en: "Projects" } },
+    { _key: "draft", value: "99", approved: false, label: { tr: "Gizli" } },
+    { _key: "missing", value: "88", label: { tr: "Onaysız" } },
+    { _key: "empty", value: "", approved: true, label: { tr: "Boş" } },
+  ] }];
+  assert.deepEqual(await run("verifiedStatsQuery", dataset, { locale: "en" }), [{ _key: "yes", value: "12+", label: "Projects" }]);
+  assert.deepEqual(await run("verifiedStatsQuery", dataset, { locale: "tr" }), [{ _key: "yes", value: "12+", label: "Proje" }]);
+});

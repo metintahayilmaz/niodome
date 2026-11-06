@@ -336,3 +336,10 @@ export const projectBySlugQuery = groq`
     }
   }
 `;
+
+export const verifiedStatsQuery = groq`
+  *[_type == "siteSettings"][0].verifiedStats[approved == true && defined(value) && length(value) > 0] {
+    _key, value,
+    "label": coalesce(select(length(label[$locale]) > 0 => label[$locale]), label.tr)
+  }
+`;

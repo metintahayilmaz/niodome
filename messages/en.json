@@ -171,5 +171,11 @@
     "approach": "Our approach",
     "approachLead": "We bring design, technology and brand strategy together around a shared goal.",
     "approachSpan": "We clarify needs together and create clear, consistent solutions at every step, from design through development."
+  },
+  "restoredSections": {
+    "testimonials": "From the brands we work with",
+    "team": "The Niodome team",
+    "workTogether": "Let’s work together",
+    "teamIntro": "A team bringing strategy, design and technology together around a shared goal."
   }
 }
