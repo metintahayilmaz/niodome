@@ -6,8 +6,9 @@ export const siteSettings: SiteSettingsData = {
   email: "hello@niodome.com",
   emailHref: "mailto:hello@niodome.com?subject=Web%20Sitesinden%20Mesaj",
 
-  phone: "+90 530 000 00 00",
-  phoneHref: "tel:+905300000000",
+  // Geçici mobil numara; sabit hat geldiğinde site ayarlarıyla birlikte güncelleyin.
+  phone: "+90 533 253 25 38",
+  phoneHref: "tel:+905332532538",
 
   address: "İstanbul, Türkiye",
 

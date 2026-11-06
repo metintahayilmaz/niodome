@@ -9,6 +9,7 @@ import AutoplayLoopVideo from "@/components/media/AutoplayLoopVideo";
 import type { MenuLinkItem } from "@/types/menu";
 import { homeLinks, insightLinks, pageLinks, worksLinks } from "@/data/menu";
 import { useMxdMenuGsap, useMxdMenuGsapRefs } from "@/hooks/useMxdMenuGsap";
+import { siteSettings } from "@/data/siteSettings";
 import TextScramble from "@/components/animations/TextScramble";
 
 /** Routes not listed in pageLinks but grouped under Pages in the overlay menu */
@@ -378,13 +379,13 @@ export default function Nav({
                         <a
                           ref={contactSlots[1]}
                           className="tag tag-m"
-                          href="tel:+905300000000"
+                          href={siteSettings.phoneHref}
                         >
                           <TextScramble
                             ref={contactRevealSlots[1]}
                             className="mxd-scramble"
                           >
-                            +90 530 000 00 00
+                            {siteSettings.phone}
                           </TextScramble>
                         </a>
                       </li>
