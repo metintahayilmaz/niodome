@@ -65,7 +65,7 @@ export default function Footer3({ name, settings }: Props) {
                 <p className="footer-data">
                   <CommonScrollAnimated
                     className="anim-uni-slide-down"
-                    href={s.emailHref}
+                    href={`mailto:${s.email}`}
                     as="a"
                     animation="slideDownLine"
                   >

@@ -1,5 +1,6 @@
 import BlurSection from "@/components/animations/BlurSection";
-import Link from "next/link";
+import Link from "@/components/common/LocalizedLink";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
@@ -9,7 +10,8 @@ import CommonCursorTrailTransparent, {
   CommonCursorTrailImage,
   CommonCursorTrailWrapper,
 } from "@/components/animations/CommonCursorTrailTransparent";
-export default function Divider() {
+export default async function Divider() {
+  const t = await getTranslations("homeContent");
   return (
     <>
       <BlurSection className="mxd-section bg-color-opposite">
@@ -109,14 +111,14 @@ export default function Divider() {
                     href={`/contact`}
                   >
                     <TextScramble className="btn-caption mxd-scramble">
-                      Contact
+                      {t("contact")}
                     </TextScramble>
                   </Link>
                 </CommonScrollAnimated>
                 <div className="mxd-divider-xl__caption difference">
                   <Link
                     className="active-cursor-accent"
-                    data-cursor-text="Let's Talk"
+                    data-cursor-text={t("letsTalk")}
                     href={`/contact`}
                   >
                     <CommonAnimatedText
@@ -124,7 +126,7 @@ export default function Divider() {
                       className="permanent reveal-type"
                       animation="revealType"
                     >
-                      Ready for the game changing project?
+                      {t("projectCta")}
                     </CommonAnimatedText>
                   </Link>
                 </div>

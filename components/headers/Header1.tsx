@@ -31,7 +31,7 @@ export default function Header1({ initialTheme }: Header1Props) {
       <header
         id="header"
         ref={headerRef}
-        className={`mxd-header ${isPermanent ? "mxd-header-permanent" : ""}`}
+        className={`mxd-header ${isPermanent ? "mxd-header-permanent" : ""} ${p === "/" ? "mxd-header-on-dark" : ""}`}
       >
         <CommonLoadFade index={0}>
           <div className="mxd-header__logo loading-fade">
@@ -78,7 +78,7 @@ export default function Header1({ initialTheme }: Header1Props) {
               <Link
                 className="btn mxd-header__link slide-right"
                 href="/contact"
-                aria-label="Say Hello"
+                aria-label={t("cta")}
               >
                 <span className="btn-caption">
                   <TextScramble className="mxd-scramble">

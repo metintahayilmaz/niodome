@@ -125,5 +125,12 @@
     "blogTitle": "Blog",
     "blogDescription": "Niodome insights on design, technology and branding.",
     "emptyBlog": "No articles have been published yet. Check back soon for new content."
+  },
+  "homeContent": {
+    "servicesTitle": "Intersection of art & technology",
+    "allServices": "All services",
+    "contact": "Contact",
+    "letsTalk": "Let’s talk",
+    "projectCta": "Ready for a game changing project?"
   }
 }

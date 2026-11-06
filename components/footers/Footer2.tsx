@@ -145,7 +145,7 @@ export default async function Footer2({ name, settings }: Props) {
                               <li>
                                 <CommonScrollAnimated
                                   className="anim-uni-slide-down"
-                                  href={s.emailHref}
+                                  href={`mailto:${s.email}`}
                                   as="a"
                                   animation="slideDownLine"
                                 >

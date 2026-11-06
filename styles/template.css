@@ -47,3 +47,17 @@
 .no-touch .mxd-menu .main-menu__item.main-menu__item--current .main-menu__toggle:hover svg {
   fill: var(--accent);
 }
+
+/* Header contrast follows the page surface; the home hero stays dark in either theme. */
+#header.mxd-header-permanent .mxd-logo,
+#header.mxd-header-permanent .mxd-logo__text,
+#header.mxd-header-permanent .mxd-header__link,
+#header.mxd-header-permanent .mxd-color-switcher {
+  color: var(--t-bright);
+}
+#header.mxd-header-on-dark .mxd-logo,
+#header.mxd-header-on-dark .mxd-logo__text,
+#header.mxd-header-on-dark .mxd-header__link,
+#header.mxd-header-on-dark .mxd-color-switcher {
+  color: #ffffff;
+}

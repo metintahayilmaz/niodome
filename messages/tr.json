@@ -125,5 +125,12 @@
     "blogTitle": "Blog",
     "blogDescription": "Tasarım, teknoloji ve marka dünyasından Niodome içerikleri.",
     "emptyBlog": "Henüz yazı yayımlanmadı. Yeni içerikler için yakında tekrar ziyaret edin."
+  },
+  "homeContent": {
+    "servicesTitle": "Sanat ve teknolojinin kesişiminde",
+    "allServices": "Tüm hizmetler",
+    "contact": "İletişim",
+    "letsTalk": "Konuşalım",
+    "projectCta": "Fark yaratacak projenize hazır mısınız?"
   }
 }
