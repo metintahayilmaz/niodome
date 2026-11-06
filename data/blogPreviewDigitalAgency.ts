@@ -3,7 +3,7 @@ import type { BlogPreviewData } from "@/types/blogPreview";
 export const blogPreviewDigitalAgencyData: BlogPreviewData = {
   sectionTitle: "Featured\nnews",
   overviewLabel: "News Overview",
-  overviewHref: "/blog-standard",
+  overviewHref: "/blog",
 
   items: [
     {
