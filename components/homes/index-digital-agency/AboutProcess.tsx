@@ -1,16 +1,12 @@
 import BlurSection from "@/components/animations/BlurSection";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
-import Link from "next/link";
+import Link from "@/components/common/LocalizedLink";
+import { getTranslations } from "next-intl/server";
 import {
   CommonScrollAnimated,
   CommonCardBatchAnimated,
 } from "@/components/animations/CommonScrollAnimated";
-import { aboutProcessDigitalAgencyData } from "@/data/aboutProcessDigitalAgency";
 import type { ProcessStep } from "@/types/aboutProcess";
-
-// Bölüm-seviyesi sabitler (manifesto) data dosyasından gelmeye devam eder
-const { manifestLead, manifestSpan, manifestHref, steps: localSteps } =
-  aboutProcessDigitalAgencyData;
 
 type Props = {
   /** Sanity'den gelen süreç adımları.
@@ -18,9 +14,10 @@ type Props = {
   steps?: ProcessStep[];
 };
 
-export default function AboutProcess({ steps }: Props) {
+export default async function AboutProcess({ steps }: Props) {
+  const t = await getTranslations("homeAbout");
   const resolvedSteps =
-    steps && steps.length >= 3 ? steps : localSteps;
+    steps && steps.length >= 3 ? steps : (t.raw("steps") as ProcessStep[]);
   return (
     <>
       <BlurSection
@@ -36,14 +33,13 @@ export default function AboutProcess({ steps }: Props) {
                   <div className="col-12 mxd-grid-item">
                     <div className="mxd-section-manifest__wrap wrap-text-m">
                       <div className="mxd-section-manifest__text manifest-text-m">
-                        <Link data-cursor-text="About us" href={manifestHref}>
+                        <Link data-cursor-text={t("cursor")} href="/about-us">
                           <CommonAnimatedText
                             as="span"
                             className="manifest manifest-m manifest-accent mxd-split-lines active-cursor-permanent"
                             animation="splitLines"
                           >
-                            {manifestLead}
-                            <span>{manifestSpan}</span>
+                            {t("manifestLead")} <span>{t("manifestSpan")}</span>
                           </CommonAnimatedText>
                         </Link>
                       </div>
@@ -73,7 +69,9 @@ export default function AboutProcess({ steps }: Props) {
                       <p className="accent">{resolvedSteps[0].title}</p>
                     </div>
                     <div className="mxd-process-points__descr">
-                      <p className="t-medium t-accent">{resolvedSteps[0].description}</p>
+                      <p className="t-medium t-accent">
+                        {resolvedSteps[0].description}
+                      </p>
                     </div>
                     <div className="mxd-process-points__time">
                       <span className="tag tag-m tag-permanent">
@@ -99,7 +97,9 @@ export default function AboutProcess({ steps }: Props) {
                       <p className="accent">{resolvedSteps[1].title}</p>
                     </div>
                     <div className="mxd-process-points__descr">
-                      <p className="t-medium t-accent">{resolvedSteps[1].description}</p>
+                      <p className="t-medium t-accent">
+                        {resolvedSteps[1].description}
+                      </p>
                     </div>
                     <div className="mxd-process-points__time">
                       <span className="tag tag-m tag-permanent">
@@ -125,7 +125,9 @@ export default function AboutProcess({ steps }: Props) {
                       <p className="accent">{resolvedSteps[2].title}</p>
                     </div>
                     <div className="mxd-process-points__descr">
-                      <p className="t-medium t-accent">{resolvedSteps[2].description}</p>
+                      <p className="t-medium t-accent">
+                        {resolvedSteps[2].description}
+                      </p>
                     </div>
                     <div className="mxd-process-points__time">
                       <span className="tag tag-m tag-permanent">

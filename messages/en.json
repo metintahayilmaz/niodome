@@ -95,5 +95,30 @@
       "title": "Projects",
       "description": "Discover select Niodome projects in brand identity, web design, and digital strategy."
     }
+  },
+  "homeAbout": {
+    "manifestLead": "From digital development and print materials to visionary video projects and SEO/GEO algorithms, we design your brand’s entire creative universe under one Nio Dome roof, with a complete, end-to-end approach.",
+    "manifestSpan": "We are a high-performance creative agency helping businesses lead in the modern marketplace.",
+    "cursor": "About us",
+    "steps": [
+      {
+        "stepNumber": "01",
+        "title": "Strategy",
+        "description": "We analyze your brand’s goals, competitive positioning and target audience to build a clear roadmap for the project.",
+        "durationLabel": "1–2 weeks"
+      },
+      {
+        "stepNumber": "02",
+        "title": "Design",
+        "description": "We turn strategy-led creative concepts into a visual language, bringing user experience and brand identity together in one design system.",
+        "durationLabel": "~2 weeks"
+      },
+      {
+        "stepNumber": "03",
+        "title": "Development",
+        "description": "We turn the design into a fast, accessible and scalable product. After delivery, we continue to support performance and growth.",
+        "durationLabel": "3–4 weeks"
+      }
+    ]
   }
 }
