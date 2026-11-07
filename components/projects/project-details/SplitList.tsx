@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import BlurSection from "@/components/animations/BlurSection";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
@@ -13,7 +14,7 @@ type Props = {
   projectDate?: string;
 };
 
-export default function SplitList({
+export default async function SplitList({
   overviewLead = "Stand out and express your uniqueness with Azurio — a vibrant and minimal React Nextjs Template for creatives, studios and freelancers.",
   overviewSpan = "Impress your website visitors with a clean, stylish layout and stunning visuals.",
   liveUrl = "#",
@@ -22,6 +23,7 @@ export default function SplitList({
   industries = "React Nextjs Template",
   projectDate = "October 2025 - January 2026",
 }: Props) {
+  const t = await getTranslations("projectContent");
   const liveLabel = liveUrl && liveUrl !== "#"
     ? liveUrl.replace(/^https?:\/\//, "").replace(/\/$/, "")
     : "ibthemes.dev";
@@ -39,7 +41,7 @@ export default function SplitList({
                     <div className="mxd-block-split__inner">
                       <div className="mxd-block-split__subtitle pre-manifest">
                         <CommonScrollAnimated className="anim-uni-in-up" as="p" animation="inUp">
-                          <span>/ Overview</span>
+                          <span>/ {t("overview")}</span>
                         </CommonScrollAnimated>
                       </div>
                       <div className="mxd-block-split__manifest">
@@ -58,7 +60,7 @@ export default function SplitList({
                           animation="inUp"
                         >
                           <TextScramble className="btn-caption mxd-scramble">
-                            See it live
+                            {t("seeLive")}
                           </TextScramble>
                           <i className="btn-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 18 18">
@@ -75,15 +77,15 @@ export default function SplitList({
                     <div className="mxd-block-split__inner">
                       <div className="mxd-block-split__subtitle pre-grid">
                         <CommonScrollAnimated className="anim-uni-in-up" as="p" animation="inUp">
-                          <span>/ Project Details</span>
+                          <span>/ {t("details")}</span>
                         </CommonScrollAnimated>
                       </div>
                       <div className="mxd-block-split__info">
                         {[
-                          { label: "Name:", value: projectName },
-                          { label: "Client:", value: clientName },
-                          { label: "Industries:", value: industries },
-                          { label: "Date:", value: projectDate },
+                          { label: t("name"), value: projectName },
+                          { label: t("client"), value: clientName },
+                          { label: t("industries"), value: industries },
+                          { label: t("date"), value: projectDate },
                         ].map(({ label, value }) => (
                           <div key={label} className="split-info__item">
                             <div className="split-info__divider divider-top" />
@@ -100,7 +102,7 @@ export default function SplitList({
                           <div className="split-info__divider divider-top" />
                           <div className="split-info__details">
                             <CommonScrollAnimated className="anim-uni-in-up" as="p" animation="inUp">
-                              Project page:
+                              {t("projectPage")}
                               <span>
                                 <a href={liveUrl}>{liveLabel}</a>
                               </span>

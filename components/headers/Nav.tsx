@@ -9,6 +9,7 @@ import AutoplayLoopVideo from "@/components/media/AutoplayLoopVideo";
 import type { MenuLinkItem } from "@/types/menu";
 import { homeLinks, insightLinks, pageLinks, worksLinks } from "@/data/menu";
 import { useMxdMenuGsap, useMxdMenuGsapRefs } from "@/hooks/useMxdMenuGsap";
+import { siteSettings } from "@/data/siteSettings";
 import TextScramble from "@/components/animations/TextScramble";
 
 /** Routes not listed in pageLinks but grouped under Pages in the overlay menu */
@@ -24,7 +25,10 @@ function pathMatches(pathname: string, href: string): boolean {
   return normalizePath(pathname) === normalizePath(href);
 }
 
-function sectionHasActiveRoute(pathname: string, links: MenuLinkItem[]): boolean {
+function sectionHasActiveRoute(
+  pathname: string,
+  links: MenuLinkItem[],
+): boolean {
   return links.some((l) => pathMatches(pathname, l.href));
 }
 
@@ -74,16 +78,17 @@ export default function Nav({
     "/faq": "faq",
     "/404": "notFoundPage",
     "/": "landingPage",
+    "/works": "works",
+    "/blog": "blog",
   };
 
-  const renderSubmenuLinks = (links: MenuLinkItem[], translateLabel?: boolean) =>
+  const renderSubmenuLinks = (links: MenuLinkItem[], translateLabel = true) =>
     links.map((link) => (
       <li
         key={link.href}
         className={`submenu__item ${pathMatches(pathname, link.href) ? "active" : ""}`}
       >
-        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-        <Link href={link.href as any}>
+        <Link href={link.href as Parameters<typeof Link>[0]["href"]}>
           {translateLabel && PAGE_MENU_KEYS[link.href]
             ? tMenu(PAGE_MENU_KEYS[link.href])
             : link.label}
@@ -374,13 +379,13 @@ export default function Nav({
                         <a
                           ref={contactSlots[1]}
                           className="tag tag-m"
-                          href="tel:+905300000000"
+                          href={siteSettings.phoneHref}
                         >
                           <TextScramble
                             ref={contactRevealSlots[1]}
                             className="mxd-scramble"
                           >
-                            +90 530 000 00 00
+                            {siteSettings.phone}
                           </TextScramble>
                         </a>
                       </li>

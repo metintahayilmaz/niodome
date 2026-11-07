@@ -24,7 +24,9 @@
     "linkInsights": "Insights",
     "linkContact": "Contact",
     "linkPricing": "Pricing",
-    "linkFaq": "FAQ"
+    "linkFaq": "FAQ",
+    "requestQuote": "Request a quote",
+    "services": "Services"
   },
   "menu": {
     "aboutMe": "About me",
@@ -34,7 +36,9 @@
     "pricing": "Pricing",
     "faq": "FAQ page",
     "notFoundPage": "404 error page",
-    "landingPage": "Landing page"
+    "landingPage": "Home",
+    "works": "Projects",
+    "blog": "Blog"
   },
   "contact": {
     "breadcrumbHome": "Home",
@@ -54,6 +58,7 @@
     "sending": "Sending…",
     "successTitle": "Done!",
     "successMessage": "Thanks for your message. We'll get back as soon as possible.",
+    "formUnavailable": "The contact form is currently unavailable. You can reach us by email.",
     "errorGeneric": "Something went wrong. Please try again in a moment.",
     "errorNetwork": "Request failed. Check your connection, ad-blockers, and try again.",
     "emailSubject": "New message from contact page",
@@ -92,5 +97,105 @@
       "title": "Projects",
       "description": "Discover select Niodome projects in brand identity, web design, and digital strategy."
     }
+  },
+  "homeAbout": {
+    "manifestLead": "From digital development and print materials to visionary video projects and SEO/GEO algorithms, we design your brand’s entire creative universe under one Nio Dome roof, with a complete, end-to-end approach.",
+    "manifestSpan": "We are a high-performance creative agency helping businesses lead in the modern marketplace.",
+    "cursor": "About us",
+    "steps": [
+      {
+        "stepNumber": "01",
+        "title": "Strategy",
+        "description": "We analyze your brand’s goals, competitive positioning and target audience to build a clear roadmap for the project.",
+        "durationLabel": "1–2 weeks"
+      },
+      {
+        "stepNumber": "02",
+        "title": "Design",
+        "description": "We turn strategy-led creative concepts into a visual language, bringing user experience and brand identity together in one design system.",
+        "durationLabel": "~2 weeks"
+      },
+      {
+        "stepNumber": "03",
+        "title": "Development",
+        "description": "We turn the design into a fast, accessible and scalable product. After delivery, we continue to support performance and growth.",
+        "durationLabel": "3–4 weeks"
+      }
+    ]
+  },
+  "content": {
+    "blogTitle": "Blog",
+    "blogDescription": "Niodome insights on design, technology and branding.",
+    "emptyBlog": "No articles have been published yet. Check back soon for new content."
+  },
+  "homeContent": {
+    "servicesTitle": "Intersection of art & technology",
+    "allServices": "All services",
+    "contact": "Contact",
+    "letsTalk": "Let’s talk",
+    "projectCta": "Ready for a game changing project?"
+  },
+  "innerContent": {
+    "write": "Write a line",
+    "projectCta": "Let’s talk about your project",
+    "contact": "Contact us",
+    "photography": "Photography",
+    "models": "3D models",
+    "development": "Development",
+    "illustrations": "Illustrations",
+    "fashion": "Fashion",
+    "digitalArt": "Digital art",
+    "packaging": "Packaging",
+    "motion": "Motion",
+    "video": "Video production",
+    "home": "Home",
+    "works": "Works",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "scroll": "Scroll to explore",
+    "worksLead": "Where bold ideas",
+    "worksSpan": "take shape",
+    "servicesLead": "New standards in",
+    "servicesSpan": "digital excellence"
+  },
+  "aboutContent": {
+    "lead": "Creating engaging",
+    "experiences": "user experiences",
+    "and": "and",
+    "solutions": "design solutions",
+    "studio": "Studio",
+    "home": "Home",
+    "about": "About us",
+    "scroll": "Scroll to explore",
+    "viewWorks": "View works",
+    "approach": "Our approach",
+    "approachLead": "We bring design, technology and brand strategy together around a shared goal.",
+    "approachSpan": "We clarify needs together and create clear, consistent solutions at every step, from design through development."
+  },
+  "restoredSections": {
+    "testimonials": "From the brands we work with",
+    "team": "Our Management Team",
+    "workTogether": "Let’s work together",
+    "teamIntro": "The people leading Niodome’s strategy, client relationships, design and technology."
+  },
+  "projectContent": {
+    "works": "Works",
+    "scroll": "Scroll to explore",
+    "overview": "Overview",
+    "details": "Project details",
+    "challenge": "Challenge",
+    "providedServices": "Provided services",
+    "solution": "Solution",
+    "techStack": "Tech stack",
+    "seeLive": "See it live",
+    "projectPage": "Project page:",
+    "name": "Name:",
+    "client": "Client:",
+    "industries": "Industries:",
+    "date": "Date:",
+    "featuredLead": "Our featured",
+    "featuredSpan": "insights",
+    "allArticles": "All articles",
+    "blogIntro": "Insights on design, technology and branding."
   }
 }

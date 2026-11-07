@@ -4,7 +4,6 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { projectBySlugQuery, projectSlugsQuery } from "@/sanity/lib/queries";
 import type { ProjectDetail } from "@/types/project";
-import { projectDetailsData } from "@/data/projectDetails";
 
 import InnerHeadline from "@/components/projects/project-details/InnerHeadline";
 import SplitList from "@/components/projects/project-details/SplitList";
@@ -33,7 +32,7 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   } catch {
     // Sanity erişilemez → local fallback
   }
-  return projectDetailsData.map((p) => ({ slug: p.slug }));
+  return [];
 }
 
 // ── generateMetadata ────────────────────────────────────────────────────────
@@ -54,7 +53,8 @@ export async function generateMetadata({
       const ogImage = raw.bgImageSrc
         ? urlFor(raw.bgImageSrc).width(1200).height(630).auto("format").url()
         : undefined;
-      const description = raw.overviewLead ?? `${raw.title} — Niodome case study`;
+      const description =
+        raw.overviewLead ?? `${raw.title} — Niodome case study`;
       return {
         title: raw.title,
         description,
@@ -64,14 +64,17 @@ export async function generateMetadata({
           url: `${SITE_URL}/works/${slug}`,
           type: "article",
           ...(ogImage && {
-            images: [{ url: ogImage, width: 1200, height: 630, alt: raw.title }],
+            images: [
+              { url: ogImage, width: 1200, height: 630, alt: raw.title },
+            ],
           }),
         },
         twitter: { card: "summary_large_image" },
         alternates: {
-          canonical: locale === "en"
-            ? `${SITE_URL}/en/works/${slug}`
-            : `${SITE_URL}/calismalar/${slug}`,
+          canonical:
+            locale === "en"
+              ? `${SITE_URL}/en/works/${slug}`
+              : `${SITE_URL}/calismalar/${slug}`,
           languages: {
             "x-default": `${SITE_URL}/calismalar/${slug}`,
             tr: `${SITE_URL}/calismalar/${slug}`,
@@ -120,6 +123,7 @@ type RawProject = {
   solutionSpan: string | null;
   techStack: { name: string; description: string }[] | null;
   galleryImages: RawGalleryImage[] | null;
+  feedbackApproved: boolean | null;
   feedbackQuoteLead: string | null;
   feedbackQuoteSpan: string | null;
   feedbackAuthorName: string | null;
@@ -148,25 +152,49 @@ export default async function WorksSlugPage({
   let project: ProjectDetail | null = null;
 
   try {
-    const raw = await client.fetch<RawProject | null>(projectBySlugQuery, { slug, locale });
+    const raw = await client.fetch<RawProject | null>(projectBySlugQuery, {
+      slug,
+      locale,
+    });
 
     if (raw && raw._id) {
       // Gallery images — slot 0 & 5 tam genişlik (1920px), 1-4 yarı genişlik (960px)
-      const galleryImages: string[] = (raw.galleryImages ?? []).map((img, i) => {
-        const isFullWidth = i === 0 || i === 5;
-        return isFullWidth
-          ? urlFor(img).width(1920).height(1440).quality(80).auto("format").url()
-          : urlFor(img).width(960).height(1280).quality(80).auto("format").url();
-      });
+      const galleryImages: string[] = (raw.galleryImages ?? []).map(
+        (img, i) => {
+          const isFullWidth = i === 0 || i === 5;
+          return isFullWidth
+            ? urlFor(img)
+                .width(1920)
+                .height(1440)
+                .quality(80)
+                .auto("format")
+                .url()
+            : urlFor(img)
+                .width(960)
+                .height(1280)
+                .quality(80)
+                .auto("format")
+                .url();
+        },
+      );
 
       // Feedback author photo
       const feedbackAuthorPhoto = raw.feedbackAuthorPhoto
-        ? urlFor(raw.feedbackAuthorPhoto).width(300).height(300).auto("format").url()
+        ? urlFor(raw.feedbackAuthorPhoto)
+            .width(300)
+            .height(300)
+            .auto("format")
+            .url()
         : undefined;
 
       // Next project banner image
       const nextProjectImageSrc = raw.nextProject?.imageSrc
-        ? urlFor(raw.nextProject.imageSrc).width(1920).height(1200).quality(80).auto("format").url()
+        ? urlFor(raw.nextProject.imageSrc)
+            .width(1920)
+            .height(1200)
+            .quality(80)
+            .auto("format")
+            .url()
         : undefined;
 
       project = {
@@ -189,6 +217,7 @@ export default async function WorksSlugPage({
         solutionSpan: raw.solutionSpan ?? undefined,
         techStack: raw.techStack ?? [],
         galleryImages,
+        feedbackApproved: raw.feedbackApproved === true,
         feedbackQuoteLead: raw.feedbackQuoteLead ?? undefined,
         feedbackQuoteSpan: raw.feedbackQuoteSpan ?? undefined,
         feedbackAuthorName: raw.feedbackAuthorName ?? undefined,
@@ -209,53 +238,6 @@ export default async function WorksSlugPage({
     }
   } catch {
     // Sanity erişilemez → project null kalır
-  }
-
-  // Sanity boşsa → local data'dan ara (fallback, site çökmesin)
-  if (!project) {
-    const local = projectDetailsData.find((p) => p.slug === slug);
-    if (local) {
-      project = {
-        _id: `local-project-${local.id}`,
-        title: local.titleLines.join(" "),
-        slug: local.slug,
-        subtitle: local.subtitle,
-        tagsColA: local.tagsColA,
-        tagsColB: local.tagsColB,
-        overviewLead: local.overviewLead,
-        overviewSpan: local.overviewSpan,
-        liveUrl: local.liveUrl,
-        clientName: local.clientName,
-        industries: local.industries,
-        projectDate: local.projectDate,
-        challengeLead: local.challengeLead,
-        challengeSpan: local.challengeSpan,
-        services: local.services,
-        solutionLead: local.solutionLead,
-        solutionSpan: local.solutionSpan,
-        techStack: local.techStack,
-        galleryImages: local.galleryImages,
-        feedbackQuoteLead: local.feedbackQuoteLead,
-        feedbackQuoteSpan: local.feedbackQuoteSpan,
-        feedbackAuthorName: local.feedbackAuthorName,
-        feedbackAuthorRole: local.feedbackAuthorRole,
-        feedbackAuthorCompany: local.feedbackAuthorCompany,
-        feedbackAuthorCompanyUrl: local.feedbackAuthorCompanyUrl,
-        feedbackAuthorPhoto: local.feedbackAuthorPhoto,
-        order: local.order,
-        // nextProject: GROQ olmadan sıradaki projeyi local'den bul
-        nextProject: (() => {
-          const next = projectDetailsData.find((p) => p.order === local.order + 1);
-          if (!next) return undefined;
-          return {
-            slug: next.slug,
-            title: next.titleLines.join(" "),
-            imageSrc: next.bgImageSrc,
-            cursorText: next.cursorText,
-          };
-        })(),
-      };
-    }
   }
 
   // Local'de de yoksa → 404
@@ -309,16 +291,20 @@ export default async function WorksSlugPage({
         techStack={project.techStack}
       />
       <ParallaxDividerImage2 />
-      <ClientSFeedback
-        quoteLead={project.feedbackQuoteLead}
-        quoteSpan={project.feedbackQuoteSpan}
-        authorName={project.feedbackAuthorName}
-        authorRole={project.feedbackAuthorRole}
-        authorCompany={project.feedbackAuthorCompany}
-        authorCompanyUrl={project.feedbackAuthorCompanyUrl}
-        authorPhoto={project.feedbackAuthorPhoto}
-      />
-      <NextProjectLink nextProject={project.nextProject} />
+      {project.feedbackApproved && (
+        <ClientSFeedback
+          quoteLead={project.feedbackQuoteLead}
+          quoteSpan={project.feedbackQuoteSpan}
+          authorName={project.feedbackAuthorName}
+          authorRole={project.feedbackAuthorRole}
+          authorCompany={project.feedbackAuthorCompany}
+          authorCompanyUrl={project.feedbackAuthorCompanyUrl}
+          authorPhoto={project.feedbackAuthorPhoto}
+        />
+      )}
+      {project.nextProject && (
+        <NextProjectLink nextProject={project.nextProject} />
+      )}
       <CTAWithMarquee />
     </>
   );

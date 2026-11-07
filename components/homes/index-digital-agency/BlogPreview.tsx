@@ -2,6 +2,9 @@
 
 import PinnedSection from "@/components/animations/PinnedSection";
 import Link from "next/link";
+import { useLocale } from "next-intl";
+import { localizeHref } from "@/i18n/localizeHref";
+import type { Locale } from "@/i18n/routing";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import TextScramble from "@/components/animations/TextScramble";
@@ -19,15 +22,28 @@ function formatDate(raw: string): string {
   const [year, month, day] = raw.split("-").map(Number);
   // UTC'den kaçınmak için yerel Date yerine doğrudan değerleri kullan
   const months = [
-    "January","February","March","April","May","June",
-    "July","August","September","October","November","December",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
   return `${String(day).padStart(2, "0")} ${months[month - 1]}, ${year}`;
 }
 
 // Bölüm-seviyesi sabitler data dosyasından gelmeye devam eder
-const { sectionTitle, overviewLabel, overviewHref, items: localItems } =
-  blogPreviewDigitalAgencyData;
+const {
+  sectionTitle,
+  overviewLabel,
+  overviewHref,
+} = blogPreviewDigitalAgencyData;
 
 const [titleLine1, titleLine2] = sectionTitle.split("\n");
 
@@ -38,7 +54,9 @@ type Props = {
 };
 
 export default function BlogPreview({ posts }: Props) {
-  const resolvedItems = posts && posts.length >= 2 ? posts : localItems;
+  const locale = useLocale() as Locale;
+  const resolvedItems = posts ?? [];
+  if (!resolvedItems.length) return null;
   return (
     <>
       <PinnedSection
@@ -74,7 +92,7 @@ export default function BlogPreview({ posts }: Props) {
                         >
                           <Link
                             className="btn btn-line btn-line-default"
-                            href={overviewHref}
+                            href={localizeHref(overviewHref, locale)}
                           >
                             <TextScramble className="btn-caption mxd-scramble">
                               {overviewLabel}
@@ -97,7 +115,7 @@ export default function BlogPreview({ posts }: Props) {
                     className="mxd-blog-list__item active-cursor-image active-cursor-permanent"
                     data-cursor-image={post.cursorImageSrc}
                     data-cursor-text="Read Post"
-                    href={post.href}
+                    href={localizeHref(post.href, locale)}
                   >
                     <div className="mxd-blog-list__divider top" />
                     <div className="container-fluid px-0 mxd-blog-list__inner">
@@ -119,7 +137,9 @@ export default function BlogPreview({ posts }: Props) {
                               <span className="meta-author comma-tag">
                                 {post.author}
                               </span>
-                              <span className="meta-date">{formatDate(post.date)}</span>
+                              <span className="meta-date">
+                                {formatDate(post.date)}
+                              </span>
                             </div>
                           </div>
                         </div>

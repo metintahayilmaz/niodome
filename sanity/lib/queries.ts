@@ -2,14 +2,14 @@ import { groq } from "next-sanity";
 
 /**
  * Tüm service dokümanlarını "number" alanına göre artan sırada çeker.
- * $locale: "tr" | "en" — coalesce ile fallback.
+ * $locale: "tr" | "en" — boş metin/dizilerde Türkçe alana fallback.
  */
 export const servicesQuery = groq`
   *[_type == "service"] | order(number asc) {
     _id,
     number,
-    "title": coalesce(title[$locale], title.tr),
-    "description": coalesce(description[$locale], description.tr),
+    "title": coalesce(select(length(title[$locale]) > 0 => title[$locale]), title.tr),
+    "description": coalesce(select(length(description[$locale]) > 0 => description[$locale]), description.tr),
     cursorImageSrc,
     href
   }
@@ -21,9 +21,9 @@ export const servicesQuery = groq`
 export const processStepsQuery = groq`
   *[_type == "processStep"] | order(stepNumber asc) {
     stepNumber,
-    "title": coalesce(title[$locale], title.tr),
-    "description": coalesce(description[$locale], description.tr),
-    "durationLabel": coalesce(durationLabel[$locale], durationLabel.tr)
+    "title": coalesce(select(length(title[$locale]) > 0 => title[$locale]), title.tr),
+    "description": coalesce(select(length(description[$locale]) > 0 => description[$locale]), description.tr),
+    "durationLabel": coalesce(select(length(durationLabel[$locale]) > 0 => durationLabel[$locale]), durationLabel.tr)
   }
 `;
 
@@ -31,16 +31,16 @@ export const processStepsQuery = groq`
  * Sticky testimonials için 5 kart çeker.
  */
 export const stickyTestimonialsQuery = groq`
-  *[_type == "testimonial"] | order(order asc) [0..4] {
+  *[_type == "testimonial" && coalesce(isDemo, false) == false] | order(order asc) [0..4] {
     name,
-    "rolePrefix": coalesce(rolePrefix[$locale], rolePrefix.tr),
+    "rolePrefix": coalesce(select(length(rolePrefix[$locale]) > 0 => rolePrefix[$locale]), rolePrefix.tr),
     companyName,
-    "descriptionLead": coalesce(descriptionLead[$locale], descriptionLead.tr),
-    "descriptionSpan": coalesce(descriptionSpan[$locale], descriptionSpan.tr),
+    "descriptionLead": coalesce(select(length(descriptionLead[$locale]) > 0 => descriptionLead[$locale]), descriptionLead.tr),
+    "descriptionSpan": coalesce(select(length(descriptionSpan[$locale]) > 0 => descriptionSpan[$locale]), descriptionSpan.tr),
     photoSrc,
-    "photoAlt": coalesce(photoAlt[$locale], photoAlt.tr),
+    "photoAlt": coalesce(select(length(photoAlt[$locale]) > 0 => photoAlt[$locale]), photoAlt.tr),
     largeSrc,
-    "largeAlt": coalesce(largeAlt[$locale], largeAlt.tr)
+    "largeAlt": coalesce(select(length(largeAlt[$locale]) > 0 => largeAlt[$locale]), largeAlt.tr)
   }
 `;
 
@@ -48,16 +48,16 @@ export const stickyTestimonialsQuery = groq`
  * ProjectShowcase için proje dokümanlarını çeker.
  */
 export const projectsShowcaseQuery = groq`
-  *[_type == "project" && defined(bgImageSrc) && defined(cardImageSrc)] | order(order asc, _createdAt asc) {
+  *[_type == "project" && coalesce(isDemo, false) == false && defined(bgImageSrc) && defined(cardImageSrc)] | order(order asc, _createdAt asc) {
     _id,
-    "titleLines": coalesce(titleLines[$locale], titleLines.tr),
+    "titleLines": coalesce(select(count(titleLines[$locale][defined(@) && @ != ""]) > 0 => titleLines[$locale]), titleLines.tr),
     bgImageSrc,
     cardImageSrc,
-    "cardImageAlt": coalesce(cardImageAlt[$locale], cardImageAlt.tr),
-    "cursorText": coalesce(cursorText[$locale], cursorText.tr),
+    "cardImageAlt": coalesce(select(length(cardImageAlt[$locale]) > 0 => cardImageAlt[$locale]), cardImageAlt.tr),
+    "cursorText": coalesce(select(length(cursorText[$locale]) > 0 => cursorText[$locale]), cursorText.tr),
     href,
     "slug": coalesce(slug_en.current, slug.current),
-    "tags": coalesce(tags[$locale], tags.tr)
+    "tags": coalesce(select(count(tags[$locale][defined(@) && @ != ""]) > 0 => tags[$locale]), tags.tr)
   }
 `;
 
@@ -65,13 +65,13 @@ export const projectsShowcaseQuery = groq`
  * ProjectsStack bileşeni için imageSrc dolu projeleri çeker (stack view).
  */
 export const projectsStackQuery = groq`
-  *[_type == "project" && defined(imageSrc)] | order(_createdAt asc) {
+  *[_type == "project" && coalesce(isDemo, false) == false && defined(imageSrc)] | order(_createdAt asc) {
     _id,
-    "title": coalesce(title[$locale], title.tr),
+    "title": coalesce(select(length(title[$locale]) > 0 => title[$locale]), title.tr),
     imageSrc,
-    "imageAlt": coalesce(imageAlt[$locale], imageAlt.tr),
+    "imageAlt": coalesce(select(length(imageAlt[$locale]) > 0 => imageAlt[$locale]), imageAlt.tr),
     coverClassName,
-    "tags": coalesce(tags[$locale], tags.tr),
+    "tags": coalesce(select(count(tags[$locale][defined(@) && @ != ""]) > 0 => tags[$locale]), tags.tr),
     href,
     "slug": coalesce(slug_en.current, slug.current)
   }
@@ -81,13 +81,13 @@ export const projectsStackQuery = groq`
  * ProjectsList bileşeni için tüm projeleri çeker (archive/list view).
  */
 export const projectsListQuery = groq`
-  *[_type == "project"] | order(order asc, _createdAt asc) {
+  *[_type == "project" && coalesce(isDemo, false) == false] | order(order asc, _createdAt asc) {
     _id,
-    "titleLines": coalesce(titleLines[$locale], titleLines.tr),
+    "titleLines": coalesce(select(count(titleLines[$locale][defined(@) && @ != ""]) > 0 => titleLines[$locale]), titleLines.tr),
     cardImageSrc,
     href,
     "slug": coalesce(slug_en.current, slug.current),
-    "tags": coalesce(tags[$locale], tags.tr)
+    "tags": coalesce(select(count(tags[$locale][defined(@) && @ != ""]) > 0 => tags[$locale]), tags.tr)
   }
 `;
 
@@ -95,13 +95,13 @@ export const projectsListQuery = groq`
  * Grid showcase bileşenleri için tüm projeleri çeker.
  */
 export const projectsGridQuery = groq`
-  *[_type == "project"] | order(order asc, _createdAt asc) {
+  *[_type == "project" && coalesce(isDemo, false) == false] | order(order asc, _createdAt asc) {
     _id,
-    "title": coalesce(title[$locale], title.tr),
+    "title": coalesce(select(length(title[$locale]) > 0 => title[$locale]), title.tr),
     href,
     "slug": coalesce(slug_en.current, slug.current),
-    "cursorText": coalesce(cursorText[$locale], cursorText.tr),
-    "tags": coalesce(tags[$locale], tags.tr)
+    "cursorText": coalesce(select(length(cursorText[$locale]) > 0 => cursorText[$locale]), cursorText.tr),
+    "tags": coalesce(select(count(tags[$locale][defined(@) && @ != ""]) > 0 => tags[$locale]), tags.tr)
   }
 `;
 
@@ -109,15 +109,15 @@ export const projectsGridQuery = groq`
  * BlogPreview için en yeni 2 yazıyı çeker (date desc).
  */
 export const postsPreviewQuery = groq`
-  *[_type == "post"] | order(date desc) [0..1] {
+  *[_type == "post" && coalesce(isDemo, false) == false] | order(date desc) [0..1] {
     _id,
-    "title": coalesce(title[$locale], title.tr),
+    "title": coalesce(select(length(title[$locale]) > 0 => title[$locale]), title.tr),
     "slug": coalesce(slug_en.current, slug.current),
-    "categories": coalesce(categories[$locale], categories.tr),
-    "readTime": coalesce(readTime[$locale], readTime.tr),
+    "categories": coalesce(select(count(categories[$locale][defined(@) && @ != ""]) > 0 => categories[$locale]), categories.tr),
+    "readTime": coalesce(select(length(readTime[$locale]) > 0 => readTime[$locale]), readTime.tr),
     author,
     date,
-    "excerpt": coalesce(excerpt[$locale], excerpt.tr),
+    "excerpt": coalesce(select(length(excerpt[$locale]) > 0 => excerpt[$locale]), excerpt.tr),
     coverImage,
     cursorImageSrc,
     href
@@ -129,7 +129,7 @@ export const postsPreviewQuery = groq`
  * Locale gerekmez — slug_en boşsa TR slug döner.
  */
 export const postSlugsQuery = groq`
-  *[_type == "post" && defined(slug.current)] {
+  *[_type == "post" && coalesce(isDemo, false) == false && defined(slug.current)] {
     "slug": coalesce(slug_en.current, slug.current)
   }
 `;
@@ -139,7 +139,7 @@ export const postSlugsQuery = groq`
  * EN boşsa TR slug kullanılır (aynı path, farklı locale prefix).
  */
 export const postSlugsSitemapQuery = groq`
-  *[_type == "post" && defined(slug.current)] {
+  *[_type == "post" && coalesce(isDemo, false) == false && defined(slug.current)] {
     "tr": slug.current,
     "en": coalesce(slug_en.current, slug.current)
   }
@@ -150,15 +150,17 @@ export const postSlugsSitemapQuery = groq`
  * body: locale'e göre bodyTr veya bodyEn; bodyEn boşsa bodyTr fallback.
  */
 export const postBySlugQuery = groq`
-  *[_type == "post" && slug.current == $slug][0] {
+  *[_type == "post" && coalesce(isDemo, false) == false && slug.current == $slug][0] {
     _id,
-    "title": coalesce(title[$locale], title.tr),
+    "title": coalesce(select(length(title[$locale]) > 0 => title[$locale]), title.tr),
     "slug": coalesce(slug_en.current, slug.current),
-    "categories": coalesce(categories[$locale], categories.tr),
-    "readTime": coalesce(readTime[$locale], readTime.tr),
+    "categories": coalesce(select(count(categories[$locale][defined(@) && @ != ""]) > 0 => categories[$locale]), categories.tr),
+    "readTime": coalesce(select(length(readTime[$locale]) > 0 => readTime[$locale]), readTime.tr),
+    "seoTitle": coalesce(select(length(seoTitle[$locale]) > 0 => seoTitle[$locale]), seoTitle.tr),
+    "seoDescription": coalesce(select(length(seoDescription[$locale]) > 0 => seoDescription[$locale]), seoDescription.tr),
     author,
     date,
-    "excerpt": coalesce(excerpt[$locale], excerpt.tr),
+    "excerpt": coalesce(select(length(excerpt[$locale]) > 0 => excerpt[$locale]), excerpt.tr),
     coverImage,
     cursorImageSrc,
     "body": coalesce(select($locale == "en" && count(bodyEn) > 0 => bodyEn), bodyTr)
@@ -169,15 +171,15 @@ export const postBySlugQuery = groq`
  * Blog liste sayfaları için tüm yazıları çeker (date desc, limit yok).
  */
 export const postsListQuery = groq`
-  *[_type == "post"] | order(date desc) {
+  *[_type == "post" && coalesce(isDemo, false) == false] | order(date desc) {
     _id,
-    "title": coalesce(title[$locale], title.tr),
+    "title": coalesce(select(length(title[$locale]) > 0 => title[$locale]), title.tr),
     "slug": coalesce(slug_en.current, slug.current),
-    "categories": coalesce(categories[$locale], categories.tr),
-    "readTime": coalesce(readTime[$locale], readTime.tr),
+    "categories": coalesce(select(count(categories[$locale][defined(@) && @ != ""]) > 0 => categories[$locale]), categories.tr),
+    "readTime": coalesce(select(length(readTime[$locale]) > 0 => readTime[$locale]), readTime.tr),
     author,
     date,
-    "excerpt": coalesce(excerpt[$locale], excerpt.tr),
+    "excerpt": coalesce(select(length(excerpt[$locale]) > 0 => excerpt[$locale]), excerpt.tr),
     coverImage,
     cursorImageSrc,
     href
@@ -189,12 +191,12 @@ export const postsListQuery = groq`
  */
 export const heroSettingsQuery = groq`
   *[_type == "heroSettings"][0] {
-    "headline": coalesce(headline[$locale], headline.tr),
-    "subline": coalesce(subline[$locale], subline.tr),
-    "scrollLabel": coalesce(scrollLabel[$locale], scrollLabel.tr),
+    "headline": coalesce(select(length(headline[$locale]) > 0 => headline[$locale]), headline.tr),
+    "subline": coalesce(select(length(subline[$locale]) > 0 => subline[$locale]), subline.tr),
+    "scrollLabel": coalesce(select(length(scrollLabel[$locale]) > 0 => scrollLabel[$locale]), scrollLabel.tr),
     coverImage {
       src,
-      "alt": coalesce(alt[$locale], alt.tr),
+      "alt": coalesce(select(length(alt[$locale]) > 0 => alt[$locale]), alt.tr),
       "assetWidth": src.asset->metadata.dimensions.width,
       "assetHeight": src.asset->metadata.dimensions.height,
       width,
@@ -207,7 +209,7 @@ export const heroSettingsQuery = groq`
     galleryImages[] {
       _key,
       src,
-      "alt": coalesce(alt[$locale], alt.tr),
+      "alt": coalesce(select(length(alt[$locale]) > 0 => alt[$locale]), alt.tr),
       "assetWidth": src.asset->metadata.dimensions.width,
       "assetHeight": src.asset->metadata.dimensions.height,
       width,
@@ -229,8 +231,8 @@ export const siteSettingsQuery = groq`
     phone,
     phoneHref,
     address,
-    "copyrightText": coalesce(copyrightText[$locale], copyrightText.tr),
-    navLinks[] { "label": coalesce(label[$locale], label.tr), href },
+    "copyrightText": coalesce(select(length(copyrightText[$locale]) > 0 => copyrightText[$locale]), copyrightText.tr),
+    navLinks[] { "label": coalesce(select(length(label[$locale]) > 0 => label[$locale]), label.tr), href },
     socials[]  { label, href }
   }
 `;
@@ -239,10 +241,10 @@ export const siteSettingsQuery = groq`
  * teamMember dokümanlarını "order" alanına göre artan sırada çeker.
  */
 export const teamMembersQuery = groq`
-  *[_type == "teamMember"] | order(order asc) {
+  *[_type == "teamMember" && coalesce(isDemo, false) == false] | order(order asc) {
     _id,
     name,
-    "role": coalesce(role[$locale], role.tr),
+    "role": coalesce(select(length(role[$locale]) > 0 => role[$locale]), role.tr),
     photo,
     "socials": socials[] {
       platform,
@@ -258,12 +260,12 @@ export const teamMembersQuery = groq`
 export const serviceDetailsQuery = groq`
   *[_type == "serviceDetail"] | order(order asc) {
     _id,
-    "title": coalesce(title[$locale], title.tr),
+    "title": coalesce(select(length(title[$locale]) > 0 => title[$locale]), title.tr),
     "slug": coalesce(slug_en.current, slug.current),
-    "shortDescription": coalesce(shortDescription[$locale], shortDescription.tr),
+    "shortDescription": coalesce(select(length(shortDescription[$locale]) > 0 => shortDescription[$locale]), shortDescription.tr),
     "body": coalesce(select($locale == "en" && count(bodyEn) > 0 => bodyEn), bodyTr),
-    "tagsColA": coalesce(tagsColA[$locale], tagsColA.tr),
-    "tagsColB": coalesce(tagsColB[$locale], tagsColB.tr),
+    "tagsColA": coalesce(select(count(tagsColA[$locale][defined(@) && @ != ""]) > 0 => tagsColA[$locale]), tagsColA.tr),
+    "tagsColB": coalesce(select(count(tagsColB[$locale][defined(@) && @ != ""]) > 0 => tagsColB[$locale]), tagsColB.tr),
     image,
     order
   }
@@ -273,7 +275,7 @@ export const serviceDetailsQuery = groq`
  * generateStaticParams için slug tanımlı tüm project dokümanlarını çeker.
  */
 export const projectSlugsQuery = groq`
-  *[_type == "project" && defined(slug.current)] {
+  *[_type == "project" && coalesce(isDemo, false) == false && defined(slug.current)] {
     "slug": coalesce(slug_en.current, slug.current)
   }
 `;
@@ -282,7 +284,7 @@ export const projectSlugsQuery = groq`
  * Sitemap için project slug'larını çeker — TR ve EN ayrı ayrı.
  */
 export const projectSlugsSitemapQuery = groq`
-  *[_type == "project" && defined(slug.current)] {
+  *[_type == "project" && coalesce(isDemo, false) == false && defined(slug.current)] {
     "tr": slug.current,
     "en": coalesce(slug_en.current, slug.current)
   }
@@ -292,46 +294,54 @@ export const projectSlugsSitemapQuery = groq`
  * Tam vaka çalışması — /works/[slug] dinamik rotası için tek proje çeker.
  */
 export const projectBySlugQuery = groq`
-  *[_type == "project" && slug.current == $slug][0] {
+  *[_type == "project" && coalesce(isDemo, false) == false && slug.current == $slug][0] {
     _id,
-    "title": coalesce(title[$locale], title.tr),
+    "title": coalesce(select(length(title[$locale]) > 0 => title[$locale]), title.tr),
     "slug": coalesce(slug_en.current, slug.current),
     bgImageSrc,
-    "subtitle": coalesce(subtitle[$locale], subtitle.tr),
-    "tagsColA": coalesce(tagsColA[$locale], tagsColA.tr),
-    "tagsColB": coalesce(tagsColB[$locale], tagsColB.tr),
-    "overviewLead": coalesce(overviewLead[$locale], overviewLead.tr),
-    "overviewSpan": coalesce(overviewSpan[$locale], overviewSpan.tr),
+    "subtitle": coalesce(select(length(subtitle[$locale]) > 0 => subtitle[$locale]), subtitle.tr),
+    "tagsColA": coalesce(select(count(tagsColA[$locale][defined(@) && @ != ""]) > 0 => tagsColA[$locale]), tagsColA.tr),
+    "tagsColB": coalesce(select(count(tagsColB[$locale][defined(@) && @ != ""]) > 0 => tagsColB[$locale]), tagsColB.tr),
+    "overviewLead": coalesce(select(length(overviewLead[$locale]) > 0 => overviewLead[$locale]), overviewLead.tr),
+    "overviewSpan": coalesce(select(length(overviewSpan[$locale]) > 0 => overviewSpan[$locale]), overviewSpan.tr),
     liveUrl,
     clientName,
-    "industries": coalesce(industries[$locale], industries.tr),
+    "industries": coalesce(select(length(industries[$locale]) > 0 => industries[$locale]), industries.tr),
     projectDate,
-    "challengeLead": coalesce(challengeLead[$locale], challengeLead.tr),
-    "challengeSpan": coalesce(challengeSpan[$locale], challengeSpan.tr),
+    "challengeLead": coalesce(select(length(challengeLead[$locale]) > 0 => challengeLead[$locale]), challengeLead.tr),
+    "challengeSpan": coalesce(select(length(challengeSpan[$locale]) > 0 => challengeSpan[$locale]), challengeSpan.tr),
     "services": services[] {
-      "name": coalesce(name[$locale], name.tr),
-      "description": coalesce(description[$locale], description.tr)
+      "name": coalesce(select(length(name[$locale]) > 0 => name[$locale]), name.tr),
+      "description": coalesce(select(length(description[$locale]) > 0 => description[$locale]), description.tr)
     },
-    "solutionLead": coalesce(solutionLead[$locale], solutionLead.tr),
-    "solutionSpan": coalesce(solutionSpan[$locale], solutionSpan.tr),
+    "solutionLead": coalesce(select(length(solutionLead[$locale]) > 0 => solutionLead[$locale]), solutionLead.tr),
+    "solutionSpan": coalesce(select(length(solutionSpan[$locale]) > 0 => solutionSpan[$locale]), solutionSpan.tr),
     "techStack": techStack[] {
       name,
-      "description": coalesce(description[$locale], description.tr)
+      "description": coalesce(select(length(description[$locale]) > 0 => description[$locale]), description.tr)
     },
     "galleryImages": galleryImages[],
-    "feedbackQuoteLead": coalesce(feedbackQuoteLead[$locale], feedbackQuoteLead.tr),
-    "feedbackQuoteSpan": coalesce(feedbackQuoteSpan[$locale], feedbackQuoteSpan.tr),
+    "feedbackQuoteLead": coalesce(select(length(feedbackQuoteLead[$locale]) > 0 => feedbackQuoteLead[$locale]), feedbackQuoteLead.tr),
+    "feedbackQuoteSpan": coalesce(select(length(feedbackQuoteSpan[$locale]) > 0 => feedbackQuoteSpan[$locale]), feedbackQuoteSpan.tr),
+    feedbackApproved,
     feedbackAuthorName,
-    "feedbackAuthorRole": coalesce(feedbackAuthorRole[$locale], feedbackAuthorRole.tr),
+    "feedbackAuthorRole": coalesce(select(length(feedbackAuthorRole[$locale]) > 0 => feedbackAuthorRole[$locale]), feedbackAuthorRole.tr),
     feedbackAuthorCompany,
     feedbackAuthorCompanyUrl,
     feedbackAuthorPhoto,
     order,
-    "nextProject": *[_type == "project" && order == ^.order + 1 && defined(slug.current)][0] {
+    "nextProject": *[_type == "project" && coalesce(isDemo, false) == false && order == ^.order + 1 && defined(slug.current)][0] {
       "slug": coalesce(slug_en.current, slug.current),
-      "title": coalesce(title[$locale], title.tr),
+      "title": coalesce(select(length(title[$locale]) > 0 => title[$locale]), title.tr),
       "imageSrc": bgImageSrc,
-      "cursorText": coalesce(cursorText[$locale], cursorText.tr)
+      "cursorText": coalesce(select(length(cursorText[$locale]) > 0 => cursorText[$locale]), cursorText.tr)
     }
+  }
+`;
+
+export const verifiedStatsQuery = groq`
+  *[_type == "siteSettings"][0].verifiedStats[approved == true && defined(value) && length(value) > 0] {
+    _key, value,
+    "label": coalesce(select(length(label[$locale]) > 0 => label[$locale]), label.tr)
   }
 `;

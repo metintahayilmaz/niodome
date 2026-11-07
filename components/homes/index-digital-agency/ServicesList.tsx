@@ -1,7 +1,8 @@
 "use client";
 
 import PinnedSection from "@/components/animations/PinnedSection";
-import Link from "next/link";
+import Link from "@/components/common/LocalizedLink";
+import { useTranslations } from "next-intl";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import TextScramble from "@/components/animations/TextScramble";
@@ -9,7 +10,7 @@ import { servicesListDigitalAgencyData } from "@/data/servicesListDigitalAgency"
 import type { ServiceListItem } from "@/types/servicesList";
 
 // Bölüm-seviyesi sabitler data dosyasından gelmeye devam eder
-const { sectionTitle, allServicesLabel, allServicesHref, items: localItems } =
+const { allServicesHref, items: localItems } =
   servicesListDigitalAgencyData;
 
 type Props = {
@@ -18,6 +19,7 @@ type Props = {
 };
 
 export default function ServicesList({ items }: Props) {
+  const t = useTranslations("homeContent");
   // Fallback: Sanity boş / erişilemezse local data'ya dön
   const resolvedItems = items && items.length > 0 ? items : localItems;
   return (
@@ -40,7 +42,7 @@ export default function ServicesList({ items }: Props) {
                           className="reveal-type"
                           animation="revealType"
                         >
-                          {sectionTitle}
+                          {t("servicesTitle")}
                         </CommonAnimatedText>
                       </div>
                     </div>
@@ -56,7 +58,7 @@ export default function ServicesList({ items }: Props) {
                             href={allServicesHref}
                           >
                             <TextScramble className="btn-caption mxd-scramble">
-                              {allServicesLabel}
+                              {t("allServices")}
                             </TextScramble>
                           </Link>
                         </CommonScrollAnimated>

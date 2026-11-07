@@ -1,23 +1,22 @@
+import { getTranslations } from "next-intl/server";
+import TestimonialCards from "@/components/common/TestimonialCards";
 import BlurSection from "@/components/animations/BlurSection";
 import Image from "next/image";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import TextScramble from "@/components/animations/TextScramble";
-import { digitalAgencyStickyTestimonials } from "@/data/testimonials";
 import type { TestimonialStickyCard } from "@/types/testimonials";
 
 type Props = {
-  /** Sanity'den gelen 5 testimonial kartı.
-   *  Verilmezse veya 5'ten azsa local data kullanılır (layout 5 sabit slot gerektirir). */
+  /** Gerçek yorumlar: 1–4 kayıtta kartlar, 5 kayıtta özgün yapışkan düzen. */
   testimonials?: TestimonialStickyCard[];
 };
 
-export default function TestimonialsSticky({ testimonials }: Props) {
-  // 5 slot gerekiyor — Sanity tam 5 kayıt döndürmediyse local data'ya dön
-  const t =
-    testimonials && testimonials.length >= 5
-      ? testimonials
-      : digitalAgencyStickyTestimonials;
+export default async function TestimonialsSticky({ testimonials }: Props) {
+  if (!testimonials?.length) return null;
+  const labels = await getTranslations("restoredSections");
+  if (testimonials.length < 5) return <TestimonialCards testimonials={testimonials} />;
+  const t = testimonials;
   return (
     <>
       <BlurSection id="testimonials" className="mxd-section padding-top-title padding-bottom-default">
@@ -38,9 +37,7 @@ export default function TestimonialsSticky({ testimonials }: Props) {
                               className="reveal-type"
                               animation="revealType"
                             >
-                              Few words
-                              <br />
-                              from our clients
+                              {labels("testimonials")}
                             </CommonAnimatedText>
                           </div>
                           <CommonScrollAnimated

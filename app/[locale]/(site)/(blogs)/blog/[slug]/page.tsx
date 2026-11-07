@@ -17,6 +17,8 @@ export const revalidate = 60;
 type PostDoc = {
   _id: string;
   title: string;
+  seoTitle?: string;
+  seoDescription?: string;
   slug: string;
   categories: string[];
   readTime: string;
@@ -54,8 +56,8 @@ export async function generateMetadata({
       : undefined;
 
     return {
-      title: post.title,
-      description: post.excerpt ?? "",
+      title: post.seoTitle ? { absolute: post.seoTitle } : post.title,
+      description: post.seoDescription || post.excerpt || "",
       openGraph: {
         title: post.title,
         description: post.excerpt ?? "",
@@ -153,7 +155,7 @@ export default async function BlogSlugPage({
           coverImageUrl={coverImageUrl}
           body={post.body}
         />
-        <MoreOnTopic />
+        <MoreOnTopic currentId={post._id} />
         <CTAWithMarquee />
       </div>
     </>

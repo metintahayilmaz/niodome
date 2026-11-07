@@ -1,6 +1,7 @@
 import BlurSection from "@/components/animations/BlurSection";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
-import Link from "next/link";
+import Link from "@/components/common/LocalizedLink";
+import { getTranslations } from "next-intl/server";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import type { ProcessStep } from "@/types/aboutProcess";
 
@@ -12,37 +13,15 @@ const SLOT_ICONS = [
 ];
 
 // Fallback: Sanity boşsa local data
-const LOCAL_STEPS: ProcessStep[] = [
-  {
-    stepNumber: "01",
-    title: "Strategy",
-    description:
-      "Discover how artificial intelligence is transforming artistic processes, pushing boundaries, and inspiring new possibilities in digital design.",
-    durationLabel: "1-2 weeks timeline",
-  },
-  {
-    stepNumber: "02",
-    title: "Design",
-    description:
-      "Discover how artificial intelligence is transforming artistic processes, pushing boundaries, and inspiring new possibilities in digital design.",
-    durationLabel: "~2 weeks timeline",
-  },
-  {
-    stepNumber: "03",
-    title: "Development",
-    description:
-      "Discover how artificial intelligence is transforming artistic processes, pushing boundaries, and inspiring new possibilities in digital design.",
-    durationLabel: "3-4 weeks timeline",
-  },
-];
-
 type Props = {
   steps?: ProcessStep[];
 };
 
-export default function Process({ steps }: Props) {
+export default async function Process({ steps }: Props) {
+  const t = await getTranslations("aboutContent");
+  const home = await getTranslations("homeAbout");
   const resolvedSteps =
-    steps && steps.length > 0 ? steps : LOCAL_STEPS;
+    steps && steps.length > 0 ? steps : home.raw("steps") as ProcessStep[];
 
   return (
     <>
@@ -57,20 +36,15 @@ export default function Process({ steps }: Props) {
                     <div className="mxd-section-manifest__wrap wrap-text-m">
                       <div className="mxd-section-manifest__text manifest-text-m">
                         <Link
-                          data-cursor-text="View Works"
-                          href={`/works-default`}
+                          data-cursor-text={t("viewWorks")}
+                          href="/works"
                         >
                           <CommonAnimatedText
                             as="span"
                             className="manifest manifest-m mxd-split-lines active-cursor-accent"
                             animation="splitLines"
                           >
-                            We are a creative web agency specializing in
-                            innovative design and cutting-edge development.
-                            <span>
-                              We help businesses stand out and thrive in the
-                              modern landscape.
-                            </span>
+                            {home("manifestLead")} <span>{home("manifestSpan")}</span>
                           </CommonAnimatedText>
                         </Link>
                       </div>

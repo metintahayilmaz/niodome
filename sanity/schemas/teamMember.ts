@@ -7,6 +7,13 @@ export const teamMember = defineType({
   type: "document",
   fields: [
     defineField({
+      name: "isDemo",
+      title: "Demo / örnek içerik",
+      description: "Açıksa bu kayıt ziyaretçi sayfalarında gösterilmez.",
+      type: "boolean",
+      initialValue: false,
+    }),
+    defineField({
       name: "name",
       title: "Name",
       type: "string",

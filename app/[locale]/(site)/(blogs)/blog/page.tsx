@@ -84,7 +84,7 @@ export default async function BlogStandardPage() {
   return (
     <>
       <div className="mxd-page-content inner-page-content">
-        <InnerHeadline />
+        <InnerHeadline count={sanityPosts.length} />
         <Blog posts={sanityPosts} />
         <CTAWithMarquee />
       </div>

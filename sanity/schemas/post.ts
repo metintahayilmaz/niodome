@@ -6,7 +6,16 @@ export const post = defineType({
   title: "Post",
   type: "document",
   fields: [
+    defineField({
+      name: "isDemo",
+      title: "Demo / örnek içerik",
+      description: "Açıksa bu kayıt ziyaretçi sayfalarında gösterilmez.",
+      type: "boolean",
+      initialValue: false,
+    }),
     localeString("title", "Title"),
+    localeString("seoTitle", "SEO Title"),
+    localeText("seoDescription", "SEO Description"),
     defineField({
       name: "slug",
       title: "Slug (TR)",

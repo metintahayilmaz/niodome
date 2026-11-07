@@ -1,8 +1,10 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import AutoplayLoopVideo from "@/components/media/AutoplayLoopVideo";
 import PinnedSection from "@/components/animations/PinnedSection";
-import Link from "next/link";
+import Link from "@/components/common/LocalizedLink";
 import CommonLoadAnimation, {
   CommonLoadFade,
 } from "@/components/animations/CommonLoadAnimation";
@@ -11,6 +13,7 @@ import TextScramble from "@/components/animations/TextScramble";
 import SmoothAnchorLink from "@/components/common/SmoothAnchorLink";
 
 export default function InnerHeadline() {
+  const t = useTranslations("innerContent");
   return (
     <CommonLoadAnimation>
       <>
@@ -58,11 +61,11 @@ export default function InnerHeadline() {
                                 <span>
                                   <Link href={`/`}>
                                     <TextScramble className="mxd-scramble">
-                                      Home
+                                      {t("home")}
                                     </TextScramble>
                                   </Link>
                                 </span>
-                                <span className="current-item">Services </span>
+                                <span className="current-item">{t("services")} </span>
                               </div>
                             </div>
                           </CommonLoadFade>
@@ -88,7 +91,7 @@ export default function InnerHeadline() {
                                           targetId="services"
                                         >
                                           <TextScramble className="btn-caption mxd-scramble">
-                                            Services
+                                            {t("services")}
                                           </TextScramble>
                                         </SmoothAnchorLink>
                                       </div>
@@ -99,8 +102,8 @@ export default function InnerHeadline() {
                                         className="medium permanent loading-split"
                                         animation="splitLinesLoad"
                                       >
-                                        New standards in{" "}
-                                        <span>digital excellence</span>
+                                        {t("servicesLead")}{" "}
+                                        <span>{t("servicesSpan")}</span>
                                       </CommonAnimatedText>
                                     </div>
                                   </div>
@@ -112,7 +115,7 @@ export default function InnerHeadline() {
                                           targetId="services"
                                         >
                                           <TextScramble className="btn-caption mxd-scramble">
-                                            Scroll to explore
+                                            {t("scroll")}
                                           </TextScramble>
                                           <i>
                                             <svg

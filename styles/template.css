@@ -47,3 +47,31 @@
 .no-touch .mxd-menu .main-menu__item.main-menu__item--current .main-menu__toggle:hover svg {
   fill: var(--accent);
 }
+
+/* Header contrast follows the page surface; the home hero stays dark in either theme. */
+#header.mxd-header-permanent .mxd-logo,
+#header.mxd-header-permanent .mxd-logo__text,
+#header.mxd-header-permanent .mxd-header__link,
+#header.mxd-header-permanent .mxd-color-switcher {
+  color: var(--t-bright);
+}
+#header.mxd-header-on-dark .mxd-logo,
+#header.mxd-header-on-dark .mxd-logo__text,
+#header.mxd-header-on-dark .mxd-header__link,
+#header.mxd-header-on-dark .mxd-color-switcher {
+  color: #ffffff;
+}
+
+/* Keep each management caption visually attached to its own portrait. */
+.niodome-management-grid__rows { row-gap: 5.6rem; }
+.niodome-management-grid .mxd-team-grid__item { margin-bottom: 0; }
+.niodome-management-grid .mxd-team-grid__inner { gap: 1.2rem; }
+.niodome-management-grid .mxd-team-grid__photo img {
+  width: 100%; height: auto; aspect-ratio: 1; object-fit: cover;
+}
+.niodome-management-grid .mxd-team-grid__media:not(.has-socials):hover .mxd-team-grid__photo img {
+  filter: none; transform: none;
+}
+@media (min-width: 768px) {
+  .niodome-management-grid__rows { row-gap: 6.4rem; }
+}

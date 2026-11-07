@@ -7,6 +7,15 @@ export const siteSettings = defineType({
   type: "document",
   fields: [
     defineField({
+      name: "verifiedStats", title: "Niodome istatistikleri", type: "array",
+      description: "Doğrulanmış sayıları ekleyin. Yalnızca yayın onayı açık kayıtlar görünür.",
+      of: [{ type: "object", fields: [
+        defineField({ name: "value", title: "Değer (ör. 12+)", type: "string", validation: r => r.required() }),
+        localeString("label", "Açıklama"),
+        defineField({ name: "approved", title: "Doğrulandı ve yayına hazır", type: "boolean", initialValue: false }),
+      ], preview: { select: { title: "value", subtitle: "label.tr" } } }],
+    }),
+    defineField({
       name: "logotype",
       title: "Logotype / Brand Name",
       description: "Logo görseli yüklenmediyse footer'da bu metin görünür",

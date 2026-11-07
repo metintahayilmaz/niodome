@@ -1,8 +1,10 @@
 "use client";
 import Link from "next/link";
+import { useLocale } from "next-intl";
+import { localizeHref } from "@/i18n/localizeHref";
+import type { Locale } from "@/i18n/routing";
 import Image from "next/image";
 import TextScramble from "@/components/animations/TextScramble";
-import { digitalDesignerProjectsShowcase } from "@/data/projects";
 import type { ProjectShowcaseItem } from "@/types/project";
 import CommonProjectsClip, {
   CommonProjectsClipBackground,
@@ -16,8 +18,10 @@ type Props = {
 };
 
 export default function ProjectsShowcase({ projects }: Props) {
+  const locale = useLocale() as Locale;
   // Fallback: Sanity boş / erişilemezse local data'ya dön
-  const resolvedProjects = projects && projects.length > 0 ? projects : digitalDesignerProjectsShowcase;
+  const resolvedProjects = projects ?? [];
+  if (!resolvedProjects.length) return null;
   return (
     <>
       <div className="mxd-section">
@@ -53,7 +57,7 @@ export default function ProjectsShowcase({ projects }: Props) {
                   as={Link}
                   index={index}
                   className="mxd-showcase-clip__item active-cursor-permanent"
-                  href={project.href}
+                  href={localizeHref(project.href, locale)}
                   data-cursor-text={project.cursorText}
                 >
                   <p className="mxd-showcase-clip__title permanent">

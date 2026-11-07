@@ -17,6 +17,7 @@ type Web3Response = { success: boolean; message?: string };
  */
 export default function ContactForm() {
   const t = useTranslations("contact");
+  const key = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY?.trim();
   const [status, setStatus] = useState<FormStatus>("idle");
   const [feedback, setFeedback] = useState("");
 
@@ -24,12 +25,9 @@ export default function ContactForm() {
     e.preventDefault();
     if (status === "sending") return;
 
-    const key = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
     if (!key) {
       setStatus("error");
-      setFeedback(
-        "Set NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY in .env.local (get a key at web3forms.com), then restart the dev server.",
-      ); // dev-only error, not user-facing, intentionally not translated
+      setFeedback(t("formUnavailable"));
       return;
     }
 
@@ -43,18 +41,14 @@ export default function ContactForm() {
     try {
       const res = await fetch(WEB3_SUBMIT, { method: "POST", body: formData });
       const data: Web3Response = await res.json();
-      if (data.success) {
+      if (res.ok && data.success) {
         setStatus("success");
         setFeedback(t("successMessage"));
         form.reset();
         return;
       }
       setStatus("error");
-      setFeedback(
-        data.message && data.message.length > 0
-          ? data.message
-          : t("errorGeneric"),
-      );
+      setFeedback(t("errorGeneric"));
     } catch {
       setStatus("error");
       setFeedback(t("errorNetwork"));
@@ -66,6 +60,12 @@ export default function ContactForm() {
   return (
     <div className="mxd-block contact">
       <div className="mxd-form-container">
+        {!key && (
+          <p className="reply__text" role="status">
+            {t("formUnavailable")}{" "}
+            <a href="mailto:hello@niodome.com">hello@niodome.com</a>
+          </p>
+        )}
         {showSuccessReply && (
           <div
             className="form__reply centered text-center is-visible"
@@ -98,8 +98,9 @@ export default function ContactForm() {
                     name="name"
                     autoComplete="name"
                     placeholder={t("namePlaceholder")}
+                    aria-label={t("namePlaceholder").replace(/\*$/, "")}
                     required
-                    disabled={status === "sending" || showSuccessReply}
+                    disabled={!key || status === "sending" || showSuccessReply}
                   />
                 </div>
               </CommonLoadItem>
@@ -110,7 +111,8 @@ export default function ContactForm() {
                     name="company"
                     autoComplete="organization"
                     placeholder={t("companyPlaceholder")}
-                    disabled={status === "sending" || showSuccessReply}
+                    aria-label={t("companyPlaceholder").replace(/\*$/, "")}
+                    disabled={!key || status === "sending" || showSuccessReply}
                   />
                 </div>
               </CommonLoadItem>
@@ -121,8 +123,9 @@ export default function ContactForm() {
                     name="email"
                     autoComplete="email"
                     placeholder={t("emailPlaceholder")}
+                    aria-label={t("emailPlaceholder").replace(/\*$/, "")}
                     required
-                    disabled={status === "sending" || showSuccessReply}
+                    disabled={!key || status === "sending" || showSuccessReply}
                   />
                 </div>
               </CommonLoadItem>
@@ -133,7 +136,8 @@ export default function ContactForm() {
                     name="phone"
                     autoComplete="tel"
                     placeholder={t("phonePlaceholder")}
-                    disabled={status === "sending" || showSuccessReply}
+                    aria-label={t("phonePlaceholder").replace(/\*$/, "")}
+                    disabled={!key || status === "sending" || showSuccessReply}
                   />
                 </div>
               </CommonLoadItem>
@@ -142,9 +146,10 @@ export default function ContactForm() {
                   <textarea
                     name="message"
                     placeholder={t("messagePlaceholder")}
+                    aria-label={t("messagePlaceholder").replace(/\*$/, "")}
                     required
                     defaultValue={""}
-                    disabled={status === "sending" || showSuccessReply}
+                    disabled={!key || status === "sending" || showSuccessReply}
                   />
                 </div>
               </CommonLoadItem>
@@ -153,7 +158,7 @@ export default function ContactForm() {
                   <button
                     className="btn btn-default-icon btn-default-accent slide-right"
                     type="submit"
-                    disabled={status === "sending" || showSuccessReply}
+                    disabled={!key || status === "sending" || showSuccessReply}
                   >
                     {status === "sending" ? (
                       <span className="btn-caption">{t("sending")}</span>
@@ -179,7 +184,11 @@ export default function ContactForm() {
           </div>
         </form>
         {status === "error" && feedback ? (
-          <p className="reply__text" role="alert" style={{ marginTop: "2.4rem" }}>
+          <p
+            className="reply__text"
+            role="alert"
+            style={{ marginTop: "2.4rem" }}
+          >
             {feedback}
           </p>
         ) : null}

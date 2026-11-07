@@ -145,7 +145,7 @@ export default async function Footer2({ name, settings }: Props) {
                               <li>
                                 <CommonScrollAnimated
                                   className="anim-uni-slide-down"
-                                  href={s.emailHref}
+                                  href={`mailto:${s.email}`}
                                   as="a"
                                   animation="slideDownLine"
                                 >
@@ -181,19 +181,19 @@ export default async function Footer2({ name, settings }: Props) {
                               <li>
                                 <CommonScrollAnimatedLink
                                   className="anim-uni-slide-down"
-                                  href="/pricing"
+                                  href="/contact"
                                   animation="slideDownLine"
                                 >
-                                  <span>{t("linkPricing")}</span>
+                                  <span>{t("requestQuote")}</span>
                                 </CommonScrollAnimatedLink>
                               </li>
                               <li>
                                 <CommonScrollAnimatedLink
                                   className="anim-uni-slide-down"
-                                  href="/faq"
+                                  href="/services"
                                   animation="slideDownLine"
                                 >
-                                  <span>{t("linkFaq")}</span>
+                                  <span>{t("services")}</span>
                                 </CommonScrollAnimatedLink>
                               </li>
                             </ul>

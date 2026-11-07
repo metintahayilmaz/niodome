@@ -1,7 +1,9 @@
 "use client";
 
 import BlurSection from "@/components/animations/BlurSection";
-import Link from "next/link";
+import Link from "@/components/common/LocalizedLink";
+import { useTranslations } from "next-intl";
+import { siteSettings } from "@/data/siteSettings";
 import Image from "next/image";
 import CommonLoadAnimation, {
   CommonLoadFade,
@@ -16,6 +18,7 @@ import TextScramble from "@/components/animations/TextScramble";
 import SmoothAnchorLink from "@/components/common/SmoothAnchorLink";
 
 export default function InnerHeadline() {
+  const t = useTranslations("aboutContent");
   const bannersHoverRef = useRef<HTMLDivElement>(null);
   const trigger1Ref = useRef<HTMLAnchorElement>(null);
   const trigger2Ref = useRef<HTMLAnchorElement>(null);
@@ -84,7 +87,7 @@ export default function InnerHeadline() {
                             targetId="process"
                           >
                             <TextScramble className="btn-caption mxd-scramble">
-                              Studio
+                              {t("studio")}
                             </TextScramble>
                           </SmoothAnchorLink>
                         </div>
@@ -95,21 +98,21 @@ export default function InnerHeadline() {
                           className="inner-headline__title banners-hover centered loading-item"
                         >
                           <h1 className="small">
-                            Creating engaging{" "}
+                            {t("lead")}{" "}
                             <Link
                               ref={trigger1Ref}
                               className="inner-headline__trigger banners-trigger-1"
-                              href={`/works-default`}
+                              href="/works"
                             >
-                              user experiences
+                              {t("experiences")}
                             </Link>{" "}
-                            and{" "}
+                            {t("and")}{" "}
                             <Link
                               ref={trigger2Ref}
                               className="inner-headline__trigger banners-trigger-2"
-                              href={`/works-default`}
+                              href="/works"
                             >
-                              design solutions
+                              {t("solutions")}
                             </Link>
                           </h1>
                         </div>
@@ -120,7 +123,7 @@ export default function InnerHeadline() {
                         className="headline-banner-01 landscape image-01"
                       >
                         <Image
-                          alt="Azurio Template Sample Image"
+                          alt=""
                           src="/img/illustrations/about-us-01.webp"
                           width={640}
                           height={480}
@@ -131,7 +134,7 @@ export default function InnerHeadline() {
                         className="headline-banner-01 portrait image-02"
                       >
                         <Image
-                          alt="Azurio Template Sample Image"
+                          alt=""
                           src="/img/illustrations/about-us-02.webp"
                           width={560}
                           height={700}
@@ -142,7 +145,7 @@ export default function InnerHeadline() {
                         className="headline-banner-01 landscape image-03"
                       >
                         <Image
-                          alt="Azurio Template Sample Image"
+                          alt=""
                           src="/img/illustrations/about-us-03.webp"
                           width={640}
                           height={480}
@@ -153,7 +156,7 @@ export default function InnerHeadline() {
                         className="headline-banner-01 portrait image-04"
                       >
                         <Image
-                          alt="Azurio Template Sample Image"
+                          alt=""
                           src="/img/illustrations/about-us-04.webp"
                           width={560}
                           height={700}
@@ -164,7 +167,7 @@ export default function InnerHeadline() {
                         className="headline-banner-02 portrait image-05"
                       >
                         <Image
-                          alt="Azurio Template Sample Image"
+                          alt=""
                           src="/img/illustrations/about-us-05.webp"
                           width={560}
                           height={700}
@@ -175,7 +178,7 @@ export default function InnerHeadline() {
                         className="headline-banner-02 landscape image-06"
                       >
                         <Image
-                          alt="Azurio Template Sample Image"
+                          alt=""
                           src="/img/illustrations/about-us-06.webp"
                           width={640}
                           height={480}
@@ -186,7 +189,7 @@ export default function InnerHeadline() {
                         className="headline-banner-02 portrait image-07"
                       >
                         <Image
-                          alt="Azurio Template Sample Image"
+                          alt=""
                           src="/img/illustrations/about-us-07.webp"
                           width={560}
                           height={700}
@@ -197,7 +200,7 @@ export default function InnerHeadline() {
                         className="headline-banner-02 landscape image-08"
                       >
                         <Image
-                          alt="Azurio Template Sample Image"
+                          alt=""
                           src="/img/illustrations/about-us-08.webp"
                           width={640}
                           height={480}
@@ -212,71 +215,15 @@ export default function InnerHeadline() {
                     <div className="headline-dataline">
                       <div className="headline-dataline__socials">
                         <ul className="mxd-socials-line centered-mobile">
-                          <CommonLoadItem index={2}>
-                            <li className="loading-item">
-                              <a
-                                className="mxd-socials-line__link"
-                                href="https://dribbble.com/"
-                                target="_blank"
-                              >
-                                <TextScramble className="mxd-scramble">
-                                  Dribbble
-                                </TextScramble>
-                              </a>
-                            </li>
-                          </CommonLoadItem>
-                          <CommonLoadItem index={3}>
-                            <li className="loading-item">
-                              <a
-                                className="mxd-socials-line__link"
-                                href="https://www.behance.net/"
-                                target="_blank"
-                              >
-                                <TextScramble className="mxd-scramble">
-                                  Behance
-                                </TextScramble>
-                              </a>
-                            </li>
-                          </CommonLoadItem>
-                          <CommonLoadItem index={4}>
-                            <li className="loading-item">
-                              <a
-                                className="mxd-socials-line__link"
-                                href="https://github.com/"
-                                target="_blank"
-                              >
-                                <TextScramble className="mxd-scramble">
-                                  Github
-                                </TextScramble>
-                              </a>
-                            </li>
-                          </CommonLoadItem>
-                          <CommonLoadItem index={5}>
-                            <li className="loading-item">
-                              <a
-                                className="mxd-socials-line__link"
-                                href="https://codepen.io/"
-                                target="_blank"
-                              >
-                                <TextScramble className="mxd-scramble">
-                                  Codepen
-                                </TextScramble>
-                              </a>
-                            </li>
-                          </CommonLoadItem>
-                          <CommonLoadItem index={6}>
-                            <li className="loading-item">
-                              <a
-                                className="mxd-socials-line__link"
-                                href="https://www.figma.com/community"
-                                target="_blank"
-                              >
-                                <TextScramble className="mxd-scramble">
-                                  Figma Community
-                                </TextScramble>
-                              </a>
-                            </li>
-                          </CommonLoadItem>
+                          {siteSettings.socials.map((social, index) => (
+                            <CommonLoadItem index={index + 2} key={social.href}>
+                              <li className="loading-item">
+                                <a className="mxd-socials-line__link" href={social.href} target="_blank" rel="noopener noreferrer">
+                                  <TextScramble className="mxd-scramble">{social.label}</TextScramble>
+                                </a>
+                              </li>
+                            </CommonLoadItem>
+                          ))}
                         </ul>
                       </div>
                       <CommonLoadItem index={7}>
@@ -286,7 +233,7 @@ export default function InnerHeadline() {
                             targetId="process"
                           >
                             <TextScramble className="btn-caption mxd-scramble">
-                              Scroll to explore
+                              {t("scroll")}
                             </TextScramble>
                             <i>
                               <svg
@@ -314,11 +261,11 @@ export default function InnerHeadline() {
                               <span>
                                 <Link href={`/`}>
                                   <TextScramble className="mxd-scramble">
-                                    Home
+                                    {t("home")}
                                   </TextScramble>
                                 </Link>
                               </span>
-                              <span className="current-item">About Us </span>
+                              <span className="current-item">{t("about")} </span>
                             </div>
                           </div>
                         </CommonLoadFade>

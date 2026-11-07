@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import BlurSection from "@/components/animations/BlurSection";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
@@ -9,31 +10,14 @@ type Props = {
   techStack?: NamedItem[];
 };
 
-const LOCAL_TECH_STACK: NamedItem[] = [
-  {
-    name: "HTML5 & CSS3",
-    description:
-      "At the core of the project lies a semantic html structure paired with modern css techniques. Flexible layouts, responsive behavior and clean styles ensure consistency across devices.",
-  },
-  {
-    name: "Node.js & NPM",
-    description:
-      "A simple build environment was used to manage dependencies and streamline development. Npm packages support tooling, workflow automation and easier project maintenance.",
-  },
-  {
-    name: "GSAP",
-    description:
-      "Animations are powered by gsap to create smooth, precise motion throughout the interface. Scroll-based effects and micro-interactions enhance usability.",
-  },
-];
-
-export default function SplitList3({
+export default async function SplitList3({
   solutionLead = "Azurio was built using modern web technologies with a focus on flexibility.",
   solutionSpan = "Clean React Nextjs structure, scalable CSS architecture and GSAP-powered animations create smooth interactions without sacrificing speed.",
   techStack,
 }: Props) {
+  const t = await getTranslations("projectContent");
   const resolvedStack =
-    techStack && techStack.length > 0 ? techStack : LOCAL_TECH_STACK;
+    techStack ?? [];
 
   return (
     <>
@@ -48,7 +32,7 @@ export default function SplitList3({
                     <div className="mxd-block-split__inner">
                       <div className="mxd-block-split__subtitle pre-manifest">
                         <CommonScrollAnimated className="anim-uni-in-up" as="p" animation="inUp">
-                          <span>/ Solution</span>
+                          <span>/ {t("solution")}</span>
                         </CommonScrollAnimated>
                       </div>
                       <div className="mxd-block-split__manifest">
@@ -69,7 +53,7 @@ export default function SplitList3({
                     <div className="mxd-block-split__inner">
                       <div className="mxd-block-split__subtitle pre-grid">
                         <CommonScrollAnimated className="anim-uni-in-up" as="p" animation="inUp">
-                          <span>/ Tech stack</span>
+                          <span>/ {t("techStack")}</span>
                         </CommonScrollAnimated>
                       </div>
                       <div className="mxd-block-split__data">
