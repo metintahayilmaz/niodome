@@ -2,7 +2,8 @@
 
 import PinnedSection from "@/components/animations/PinnedSection";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
-import Link from "next/link";
+import Link from "@/components/common/LocalizedLink";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import {
   CommonScrollAnimated,
@@ -32,53 +33,14 @@ const LOCAL_SLOT_IMAGES = [
   { src: "/img/blog/preview/grid-x3/pr-03.webp", width: 1423, height: 800 },
 ];
 
-// Fallback: Sanity boşsa local data (3 post, 3 kolon)
-const LOCAL_POSTS: PostListItem[] = [
-  {
-    _id: "local-srv-1",
-    title: "Frontend innovations and user journeys",
-    slug: "",
-    categories: ["UI/UX", "Development", "Insights"],
-    readTime: "5 min",
-    author: "Studio",
-    date: "02 February, 2026",
-    excerpt: "",
-    cursorImageSrc: "",
-    href: "/blog-article",
-  },
-  {
-    _id: "local-srv-2",
-    title: "Branding in creating digital experiences",
-    slug: "",
-    categories: ["Concept", "Editorial", "Event"],
-    readTime: "4 min",
-    author: "Studio",
-    date: "28 January, 2026",
-    excerpt: "",
-    cursorImageSrc: "",
-    href: "/blog-article",
-  },
-  {
-    _id: "local-srv-3",
-    title: "Designing for the future of interactive digital spaces",
-    slug: "",
-    categories: ["Midjourney", "News", "Editorial"],
-    readTime: "6 min",
-    author: "Studio",
-    date: "15 January, 2026",
-    excerpt: "",
-    cursorImageSrc: "",
-    href: "/blog-article",
-  },
-];
-
 type Props = {
   posts?: PostListItem[];
 };
 
 export default function BlogPreview({ posts }: Props) {
-  const resolvedPosts =
-    posts && posts.length > 0 ? posts.slice(0, 3) : LOCAL_POSTS;
+  const t = useTranslations("projectContent");
+  const resolvedPosts = posts?.slice(0, 3) ?? [];
+  if (!resolvedPosts.length) return null;
 
   return (
     <>
@@ -100,9 +62,9 @@ export default function BlogPreview({ posts }: Props) {
                           className="reveal-type"
                           animation="revealType"
                         >
-                          Our featured
+                          {t("featuredLead")}
                           <br />
-                          insights
+                          {t("featuredSpan")}
                         </CommonAnimatedText>
                       </div>
                     </div>
@@ -118,7 +80,7 @@ export default function BlogPreview({ posts }: Props) {
                             href={`/blog-standard`}
                           >
                             <TextScramble className="btn-caption mxd-scramble">
-                              News Overview
+                              {t("allArticles")}
                             </TextScramble>
                           </Link>
                         </CommonScrollAnimated>
@@ -131,7 +93,7 @@ export default function BlogPreview({ posts }: Props) {
                             Inspiring ideas, creative insights, and the latest
                             in design and tech.
                             <span>
-                              Fueling innovation for your digital journey.
+                              {t("blogIntro")}
                             </span>
                           </CommonAnimatedText>
                         </div>

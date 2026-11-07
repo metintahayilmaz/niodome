@@ -177,5 +177,25 @@
     "team": "Yönetim Ekibimiz",
     "workTogether": "Birlikte çalışalım",
     "teamIntro": "Niodome’un strateji, müşteri ilişkileri, tasarım ve teknoloji çalışmalarını yöneten kadro."
+  },
+  "projectContent": {
+    "works": "Çalışmalar",
+    "scroll": "Keşfetmek için kaydırın",
+    "overview": "Genel Bakış",
+    "details": "Proje Bilgileri",
+    "challenge": "İhtiyaç",
+    "providedServices": "Sunduğumuz Hizmetler",
+    "solution": "Çözüm",
+    "techStack": "Kullanılan Teknolojiler",
+    "seeLive": "Siteyi ziyaret edin",
+    "projectPage": "Proje bağlantısı:",
+    "name": "Proje:",
+    "client": "Müşteri:",
+    "industries": "Sektör:",
+    "date": "Tarih:",
+    "featuredLead": "Öne çıkan",
+    "featuredSpan": "yazılarımız",
+    "allArticles": "Tüm yazılar",
+    "blogIntro": "Tasarım, teknoloji ve marka dünyasından içerikler."
   }
 }

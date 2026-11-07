@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import BlurSection from "@/components/animations/BlurSection";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
@@ -9,31 +10,14 @@ type Props = {
   services?: NamedItem[];
 };
 
-const LOCAL_SERVICES: NamedItem[] = [
-  {
-    name: "Art direction",
-    description:
-      "Visual decisions were guided by a strong creative framework built around clarity and balance. Layout, typography, and motion work together to create a consistent and engaging experience.",
-  },
-  {
-    name: "Branding",
-    description:
-      "The project relies on a minimal yet expressive identity that highlights Azurio's character. Carefully selected colors, type, and graphic accents reinforce recognition and visual cohesion.",
-  },
-  {
-    name: "Web development",
-    description:
-      "Implementation focused on modern front-end standards and performance. Clear structure, smooth interactions and clean code provide flexibility and long-term maintainability.",
-  },
-];
-
-export default function SplitList2({
+export default async function SplitList2({
   challengeLead = "The challenge was to create a template that feels bold and contemporary without overwhelming content or performance.",
   challengeSpan = "It needed to serve a wide range of creatives while remaining flexible and easy to customize for different project types and personal styles.",
   services,
 }: Props) {
+  const t = await getTranslations("projectContent");
   const resolvedServices =
-    services && services.length > 0 ? services : LOCAL_SERVICES;
+    services ?? [];
 
   return (
     <>
@@ -48,7 +32,7 @@ export default function SplitList2({
                     <div className="mxd-block-split__inner">
                       <div className="mxd-block-split__subtitle pre-manifest">
                         <CommonScrollAnimated className="anim-uni-in-up" as="p" animation="inUp">
-                          <span>/ Challenge</span>
+                          <span>/ {t("challenge")}</span>
                         </CommonScrollAnimated>
                       </div>
                       <div className="mxd-block-split__manifest">
@@ -69,7 +53,7 @@ export default function SplitList2({
                     <div className="mxd-block-split__inner">
                       <div className="mxd-block-split__subtitle pre-grid">
                         <CommonScrollAnimated className="anim-uni-in-up" as="p" animation="inUp">
-                          <span>/ Provided Services</span>
+                          <span>/ {t("providedServices")}</span>
                         </CommonScrollAnimated>
                       </div>
                       <div className="mxd-block-split__data">

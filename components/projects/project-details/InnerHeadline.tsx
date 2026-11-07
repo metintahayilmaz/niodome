@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import BlurSection from "@/components/animations/BlurSection";
 import Link from "@/components/common/LocalizedLink";
 import CommonLoadAnimation, {
@@ -16,12 +17,11 @@ type Props = {
   tagsColB?: string[];
 };
 
-const LOCAL_TAGS_COL_A = ["Website", "UI/UX Design", "Development", "Promotions"];
-const LOCAL_TAGS_COL_B = ["Branding", "Art Direction", "Marketing"];
 
 export default function InnerHeadline({ title, subtitle, tagsColA, tagsColB }: Props) {
-  const colA = tagsColA && tagsColA.length > 0 ? tagsColA : LOCAL_TAGS_COL_A;
-  const colB = tagsColB && tagsColB.length > 0 ? tagsColB : LOCAL_TAGS_COL_B;
+  const t = useTranslations("projectContent");
+  const colA = tagsColA ?? [];
+  const colB = tagsColB ?? [];
 
   return (
     <CommonLoadAnimation>
@@ -39,7 +39,7 @@ export default function InnerHeadline({ title, subtitle, tagsColA, tagsColB }: P
                             <span>
                               <Link href={`/works-default`}>
                                 <TextScramble className="mxd-scramble">
-                                  Works
+                                  {t("works")}
                                 </TextScramble>
                               </Link>
                             </span>
@@ -102,7 +102,7 @@ export default function InnerHeadline({ title, subtitle, tagsColA, tagsColB }: P
                                     targetId="overview"
                                   >
                                     <TextScramble className="btn-caption mxd-scramble">
-                                      Scroll to explore
+                                      {t("scroll")}
                                     </TextScramble>
                                     <i>
                                       <svg

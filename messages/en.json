@@ -177,5 +177,25 @@
     "team": "Our Management Team",
     "workTogether": "Let’s work together",
     "teamIntro": "The people leading Niodome’s strategy, client relationships, design and technology."
+  },
+  "projectContent": {
+    "works": "Works",
+    "scroll": "Scroll to explore",
+    "overview": "Overview",
+    "details": "Project details",
+    "challenge": "Challenge",
+    "providedServices": "Provided services",
+    "solution": "Solution",
+    "techStack": "Tech stack",
+    "seeLive": "See it live",
+    "projectPage": "Project page:",
+    "name": "Name:",
+    "client": "Client:",
+    "industries": "Industries:",
+    "date": "Date:",
+    "featuredLead": "Our featured",
+    "featuredSpan": "insights",
+    "allArticles": "All articles",
+    "blogIntro": "Insights on design, technology and branding."
   }
 }
