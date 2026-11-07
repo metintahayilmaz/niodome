@@ -156,6 +156,8 @@ export const postBySlugQuery = groq`
     "slug": coalesce(slug_en.current, slug.current),
     "categories": coalesce(select(count(categories[$locale][defined(@) && @ != ""]) > 0 => categories[$locale]), categories.tr),
     "readTime": coalesce(select(length(readTime[$locale]) > 0 => readTime[$locale]), readTime.tr),
+    "seoTitle": coalesce(select(length(seoTitle[$locale]) > 0 => seoTitle[$locale]), seoTitle.tr),
+    "seoDescription": coalesce(select(length(seoDescription[$locale]) > 0 => seoDescription[$locale]), seoDescription.tr),
     author,
     date,
     "excerpt": coalesce(select(length(excerpt[$locale]) > 0 => excerpt[$locale]), excerpt.tr),

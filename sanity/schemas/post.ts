@@ -14,6 +14,8 @@ export const post = defineType({
       initialValue: false,
     }),
     localeString("title", "Title"),
+    localeString("seoTitle", "SEO Title"),
+    localeText("seoDescription", "SEO Description"),
     defineField({
       name: "slug",
       title: "Slug (TR)",
