@@ -32,6 +32,7 @@ type HeroSettings = {
 };
 
 type Props = {
+  scrollTargetId?: string;
   /**
    * Sanity'den çekilen sosyal linkler.
    * Verilmezse local data/siteSettings.ts'e fallback yapılır.
@@ -74,7 +75,7 @@ const galleryImageStyle = {
   objectFit: "contain" as const,
 };
 
-export default function Hero({ socials, heroSettings }: Props) {
+export default function Hero({ socials, heroSettings, scrollTargetId = "about" }: Props) {
   const resolvedSocials = socials && socials.length > 0 ? socials : siteSettings.socials;
   const local = heroDigitalAgencyData;
   const sanityGallery = heroSettings?.galleryImages ?? [];
@@ -187,7 +188,7 @@ export default function Hero({ socials, heroSettings }: Props) {
                   <div className="mxd-hero-02__controls mxd-grid-item loading-fade">
                     <SmoothAnchorLink
                       className="btn btn-line-icon btn-line-permanent slide-down"
-                      targetId="about"
+                      targetId={scrollTargetId}
                     >
                       <TextScramble className="btn-caption mxd-scramble">
                         {scrollLabel}

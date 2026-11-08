@@ -1,3 +1,5 @@
+import { heroDigitalAgencyData } from "@/data/heroDigitalAgency";
+import ApprovedNarrative from "@/components/common/ApprovedNarrative";
 import Footer3 from "@/components/footers/Footer3";
 import type { Metadata } from "next";
 import { organizationSchema, websiteSchema } from "@/lib/jsonLd";
@@ -365,15 +367,22 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
       />
       <>
-        <Hero socials={sanitySettings?.socials} heroSettings={sanityHero} />
-        <AboutProcess steps={sanitySteps} />
-        <ProjectsShowcase projects={sanityProjects} />
-        <ServicesList items={sanityItems} />
+        <Hero scrollTargetId={locale === "tr" ? "selected-work" : "about"} socials={sanitySettings?.socials} heroSettings={locale === "tr" ? {
+          ...sanityHero,
+          coverImage: sanityHero?.coverImage ?? heroDigitalAgencyData.coverImage,
+          galleryImages: sanityHero?.galleryImages ?? [],
+          headline: "Markanızın bir sonraki hamlesi.",
+          subline: "Bir markayı yeniden düşünmek. Yeni bir ürünün yerini bulmak. İnsanların katılacağı bir fikir yaratmak.",
+          scrollLabel: "İşlerimizi keşfedin",
+        } : sanityHero} />
+        {locale === "tr" ? <ApprovedNarrative part="home" /> : <AboutProcess steps={sanitySteps} />}
+        <div id="selected-work"><ProjectsShowcase projects={sanityProjects} /></div>
+        {locale === "tr" ? <ApprovedNarrative part="services" /> : <ServicesList items={sanityItems} />}
         <ParallaxDividerVideo />
         <TestimonialsSticky testimonials={sanityTestimonials} />
         <ParallaxDividerImage />
         <BlogPreview posts={sanityPosts} />
-        <Divider />
+        {locale === "tr" ? <ApprovedNarrative part="contact" /> : <Divider />}
       </>
       <Footer3 settings={sanitySettings} />
     </>

@@ -75,11 +75,11 @@
   "meta": {
     "home": {
       "title": "Niodome — Strateji, Tasarım ve Teknoloji",
-      "description": "Markanızı büyütecek dijital deneyimler tasarlıyoruz. Grafik tasarım, web geliştirme ve marka kimliği."
+      "description": "Niodome, strateji, yaratıcılık, tasarım ve teknolojiyle markaların bir sonraki hamlesini geliştiren bağımsız bir ajans."
     },
     "aboutUs": {
       "title": "Hakkımızda",
-      "description": "Niodome ekibi, markaların dijital dünyada güçlü bir kimlik kazanması için strateji, tasarım ve teknoloji alanlarında birlikte çalışır."
+      "description": "Niodome, markaların önündeki fırsatları keşfetmek ve hayata geçirmek için strateji, yaratıcı düşünce, tasarım ve teknolojiyi aynı masada buluşturur."
     },
     "services": {
       "title": "Hizmetler",
@@ -159,10 +159,10 @@
     "servicesSpan": "yeni standartlar"
   },
   "aboutContent": {
-    "lead": "Markanız için",
-    "experiences": "kullanıcı deneyimleri",
-    "and": "ve",
-    "solutions": "tasarım çözümleri üretiyoruz",
+    "lead": "Bir markanın",
+    "experiences": "yapabileceklerini",
+    "and": "genişletmek",
+    "solutions": "için.",
     "studio": "Stüdyo",
     "home": "Anasayfa",
     "about": "Hakkımızda",

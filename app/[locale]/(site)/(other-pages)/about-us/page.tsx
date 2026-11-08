@@ -1,3 +1,4 @@
+import ApprovedNarrative from "@/components/common/ApprovedNarrative";
 import { Metadata } from "next";
 import InnerHeadline from "@/components/other-pages/about-us/InnerHeadline";
 import ParallaxDividerImage from "@/components/other-pages/about-us/ParallaxDividerImage";
@@ -145,12 +146,12 @@ export default async function AboutUsPage() {
       <>
         <InnerHeadline />
         <ParallaxDividerImage />
-        <Process steps={sanitySteps} />
+        {locale === "tr" ? <ApprovedNarrative part="aboutStart" /> : <Process steps={sanitySteps} />}
         <DoubleMarqueeDivider />
         {/* <Awards /> — ileride award şeması eklenince açılacak */}
         <TeamGrid members={sanityMembers} />
         <ParallaxDividerImage2 />
-        <Approach />
+        {locale === "tr" ? <ApprovedNarrative part="aboutEnd" /> : <Approach />}
         <BlogPreview posts={sanityPosts} />
         <CTAWithMarquee />
       </>
