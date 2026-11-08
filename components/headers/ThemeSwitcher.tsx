@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { safeLocalSet } from "@/lib/template/safeStorage";
 import TextScramble from "../animations/TextScramble";
 
@@ -20,6 +21,7 @@ export default function ThemeSwitcher({
   initialTheme,
   isPermanent = false,
 }: ThemeSwitcherProps) {
+  const t = useTranslations("header");
   const [theme, setTheme] = useState<Theme>(initialTheme);
 
   useEffect(() => {
@@ -43,13 +45,13 @@ export default function ThemeSwitcher({
       className={`btn mxd-color-switcher ${isPermanent ? "permanent" : ""}`}
       type="button"
       role="switch"
-      aria-label="light/dark mode"
+      aria-label={t("themeMode")}
       aria-checked={isDark}
       onClick={toggle}
     >
       {isDark ? (
         <>
-          <TextScramble className="switcher-text">Day</TextScramble>
+          <TextScramble className="switcher-text">{t("day")}</TextScramble>
           <span className="switcher-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +66,7 @@ export default function ThemeSwitcher({
         </>
       ) : (
         <>
-          <TextScramble className="switcher-text">Night</TextScramble>
+          <TextScramble className="switcher-text">{t("night")}</TextScramble>
           <span className="switcher-icon night">
             <svg
               xmlns="http://www.w3.org/2000/svg"

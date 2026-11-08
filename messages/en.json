@@ -9,7 +9,12 @@
     "captionLine2": "under one roof"
   },
   "header": {
-    "cta": "Say Hello"
+    "cta": "Say Hello",
+    "languageSelection": "Language selection",
+    "themeMode": "Light/dark mode",
+    "day": "Day",
+    "night": "Night",
+    "menu": "Menu"
   },
   "footer": {
     "discover": "/ Discover",
@@ -26,7 +31,9 @@
     "linkPricing": "Pricing",
     "linkFaq": "FAQ",
     "requestQuote": "Request a quote",
-    "services": "Services"
+    "services": "Services",
+    "backToTop": "Back to Top",
+    "templateCredit": "Template design:"
   },
   "menu": {
     "aboutMe": "About me",
@@ -197,5 +204,10 @@
     "featuredSpan": "insights",
     "allArticles": "All articles",
     "blogIntro": "Insights on design, technology and branding."
+  },
+  "blogPreview": {
+    "title": "Featured news",
+    "overview": "News overview",
+    "readPost": "Read post"
   }
 }

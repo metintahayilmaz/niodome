@@ -75,3 +75,40 @@
 @media (min-width: 768px) {
   .niodome-management-grid__rows { row-gap: 6.4rem; }
 }
+
+/* A visible language choice remains available in the compact mobile header. */
+.niodome-language-switcher {
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+  color: var(--t-bright);
+  font: 600 1.4rem/1 var(--_font-accent);
+}
+.niodome-language-switcher a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.2rem;
+  min-height: 4.4rem;
+  color: inherit;
+  opacity: .65;
+  border-bottom: 2px solid transparent;
+}
+.niodome-language-switcher a[aria-current="true"] {
+  opacity: 1;
+  border-bottom-color: currentColor;
+}
+.niodome-language-switcher a:hover,
+.niodome-language-switcher a:focus-visible { opacity: 1; }
+.niodome-language-switcher a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+#header.mxd-header-on-dark .niodome-language-switcher { color: #fff; }
+@media (max-width: 479px) {
+  #header .mxd-header__link { display: none; }
+}
+@media (min-width: 768px) {
+  .niodome-language-switcher { font-size: 1.6rem; }
+  .niodome-language-switcher a { min-width: 4.4rem; }
+}

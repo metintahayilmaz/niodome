@@ -357,7 +357,7 @@ export default async function Footer2({ name, settings }: Props) {
                         >
                           <p className="footer-data">
                             <span>
-                              React Nextjs Template by&nbsp;
+                              {t("templateCredit")}&nbsp;
                               <a
                                 href="https://themeforest.net/user/ib-themes"
                                 target="_blank"

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import LanguageSwitcher from "@/components/headers/LanguageSwitcher";
 import ThemeSwitcher from "@/components/headers/ThemeSwitcher";
 import TextScramble from "@/components/animations/TextScramble";
 import { useLenis } from "@/components/common/LenisContext";
@@ -96,6 +97,7 @@ export default function Header1({ initialTheme }: Header1Props) {
                 </i>
               </Link>
             )}
+            <LanguageSwitcher />
             <ThemeSwitcher
               isPermanent={isPermanent}
               initialTheme={initialTheme}

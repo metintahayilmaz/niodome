@@ -2,8 +2,9 @@
 
 import PinnedSection from "@/components/animations/PinnedSection";
 import Link from "next/link";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { localizeHref } from "@/i18n/localizeHref";
+import { formatPostDate } from "@/lib/formatPostDate";
 import type { Locale } from "@/i18n/routing";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
@@ -16,36 +17,14 @@ import type { BlogPreviewItem } from "@/types/blogPreview";
  * Sanity date tipi ISO string döndürür; local data string metni döndürür.
  * Zaten okunaklı format ise (sayı ile başlamıyor) olduğu gibi döndürür.
  */
-function formatDate(raw: string): string {
-  // YYYY-MM-DD formatı mı? Sadece o zaman parse et.
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw;
-  const [year, month, day] = raw.split("-").map(Number);
-  // UTC'den kaçınmak için yerel Date yerine doğrudan değerleri kullan
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  return `${String(day).padStart(2, "0")} ${months[month - 1]}, ${year}`;
-}
+
 
 // Bölüm-seviyesi sabitler data dosyasından gelmeye devam eder
 const {
-  sectionTitle,
-  overviewLabel,
   overviewHref,
 } = blogPreviewDigitalAgencyData;
 
-const [titleLine1, titleLine2] = sectionTitle.split("\n");
+
 
 type Props = {
   /** Sanity'den gelen post listesi.
@@ -55,6 +34,7 @@ type Props = {
 
 export default function BlogPreview({ posts }: Props) {
   const locale = useLocale() as Locale;
+  const t = useTranslations("blogPreview");
   const resolvedItems = posts ?? [];
   if (!resolvedItems.length) return null;
   return (
@@ -77,9 +57,7 @@ export default function BlogPreview({ posts }: Props) {
                           className="reveal-type"
                           animation="revealType"
                         >
-                          {titleLine1}
-                          <br />
-                          {titleLine2}
+                          {t("title")}
                         </CommonAnimatedText>
                       </div>
                     </div>
@@ -95,7 +73,7 @@ export default function BlogPreview({ posts }: Props) {
                             href={localizeHref(overviewHref, locale)}
                           >
                             <TextScramble className="btn-caption mxd-scramble">
-                              {overviewLabel}
+                              {t("overview")}
                             </TextScramble>
                           </Link>
                         </CommonScrollAnimated>
@@ -114,7 +92,7 @@ export default function BlogPreview({ posts }: Props) {
                     key={post._id ?? post.slug ?? `post-${index}`}
                     className="mxd-blog-list__item active-cursor-image active-cursor-permanent"
                     data-cursor-image={post.cursorImageSrc}
-                    data-cursor-text="Read Post"
+                    data-cursor-text={t("readPost")}
                     href={localizeHref(post.href, locale)}
                   >
                     <div className="mxd-blog-list__divider top" />
@@ -138,7 +116,7 @@ export default function BlogPreview({ posts }: Props) {
                                 {post.author}
                               </span>
                               <span className="meta-date">
-                                {formatDate(post.date)}
+                                {formatPostDate(post.date, locale)}
                               </span>
                             </div>
                           </div>

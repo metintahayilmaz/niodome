@@ -9,7 +9,12 @@
     "captionLine2": "tek bir çatıda"
   },
   "header": {
-    "cta": "Merhaba de"
+    "cta": "Merhaba de",
+    "languageSelection": "Dil seçimi",
+    "themeMode": "Açık/koyu tema",
+    "day": "Gündüz",
+    "night": "Gece",
+    "menu": "Menü"
   },
   "footer": {
     "discover": "/ Keşfet",
@@ -26,7 +31,9 @@
     "linkPricing": "Fiyatlandırma",
     "linkFaq": "SSS",
     "requestQuote": "Teklif isteyin",
-    "services": "Hizmetler"
+    "services": "Hizmetler",
+    "backToTop": "Başa dön",
+    "templateCredit": "Şablon tasarımı:"
   },
   "menu": {
     "aboutMe": "Hakkımda",
@@ -197,5 +204,10 @@
     "featuredSpan": "yazılarımız",
     "allArticles": "Tüm yazılar",
     "blogIntro": "Tasarım, teknoloji ve marka dünyasından içerikler."
+  },
+  "blogPreview": {
+    "title": "Yazılar ve fikirler",
+    "overview": "Tüm yazılar",
+    "readPost": "Yazıyı oku"
   }
 }

@@ -1,14 +1,16 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import BackToTop from "@/components/common/BackToTop";
 import TextScramble from "@/components/animations/TextScramble";
 
 /** Same markup as the React Nextjs Template; click uses Lenis (`mxdToTop` parity). */
 export default function FooterBackToTop() {
+  const t = useTranslations("footer");
   return (
     <BackToTop className="btn btn-line-icon btn-line-default slide-up">
       <TextScramble className="btn-caption mxd-scramble">
-        Back to Top
+        {t("backToTop")}
       </TextScramble>
       <i>
         <svg
