@@ -209,5 +209,39 @@
     "title": "Yazılar ve fikirler",
     "overview": "Tüm yazılar",
     "readPost": "Yazıyı oku"
+  },
+  "narrative": {
+    "heroTitle": "Markanızın bir sonraki hamlesi.",
+    "heroSubline": "Bir markayı yeniden düşünmek. Yeni bir ürünün yerini bulmak. İnsanların katılacağı bir fikir yaratmak.",
+    "explore": "İşlerimizi keşfedin",
+    "homeIntro": "Niodome, strateji, yaratıcılık, tasarım ve teknolojiyle markaların bir sonraki hamlesini geliştiren bağımsız bir ajans.",
+    "homeTitle": "Doğru soru, işin şeklini değiştirir.",
+    "homeParagraphs": [
+      "Önce neyi değiştirmek istediğimizi belirleriz. Markanın hedefini, insanların beklentilerini ve değişen kültürü anlamak için araştırırız.",
+      "Buradan çıkan fikir bir kampanyaya, kimliğe, ürüne veya deneyime dönüşebilir. Biçimini, yaratacağı etkiye göre birlikte belirleriz."
+    ],
+    "servicesTitle": "Düşünceden hayata.",
+    "areas": [
+      "Marka ve Strateji",
+      "İletişim ve Kültür",
+      "Tasarım ve Deneyim",
+      "Ürün ve Teknoloji"
+    ],
+    "aboutIntro": [
+      "İnsanların alışkanlıkları, beklentileri ve markalarla kurdukları ilişkiler değişiyor. Bu değişim, markalara yeni roller üstlenme fırsatı veriyor.",
+      "Niodome, bu fırsatları keşfetmek ve hayata geçirmek için var."
+    ],
+    "aboutStartTitle": "Önce neyi değiştirmek istediğimizi belirleriz.",
+    "aboutStartParagraphs": [
+      "İnsanları dinler, markanın işini öğrenir, kabul edilmiş cevapları sorgularız. Strateji, yaratıcı düşünce, tasarım ve teknolojiyi aynı masada buluştururuz.",
+      "Fikirleri çizerek, yazarak ve prototiplerle deneyerek geliştiririz. Kampanyadan ürüne, kimlikten deneyime uzanan olasılıklar arasından hedefe en güçlü katkıyı sağlayanı seçeriz."
+    ],
+    "aboutEndTitle": "Fikrin gerektirdiği ekibi kurarız.",
+    "aboutEndParagraph": "Projenin ihtiyacına göre farklı uzmanlıkları bir araya getiririz. Yaratıcı yönü ve uygulamanın kalitesini süreç boyunca gözetiriz.",
+    "measureTitle": "Ölçümüz, işin yarattığı karşılık.",
+    "measureParagraph": "İnsanların zaman ayıracağı, kullanacağı, katılacağı ve hatırlayacağı işler üretmeyi hedefleriz. Başarıyı projenin başında tanımlar, kararlarımızı bu hedefle değerlendiririz.",
+    "contactTitle": "Sırada ne var?",
+    "contactParagraph": "Çözmek istediğiniz meseleyi konuşalım.",
+    "contactButton": "İletişime geçin"
   }
 }

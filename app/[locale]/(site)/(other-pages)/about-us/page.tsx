@@ -2,20 +2,16 @@ import ApprovedNarrative from "@/components/common/ApprovedNarrative";
 import { Metadata } from "next";
 import InnerHeadline from "@/components/other-pages/about-us/InnerHeadline";
 import ParallaxDividerImage from "@/components/other-pages/about-us/ParallaxDividerImage";
-import Process from "@/components/other-pages/about-us/Process";
 import DoubleMarqueeDivider from "@/components/other-pages/about-us/DoubleMarqueeDivider";
-import Awards from "@/components/other-pages/about-us/Awards";
 import TeamGrid from "@/components/other-pages/about-us/TeamGrid";
 import ParallaxDividerImage2 from "@/components/other-pages/about-us/ParallaxDividerImage2";
-import Approach from "@/components/other-pages/about-us/Approach";
 import BlogPreview from "@/components/other-pages/about-us/BlogPreview";
 import CTAWithMarquee from "@/components/other-pages/about-us/CTAWithMarquee";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
-import { processStepsQuery, postsListQuery, teamMembersQuery } from "@/sanity/lib/queries";
+import { postsListQuery, teamMembersQuery } from "@/sanity/lib/queries";
 import { getLocale, getTranslations } from "next-intl/server";
 import { SITE_URL } from "@/lib/site";
-import type { ProcessStep } from "@/types/aboutProcess";
 import type { PostListItem } from "@/types/blogPreview";
 import type { TeamMember } from "@/types/teamMember";
 
@@ -79,28 +75,6 @@ export default async function AboutUsPage() {
     // Sanity erişilemez → TeamGrid local data'ya döner
   }
 
-  // --- process steps ---
-  let sanitySteps: ProcessStep[] = [];
-  try {
-    const raw = await client.fetch<
-      {
-        stepNumber: string | null;
-        title: string | null;
-        description: string | null;
-        durationLabel: string | null;
-      }[]
-    >(processStepsQuery, { locale });
-
-    sanitySteps = raw.map((r) => ({
-      stepNumber: r.stepNumber ?? "",
-      title: r.title ?? "",
-      description: r.description ?? "",
-      durationLabel: r.durationLabel ?? "",
-    }));
-  } catch {
-    // Sanity erişilemez → Process local data'ya döner
-  }
-
   // --- blog posts (ilk 4) ---
   let sanityPosts: PostListItem[] = [];
   try {
@@ -146,12 +120,12 @@ export default async function AboutUsPage() {
       <>
         <InnerHeadline />
         <ParallaxDividerImage />
-        {locale === "tr" ? <ApprovedNarrative part="aboutStart" /> : <Process steps={sanitySteps} />}
+        <ApprovedNarrative part="aboutStart" />
         <DoubleMarqueeDivider />
         {/* <Awards /> — ileride award şeması eklenince açılacak */}
         <TeamGrid members={sanityMembers} />
         <ParallaxDividerImage2 />
-        {locale === "tr" ? <ApprovedNarrative part="aboutEnd" /> : <Approach />}
+        <ApprovedNarrative part="aboutEnd" />
         <BlogPreview posts={sanityPosts} />
         <CTAWithMarquee />
       </>

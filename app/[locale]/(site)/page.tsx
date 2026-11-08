@@ -4,30 +4,23 @@ import Footer3 from "@/components/footers/Footer3";
 import type { Metadata } from "next";
 import { organizationSchema, websiteSchema } from "@/lib/jsonLd";
 import Hero from "@/components/homes/index-digital-agency/Hero";
-import AboutProcess from "@/components/homes/index-digital-agency/AboutProcess";
 import ProjectsShowcase from "@/components/homes/index-digital-agency/ProjectsShowcase";
-import ServicesList from "@/components/homes/index-digital-agency/ServicesList";
 import ParallaxDividerVideo from "@/components/homes/index-digital-agency/ParallaxDividerVideo";
 import TestimonialsSticky from "@/components/homes/index-digital-agency/TestimonialsSticky";
 import ParallaxDividerImage from "@/components/homes/index-digital-agency/ParallaxDividerImage";
 import BlogPreview from "@/components/homes/index-digital-agency/BlogPreview";
-import Divider from "@/components/homes/index-digital-agency/Divider";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import {
-  servicesQuery,
   siteSettingsQuery,
   projectsShowcaseQuery,
   stickyTestimonialsQuery,
-  processStepsQuery,
   postsPreviewQuery,
   heroSettingsQuery,
 } from "@/sanity/lib/queries";
-import type { ServiceListItem } from "@/types/servicesList";
 import type { SiteSettingsData } from "@/types/siteSettings";
 import type { ProjectShowcaseItem } from "@/types/project";
 import type { TestimonialStickyCard } from "@/types/testimonials";
-import type { ProcessStep } from "@/types/aboutProcess";
 import type { BlogPreviewItem } from "@/types/blogPreview";
 import type { HeroGalleryImage } from "@/types/heroDigitalAgency";
 import { getLocale, getTranslations } from "next-intl/server";
@@ -64,6 +57,7 @@ export async function generateMetadata({
 
 export default async function HomePage() {
   const locale = await getLocale();
+  const narrative = await getTranslations("narrative");
 
   // --- siteSettings ---
   let sanitySettings: SiteSettingsData | undefined;
@@ -176,28 +170,6 @@ export default async function HomePage() {
     // Sanity erişilemez → Hero local data'ya döner
   }
 
-  // --- process steps ---
-  let sanitySteps: ProcessStep[] = [];
-  try {
-    const raw = await client.fetch<
-      {
-        stepNumber: string | null;
-        title: string | null;
-        description: string | null;
-        durationLabel: string | null;
-      }[]
-    >(processStepsQuery, { locale });
-
-    sanitySteps = raw.map((r) => ({
-      stepNumber: r.stepNumber ?? "",
-      title: r.title ?? "",
-      description: r.description ?? "",
-      durationLabel: r.durationLabel ?? "",
-    }));
-  } catch {
-    // Sanity erişilemez → AboutProcess local data'yı kullanır
-  }
-
   // --- testimonials ---
   let sanityTestimonials: TestimonialStickyCard[] = [];
   try {
@@ -286,7 +258,7 @@ export default async function HomePage() {
       {
         _id: string;
         title: string | null;
-        slug: { current: string } | null;
+        slug: string | null;
         categories: string[] | null;
         readTime: string | null;
         author: string | null;
@@ -301,14 +273,14 @@ export default async function HomePage() {
     sanityPosts = raw.map((p) => ({
       _id: p._id,
       title: p.title ?? "",
-      slug: p.slug?.current ?? "",
+      slug: p.slug ?? "",
       categories: p.categories ?? [],
       readTime: p.readTime ?? "",
       author: p.author ?? "",
       date: p.date ?? "",
       excerpt: p.excerpt ?? "",
-      href: p.slug?.current
-        ? `/blog/${p.slug.current}`
+      href: p.slug
+        ? `/blog/${p.slug}`
         : (p.href ?? "/blog-article"),
       cursorImageSrc: p.cursorImageSrc
         ? urlFor(p.cursorImageSrc).width(500).height(500).auto("format").url()
@@ -325,34 +297,6 @@ export default async function HomePage() {
     // Sanity erişilemez → BlogPreview local data'ya döner
   }
 
-  // --- services ---
-  let sanityItems: ServiceListItem[] = [];
-  try {
-    const raw = await client.fetch<
-      {
-        _id: string;
-        number: string;
-        title: string;
-        description: string;
-        cursorImageSrc: Parameters<typeof urlFor>[0] | null;
-        href: string;
-      }[]
-    >(servicesQuery, { locale });
-
-    sanityItems = raw.map((s) => ({
-      _id: s._id,
-      number: s.number,
-      title: s.title,
-      description: s.description,
-      cursorImageSrc: s.cursorImageSrc
-        ? urlFor(s.cursorImageSrc).width(500).height(500).auto("format").url()
-        : "",
-      href: s.href,
-    }));
-  } catch {
-    // Sanity erişilemez → ServicesList kendi local data'sını kullanır
-  }
-
   const orgSchema = organizationSchema(sanitySettings);
   const siteSchema = websiteSchema(sanitySettings);
 
@@ -367,22 +311,22 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
       />
       <>
-        <Hero scrollTargetId={locale === "tr" ? "selected-work" : "about"} socials={sanitySettings?.socials} heroSettings={locale === "tr" ? {
+        <Hero scrollTargetId="selected-work" socials={sanitySettings?.socials} heroSettings={{
           ...sanityHero,
           coverImage: sanityHero?.coverImage ?? heroDigitalAgencyData.coverImage,
           galleryImages: sanityHero?.galleryImages ?? [],
-          headline: "Markanızın bir sonraki hamlesi.",
-          subline: "Bir markayı yeniden düşünmek. Yeni bir ürünün yerini bulmak. İnsanların katılacağı bir fikir yaratmak.",
-          scrollLabel: "İşlerimizi keşfedin",
-        } : sanityHero} />
-        {locale === "tr" ? <ApprovedNarrative part="home" /> : <AboutProcess steps={sanitySteps} />}
+          headline: narrative("heroTitle"),
+          subline: narrative("heroSubline"),
+          scrollLabel: narrative("explore"),
+        }} />
+        <ApprovedNarrative part="home" />
         <div id="selected-work"><ProjectsShowcase projects={sanityProjects} /></div>
-        {locale === "tr" ? <ApprovedNarrative part="services" /> : <ServicesList items={sanityItems} />}
+        <ApprovedNarrative part="services" />
         <ParallaxDividerVideo />
         <TestimonialsSticky testimonials={sanityTestimonials} />
         <ParallaxDividerImage />
         <BlogPreview posts={sanityPosts} />
-        {locale === "tr" ? <ApprovedNarrative part="contact" /> : <Divider />}
+        <ApprovedNarrative part="contact" />
       </>
       <Footer3 settings={sanitySettings} />
     </>
