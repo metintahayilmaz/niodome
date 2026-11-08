@@ -3,8 +3,8 @@ import { defineRouting } from "next-intl/routing";
 export const routing = defineRouting({
   locales: ["tr", "en"],
   defaultLocale: "tr",
-  // The unprefixed public address always opens in Turkish. English uses /en.
-  localeDetection: false,
+  // Explicit URLs and saved language choices take priority over browser detection.
+  localeDetection: true,
   localePrefix: "as-needed",
 
   pathnames: {

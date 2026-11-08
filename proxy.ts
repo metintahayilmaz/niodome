@@ -1,5 +1,6 @@
 import createMiddleware from "next-intl/middleware";
 import { routing } from "./i18n/routing";
+import { browserLocale } from "./i18n/browserLocale";
 import { NextRequest, NextResponse } from "next/server";
 
 const intlMiddleware = createMiddleware(routing);
@@ -56,7 +57,11 @@ export default function middleware(req: NextRequest) {
   }
 
   // ── Normal intl middleware ───────────────────────────────────────────────────
-  const res = intlMiddleware(req);
+  // Use English for every non-Turkish browser language, including languages
+  // not offered by the site. next-intl still prioritizes URL and locale cookie.
+  const headers = new Headers(req.headers);
+  headers.set("accept-language", browserLocale(req.headers.get("accept-language")));
+  const res = intlMiddleware(new NextRequest(req, { headers }));
 
   // noindex: bakım açıksa VEYA production host değilse
   if (MAINTENANCE_ON || !isProduction) {

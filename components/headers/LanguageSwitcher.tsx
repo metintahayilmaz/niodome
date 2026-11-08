@@ -16,6 +16,10 @@ export default function LanguageSwitcher() {
         <a
           key={language}
           href={localizeHref(pathname, language)}
+          onClick={() => {
+            // Save the explicit choice before opening an unprefixed Turkish URL.
+            document.cookie = `NEXT_LOCALE=${language}; path=/; max-age=31536000; samesite=lax`;
+          }}
           hrefLang={language}
           lang={language}
           aria-label={language === "tr" ? "Türkçe" : "English"}
