@@ -7,7 +7,7 @@ type Part = "home" | "services" | "aboutStart" | "aboutEnd" | "contact";
 export default async function ApprovedNarrative({ part }: { part: Part }) {
   const t = await getTranslations("narrative");
   return (
-    <section id={part === "home" ? "about" : undefined} className={`mxd-section ${styles.section}`} aria-labelledby={`narrative-${part}`}>
+    <section id={part === "home" ? "about" : part === "aboutStart" ? "process" : undefined} className={`mxd-section ${styles.section}`} aria-labelledby={`narrative-${part}`}>
       <div className="mxd-container grid-l-container">
         <div className={`mxd-grid-item ${styles.copy}`}>
           {part === "home" && <>
