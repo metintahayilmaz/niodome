@@ -2,6 +2,7 @@
 .visual { position: relative; flex: 1 1 50%; aspect-ratio: 4 / 3; min-width: 0; overflow: hidden; }
 .visual img { object-fit: cover; }
 .copy { flex: 1 1 50%; min-width: 0; }
+.copy a { color: inherit; }
 .eyebrow { display: inline-block; font: 600 14px/1.5 var(--_font-accent); text-transform: uppercase; margin-bottom: 24px; }
 .copy h2 { font-size: clamp(32px, 4vw, 56px); line-height: 1.15; }
 @media(max-width: 767px) { .section { width: calc(100% - 40px); flex-direction: column; align-items: stretch; } .visual { flex-basis: auto; } }
