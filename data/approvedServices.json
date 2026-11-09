@@ -1,0 +1,406 @@
+{
+  "tr": {
+    "headline": "Bir sonraki hamle için.",
+    "intro": "Markanın hedefinden başlar, fikrin ihtiyaç duyduğu uzmanlıkları bir araya getiririz. Strateji, iletişim, tasarım ve teknolojiyi projenin gerektirdiği biçimde birlikte çalıştırırız.",
+    "items": [
+      {
+        "title": "Marka ve Strateji",
+        "shortDescription": "Markanın neyi temsil edeceğini netleştirmek.",
+        "description": "İnsanların beklentilerini, markanın işini ve içinde bulunduğu kültürü araştırırız. Markanın hangi değeri, kimin için ve nasıl yaratacağını tanımlarız. Bu düşünceyi konumlandırmaya, isme, marka diline ve yaratıcı çalışmalara yön verecek bir çerçeveye dönüştürürüz.",
+        "body": [
+          {
+            "_type": "block",
+            "_key": "block-0",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "span-0",
+                "text": "Markanın neyi temsil edeceğini netleştirmek.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "block-1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "span-1",
+                "text": "İnsanların beklentilerini, markanın işini ve içinde bulunduğu kültürü araştırırız. Markanın hangi değeri, kimin için ve nasıl yaratacağını tanımlarız. Bu düşünceyi konumlandırmaya, isme, marka diline ve yaratıcı çalışmalara yön verecek bir çerçeveye dönüştürürüz.",
+                "marks": []
+              }
+            ]
+          }
+        ],
+        "tagsColA": [
+          "Araştırma ve içgörü",
+          "Marka konumlandırma",
+          "İsimlendirme"
+        ],
+        "tagsColB": [
+          "Marka mimarisi",
+          "Marka dili ve mesajlar",
+          "Yaratıcı strateji"
+        ],
+        "order": 1,
+        "slug": "marka-ve-strateji",
+        "_id": "niodome-service-1"
+      },
+      {
+        "title": "İletişim ve Kültür",
+        "shortDescription": "İnsanların hayatında karşılık bulan fikirler.",
+        "description": "Markanın söyleyeceğini, insanların ilgilenmek ve katılmak isteyeceği bir fikre dönüştürürüz. Kampanyaları, içerikleri ve işbirliklerini aynı düşünce etrafında geliştiririz. Her kanalın kendine özgü dilini ve insanların o kanalı nasıl kullandığını gözetiriz.",
+        "body": [
+          {
+            "_type": "block",
+            "_key": "block-0",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "span-0",
+                "text": "İnsanların hayatında karşılık bulan fikirler.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "block-1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "span-1",
+                "text": "Markanın söyleyeceğini, insanların ilgilenmek ve katılmak isteyeceği bir fikre dönüştürürüz. Kampanyaları, içerikleri ve işbirliklerini aynı düşünce etrafında geliştiririz. Her kanalın kendine özgü dilini ve insanların o kanalı nasıl kullandığını gözetiriz.",
+                "marks": []
+              }
+            ]
+          }
+        ],
+        "tagsColA": [
+          "Yaratıcı iletişim platformları",
+          "Entegre kampanyalar",
+          "Lansmanlar"
+        ],
+        "tagsColB": [
+          "İçerik stratejisi",
+          "Sosyal içerikler",
+          "Kültürel işbirlikleri"
+        ],
+        "order": 2,
+        "slug": "iletisim-ve-kultur",
+        "_id": "niodome-service-2"
+      },
+      {
+        "title": "Tasarım ve Deneyim",
+        "shortDescription": "Markanın her karşılaşmada kendisi olması.",
+        "description": "Bir markanın nasıl göründüğünü, hareket ettiğini ve deneyimlendiğini birlikte tasarlarız. Kimlikten ambalaja, ekrandan fiziksel ortama uzanan temasları ortak bir tasarım düşüncesiyle ele alırız. Ayrıntıları, hem markanın karakterini hem de insanların kullanımını güçlendirecek şekilde geliştiririz.",
+        "body": [
+          {
+            "_type": "block",
+            "_key": "block-0",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "span-0",
+                "text": "Markanın her karşılaşmada kendisi olması.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "block-1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "span-1",
+                "text": "Bir markanın nasıl göründüğünü, hareket ettiğini ve deneyimlendiğini birlikte tasarlarız. Kimlikten ambalaja, ekrandan fiziksel ortama uzanan temasları ortak bir tasarım düşüncesiyle ele alırız. Ayrıntıları, hem markanın karakterini hem de insanların kullanımını güçlendirecek şekilde geliştiririz.",
+                "marks": []
+              }
+            ]
+          }
+        ],
+        "tagsColA": [
+          "Görsel kimlik",
+          "Tasarım sistemleri",
+          "Ambalaj",
+          "Kullanıcı araştırması ve deneyim tasarımı"
+        ],
+        "tagsColB": [
+          "Arayüz tasarımı",
+          "Hareketli tasarım",
+          "Fiziksel marka deneyimleri"
+        ],
+        "order": 3,
+        "slug": "tasarim-ve-deneyim",
+        "_id": "niodome-service-3"
+      },
+      {
+        "title": "Ürün ve Teknoloji",
+        "shortDescription": "Bir fikri çalışır hâle getirmek.",
+        "description": "İhtiyaçları yeni bir ürün, hizmet veya dijital deneyim geliştirmek için başlangıç noktası olarak ele alırız. Olasılıkları prototiplerle dener, işe yarayan yaklaşımı tasarım ve mühendislikle geliştiririz. Web platformlarını, etkileşimli deneyimleri ve yapay zekâ uygulamalarını kullanım amacı, erişilebilirlik ve sürdürülebilirlik açısından değerlendiririz.",
+        "body": [
+          {
+            "_type": "block",
+            "_key": "block-0",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "span-0",
+                "text": "Bir fikri çalışır hâle getirmek.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "block-1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "span-1",
+                "text": "İhtiyaçları yeni bir ürün, hizmet veya dijital deneyim geliştirmek için başlangıç noktası olarak ele alırız. Olasılıkları prototiplerle dener, işe yarayan yaklaşımı tasarım ve mühendislikle geliştiririz. Web platformlarını, etkileşimli deneyimleri ve yapay zekâ uygulamalarını kullanım amacı, erişilebilirlik ve sürdürülebilirlik açısından değerlendiririz.",
+                "marks": []
+              }
+            ]
+          }
+        ],
+        "tagsColA": [
+          "Ürün ve hizmet geliştirme",
+          "Web geliştirme",
+          "E-ticaret deneyimleri"
+        ],
+        "tagsColB": [
+          "Yaratıcı prototipleme",
+          "Etkileşimli uygulamalar",
+          "Yapay zekâ ve üretim araçları"
+        ],
+        "order": 4,
+        "slug": "urun-ve-teknoloji",
+        "_id": "niodome-service-4"
+      }
+    ],
+    "closingTitle": "Neyi değiştirmek istiyorsunuz?",
+    "closingBody": "İhtiyacınızı birlikte tanımlayalım, doğru ekibi ve çalışma biçimini kuralım.",
+    "closingButton": "Projenizi konuşalım"
+  },
+  "en": {
+    "headline": "For the next move.",
+    "intro": "We start with the brand’s ambition and bring together the expertise the idea needs. Strategy, communications, design and technology work together in the way each project calls for.",
+    "items": [
+      {
+        "title": "Brand & Strategy",
+        "shortDescription": "Define what the brand stands for.",
+        "description": "We explore people’s expectations, the business and the culture around it. We define the value a brand can create, who it serves and how it delivers. That thinking becomes a foundation for positioning, naming, brand language and creative work.",
+        "body": [
+          {
+            "_type": "block",
+            "_key": "block-0",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "span-0",
+                "text": "Define what the brand stands for.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "block-1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "span-1",
+                "text": "We explore people’s expectations, the business and the culture around it. We define the value a brand can create, who it serves and how it delivers. That thinking becomes a foundation for positioning, naming, brand language and creative work.",
+                "marks": []
+              }
+            ]
+          }
+        ],
+        "tagsColA": [
+          "Research & insights",
+          "Brand positioning",
+          "Naming"
+        ],
+        "tagsColB": [
+          "Brand architecture",
+          "Brand voice & messaging",
+          "Creative strategy"
+        ],
+        "order": 1,
+        "slug": "marka-ve-strateji",
+        "_id": "niodome-service-1"
+      },
+      {
+        "title": "Communications & Culture",
+        "shortDescription": "Ideas that find a place in people’s lives.",
+        "description": "We turn what a brand wants to say into an idea people want to engage with and be part of. Campaigns, content and collaborations develop around a shared thought, shaped by the language of each channel and the way people use it.",
+        "body": [
+          {
+            "_type": "block",
+            "_key": "block-0",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "span-0",
+                "text": "Ideas that find a place in people’s lives.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "block-1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "span-1",
+                "text": "We turn what a brand wants to say into an idea people want to engage with and be part of. Campaigns, content and collaborations develop around a shared thought, shaped by the language of each channel and the way people use it.",
+                "marks": []
+              }
+            ]
+          }
+        ],
+        "tagsColA": [
+          "Creative communications platforms",
+          "Integrated campaigns",
+          "Launches"
+        ],
+        "tagsColB": [
+          "Content strategy",
+          "Social content",
+          "Cultural collaborations"
+        ],
+        "order": 2,
+        "slug": "iletisim-ve-kultur",
+        "_id": "niodome-service-2"
+      },
+      {
+        "title": "Design & Experience",
+        "shortDescription": "Make every encounter feel like the brand.",
+        "description": "We design how a brand looks, moves and is experienced. From identities and packaging to screens and physical spaces, we connect touchpoints through a shared design approach. Every detail should strengthen the brand’s character and make the experience work better for people.",
+        "body": [
+          {
+            "_type": "block",
+            "_key": "block-0",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "span-0",
+                "text": "Make every encounter feel like the brand.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "block-1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "span-1",
+                "text": "We design how a brand looks, moves and is experienced. From identities and packaging to screens and physical spaces, we connect touchpoints through a shared design approach. Every detail should strengthen the brand’s character and make the experience work better for people.",
+                "marks": []
+              }
+            ]
+          }
+        ],
+        "tagsColA": [
+          "Visual identity",
+          "Design systems",
+          "Packaging",
+          "User research & experience design"
+        ],
+        "tagsColB": [
+          "Interface design",
+          "Motion design",
+          "Physical brand experiences"
+        ],
+        "order": 3,
+        "slug": "tasarim-ve-deneyim",
+        "_id": "niodome-service-3"
+      },
+      {
+        "title": "Product & Technology",
+        "shortDescription": "Make the idea work.",
+        "description": "We use real needs as a starting point for new products, services and digital experiences. We explore possibilities through prototypes, then develop the right approach through design and engineering. We assess web platforms, interactive experiences and AI applications against their purpose, accessibility and long-term viability.",
+        "body": [
+          {
+            "_type": "block",
+            "_key": "block-0",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "span-0",
+                "text": "Make the idea work.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "block-1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "span-1",
+                "text": "We use real needs as a starting point for new products, services and digital experiences. We explore possibilities through prototypes, then develop the right approach through design and engineering. We assess web platforms, interactive experiences and AI applications against their purpose, accessibility and long-term viability.",
+                "marks": []
+              }
+            ]
+          }
+        ],
+        "tagsColA": [
+          "Product & service development",
+          "Web development",
+          "Commerce experiences"
+        ],
+        "tagsColB": [
+          "Creative prototyping",
+          "Interactive applications",
+          "AI & production tools"
+        ],
+        "order": 4,
+        "slug": "urun-ve-teknoloji",
+        "_id": "niodome-service-4"
+      }
+    ],
+    "closingTitle": "What are you looking to change?",
+    "closingBody": "Let’s define the need and bring together the right team and way of working.",
+    "closingButton": "Let’s talk about your project"
+  }
+}

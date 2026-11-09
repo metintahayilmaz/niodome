@@ -3,7 +3,8 @@ import InnerHeadline from "@/components/other-pages/services/InnerHeadline";
 import ServicesDescriptionStack from "@/components/other-pages/services/ServicesDescriptionStack";
 import ParallaxDividerImage from "@/components/other-pages/services/ParallaxDividerImage";
 import BlogPreview from "@/components/other-pages/services/BlogPreview";
-import CTAWithMarquee from "@/components/other-pages/services/CTAWithMarquee";
+import ServicesNarrative from "@/components/other-pages/services/ServicesNarrative";
+import approvedServices from "@/data/approvedServices.json";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { serviceDetailsQuery, postsListQuery } from "@/sanity/lib/queries";
@@ -46,7 +47,7 @@ export async function generateMetadata({
 export default async function ServicesPage() {
   const locale = await getLocale();
   // --- service details ---
-  let sanityServices: ServiceDetailItem[] = [];
+  let sanityServices: ServiceDetailItem[] = approvedServices[locale === "en" ? "en" : "tr"].items;
   try {
     const raw = await client.fetch<
       {
@@ -62,7 +63,7 @@ export default async function ServicesPage() {
       }[]
     >(serviceDetailsQuery, { locale });
 
-    sanityServices = raw.map((s) => ({
+    sanityServices = raw.length ? raw.map((s) => ({
       _id: s._id,
       title: s.title ?? "",
       slug: s.slug ?? "",
@@ -74,9 +75,9 @@ export default async function ServicesPage() {
       ...(s.image && {
         image: urlFor(s.image).width(1200).height(1300).auto("format").url(),
       }),
-    }));
+    })) : sanityServices;
   } catch {
-    // Sanity erişilemez → ServicesDescriptionStack local data'ya döner
+    // Keep the approved localized content if the CMS is unavailable.
   }
 
   // --- blog posts (ilk 3) ---
@@ -136,10 +137,11 @@ export default async function ServicesPage() {
       )}
       <>
         <InnerHeadline />
+        <ServicesNarrative />
         <ServicesDescriptionStack services={sanityServices} />
         <ParallaxDividerImage />
         <BlogPreview posts={sanityPosts} />
-        <CTAWithMarquee />
+        <ServicesNarrative closing />
       </>
     </>
   );

@@ -1,5 +1,7 @@
 "use client";
 
+import { useLocale, useTranslations } from "next-intl";
+import approvedServices from "@/data/approvedServices.json";
 import Image from "next/image";
 import TextScramble from "@/components/animations/TextScramble";
 import CommonServicesStack, {
@@ -16,57 +18,6 @@ const LOCAL_IMAGES = [
   "/img/services/services-stack/s02.webp",
   "/img/services/services-stack/s03.webp",
   "/img/services/services-stack/s04.webp",
-];
-
-// Fallback: Sanity boşsa local data
-const LOCAL_SERVICES: ServiceDetailItem[] = [
-  {
-    _id: "local-sd-1",
-    title: "Innovative design",
-    slug: "innovative-design",
-    body: [
-      { _type: "block", _key: "a", style: "normal", markDefs: [], children: [{ _type: "span", _key: "as", text: "We create visually compelling designs that enhance user experience.", marks: [] }] },
-      { _type: "block", _key: "b", style: "normal", markDefs: [], children: [{ _type: "span", _key: "bs", text: "From UI/UX design to stunning websites, mobile apps, and print materials, we make sure your brand's visuals resonate with your audience.", marks: [] }] },
-    ],
-    tagsColA: ["UI/UX", "Web design", "Applications", "Print design"],
-    tagsColB: ["Packaging", "Motion", "3D models"],
-    order: 1,
-  },
-  {
-    _id: "local-sd-2",
-    title: "Creative development",
-    slug: "creative-development",
-    body: [
-      { _type: "block", _key: "a", style: "normal", markDefs: [], children: [{ _type: "span", _key: "as", text: "We build high-performance websites and applications using modern technologies.", marks: [] }] },
-      { _type: "block", _key: "b", style: "normal", markDefs: [], children: [{ _type: "span", _key: "bs", text: "Our solutions are designed to be scalable and functional for optimal performance.", marks: [] }] },
-    ],
-    tagsColA: ["Frontend", "Interactions", "Backend", "E-Commerce"],
-    tagsColB: ["Mobile Apps", "Maintenance", "Support"],
-    order: 2,
-  },
-  {
-    _id: "local-sd-3",
-    title: "Brand Identity",
-    slug: "brand-identity",
-    body: [
-      { _type: "block", _key: "a", style: "normal", markDefs: [], children: [{ _type: "span", _key: "as", text: "From logo design to comprehensive brand strategies, we ensure your business stands out with a unique visual identity and consistent messaging across all touchpoints.", marks: [] }] },
-    ],
-    tagsColA: ["Brand strategy", "Logo design", "Guidelines"],
-    tagsColB: ["Visual identity", "Rebranding"],
-    order: 3,
-  },
-  {
-    _id: "local-sd-4",
-    title: "Marketing solutions",
-    slug: "marketing-solutions",
-    body: [
-      { _type: "block", _key: "a", style: "normal", markDefs: [], children: [{ _type: "span", _key: "as", text: "We develop and execute tailored digital marketing strategies.", marks: [] }] },
-      { _type: "block", _key: "b", style: "normal", markDefs: [], children: [{ _type: "span", _key: "bs", text: "SEO and content marketing, social media management and paid campaigns - we help you reach and engage your target audience effectively.", marks: [] }] },
-    ],
-    tagsColA: ["Strategy", "Social media", "SEO Optimization"],
-    tagsColB: ["Email", "Campaigns"],
-    order: 4,
-  },
 ];
 
 /**
@@ -117,8 +68,9 @@ function ServiceCard({
   index: number;
   imgSrc: string;
 }) {
+  const t = useTranslations("innerContent");
   const orderLabel = String(item.order).padStart(2, "0");
-  const subtitle = `${orderLabel} / Services`;
+  const subtitle = `${orderLabel} / ${t("services")}`;
 
   return (
     <ServicesStackSlot part="card" index={index}>
@@ -181,8 +133,9 @@ type Props = {
 };
 
 export default function ServicesDescriptionStack({ services }: Props) {
-  const resolvedServices =
-    services && services.length > 0 ? services : LOCAL_SERVICES;
+  const locale = useLocale();
+  const resolvedServices: ServiceDetailItem[] =
+    services && services.length > 0 ? services : approvedServices[locale === "en" ? "en" : "tr"].items;
 
   return (
     <div id="services" className="mxd-section">

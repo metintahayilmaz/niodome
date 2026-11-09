@@ -92,7 +92,7 @@
     },
     "services": {
       "title": "Hizmetler",
-      "description": "Grafik tasarım, web geliştirme, marka kimliği ve dijital strateji hizmetleriyle markanızı bir üst seviyeye taşıyoruz."
+      "description": "Marka ve strateji, iletişim ve kültür, tasarım ve deneyim, ürün ve teknoloji. Niodome ile markanızın bir sonraki hamlesini geliştirin."
     },
     "contact": {
       "title": "İletişim",
@@ -164,8 +164,8 @@
     "scroll": "Keşfetmek için kaydırın",
     "worksLead": "Cesur fikirlerin",
     "worksSpan": "şekil bulduğu yer",
-    "servicesLead": "Dijital mükemmellikte",
-    "servicesSpan": "yeni standartlar"
+    "servicesLead": "Bir sonraki",
+    "servicesSpan": "hamle için."
   },
   "aboutContent": {
     "lead": "Bir markanın",

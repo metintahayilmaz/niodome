@@ -92,7 +92,7 @@
     },
     "services": {
       "title": "Services",
-      "description": "Graphic design, web development, brand identity, and digital strategy — we take your brand to the next level."
+      "description": "Brand & strategy, communications & culture, design & experience, product & technology. Shape your brand’s next move with Niodome."
     },
     "contact": {
       "title": "Contact",
@@ -164,8 +164,8 @@
     "scroll": "Scroll to explore",
     "worksLead": "Where bold ideas",
     "worksSpan": "take shape",
-    "servicesLead": "New standards in",
-    "servicesSpan": "digital excellence"
+    "servicesLead": "For the",
+    "servicesSpan": "next move."
   },
   "aboutContent": {
     "lead": "Expanding",
