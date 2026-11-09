@@ -77,7 +77,7 @@ export default function InnerHeadline({ title, subtitle, tagsColA, tagsColB }: P
                                 <div className="tags-column">
                                   {colA.map((tag, i) => (
                                     <CommonLoadItem key={tag} index={i}>
-                                      <TextScramble className="tag tag-m mxd-scramble loading-item">
+                                      <TextScramble stableLayout className="tag tag-m mxd-scramble loading-item">
                                         {tag}
                                       </TextScramble>
                                     </CommonLoadItem>
@@ -86,7 +86,7 @@ export default function InnerHeadline({ title, subtitle, tagsColA, tagsColB }: P
                                 <div className="tags-column">
                                   {colB.map((tag, i) => (
                                     <CommonLoadItem key={tag} index={colA.length + i}>
-                                      <TextScramble className="tag tag-m mxd-scramble loading-item">
+                                      <TextScramble stableLayout className="tag tag-m mxd-scramble loading-item">
                                         {tag}
                                       </TextScramble>
                                     </CommonLoadItem>

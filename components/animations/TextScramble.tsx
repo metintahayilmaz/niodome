@@ -10,6 +10,7 @@ type TextScrambleProps = {
   children: string;
   className?: string;
   as?: "span" | "div" | "p";
+  stableLayout?: boolean;
 };
 
 type ScrambleState = {
@@ -19,7 +20,7 @@ type ScrambleState = {
 
 /** Hover scramble effect (mxdTextScramble / `.mxd-scramble`). */
 const TextScramble = forwardRef<HTMLElement, TextScrambleProps>(function TextScramble(
-  { children, className, as: Tag = "span" },
+  { children, className, as: Tag = "span", stableLayout = false },
   ref,
 ) {
   const baseText = children.trim();
@@ -44,7 +45,7 @@ const TextScramble = forwardRef<HTMLElement, TextScrambleProps>(function TextScr
           value: source
             .split("")
             .map((letter, index) => {
-              if (index < iterations) {
+              if (/\s/.test(letter) || index < iterations) {
                 return source[index] ?? letter;
               }
               return ALPHABET[Math.floor(Math.random() * ALPHABET.length)]!;
@@ -69,10 +70,20 @@ const TextScramble = forwardRef<HTMLElement, TextScrambleProps>(function TextScr
     <Tag
       ref={ref as never}
       className={className}
+      style={stableLayout ? { position: "relative", display: "block", width: "100%" } : undefined}
       onPointerEnter={onEnter}
       onPointerLeave={onLeave}
     >
-      {scrambledText?.source === baseText ? scrambledText.value : baseText}
+      {stableLayout ? (
+        <>
+          <span style={{ visibility: scrambledText?.source === baseText ? "hidden" : undefined }}>{baseText}</span>
+          {scrambledText?.source === baseText && (
+            <span aria-hidden="true" style={{ position: "absolute", inset: 0, overflow: "hidden", pointerEvents: "none" }}>
+              {scrambledText.value}
+            </span>
+          )}
+        </>
+      ) : scrambledText?.source === baseText ? scrambledText.value : baseText}
     </Tag>
   );
 });
