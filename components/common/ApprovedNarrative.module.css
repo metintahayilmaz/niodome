@@ -1,4 +1,6 @@
 .section {
+  position: relative;
+  background-color: var(--base);
   padding-block: clamp(5.6rem, 9vw, 12rem);
 }
 .copy {

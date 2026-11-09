@@ -112,3 +112,7 @@
   .niodome-language-switcher { font-size: 1.6rem; }
   .niodome-language-switcher a { min-width: 4.4rem; }
 }
+
+/* GSAP line masks must retain the measured line breaks in service cards. */
+.services-card__title-text > .line,
+.services-card__descr > .line { display: block; }
