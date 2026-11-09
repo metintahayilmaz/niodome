@@ -99,7 +99,7 @@ export default function InnerHeadline({ email }: Props) {
                     className="fullwidth-text__content small accent active-cursor"
                     data-cursor-text="Let's chat"
                     href={resolvedEmailHref}
-                    aria-label={`Send email to ${resolvedEmail}`}
+                    aria-label={t("sendEmailTo", { email: resolvedEmail })}
                   >
                     <CommonAnimatedText
                       as="span"

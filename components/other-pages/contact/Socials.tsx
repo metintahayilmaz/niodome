@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import { siteSettings as localSettings } from "@/data/siteSettings";
@@ -31,7 +32,8 @@ function ArrowIcon() {
   );
 }
 
-export default function Socials({ socials }: Props) {
+export default async function Socials({ socials }: Props) {
+  const t = await getTranslations("contact");
   // Sanity'den geldiyse kullan; yoksa local siteSettings.socials'a dön
   const resolvedSocials: SocialItem[] =
     socials && socials.length > 0 ? socials : localSettings.socials;
@@ -53,7 +55,7 @@ export default function Socials({ socials }: Props) {
                         className="mxd-split-lines accent"
                         animation="splitLines"
                       >
-                        Connect
+                        {t("socialsTitle")}
                       </CommonAnimatedText>
                     </div>
                   </div>

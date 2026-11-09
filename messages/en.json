@@ -71,7 +71,9 @@
     "emailSubject": "New message from contact page",
     "ctaButton": "Write a line",
     "ctaTitle": "Let's talk about your project",
-    "ctaCursor": "Contact Us"
+    "ctaCursor": "Contact Us",
+    "socialsTitle": "Follow us",
+    "sendEmailTo": "Send email to {email}"
   },
   "notFound": {
     "marquee": "Nothing here/",

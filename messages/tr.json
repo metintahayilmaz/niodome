@@ -71,7 +71,9 @@
     "emailSubject": "İletişim sayfasından yeni mesaj",
     "ctaButton": "Bize yazın",
     "ctaTitle": "Projenizi konuşalım",
-    "ctaCursor": "İletişime Geçin"
+    "ctaCursor": "İletişime Geçin",
+    "socialsTitle": "Bizi takip edin",
+    "sendEmailTo": "{email} adresine e-posta gönderin"
   },
   "notFound": {
     "marquee": "Burada bir şey yok/",

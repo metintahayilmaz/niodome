@@ -3,7 +3,8 @@
 import PinnedSection from "@/components/animations/PinnedSection";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import Link from "@/components/common/LocalizedLink";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { formatPostDate } from "@/lib/formatPostDate";
 import Image from "next/image";
 import {
   CommonScrollAnimated,
@@ -13,18 +14,7 @@ import TextScramble from "@/components/animations/TextScramble";
 import type { PostListItem } from "@/types/blogPreview";
 
 // Tarih formatı: "YYYY-MM-DD" → "06 January, 2026"
-function formatPostDate(dateStr: string): string {
-  if (!dateStr) return dateStr;
-  if (/^\d{2}\s[A-Z]/.test(dateStr)) return dateStr;
-  const d = new Date(dateStr + "T12:00:00");
-  if (isNaN(d.getTime())) return dateStr;
-  const months = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December",
-  ];
-  const day = String(d.getDate()).padStart(2, "0");
-  return `${day} ${months[d.getMonth()]}, ${d.getFullYear()}`;
-}
+
 
 // Slot başına yerel görsel (Sanity coverImage yoksa fallback)
 const LOCAL_SLOT_IMAGES = [
@@ -38,7 +28,8 @@ type Props = {
 };
 
 export default function BlogPreview({ posts }: Props) {
-  const t = useTranslations("projectContent");
+  const t = useTranslations("blogPreview");
+  const locale = useLocale();
   const resolvedPosts = posts?.slice(0, 3) ?? [];
   if (!resolvedPosts.length) return null;
 
@@ -62,9 +53,7 @@ export default function BlogPreview({ posts }: Props) {
                           className="reveal-type"
                           animation="revealType"
                         >
-                          {t("featuredLead")}
-                          <br />
-                          {t("featuredSpan")}
+                          {t("title")}
                         </CommonAnimatedText>
                       </div>
                     </div>
@@ -77,10 +66,10 @@ export default function BlogPreview({ posts }: Props) {
                         >
                           <Link
                             className="btn btn-line btn-line-default"
-                            href={`/blog-standard`}
+                            href="/blog"
                           >
                             <TextScramble className="btn-caption mxd-scramble">
-                              {t("allArticles")}
+                              {t("overview")}
                             </TextScramble>
                           </Link>
                         </CommonScrollAnimated>
@@ -123,16 +112,16 @@ export default function BlogPreview({ posts }: Props) {
                           columns={3}
                         >
                           <div className="mxd-blog-item__date">
-                            <span className="meta-date">{formatPostDate(post.date)}</span>
+                            <span className="meta-date">{formatPostDate(post.date, locale)}</span>
                           </div>
                           <Link
                             className="mxd-blog-item__media active-cursor-permanent"
-                            data-cursor-text="Read Post"
+                            data-cursor-text={t("readPost")}
                             href={href}
                           >
                             <Image
                               className=""
-                              alt="Blog Preview Image"
+                              alt={post.title}
                               src={imgSrc}
                               width={imgWidth}
                               height={imgHeight}
