@@ -15,18 +15,17 @@ type Props = {
 };
 
 export default async function SplitList({
-  overviewLead = "Stand out and express your uniqueness with Azurio — a vibrant and minimal React Nextjs Template for creatives, studios and freelancers.",
-  overviewSpan = "Impress your website visitors with a clean, stylish layout and stunning visuals.",
-  liveUrl = "#",
-  projectName = "Azurio - digital agency & personal portfolio React Nextjs Template",
-  clientName = "IB Themes",
-  industries = "React Nextjs Template",
-  projectDate = "October 2025 - January 2026",
+  overviewLead,
+  overviewSpan,
+  liveUrl,
+  projectName,
+  clientName,
+  industries,
+  projectDate,
 }: Props) {
   const t = await getTranslations("projectContent");
-  const liveLabel = liveUrl && liveUrl !== "#"
-    ? liveUrl.replace(/^https?:\/\//, "").replace(/\/$/, "")
-    : "ibthemes.dev";
+  const validLiveUrl = liveUrl && /^https?:\/\//i.test(liveUrl) ? liveUrl : undefined;
+  const liveLabel = validLiveUrl?.replace(/^https?:\/\//i, "").replace(/\/$/, "");
 
   return (
     <>
@@ -53,9 +52,9 @@ export default async function SplitList({
                           {overviewLead}
                           {overviewSpan && <span>{overviewSpan}</span>}
                         </CommonAnimatedText>
-                        <CommonScrollAnimated
+                        {validLiveUrl && <CommonScrollAnimated
                           className="btn btn-default-icon btn-default-accent slide-right anim-uni-in-up"
-                          href={liveUrl}
+                          href={validLiveUrl}
                           as="a"
                           animation="inUp"
                         >
@@ -67,7 +66,7 @@ export default async function SplitList({
                               <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
                             </svg>
                           </i>
-                        </CommonScrollAnimated>
+                        </CommonScrollAnimated>}
                       </div>
                     </div>
                   </div>
@@ -86,7 +85,7 @@ export default async function SplitList({
                           { label: t("client"), value: clientName },
                           { label: t("industries"), value: industries },
                           { label: t("date"), value: projectDate },
-                        ].map(({ label, value }) => (
+                        ].filter(({ value }) => value?.trim()).map(({ label, value }) => (
                           <div key={label} className="split-info__item">
                             <div className="split-info__divider divider-top" />
                             <div className="split-info__details">
@@ -98,18 +97,18 @@ export default async function SplitList({
                             <div className="split-info__divider divider-bottom" />
                           </div>
                         ))}
-                        <div className="split-info__item">
+                        {validLiveUrl && <div className="split-info__item">
                           <div className="split-info__divider divider-top" />
                           <div className="split-info__details">
                             <CommonScrollAnimated className="anim-uni-in-up" as="p" animation="inUp">
                               {t("projectPage")}
                               <span>
-                                <a href={liveUrl}>{liveLabel}</a>
+                                <a href={validLiveUrl}>{liveLabel}</a>
                               </span>
                             </CommonScrollAnimated>
                           </div>
                           <div className="split-info__divider divider-bottom" />
-                        </div>
+                        </div>}
                       </div>
                     </div>
                   </div>
