@@ -116,3 +116,7 @@
 /* GSAP line masks must retain the measured line breaks in service cards. */
 .services-card__title-text > .line,
 .services-card__descr > .line { display: block; }
+
+/* Keep the approved descriptions readable even when entering a pinned card directly. */
+.services-card__tags { opacity: 1 !important; }
+.services-card__descr .line { transform: none !important; }

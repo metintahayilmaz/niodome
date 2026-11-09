@@ -41,7 +41,7 @@ function ServicesBodyRenderer({ body }: { body: unknown[] | null }) {
         if (block._type !== "block") return null;
         const text = (block.children ?? []).map((s) => s.text).join("");
         return i === 0 ? (
-          <span key={block._key ?? i}>{text}</span>
+          <span key={block._key ?? i}>{text}{" "}</span>
         ) : (
           <span key={block._key ?? i} className="services-card__descr-span">
             {text}
