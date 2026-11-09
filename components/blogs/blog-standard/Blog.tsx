@@ -14,7 +14,7 @@ export default function Blog({ posts = [] }: { posts?: PostListItem[] }) {
         {posts.length === 0 ? (
           <p className="mxd-grid-item">{t("emptyBlog")}</p>
         ) : (
-          <div className="row g-4">
+          <div className="row g-4 mx-0">
             {posts.map((post) => (
               <article className="col-12 col-md-6 mxd-grid-item" key={post._id}>
                 <Link href={post.href}>

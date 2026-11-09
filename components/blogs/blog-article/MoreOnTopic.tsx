@@ -16,7 +16,7 @@ export default async function MoreOnTopic({ currentId }: { currentId?: string })
   return <BlurSection className="mxd-section padding-bottom-default">
     <div className="mxd-container grid-l-container">
       <h2 className="mxd-grid-item">{t("allArticles")}</h2>
-      <div className="row g-4">{posts.map(post => <div className="col-12 col-md-4 mxd-grid-item" key={post._id}>
+      <div className="row g-4 mx-0">{posts.map(post => <div className="col-12 col-md-4 mxd-grid-item" key={post._id}>
         <Link href={`/blog/${post.slug}`}>{post.title}</Link>
       </div>)}</div>
     </div>
