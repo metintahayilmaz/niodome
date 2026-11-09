@@ -1,0 +1,20 @@
+.section { position: relative; isolation: isolate; overflow: hidden; background: #002bba; color: #fff; min-height: 640px; }
+.copy { position: relative; z-index: 2; margin: 0 auto; padding: 90px 24px 0; max-width: 760px; text-align: center; pointer-events: none; }
+.copy a { pointer-events: auto; color: #fff; }
+.eyebrow { display: inline-block; font: 600 14px/1.5 var(--_font-accent); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 28px; }
+.copy h2 { font-size: clamp(38px, 5.2vw, 72px); line-height: 1.1; font-weight: 500; }
+.copy p { font-size: 20px; line-height: 1.5; margin: 22px 0 0; }
+.field { position: absolute; inset: 0; display: flex; flex-wrap: wrap; align-content: flex-end; justify-content: center; gap: 8px; padding: 24px; overflow: hidden; }
+.chip { display: inline-block; flex: 0 0 auto; white-space: nowrap; background: #101010; color: #fff; padding: 15px 19px; border-radius: 3px; font: 600 14px/1 var(--_font-accent); text-transform: uppercase; user-select: none; -webkit-user-select: none; touch-action: none; cursor: grab; }
+.field[data-ready] .chip { position: absolute; left: 0; top: 0; will-change: transform; }
+.field[data-dragging], .field[data-dragging] .chip { cursor: grabbing; }
+.hint { color: #fff; position: absolute; z-index: 2; bottom: 110px; left: 24px; right: 24px; margin: 0; text-align: center; font: 500 12px/1.4 var(--_font-accent); opacity: .7; pointer-events: none; }
+@media (max-width: 767px) {
+ .section { min-height: 620px; }
+ .copy { padding-top: 65px; }
+ .copy h2 { font-size: 40px; }
+ .copy p { font-size: 18px; }
+ .chip { padding: 12px 14px; font-size: 11px; }
+ .hint { bottom: 175px; }
+}
+@media (prefers-reduced-motion: reduce) { .hint { display: none; } .chip { cursor: default; touch-action: pan-y; } }

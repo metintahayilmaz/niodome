@@ -248,5 +248,22 @@
     "contactTitle": "What’s next?",
     "contactParagraph": "Tell us what you’re looking to change.",
     "contactButton": "Get in touch"
+  },
+  "gravityContact": {
+    "items": [
+      "Brand strategy",
+      "Visual identity",
+      "Logo design",
+      "Packaging",
+      "Web design",
+      "User experience",
+      "Product design",
+      "Technology",
+      "Art direction",
+      "Communications",
+      "Campaigns",
+      "Motion design"
+    ],
+    "hint": "Grab a block and give it a throw."
   }
 }

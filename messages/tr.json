@@ -248,5 +248,22 @@
     "contactTitle": "Sırada ne var?",
     "contactParagraph": "Çözmek istediğiniz meseleyi konuşalım.",
     "contactButton": "İletişime geçin"
+  },
+  "gravityContact": {
+    "items": [
+      "Marka stratejisi",
+      "Görsel kimlik",
+      "Logo tasarımı",
+      "Ambalaj",
+      "Web tasarımı",
+      "Kullanıcı deneyimi",
+      "Ürün tasarımı",
+      "Teknoloji",
+      "Sanat yönetimi",
+      "İletişim",
+      "Kampanya",
+      "Hareketli tasarım"
+    ],
+    "hint": "Kutuları tutup fırlatabilirsiniz."
   }
 }
