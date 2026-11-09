@@ -11,8 +11,8 @@ type Props = {
 };
 
 export default async function SplitList3({
-  solutionLead = "Azurio was built using modern web technologies with a focus on flexibility.",
-  solutionSpan = "Clean React Nextjs structure, scalable CSS architecture and GSAP-powered animations create smooth interactions without sacrificing speed.",
+  solutionLead,
+  solutionSpan,
   techStack,
 }: Props) {
   const t = await getTranslations("projectContent");

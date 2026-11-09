@@ -11,8 +11,8 @@ type Props = {
 };
 
 export default async function SplitList2({
-  challengeLead = "The challenge was to create a template that feels bold and contemporary without overwhelming content or performance.",
-  challengeSpan = "It needed to serve a wide range of creatives while remaining flexible and easy to customize for different project types and personal styles.",
+  challengeLead,
+  challengeSpan,
   services,
 }: Props) {
   const t = await getTranslations("projectContent");
