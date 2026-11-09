@@ -208,7 +208,14 @@
     "blogIntro": "Tasarım, teknoloji ve marka dünyasından içerikler.",
     "projectArchive": "Tüm projeler",
     "discussProject": "Projenizi konuşalım",
-    "viewProject": "Projeyi incele"
+    "viewProject": "Projeyi incele",
+    "marqueeWords": [
+      "Projeler/",
+      "Kimlik/",
+      "Ambalaj/",
+      "Deneyim/",
+      "Dijital/"
+    ]
   },
   "blogPreview": {
     "title": "Yazılar ve fikirler",

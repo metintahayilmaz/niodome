@@ -208,7 +208,14 @@
     "blogIntro": "Insights on design, technology and branding.",
     "projectArchive": "All projects",
     "discussProject": "Let’s discuss your project",
-    "viewProject": "View project"
+    "viewProject": "View project",
+    "marqueeWords": [
+      "Projects/",
+      "Identity/",
+      "Packaging/",
+      "Experience/",
+      "Digital/"
+    ]
   },
   "blogPreview": {
     "title": "Featured news",

@@ -4,6 +4,7 @@ import AutoplayLoopVideo from "@/components/media/AutoplayLoopVideo";
 import Image from "next/image";
 import Link from "@/components/common/LocalizedLink";
 import { useLayoutEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 import TextScramble from "@/components/animations/TextScramble";
 import {
   initStackCardsEffects,
@@ -12,93 +13,16 @@ import {
 } from "@/lib/template/stackCardsEffects";
 import type { ProjectStackItem } from "@/types/project";
 
-const MARQUEE_WORDS = [
-  "Projects/",
-  "Cases/",
-  "Works/",
-  "Editorial/",
-  "Experiments/",
-] as const;
-
-const WORK_TAGS = [
-  "Design",
-  "Illustrations",
-  "Packaging",
-  "marketing",
-] as const;
-
 type VideoSources = { type: string; src: string }[];
 
-type WorksDefaultProjectCard =
-  | {
-      key: string;
-      title: string;
-      coverClassName?: string;
-      href?: string;
-      media: "video";
-      poster: string;
-      sources: VideoSources;
-    }
-  | {
-      key: string;
-      title: string;
-      coverClassName?: string;
-      href?: string;
-      media: "image";
-      imageSrc: string;
-      imageWidth: number;
-      imageHeight: number;
-    };
-
-const WORKS_DEFAULT_PROJECT_CARDS: WorksDefaultProjectCard[] = [
-  {
-    key: "nft-branding",
-    title: "NFT project branding",
-    href: "/project-details",
-    media: "video",
-    poster: "video/1280x720_video-05.webp",
-    sources: [
-      { type: "video/mp4", src: "video/1280x720_video-05.mp4" },
-      { type: "video/webm", src: "video/1280x720_video-05.webm" },
-    ],
-  },
-  {
-    key: "interactive-app",
-    title: "Interactive app concept",
-    href: "/works/interactive-concept",
-    media: "image",
-    imageSrc: "/img/works/showcase-stack/pr02.webp",
-    imageWidth: 2200,
-    imageHeight: 1240,
-  },
-  {
-    key: "editorial",
-    title: "Editorial illustrations set",
-    href: "/works/editorial-illustrations-set",
-    media: "image",
-    imageSrc: "/img/works/showcase-stack/pr01.webp",
-    imageWidth: 1920,
-    imageHeight: 1180,
-  },
-  {
-    key: "studio-template",
-    title: "Creative studio template",
-    href: "/works/creative-studio-template",
-    media: "image",
-    imageSrc: "/img/works/showcase-stack/pr04.webp",
-    imageWidth: 1920,
-    imageHeight: 1180,
-    coverClassName: "cover-darken",
-  },
-];
-
 type Props = {
-  /** Sanity'den gelen proje listesi. Verilmezse yerel WORKS_DEFAULT_PROJECT_CARDS kullanılır. */
+  /** Published project data only. */
   projects?: ProjectStackItem[];
 };
 
 export default function ProjectsStack({ projects }: Props) {
-  // Sanity veri yoksa yerel sabit veri kullan
+  const t = useTranslations("projectContent");
+  const marqueeWords = t.raw("marqueeWords") as string[];
   const resolvedProjects: { key: string; title: string; media: "image" | "video"; imageSrc?: string; imageWidth?: number; imageHeight?: number; imageAlt?: string; coverClassName?: string; tags: string[]; poster?: string; sources?: VideoSources; href?: string; }[] =
     projects
       ? projects.map((p) => ({
@@ -113,20 +37,7 @@ export default function ProjectsStack({ projects }: Props) {
           tags: p.tags ?? [],
           href: p.href,
         }))
-      : WORKS_DEFAULT_PROJECT_CARDS.map((c) => ({
-          key: c.key,
-          title: c.title,
-          href: c.href,
-          media: c.media,
-          imageSrc: c.media === "image" ? c.imageSrc : undefined,
-          imageWidth: c.media === "image" ? c.imageWidth : undefined,
-          imageHeight: c.media === "image" ? c.imageHeight : undefined,
-          imageAlt: c.media === "image" ? "Project Preview Image" : undefined,
-          coverClassName: c.coverClassName,
-          tags: [],
-          poster: c.media === "video" ? c.poster : undefined,
-          sources: c.media === "video" ? c.sources : undefined,
-        }));
+      : [];
   const topRefs = useRef<HTMLDivElement[]>([]);
   const bottomRefs = useRef<HTMLDivElement[]>([]);
   const cardRefs = useRef<HTMLDivElement[]>([]);
@@ -187,7 +98,7 @@ export default function ProjectsStack({ projects }: Props) {
                             topRefs.current[0] = el;
                           }}
                         >
-                          {MARQUEE_WORDS.map((word) => (
+                          {marqueeWords.map((word) => (
                             <div
                               key={`top-0-${word}`}
                               className="marquee__item item-regular text"
@@ -205,7 +116,7 @@ export default function ProjectsStack({ projects }: Props) {
                             bottomRefs.current[0] = el;
                           }}
                         >
-                          {MARQUEE_WORDS.map((word) => (
+                          {marqueeWords.map((word) => (
                             <div
                               key={`bottom-0-${word}`}
                               className="marquee__item item-regular text"
@@ -223,7 +134,7 @@ export default function ProjectsStack({ projects }: Props) {
                             topRefs.current[1] = el;
                           }}
                         >
-                          {MARQUEE_WORDS.map((word) => (
+                          {marqueeWords.map((word) => (
                             <div
                               key={`top-1-${word}`}
                               className="marquee__item item-regular text"
@@ -241,7 +152,7 @@ export default function ProjectsStack({ projects }: Props) {
                             bottomRefs.current[1] = el;
                           }}
                         >
-                          {MARQUEE_WORDS.map((word) => (
+                          {marqueeWords.map((word) => (
                             <div
                               key={`bottom-1-${word}`}
                               className="marquee__item item-regular text"
@@ -272,7 +183,7 @@ export default function ProjectsStack({ projects }: Props) {
                         }}
                       >
                         <div className="card__tags">
-                          {(card.tags.length > 0 ? card.tags : WORK_TAGS).map((tag) => (
+                          {card.tags.map((tag) => (
                             <TextScramble
                               key={`${card.key}-${tag}`}
                               className="tag tag-m tag-permanent mxd-scramble"
@@ -287,14 +198,14 @@ export default function ProjectsStack({ projects }: Props) {
                             href={card.href ?? "/project-details"}
                           >
                             <TextScramble className="btn-caption mxd-scramble">
-                              Know More
+                              {t("viewProject")}
                             </TextScramble>
                           </Link>
                         </div>
                       </div>
                       <Link
                         className="card__title active-cursor-permanent"
-                        data-cursor-text="View Work"
+                        data-cursor-text={t("viewProject")}
                         href={card.href ?? "/project-details"}
                       >
                         <p

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import InnerHeadline from "@/components/projects/works-default/InnerHeadline";
 import ProjectsStack from "@/components/projects/works-default/ProjectsStack";
 import ProjectsList from "@/components/projects/works-default/ProjectsList";
-import ParallaxDividerVideo from "@/components/projects/works-default/ParallaxDividerVideo";
+import ProjectImageDivider from "@/components/projects/works-default/ParallaxDividerVideo";
 import TestimonialsSticky from "@/components/projects/works-default/TestimonialsSticky";
 import CTAWithMarquee from "@/components/projects/works-default/CTAWithMarquee";
 import { client } from "@/sanity/lib/client";
@@ -84,6 +84,7 @@ export default async function WorksDefaultPage() {
 
   // --- ProjectsList veri ---
   let sanityListProjects: ProjectListItem[] = [];
+  let closingImage: string | undefined;
   try {
     const raw = await client.fetch<
       {
@@ -96,6 +97,8 @@ export default async function WorksDefaultPage() {
       }[]
     >(projectsListQuery, { locale });
 
+    const closingSource = raw.at(-1)?.cardImageSrc;
+    closingImage = closingSource ? urlFor(closingSource).width(1200).height(900).quality(85).auto("format").url() : undefined;
     sanityListProjects = raw.map((p) => ({
       _id: p._id,
       titleLines: [
@@ -154,12 +157,12 @@ export default async function WorksDefaultPage() {
 
   return (
     <>
-      <InnerHeadline />
+      <InnerHeadline image={sanityStackProjects[0]?.imageSrc} imageAlt={sanityStackProjects[0]?.imageAlt} />
       <ProjectsStack projects={sanityStackProjects} />
       <ProjectsList projects={sanityListProjects} />
-      <ParallaxDividerVideo />
+      <ProjectImageDivider src={sanityStackProjects.at(-1)?.imageSrc} alt={sanityStackProjects.at(-1)?.imageAlt} />
       <TestimonialsSticky testimonials={sanityTestimonials} />
-      <CTAWithMarquee />
+      <CTAWithMarquee image={closingImage} imageAlt={sanityStackProjects.at(-1)?.title} />
     </>
   );
 }

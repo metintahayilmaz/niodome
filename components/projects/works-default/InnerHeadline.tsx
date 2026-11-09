@@ -11,7 +11,7 @@ import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import TextScramble from "@/components/animations/TextScramble";
 import SmoothAnchorLink from "@/components/common/SmoothAnchorLink";
 
-export default function InnerHeadline() {
+export default function InnerHeadline({ image, imageAlt = "" }: { image?: string; imageAlt?: string }) {
   const t = useTranslations("innerContent");
   return (
     <CommonLoadAnimation>
@@ -23,12 +23,12 @@ export default function InnerHeadline() {
               <div className="mxd-block loading-wrap">
                 <div className="inner-headline fullheight">
                   <div className="inner-headline__bg">
-                    <Image
-                      alt="Azurio Template Sample Image"
-                      src="/img/backgrounds/1920x1280_bg02.webp"
+                    {image && <Image
+                      alt={imageAlt}
+                      src={image}
                       width={1920}
                       height={1280}
-                    />
+                    />}
                     <div className="inner-headline__cover" />
                   </div>
                   <div className="mxd-container grid-l-container">
