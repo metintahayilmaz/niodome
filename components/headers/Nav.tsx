@@ -6,30 +6,12 @@ import { useMemo } from "react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import AutoplayLoopVideo from "@/components/media/AutoplayLoopVideo";
-import type { MenuLinkItem } from "@/types/menu";
-import { homeLinks, insightLinks, pageLinks, worksLinks } from "@/data/menu";
 import { useMxdMenuGsap, useMxdMenuGsapRefs } from "@/hooks/useMxdMenuGsap";
 import { siteSettings } from "@/data/siteSettings";
 import TextScramble from "@/components/animations/TextScramble";
 
-/** Routes not listed in pageLinks but grouped under Pages in the overlay menu */
-const EXTRA_PAGES_ROUTES = ["/preview"];
-
-function normalizePath(p: string): string {
-  if (!p) return "/";
-  const t = p.endsWith("/") && p.length > 1 ? p.slice(0, -1) : p;
-  return t || "/";
-}
-
-function pathMatches(pathname: string, href: string): boolean {
-  return normalizePath(pathname) === normalizePath(href);
-}
-
-function sectionHasActiveRoute(
-  pathname: string,
-  links: MenuLinkItem[],
-): boolean {
-  return links.some((l) => pathMatches(pathname, l.href));
+function isActiveRoute(pathname: string, href: string): boolean {
+  return href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
 }
 
 function makeSlotters<T>(
@@ -61,57 +43,27 @@ export default function Nav({
   const pathname = usePathname();
   const g = useMxdMenuGsapRefs();
 
-  const homeSectionActive = sectionHasActiveRoute(pathname, homeLinks);
-  const worksSectionActive = sectionHasActiveRoute(pathname, worksLinks);
-  const pagesSectionActive =
-    sectionHasActiveRoute(pathname, pageLinks) ||
-    EXTRA_PAGES_ROUTES.some((r) => pathMatches(pathname, r));
-  const insightsSectionActive = sectionHasActiveRoute(pathname, insightLinks);
-  const contactSectionActive = pathMatches(pathname, "/contact");
-
-  const PAGE_MENU_KEYS: Record<string, Parameters<typeof tMenu>[0]> = {
-    "/about-me": "aboutMe",
-    "/about-us": "aboutUs",
-    "/services": "services",
-    "/team": "team",
-    "/pricing": "pricing",
-    "/faq": "faq",
-    "/404": "notFoundPage",
-    "/": "landingPage",
-    "/works": "works",
-    "/blog": "blog",
-  };
-
-  const renderSubmenuLinks = (links: MenuLinkItem[], translateLabel = true) =>
-    links.map((link) => (
-      <li
-        key={link.href}
-        className={`submenu__item ${pathMatches(pathname, link.href) ? "active" : ""}`}
-      >
-        <Link href={link.href as Parameters<typeof Link>[0]["href"]}>
-          {translateLabel && PAGE_MENU_KEYS[link.href]
-            ? tMenu(PAGE_MENU_KEYS[link.href])
-            : link.label}
-        </Link>
-      </li>
-    ));
-
-  const parentItemClass = (current: boolean) =>
-    `main-menu__item${current ? " main-menu__item--current" : ""}`;
+  const links = [
+    { href: "/", label: t("home") },
+    { href: "/works", label: t("works") },
+    { href: "/about-us", label: tMenu("aboutUs") },
+    { href: "/services", label: tMenu("services") },
+    { href: "/blog", label: tMenu("blog") },
+    { href: "/contact", label: t("contact") },
+  ] as const;
 
   const headerSlots = useMemo(() => makeSlotters(g.headerSplitTargets, 3), [g]);
-  const mainSlots = useMemo(() => makeSlotters(g.mainMenuLinkSpans, 10), [g]);
+  const mainSlots = useMemo(() => makeSlotters(g.mainMenuLinkSpans, 12), [g]);
   const contactSlots = useMemo(() => makeSlotters(g.contactAnchors, 8), [g]);
   const contactRevealSlots = useMemo(
     () => makeSlotters(g.contactRevealTargets, 8),
     [g],
   );
   const footerSlots = useMemo(() => makeSlotters(g.footerSplitTargets, 4), [g]);
-  const dividerSlots = useMemo(() => makeSlotters(g.dividers, 6), [g]);
-  const arrowSlots = useMemo(() => makeSlotters(g.arrows, 4), [g]);
-  const liSlots = useMemo(() => makeSlotters(g.menuItemLis, 5), [g]);
-  const toggleSlots = useMemo(() => makeSlotters(g.menuToggles, 5), [g]);
-  const submenuSlots = useMemo(() => makeSlotters(g.menuSubmenus, 5), [g]);
+  const dividerSlots = useMemo(() => makeSlotters(g.dividers, 7), [g]);
+  const arrowSlots = useMemo(() => makeSlotters(g.arrows, 6), [g]);
+  const liSlots = useMemo(() => makeSlotters(g.menuItemLis, 6), [g]);
+  const toggleSlots = useMemo(() => makeSlotters(g.menuToggles, 6), [g]);
 
   useMxdMenuGsap(navNode, toggleNode, hamburgerNode, registerMenuReset, g);
 
@@ -175,183 +127,25 @@ export default function Nav({
                 <div className="main-menu">
                   <div className="main-menu__content">
                     <ul id="main-menu" className="main-menu__accordion">
-                      <li
-                        ref={liSlots[0]}
-                        className={parentItemClass(homeSectionActive)}
-                      >
-                        <div
-                          ref={dividerSlots[0]}
-                          className="main-menu__divider divider-top"
-                        />
-                        <div ref={toggleSlots[0]} className="main-menu__toggle">
-                          <p className="main-menu__link">
-                            <span
-                              ref={mainSlots[0]}
-                              className="main-menu__number"
-                            >
-                              / 01
-                            </span>
-                            <span
-                              ref={mainSlots[1]}
-                              className="main-menu__caption"
-                            >
-                              {t("home")}
-                            </span>
-                          </p>
-                          <div ref={arrowSlots[0]} className="main-menu__arrow">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              version="1.1"
-                              viewBox="0 0 18 18"
-                            >
-                              <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                            </svg>
-                          </div>
-                        </div>
-                        <ul ref={submenuSlots[0]} className="submenu">
-                          {renderSubmenuLinks(homeLinks)}
-                        </ul>
-                        <div
-                          ref={dividerSlots[1]}
-                          className="main-menu__divider divider-bottom"
-                        />
-                      </li>
-                      <li
-                        ref={liSlots[1]}
-                        className={parentItemClass(worksSectionActive)}
-                      >
-                        <div ref={toggleSlots[1]} className="main-menu__toggle">
-                          <p className="main-menu__link">
-                            <span
-                              ref={mainSlots[2]}
-                              className="main-menu__number"
-                            >
-                              / 02
-                            </span>
-                            <span
-                              ref={mainSlots[3]}
-                              className="main-menu__caption"
-                            >
-                              {t("works")}
-                            </span>
-                          </p>
-                          <div ref={arrowSlots[1]} className="main-menu__arrow">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              version="1.1"
-                              viewBox="0 0 18 18"
-                            >
-                              <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                            </svg>
-                          </div>
-                        </div>
-                        <ul ref={submenuSlots[1]} className="submenu">
-                          {renderSubmenuLinks(worksLinks)}
-                        </ul>
-                        <div
-                          ref={dividerSlots[2]}
-                          className="main-menu__divider divider-bottom"
-                        />
-                      </li>
-                      <li
-                        ref={liSlots[2]}
-                        className={parentItemClass(pagesSectionActive)}
-                      >
-                        <div ref={toggleSlots[2]} className="main-menu__toggle">
-                          <p className="main-menu__link">
-                            <span
-                              ref={mainSlots[4]}
-                              className="main-menu__number"
-                            >
-                              / 03
-                            </span>
-                            <span
-                              ref={mainSlots[5]}
-                              className="main-menu__caption"
-                            >
-                              {t("pages")}
-                            </span>
-                          </p>
-                          <div ref={arrowSlots[2]} className="main-menu__arrow">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              version="1.1"
-                              viewBox="0 0 18 18"
-                            >
-                              <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                            </svg>
-                          </div>
-                        </div>
-                        <ul ref={submenuSlots[2]} className="submenu">
-                          {renderSubmenuLinks(pageLinks, true)}
-                        </ul>
-                        <div
-                          ref={dividerSlots[3]}
-                          className="main-menu__divider divider-bottom"
-                        />
-                      </li>
-                      <li
-                        ref={liSlots[3]}
-                        className={parentItemClass(insightsSectionActive)}
-                      >
-                        <div ref={toggleSlots[3]} className="main-menu__toggle">
-                          <p className="main-menu__link">
-                            <span
-                              ref={mainSlots[6]}
-                              className="main-menu__number"
-                            >
-                              / 04
-                            </span>
-                            <span
-                              ref={mainSlots[7]}
-                              className="main-menu__caption"
-                            >
-                              {t("insights")}
-                            </span>
-                          </p>
-                          <div ref={arrowSlots[3]} className="main-menu__arrow">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              version="1.1"
-                              viewBox="0 0 18 18"
-                            >
-                              <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                            </svg>
-                          </div>
-                        </div>
-                        <ul ref={submenuSlots[3]} className="submenu">
-                          {renderSubmenuLinks(insightLinks)}
-                        </ul>
-                        <div
-                          ref={dividerSlots[4]}
-                          className="main-menu__divider divider-bottom"
-                        />
-                      </li>
-                      <li
-                        ref={liSlots[4]}
-                        className={parentItemClass(contactSectionActive)}
-                      >
-                        <div ref={toggleSlots[4]} className="main-menu__toggle">
-                          <Link className="main-menu__link" href={`/contact`}>
-                            <span
-                              ref={mainSlots[8]}
-                              className="main-menu__number"
-                            >
-                              / 05
-                            </span>
-                            <span
-                              ref={mainSlots[9]}
-                              className="main-menu__caption"
-                            >
-                              {t("contact")}
-                            </span>
-                          </Link>
-                        </div>
-                        <div
-                          ref={dividerSlots[5]}
-                          className="main-menu__divider divider-bottom"
-                        />
-                      </li>
+                      {links.map((link, index) => {
+                        const active = isActiveRoute(pathname, link.href);
+                        return (
+                          <li key={link.href} ref={liSlots[index]}
+                            className={`main-menu__item${active ? " main-menu__item--current" : ""}`}>
+                            {index === 0 && <div ref={dividerSlots[0]} className="main-menu__divider divider-top" />}
+                            <div ref={toggleSlots[index]} className="main-menu__toggle">
+                              <Link href={link.href} className="main-menu__link main-menu__link--direct" aria-current={active ? "page" : undefined}>
+                                <span ref={mainSlots[index * 2]} className="main-menu__number">/ {String(index + 1).padStart(2, "0")}</span>
+                                <span ref={mainSlots[index * 2 + 1]} className="main-menu__caption">{link.label}</span>
+                                <span ref={arrowSlots[index]} className="main-menu__arrow" aria-hidden="true">
+                                  <svg viewBox="0 0 18 18" fill="none"><path d="M3 9h11M9 3l6 6-6 6" stroke="currentColor" strokeWidth="2" fill="none" /></svg>
+                                </span>
+                              </Link>
+                            </div>
+                            <div ref={dividerSlots[index + 1]} className="main-menu__divider divider-bottom" />
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 </div>

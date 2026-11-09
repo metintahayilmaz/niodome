@@ -61,3 +61,8 @@
   -ms-transform: scale(1);
   transform: scale(1);
 }
+
+/* Each primary navigation row is one direct destination. */
+.main-menu__link--direct,
+.main-menu__link--direct:visited { width: 100%; color: var(--t-opp-bright); }
+.main-menu__link--direct .main-menu__arrow { margin-left: auto; }
