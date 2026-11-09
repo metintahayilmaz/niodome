@@ -2,6 +2,7 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import approvedServices from "@/data/approvedServices.json";
+import ServiceArtwork from "./ServiceArtwork";
 import Image from "next/image";
 import TextScramble from "@/components/animations/TextScramble";
 import CommonServicesStack, {
@@ -112,12 +113,12 @@ function ServiceCard({
             </div>
             <ServicesStackSlot part="image" index={index}>
               <div className="services-card__image">
-                <Image
+                {imgSrc.includes("22ff4baf74499bb61f70ac2a535d3458cb4a5cda") || LOCAL_IMAGES.includes(imgSrc) ? <ServiceArtwork index={index} /> : <Image
                   src={imgSrc}
                   width={IMG_W}
                   height={IMG_H}
                   alt={item.title}
-                />
+                />}
                 <div className="services-card__cover" />
               </div>
             </ServicesStackSlot>

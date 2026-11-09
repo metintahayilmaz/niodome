@@ -30,6 +30,7 @@ type Props = {
 export default function BlogPreview({ posts }: Props) {
   const t = useTranslations("blogPreview");
   const locale = useLocale();
+  const content = useTranslations("content");
   const resolvedPosts = posts?.slice(0, 3) ?? [];
   if (!resolvedPosts.length) return null;
 
@@ -79,11 +80,7 @@ export default function BlogPreview({ posts }: Props) {
                             className="t-bold t-large mxd-split-lines"
                             animation="splitLines"
                           >
-                            Inspiring ideas, creative insights, and the latest
-                            in design and tech.
-                            <span>
-                              {t("blogIntro")}
-                            </span>
+                            {content("blogDescription")}
                           </CommonAnimatedText>
                         </div>
                       </div>
