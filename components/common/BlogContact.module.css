@@ -1,0 +1,15 @@
+.section { overflow: hidden; background: var(--base-opp); color: var(--t-opp-bright); padding: 80px 0 60px; }
+.copy { max-width: 800px; margin: 0 auto 64px; padding: 0 24px; text-align: center; }
+.copy a, .copy a:visited { color: inherit; }
+.copy h2 { font-size: clamp(36px, 5vw, 64px); line-height: 1.15; }
+.eyebrow { display: inline-block; font: 600 14px/1.5 var(--_font-accent); text-transform: uppercase; margin-bottom: 26px; }
+.window { overflow: hidden; }
+.track { display: flex; width: max-content; animation: blog-strip 90s linear infinite; }
+.group { display: flex; gap: 14px; padding-right: 14px; }
+.card { position: relative; display: block; flex-shrink: 0; width: 360px; aspect-ratio: 4 / 3; overflow: hidden; }
+.card img { object-fit: cover; }
+.window:hover .track, .window:focus-within .track { animation-play-state: paused; }
+.card:focus-visible { outline: 3px solid #fff; outline-offset: -3px; }
+@keyframes blog-strip { to { transform: translateX(-50%); } }
+@media(max-width: 767px) { .section { padding: 60px 0 40px; } .card { width: 220px; } .group { gap: 8px; padding-right: 8px; } }
+@media(prefers-reduced-motion: reduce) { .track { animation: none; } .window { overflow-x: auto; } .group[aria-hidden] { display: none; } .card[aria-hidden] { display: none; } }

@@ -105,8 +105,8 @@ export type ArticleSchemaInput = {
   author?: string;
 };
 
-export function articleSchema(post: ArticleSchemaInput) {
-  const url = `${BASE}/blog/${post.slug}`;
+export function articleSchema(post: ArticleSchemaInput, locale = "tr") {
+  const url = locale === "en" ? `${BASE}/en/blog/${post.slug}` : `${BASE}/blog/${post.slug}`;
   return compact({
     "@context": "https://schema.org",
     "@type": "BlogPosting",

@@ -64,7 +64,7 @@ export async function generateMetadata({
         type: "article",
         publishedTime: post.date ?? undefined,
         authors: post.author ? [post.author] : undefined,
-        url: `${SITE_URL}/blog/${slug}`,
+        url: locale === "en" ? `${SITE_URL}/en/blog/${slug}` : `${SITE_URL}/blog/${slug}`,
         ...(ogImage && {
           images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
         }),
@@ -126,11 +126,11 @@ export default async function BlogSlugPage({
     coverImageUrl: coverImageUrl,
     date: post.date ?? undefined,
     author: post.author ?? undefined,
-  });
+  }, locale);
   const ldBreadcrumb = breadcrumbSchema([
-    { name: "Ana Sayfa", url: SITE_URL },
-    { name: "Blog", url: `${SITE_URL}/blog` },
-    { name: post.title, url: `${SITE_URL}/blog/${post.slug}` },
+    { name: locale === "en" ? "Home" : "Ana Sayfa", url: locale === "en" ? `${SITE_URL}/en` : SITE_URL },
+    { name: "Blog", url: locale === "en" ? `${SITE_URL}/en/blog` : `${SITE_URL}/blog` },
+    { name: post.title, url: locale === "en" ? `${SITE_URL}/en/blog/${post.slug}` : `${SITE_URL}/blog/${post.slug}` },
   ]);
 
   return (
