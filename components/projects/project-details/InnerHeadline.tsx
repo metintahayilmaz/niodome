@@ -34,7 +34,7 @@ export default function InnerHeadline({ title, subtitle, tagsColA, tagsColB }: P
                   <div className="row g-0">
                     <div className="col-12 mxd-grid-item">
                       <CommonLoadFade index={0}>
-                        <div className="inner-headline__breadcrumbs loading-fade">
+                        <div className="inner-headline__breadcrumbs loading-fade" style={{ position: "relative", top: "10rem" }}>
                           <div className="breadcrumbs__nav">
                             <span>
                               <Link href={`/works-default`}>
