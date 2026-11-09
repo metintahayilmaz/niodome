@@ -1,0 +1,8 @@
+.gallery { width: min(1440px, 90%); margin: 0 auto; display: grid; gap: clamp(32px, 5vw, 80px); padding-bottom: clamp(60px, 8vw, 120px); }
+.figure { margin: 0; min-width: 0; }
+.image { display: block; width: 100%; height: auto; border-radius: 0; }
+.caption { margin-top: 14px; font-size: clamp(14px, 1.2vw, 18px); line-height: 1.5; color: var(--t-medium); }
+@media (min-width: 768px) {
+ .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+ .figure:nth-child(3n + 1) { grid-column: 1 / -1; }
+}

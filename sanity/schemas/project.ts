@@ -160,14 +160,14 @@ export const project = defineType({
       ],
     }),
 
-    // Galeri görselleri — 6 adet, slot sırası önemli
+    // Project gallery — flexible length, localized accessibility and captions
     defineField({
       name: "galleryImages",
-      title: "Gallery Images (6 slots)",
-      description: "[0] ImagesGrid geniş · [1] sol yarı · [2] sağ yarı · [3] ImagesGrid2 sol · [4] sağ · [5] geniş",
+      title: "Project Gallery",
+      description: "Görseller sırayla gösterilir. Açıklama ve alternatif metinleri iki dilde girin.",
       type: "array",
-      of: [{ type: "image", options: { hotspot: true } }],
-      validation: (r) => r.max(6),
+      of: [{ type: "image", options: { hotspot: true }, fields: [localeString("alt", "Alternative text"), localeString("caption", "Caption")] }],
+      validation: (r) => r.max(30),
     }),
 
     // ClientSFeedback — alıntı

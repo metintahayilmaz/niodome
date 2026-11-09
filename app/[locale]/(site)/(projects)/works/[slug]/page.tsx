@@ -7,9 +7,8 @@ import type { ProjectDetail } from "@/types/project";
 
 import InnerHeadline from "@/components/projects/project-details/InnerHeadline";
 import SplitList from "@/components/projects/project-details/SplitList";
-import ImagesGrid from "@/components/projects/project-details/ImagesGrid";
+import ProjectGallery, { type ProjectGalleryItem } from "@/components/projects/project-details/ProjectGallery";
 import SplitList2 from "@/components/projects/project-details/SplitList2";
-import ImagesGrid2 from "@/components/projects/project-details/ImagesGrid2";
 import SplitList3 from "@/components/projects/project-details/SplitList3";
 import ClientSFeedback from "@/components/projects/project-details/ClientSFeedback";
 import NextProjectLink from "@/components/projects/project-details/NextProjectLink";
@@ -99,7 +98,7 @@ export async function generateMetadata({
 }
 
 // ── Raw types returned by Sanity (before urlFor) ────────────────────────────
-type RawGalleryImage = Parameters<typeof urlFor>[0];
+type RawGalleryImage = Parameters<typeof urlFor>[0] & { alt?: { tr?: string; en?: string }; caption?: { tr?: string; en?: string } };
 type RawProject = {
   _id: string;
   title: string | null;
@@ -148,6 +147,7 @@ export default async function WorksSlugPage({
   const locale = await getLocale();
 
   let project: ProjectDetail | null = null;
+  let gallery: ProjectGalleryItem[] = [];
 
   try {
     const raw = await client.fetch<RawProject | null>(projectBySlugQuery, {
@@ -163,6 +163,12 @@ export default async function WorksSlugPage({
             .quality(80).auto("format").url();
         },
       );
+
+      gallery = galleryImages.map((src, index) => {
+        const image = raw.galleryImages?.[index];
+        const language = locale === "en" ? "en" : "tr";
+        return { src, alt: image?.alt?.[language] || raw.title || "", caption: image?.caption?.[language] };
+      });
 
       // Feedback author photo
       const feedbackAuthorPhoto = raw.feedbackAuthorPhoto
@@ -263,13 +269,12 @@ export default async function WorksSlugPage({
         industries={project.industries}
         projectDate={project.projectDate}
       />
-      <ImagesGrid images={project.galleryImages.slice(0, 3)} />
+      <ProjectGallery images={gallery} />
       {project.challengeLead && <SplitList2
         challengeLead={project.challengeLead}
         challengeSpan={project.challengeSpan}
         services={project.services}
       />}
-      {project.galleryImages.length >= 6 && <ImagesGrid2 images={project.galleryImages.slice(3, 6)} />}
       {project.solutionLead && <SplitList3
         solutionLead={project.solutionLead}
         solutionSpan={project.solutionSpan}
