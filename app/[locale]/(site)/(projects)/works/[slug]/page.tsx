@@ -294,7 +294,7 @@ export default async function WorksSlugPage({
       {project.nextProject && (
         <NextProjectLink nextProject={project.nextProject} />
       )}
-      <CTAWithMarquee />
+      <CTAWithMarquee image={gallery[0]?.src} imageAlt={gallery[0]?.alt} />
     </>
   );
 }

@@ -1,3 +1,4 @@
+import GravityContact from "./GravityContact";
 import Link from "@/components/common/LocalizedLink";
 import { getTranslations } from "next-intl/server";
 import styles from "./ApprovedNarrative.module.css";
@@ -6,6 +7,7 @@ type Part = "home" | "services" | "aboutStart" | "aboutEnd" | "contact";
 
 export default async function ApprovedNarrative({ part }: { part: Part }) {
   const t = await getTranslations("narrative");
+  if (part === "contact") return <GravityContact title={t("contactTitle")} description={t("contactParagraph")} button={t("contactButton")} />;
   return (
     <section id={part === "home" ? "about" : part === "aboutStart" ? "process" : undefined} className={`mxd-section ${styles.section}`} aria-labelledby={`narrative-${part}`}>
       <div className="mxd-container grid-l-container">
@@ -34,11 +36,7 @@ export default async function ApprovedNarrative({ part }: { part: Part }) {
             <h3>{t("measureTitle")}</h3>
             <p>{t("measureParagraph")}</p>
           </>}
-          {part === "contact" && <>
-            <h2 id={`narrative-${part}`}>{t("contactTitle")}</h2>
-            <p>{t("contactParagraph")}</p>
-            <Link className="btn btn-line btn-line-default" href="/contact">{t("contactButton")}</Link>
-          </>}
+
         </div>
       </div>
     </section>
