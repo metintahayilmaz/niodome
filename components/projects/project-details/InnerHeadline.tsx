@@ -37,7 +37,7 @@ export default function InnerHeadline({ title, subtitle, tagsColA, tagsColB }: P
                         <div className="inner-headline__breadcrumbs loading-fade" style={{ position: "relative", top: "10rem" }}>
                           <div className="breadcrumbs__nav">
                             <span>
-                              <Link href={`/works-default`}>
+                              <Link href="/works">
                                 <TextScramble className="mxd-scramble">
                                   {t("works")}
                                 </TextScramble>

@@ -5,7 +5,7 @@ import Link from "@/components/common/LocalizedLink";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import TextScramble from "@/components/animations/TextScramble";
-import SmoothAnchorLink from "@/components/common/SmoothAnchorLink";
+import { useTranslations } from "next-intl";
 import type { ProjectListItem } from "@/types/project";
 
 // Yerel fallback veri — Sanity boşken kullanılır
@@ -15,6 +15,7 @@ type Props = {
 };
 
 export default function ProjectsList({ projects }: Props) {
+  const t = useTranslations("projectContent");
   const resolvedProjects = projects ?? [];
 
   if (!resolvedProjects.length) return null;
@@ -39,7 +40,7 @@ export default function ProjectsList({ projects }: Props) {
                           className="reveal-type"
                           animation="revealType"
                         >
-                          Projects archive
+                          {t("projectArchive")}
                         </CommonAnimatedText>
                       </div>
                     </div>
@@ -50,14 +51,14 @@ export default function ProjectsList({ projects }: Props) {
                           as="div"
                           animation="inUp"
                         >
-                          <SmoothAnchorLink
+                          <Link
                             className="btn btn-line btn-line-default"
-                            targetId="testimonials"
+                            href="/contact"
                           >
                             <TextScramble className="btn-caption mxd-scramble">
-                              Clients Approve
+                              {t("discussProject")}
                             </TextScramble>
-                          </SmoothAnchorLink>
+                          </Link>
                         </CommonScrollAnimated>
                       </div>
                     </div>
@@ -79,7 +80,7 @@ export default function ProjectsList({ projects }: Props) {
                       key={project._id}
                       className="mxd-projects-list__item active-cursor-image active-cursor-permanent"
                       data-cursor-image={project.cardImageSrc ?? ""}
-                      data-cursor-text="View Work"
+                      data-cursor-text={t("viewProject")}
                       href={project.href ?? "/project-details"}
                     >
                       <div className="mxd-projects-list__divider top" />

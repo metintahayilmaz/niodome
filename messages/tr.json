@@ -205,7 +205,10 @@
     "featuredLead": "Öne çıkan",
     "featuredSpan": "yazılarımız",
     "allArticles": "Tüm yazılar",
-    "blogIntro": "Tasarım, teknoloji ve marka dünyasından içerikler."
+    "blogIntro": "Tasarım, teknoloji ve marka dünyasından içerikler.",
+    "projectArchive": "Tüm projeler",
+    "discussProject": "Projenizi konuşalım",
+    "viewProject": "Projeyi incele"
   },
   "blogPreview": {
     "title": "Yazılar ve fikirler",

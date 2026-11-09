@@ -59,7 +59,7 @@ export async function generateMetadata({
         openGraph: {
           title: `${raw.title} — Niodome`,
           description,
-          url: `${SITE_URL}/works/${slug}`,
+          url: locale === "en" ? `${SITE_URL}/en/works/${slug}` : `${SITE_URL}/calismalar/${slug}`,
           type: "article",
           ...(ogImage && {
             images: [
@@ -231,11 +231,11 @@ export default async function WorksSlugPage({
     notFound();
   }
 
-  const ldCreativeWork = creativeWorkSchema(project);
+  const ldCreativeWork = creativeWorkSchema(project, locale);
   const ldBreadcrumb = breadcrumbSchema([
-    { name: "Ana Sayfa", url: SITE_URL },
-    { name: "Çalışmalar", url: `${SITE_URL}/calismalar` },
-    { name: project.title, url: `${SITE_URL}/calismalar/${project.slug}` },
+    { name: locale === "en" ? "Home" : "Ana Sayfa", url: locale === "en" ? `${SITE_URL}/en` : SITE_URL },
+    { name: locale === "en" ? "Works" : "Çalışmalar", url: locale === "en" ? `${SITE_URL}/en/works` : `${SITE_URL}/calismalar` },
+    { name: project.title, url: locale === "en" ? `${SITE_URL}/en/works/${project.slug}` : `${SITE_URL}/calismalar/${project.slug}` },
   ]);
 
   return (

@@ -134,8 +134,8 @@ export function articleSchema(post: ArticleSchemaInput) {
 
 // ── CreativeWork (works/[slug]) ──────────────────────────────────────────────
 
-export function creativeWorkSchema(project: ProjectDetail) {
-  const url = `${BASE}/works/${project.slug}`;
+export function creativeWorkSchema(project: ProjectDetail, locale = "tr") {
+  const url = locale === "en" ? `${BASE}/en/works/${project.slug}` : `${BASE}/calismalar/${project.slug}`;
 
   const images = project.galleryImages.filter(Boolean);
   const about = [

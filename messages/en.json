@@ -205,7 +205,10 @@
     "featuredLead": "Our featured",
     "featuredSpan": "insights",
     "allArticles": "All articles",
-    "blogIntro": "Insights on design, technology and branding."
+    "blogIntro": "Insights on design, technology and branding.",
+    "projectArchive": "All projects",
+    "discussProject": "Let’s discuss your project",
+    "viewProject": "View project"
   },
   "blogPreview": {
     "title": "Featured news",
