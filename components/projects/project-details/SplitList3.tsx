@@ -49,6 +49,7 @@ export default async function SplitList3({
                   </div>
 
                   {/* Right — Tech Stack list */}
+                  {resolvedStack.length > 0 && <>
                   <div className="col-12 col-xl-6 mxd-grid-item mxd-block-split__item manifest-item">
                     <div className="mxd-block-split__inner">
                       <div className="mxd-block-split__subtitle pre-grid">
@@ -76,6 +77,7 @@ export default async function SplitList3({
                       </div>
                     </div>
                   </div>
+                  </>}
                 </div>
               </div>
             </div>

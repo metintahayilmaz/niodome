@@ -13,8 +13,6 @@ import ImagesGrid2 from "@/components/projects/project-details/ImagesGrid2";
 import SplitList3 from "@/components/projects/project-details/SplitList3";
 import ClientSFeedback from "@/components/projects/project-details/ClientSFeedback";
 import NextProjectLink from "@/components/projects/project-details/NextProjectLink";
-import ParallaxDividerImage from "@/components/projects/project-details/ParallaxDividerImage";
-import ParallaxDividerImage2 from "@/components/projects/project-details/ParallaxDividerImage2";
 import CTAWithMarquee from "@/components/projects/project-details/CTAWithMarquee";
 import { creativeWorkSchema, breadcrumbSchema } from "@/lib/jsonLd";
 import { getLocale } from "next-intl/server";
@@ -161,20 +159,8 @@ export default async function WorksSlugPage({
       // Gallery images — slot 0 & 5 tam genişlik (1920px), 1-4 yarı genişlik (960px)
       const galleryImages: string[] = (raw.galleryImages ?? []).map(
         (img, i) => {
-          const isFullWidth = i === 0 || i === 5;
-          return isFullWidth
-            ? urlFor(img)
-                .width(1920)
-                .height(1440)
-                .quality(80)
-                .auto("format")
-                .url()
-            : urlFor(img)
-                .width(960)
-                .height(1280)
-                .quality(80)
-                .auto("format")
-                .url();
+          return urlFor(img).width(i === 0 || i === 5 ? 1920 : 960)
+            .quality(80).auto("format").url();
         },
       );
 
@@ -278,19 +264,17 @@ export default async function WorksSlugPage({
         projectDate={project.projectDate}
       />
       <ImagesGrid images={project.galleryImages.slice(0, 3)} />
-      <SplitList2
+      {project.challengeLead && <SplitList2
         challengeLead={project.challengeLead}
         challengeSpan={project.challengeSpan}
         services={project.services}
-      />
-      <ParallaxDividerImage />
-      <ImagesGrid2 images={project.galleryImages.slice(3, 6)} />
-      <SplitList3
+      />}
+      {project.galleryImages.length >= 6 && <ImagesGrid2 images={project.galleryImages.slice(3, 6)} />}
+      {project.solutionLead && <SplitList3
         solutionLead={project.solutionLead}
         solutionSpan={project.solutionSpan}
         techStack={project.techStack}
-      />
-      <ParallaxDividerImage2 />
+      />}
       {project.feedbackApproved && (
         <ClientSFeedback
           quoteLead={project.feedbackQuoteLead}
