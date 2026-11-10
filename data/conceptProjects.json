@@ -10,8 +10,8 @@
       }
     },
     "cardImageAlt": {
-      "tr": "Mola kahve ambalajları, yürüyen merdiven basamağı ve dev bilardo topuyla sarı stüdyo sahnesinde",
-      "en": "Mola coffee packaging on an escalator step beside an oversized billiard ball in a yellow studio set"
+      "en": "Mola coffee packaging on an escalator step beside an oversized billiard ball in a yellow studio set",
+      "tr": "Mola kahve ambalajları, yürüyen merdiven basamağı ve dev bilardo topuyla sarı stüdyo sahnesinde"
     },
     "cardImageSrc": {
       "_type": "image",
@@ -38,8 +38,8 @@
         "_key": "main",
         "_type": "image",
         "alt": {
-          "tr": "Mola kahve ambalajları, yürüyen merdiven basamağı ve dev bilardo topuyla sarı stüdyo sahnesinde",
-          "en": "Mola coffee packaging on an escalator step beside an oversized billiard ball in a yellow studio set"
+          "en": "Mola coffee packaging on an escalator step beside an oversized billiard ball in a yellow studio set",
+          "tr": "Mola kahve ambalajları, yürüyen merdiven basamağı ve dev bilardo topuyla sarı stüdyo sahnesinde"
         },
         "asset": {
           "_ref": "image-e64fd23162fb93029eeae75bec98d47f8d13829e-1536x1024-png",
@@ -54,8 +54,8 @@
         "_key": "detail",
         "_type": "image",
         "alt": {
-          "tr": "Mola kimlik uygulamaları, mavi stadyum koltuğu ve dev metal yayla kırmızı fonda",
-          "en": "Mola identity applications on a blue stadium chair with an oversized metal spring against red"
+          "en": "Mola identity applications on a blue stadium chair with an oversized metal spring against red",
+          "tr": "Mola kimlik uygulamaları, mavi stadyum koltuğu ve dev metal yayla kırmızı fonda"
         },
         "asset": {
           "_ref": "image-bd94f912be96e63fd5932bd820ea38114a0d0614-1536x1024-png",
@@ -65,8 +65,8 @@
     ],
     "href": "/works/mola-ambalaj-konsepti",
     "imageAlt": {
-      "tr": "Mola kahve ambalajları, yürüyen merdiven basamağı ve dev bilardo topuyla sarı stüdyo sahnesinde",
-      "en": "Mola coffee packaging on an escalator step beside an oversized billiard ball in a yellow studio set"
+      "en": "Mola coffee packaging on an escalator step beside an oversized billiard ball in a yellow studio set",
+      "tr": "Mola kahve ambalajları, yürüyen merdiven basamağı ve dev bilardo topuyla sarı stüdyo sahnesinde"
     },
     "imageSrc": {
       "_type": "image",
@@ -86,8 +86,8 @@
       "tr": "Mola, kahve ambalajında güçlü bir imza ile ürünler arasındaki ayrımı birlikte ele alan, Niodome için hazırlanmış özgün bir konsept çalışma."
     },
     "overviewSpan": {
-      "en": "Geometric lettering, intersecting circles and three colours create a coherent packaging family. This is a self-initiated study, not a commissioned project or a product on sale.",
-      "tr": "Geometrik harfler, kesişen daireler ve üç renk üzerinden bir ambalaj ailesi kurduk. Bu çalışma bir müşteri siparişi veya satıştaki bir ürün değildir."
+      "en": "Geometric lettering, intersecting circles and three colours create a coherent packaging family.",
+      "tr": "Geometrik harfler, kesişen daireler ve üç renk üzerinden bir ambalaj ailesi kurduk."
     },
     "projectDate": "2026",
     "services": [
