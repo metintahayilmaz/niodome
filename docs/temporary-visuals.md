@@ -15,6 +15,10 @@ Niodome’un gerçek proje görselleri ve yönetim fotoğrafları korunur. Şabl
 | Ana sayfa video kapakları | Orijinal minibüs/hero video kapakları | Gerçek Niodome videosu geldiğinde video ve kapak birlikte değişecek. Video dosyaları korundu. |
 | Diğer şablon bileşenleri | Orijinal adı eşleşen boyut yer tutucularının gerçek demo karşılıkları | Bu bileşenler kullanıma alındığında gerçek içerik ve görselle tek tek güncellenecek. Menülere yeni demo sayfası eklenmedi. |
 
+## Ana sayfa kültürel kapak
+
+Noema kapak alanı kaldırıldı. Coca-Cola / 17. İstanbul Bienali kavramsal hareketli afişi kullanılıyor. Bu alan gerçek müşteri işi veya sponsorluk kaydı olarak portfolyoya eklenmedi. Özgün görsellerin üretim kaydı: `docs/biennial-motion-sources.json`. Video ve kapak birlikte `data/homeCover.ts` üzerinden değiştirilir.
+
 ## Tam dosya listesi
 
 Makine tarafından okunabilen kayıt: `data/temporaryVisuals.json`. Her satırda dosya yolu, kaynak adresi, bulunduğu referans sayfalar, değiştirme notu ve dosya özeti bulunur.

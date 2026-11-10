@@ -1,0 +1,13 @@
+.cover { background: #f2e9d8; }
+.cover video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.cover .still { display: none; }
+@media (max-width: 767px) {
+  .cover video, .cover img { object-fit: contain; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cover video { display: none; }
+  .cover .still { display: block; }
+}
+
+.outro { width: min(900px, calc(100% - 48px)); padding: 0; }
+.outro p { font-size: clamp(26px, 3.4vw, 48px); line-height: 1.18; letter-spacing: -0.025em; }

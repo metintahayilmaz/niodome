@@ -68,6 +68,7 @@ export default async function Divider() {
                   className="mxd-trail-transparent-image"
                   alt=""
                   sizes="240px"
+                  loading="eager"
                   {...image}
                 />
               ))}

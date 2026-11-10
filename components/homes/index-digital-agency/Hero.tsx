@@ -17,6 +17,7 @@ import CommonHero3DImages, {
 } from "@/components/animations/CommonHero3DImages";
 import { heroDigitalAgencyData } from "@/data/heroDigitalAgency";
 import { siteSettings } from "@/data/siteSettings";
+import coverStyles from "./HeroCover.module.css";
 import type { SocialLinkItem } from "@/types/siteSettings";
 import type { HeroGalleryImage } from "@/types/heroDigitalAgency";
 
@@ -33,6 +34,7 @@ type HeroSettings = {
 
 type Props = {
   scrollTargetId?: string;
+  coverVideo?: string;
   /**
    * Sanity'den çekilen sosyal linkler.
    * Verilmezse local data/siteSettings.ts'e fallback yapılır.
@@ -75,8 +77,14 @@ const galleryImageStyle = {
   objectFit: "contain" as const,
 };
 
-export default function Hero({ socials, heroSettings, scrollTargetId = "about" }: Props) {
-  const resolvedSocials = socials && socials.length > 0 ? socials : siteSettings.socials;
+export default function Hero({
+  socials,
+  heroSettings,
+  coverVideo,
+  scrollTargetId = "about",
+}: Props) {
+  const resolvedSocials =
+    socials && socials.length > 0 ? socials : siteSettings.socials;
   const local = heroDigitalAgencyData;
   const sanityGallery = heroSettings?.galleryImages ?? [];
 
@@ -97,7 +105,9 @@ export default function Hero({ socials, heroSettings, scrollTargetId = "about" }
     return {
       ...fallback,
       ...sanityImage,
-      href: sanityImage.href?.includes("/project-details") ? undefined : sanityImage.href,
+      href: sanityImage.href?.includes("/project-details")
+        ? undefined
+        : sanityImage.href,
       alt: sanityImage.alt || fallback.alt,
       width: intrinsic?.width || sanityImage.width || fallback.width,
       height: intrinsic?.height || sanityImage.height || fallback.height,
@@ -159,7 +169,7 @@ export default function Hero({ socials, heroSettings, scrollTargetId = "about" }
                       style={galleryImageStyle}
                     />
                   </CommonHero3DImage>
-                )
+                ),
               )}
             </CommonHero3DImagesTrack>
             {/* bottom group */}
@@ -208,14 +218,33 @@ export default function Hero({ socials, heroSettings, scrollTargetId = "about" }
               </div>
             </div>
             {/* cover image */}
-            <CommonHero3DCover className="mxd-hero-02__cover-img">
-              <Image
-                alt={coverImage.alt}
-                src={coverImage.src}
-                width={coverImage.width}
-                height={coverImage.height}
-                priority
-              />
+            <CommonHero3DCover
+              className={`mxd-hero-02__cover-img ${coverVideo ? coverStyles.cover : ""}`}
+            >
+              {coverVideo ? (
+                <>
+                  <AutoplayLoopVideo
+                    sources={[{ src: coverVideo, type: "video/mp4" }]}
+                    poster={coverImage.src}
+                    aria-label={coverImage.alt}
+                  />
+                  <Image
+                    className={coverStyles.still}
+                    src={coverImage.src}
+                    alt={coverImage.alt}
+                    width={coverImage.width}
+                    height={coverImage.height}
+                  />
+                </>
+              ) : (
+                <Image
+                  alt={coverImage.alt}
+                  src={coverImage.src}
+                  width={coverImage.width}
+                  height={coverImage.height}
+                  priority
+                />
+              )}
             </CommonHero3DCover>
             {/* headlines */}
             <div className="mxd-hero-02__intro">
@@ -223,7 +252,9 @@ export default function Hero({ socials, heroSettings, scrollTargetId = "about" }
                 <h1 className="medium permanent">{headline}</h1>
               </CommonHero3DIntroText>
             </div>
-            <div className="mxd-hero-02__outro">
+            <div
+              className={`mxd-hero-02__outro ${coverVideo ? coverStyles.outro : ""}`}
+            >
               <CommonHero3DOutroText>
                 <p>{subline}</p>
               </CommonHero3DOutroText>

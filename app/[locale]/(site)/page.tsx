@@ -1,4 +1,4 @@
-import { heroDigitalAgencyData } from "@/data/heroDigitalAgency";
+import { homeCover } from "@/data/homeCover";
 import ApprovedNarrative from "@/components/common/ApprovedNarrative";
 import Divider from "@/components/homes/index-digital-agency/Divider";
 import Footer3 from "@/components/footers/Footer3";
@@ -126,16 +126,18 @@ export default async function HomePage() {
         poster: Parameters<typeof urlFor>[0] | null;
         sources: { src: string; type: string }[] | null;
       } | null;
-      galleryImages: {
-        _key: string;
-        src: Parameters<typeof urlFor>[0] | null;
-        alt: string | null;
-        assetWidth: number | null;
-        assetHeight: number | null;
-        width: number | null;
-        height: number | null;
-        href?: string | null;
-      }[] | null;
+      galleryImages:
+        | {
+            _key: string;
+            src: Parameters<typeof urlFor>[0] | null;
+            alt: string | null;
+            assetWidth: number | null;
+            assetHeight: number | null;
+            width: number | null;
+            height: number | null;
+            href?: string | null;
+          }[]
+        | null;
     } | null>(heroSettingsQuery, { locale });
 
     if (raw) {
@@ -149,7 +151,7 @@ export default async function HomePage() {
           width: img.width ?? img.assetWidth ?? 1280,
           height: img.height ?? img.assetHeight ?? 800,
           ...(img.href ? { href: img.href } : {}),
-        })
+        }),
       );
 
       sanityHero = {
@@ -161,7 +163,8 @@ export default async function HomePage() {
               src: urlFor(raw.coverImage.src).width(1920).auto("format").url(),
               alt: raw.coverImage.alt ?? "",
               width: raw.coverImage.width ?? raw.coverImage.assetWidth ?? 1920,
-              height: raw.coverImage.height ?? raw.coverImage.assetHeight ?? 1200,
+              height:
+                raw.coverImage.height ?? raw.coverImage.assetHeight ?? 1200,
             }
           : { src: "", alt: "", width: 1920, height: 1200 },
         galleryImages,
@@ -200,7 +203,11 @@ export default async function HomePage() {
         : "",
       photoAlt: r.photoAlt ?? "",
       ...(r.largeSrc && {
-        largeSrc: urlFor(r.largeSrc).width(800).height(800).auto("format").url(),
+        largeSrc: urlFor(r.largeSrc)
+          .width(800)
+          .height(800)
+          .auto("format")
+          .url(),
         largeAlt: r.largeAlt ?? "",
       }),
     }));
@@ -229,10 +236,10 @@ export default async function HomePage() {
       .filter((p) => p.bgImageSrc && p.cardImageSrc)
       .map((p) => ({
         _id: p._id,
-        titleLines: [
-          p.titleLines?.[0] ?? "",
-          p.titleLines?.[1] ?? "",
-        ] as [string, string],
+        titleLines: [p.titleLines?.[0] ?? "", p.titleLines?.[1] ?? ""] as [
+          string,
+          string,
+        ],
         bgImageSrc: urlFor(p.bgImageSrc!)
           .width(1920)
           .height(1280)
@@ -280,9 +287,7 @@ export default async function HomePage() {
       author: p.author ?? "",
       date: p.date ?? "",
       excerpt: p.excerpt ?? "",
-      href: p.slug
-        ? `/blog/${p.slug}`
-        : (p.href ?? "/blog-article"),
+      href: p.slug ? `/blog/${p.slug}` : (p.href ?? "/blog-article"),
       cursorImageSrc: p.cursorImageSrc
         ? urlFor(p.cursorImageSrc).width(500).height(500).auto("format").url()
         : "",
@@ -312,20 +317,35 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
       />
       <>
-        <Hero scrollTargetId="selected-work" socials={sanitySettings?.socials} heroSettings={{
-          ...sanityHero,
-          coverImage: sanityHero?.coverImage ?? heroDigitalAgencyData.coverImage,
-          galleryImages: sanityHero?.galleryImages ?? [],
-          headline: narrative("heroTitle"),
-          subline: narrative("heroSubline"),
-          scrollLabel: narrative("explore"),
-        }} />
+        <Hero
+          coverVideo={homeCover.video}
+          scrollTargetId="selected-work"
+          socials={sanitySettings?.socials}
+          heroSettings={{
+            ...sanityHero,
+            coverImage: {
+              src: homeCover.poster,
+              alt: homeCover.alt[locale === "en" ? "en" : "tr"],
+              width: homeCover.width,
+              height: homeCover.height,
+            },
+            galleryImages: sanityHero?.galleryImages ?? [],
+            headline: narrative("heroTitle"),
+            subline: narrative("heroSubline"),
+            scrollLabel: narrative("explore"),
+          }}
+        />
         <ApprovedNarrative part="home" />
-        <div id="selected-work"><ProjectsShowcase projects={sanityProjects} /></div>
+        <div id="selected-work">
+          <ProjectsShowcase projects={sanityProjects} />
+        </div>
         <ApprovedNarrative part="services" />
         <ParallaxDividerVideo />
         <TestimonialsSticky testimonials={sanityTestimonials} />
-        <ParallaxDividerImage src={sanityProjects.at(-1)?.bgImageSrc} alt={sanityProjects.at(-1)?.titleLines.join(" ")} />
+        <ParallaxDividerImage
+          src={sanityProjects.at(-1)?.bgImageSrc}
+          alt={sanityProjects.at(-1)?.titleLines.join(" ")}
+        />
         <BlogPreview posts={sanityPosts} />
         <Divider />
       </>

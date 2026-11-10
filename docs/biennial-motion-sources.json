@@ -1,0 +1,23 @@
+{
+  "type": "original-generated-concept-study",
+  "reference": "https://www.rethinkideas.com/work/coors-lights-out",
+  "durationSeconds": 9.6,
+  "poster": "public/img/niodome/coca-cola-17-bienal-poster.webp",
+  "video": "public/video/niodome-coca-cola-17-bienal.mp4",
+  "method": "built-in image generation; edited as a silent motion-poster loop",
+  "images": [
+    {
+      "name": "biennial-light",
+      "prompt": "Use case: stylized-concept. Asset type: original landscape art-installation photograph for Niodome Coca-Cola / 17. Istanbul Biennial CONCEPT motion poster. An original entirely fictional contemporary light installation, not an existing artist's work. In a dark weathered Istanbul brick-and-concrete former workshop, five suspended vertical rectangles of softly glowing warm amber glass stand at staggered depths like thin translucent monoliths, and one understated red light reflection spreads softly on a small part of the charcoal floor. Radical minimalism, rich darkness, quietly cinematic depth, careful architectural composition, tangible ribbed amber glass and old brick textures. Fine-art exhibition documentation aesthetic, not a futuristic science-fiction corridor. Wide landscape 16:9, no people, no text, no signage, no brands, no bottles, no watermark. A completely different material and form from paper strips or red fabric."
+    },
+    {
+      "name": "biennial-ribbon",
+      "prompt": "Use case: stylized-concept. Asset type: original landscape art-exhibition concept photograph for Niodome's Coca-Cola / 17. Istanbul Biennial CONCEPT motion poster. An entirely fictional original contemporary art installation, not a reproduction of any artist's real work. In a raw Istanbul industrial gallery with aged pale stone walls and very tall windows, one enormous translucent vermilion-red ribbon floats in a slow organic loop through the otherwise empty space, suspended invisibly, its curving waist subtly suggesting a classic Coke bottle without making a bottle. Natural diffuse daylight reveals beautiful sheer red material, soft floor reflections, very restrained sophisticated biennale atmosphere, architectural editorial photography, a single poetic artistic idea. Wide landscape 16:9, static frontal three-quarter composition, generous spatial depth, no people, no typography, no logos, no labels, no other art, no glass bottle, no signage, no watermark. Fully opaque photographic image, refined and minimal, not a commercial product advertisement."
+    },
+    {
+      "name": "biennial-mirror",
+      "prompt": "Use case: stylized-concept. Asset type: original landscape art-exhibition concept photograph for Niodome Coca-Cola / 17. Istanbul Biennial CONCEPT motion poster. Replace an indoor frontal white-paper installation with an entirely different visual and camera angle. A perfectly VERTICAL BIRD'S-EYE TOP-DOWN photograph of a quiet open-air Istanbul cultural courtyard paved in aged pale limestone. At its center lies one huge flat circular mirror, flush with the ground, reflecting vivid clean blue sky and a few soft white clouds. An extremely thin vermilion-red crescent of enamel traces ONLY one section of the mirror rim, providing a restrained Coca-Cola-red accent. Architectural shadows of an unseen tree and a balustrade cut diagonally across the pale stone, creating a striking minimal geometric composition. Museum-quality original fictional contemporary installation, not documentation of an existing artwork or real event. Camera directly overhead looking straight down, NO horizon, NO windows in perspective, NO interior room, NO frontal architecture, NO red fabric, NO paper strips, NO amber monoliths. Wide landscape 16:9 photograph, restrained photographic realism, real stone texture and blue-sky reflection, dramatic contrast of circle and diagonal shadow. No people, no text, no logos, no labels, no watermark."
+    }
+  ],
+  "note": "Tamamen özgün, kurgusal sanat yerleştirmeleriyle hazırlanmıştır. Gerçek bienal sanat eseri veya arşiv fotoğrafı kullanılmamıştır. Gerçek sponsorluk veya müşteri işi olarak portfolyoya eklenmez."
+}
