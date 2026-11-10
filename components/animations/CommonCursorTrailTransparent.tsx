@@ -95,7 +95,15 @@ export default function CommonCursorTrailTransparent<
     const section = sectionRef.current;
     const wrapper = wrapperRef.current;
     const images = imageRefs.current.filter(Boolean);
-    if (!section || !wrapper || !images.length) return;
+    if (
+      !section ||
+      !wrapper ||
+      !images.length ||
+      !active ||
+      window.matchMedia("(prefers-reduced-motion: reduce), (pointer: coarse)")
+        .matches
+    )
+      return;
 
     let rafId = 0;
     let zIndex = 1;
@@ -197,11 +205,25 @@ export default function CommonCursorTrailTransparent<
       rafId = window.requestAnimationFrame(update);
     };
 
-    images.forEach(setImageSize);
+    images.forEach((img) => {
+      if (img.complete && img.naturalWidth) setImageSize(img);
+      else
+        img.addEventListener("load", () => setImageSize(img), { once: true });
+    });
     section.addEventListener("pointermove", handleMove);
-    rafId = window.requestAnimationFrame(update);
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        if (!rafId) rafId = window.requestAnimationFrame(update);
+      } else {
+        window.cancelAnimationFrame(rafId);
+        rafId = 0;
+        hasPointer = false;
+      }
+    });
+    observer.observe(section);
 
     return () => {
+      observer.disconnect();
       section.removeEventListener("pointermove", handleMove);
       if (rafId) window.cancelAnimationFrame(rafId);
       images.forEach((img) => gsap.killTweensOf(img));
@@ -233,12 +255,20 @@ export function CommonCursorTrailWrapper<T extends ElementType = "div">({
 }: CommonCursorTrailWrapperProps<T>) {
   const context = useContext(TrailContext);
   const Tag = (as ?? "div") as ElementType;
-  if (!context) return <Tag className={className} {...rest}>{children}</Tag>;
+  if (!context)
+    return (
+      <Tag className={className} {...rest}>
+        {children}
+      </Tag>
+    );
   return (
     <Tag
       className={className}
       {...rest}
-      ref={mergeRefs((rest as { ref?: Ref<HTMLElement> }).ref, context.registerWrapper)}
+      ref={mergeRefs(
+        (rest as { ref?: Ref<HTMLElement> }).ref,
+        context.registerWrapper,
+      )}
     >
       {children}
     </Tag>
@@ -259,12 +289,20 @@ export function CommonCursorTrailContent<T extends ElementType = "div">({
 }: CommonCursorTrailContentProps<T>) {
   const context = useContext(TrailContext);
   const Tag = (as ?? "div") as ElementType;
-  if (!context) return <Tag className={className} {...rest}>{children}</Tag>;
+  if (!context)
+    return (
+      <Tag className={className} {...rest}>
+        {children}
+      </Tag>
+    );
   return (
     <Tag
       className={className}
       {...rest}
-      ref={mergeRefs((rest as { ref?: Ref<HTMLElement> }).ref, context.registerContent)}
+      ref={mergeRefs(
+        (rest as { ref?: Ref<HTMLElement> }).ref,
+        context.registerContent,
+      )}
     >
       {children}
     </Tag>

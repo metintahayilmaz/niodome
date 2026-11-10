@@ -12,6 +12,7 @@ import CommonCursorTrailTransparent, {
 } from "@/components/animations/CommonCursorTrailTransparent";
 export default async function Divider() {
   const t = await getTranslations("homeContent");
+  const narrative = await getTranslations("narrative");
   return (
     <>
       <BlurSection className="mxd-section bg-color-opposite">
@@ -22,78 +23,54 @@ export default async function Divider() {
           {/* Effect - Cursor Trail Transparent Start */}
           <CommonCursorTrailWrapper className="mxd-trail-transparent-wrapper">
             <CommonCursorTrailContent className="mxd-trail-transparent-content">
-              <CommonCursorTrailImage
-                index={0}
-                className="mxd-trail-transparent-image"
-                alt="Azurio Template Cursor Trail Image"
-                src="/img/cursor-trail-transparent/01_trail.webp"
-                width={400}
-                height={521}
-              />
-              <CommonCursorTrailImage
-                index={1}
-                className="mxd-trail-transparent-image"
-                alt="Azurio Template Cursor Trail Image"
-                src="/img/cursor-trail-transparent/02_trail.webp"
-                width={412}
-                height={400}
-              />
-              <CommonCursorTrailImage
-                index={2}
-                className="mxd-trail-transparent-image"
-                alt="Azurio Template Cursor Trail Image"
-                src="/img/cursor-trail-transparent/03_trail.webp"
-                width={485}
-                height={400}
-              />
-              <CommonCursorTrailImage
-                index={3}
-                className="mxd-trail-transparent-image"
-                alt="Azurio Template Cursor Trail Image"
-                src="/img/cursor-trail-transparent/04_trail.webp"
-                width={530}
-                height={400}
-              />
-              <CommonCursorTrailImage
-                index={4}
-                className="mxd-trail-transparent-image"
-                alt="Azurio Template Cursor Trail Image"
-                src="/img/cursor-trail-transparent/05_trail.webp"
-                width={400}
-                height={520}
-              />
-              <CommonCursorTrailImage
-                index={5}
-                className="mxd-trail-transparent-image"
-                alt="Azurio Template Cursor Trail Image"
-                src="/img/cursor-trail-transparent/06_trail.webp"
-                width={407}
-                height={400}
-              />
-              <CommonCursorTrailImage
-                index={6}
-                className="mxd-trail-transparent-image"
-                alt="Azurio Template Cursor Trail Image"
-                src="/img/cursor-trail-transparent/07_trail.webp"
-                width={400}
-                height={480}
-              />
-              <CommonCursorTrailImage
-                index={7}
-                className="mxd-trail-transparent-image"
-                alt="Azurio Template Cursor Trail Image"
-                src="/img/cursor-trail-transparent/08_trail.webp"
-                width={637}
-                height={400}
-              />
-              <CommonCursorTrailImage
-                index={8}
-                className="mxd-trail-transparent-image"
-                alt="Azurio Template Cursor Trail Image"
-                src="/img/cursor-trail-transparent/09_trail.webp"
-                width={400}
-                height={992}
-              />
+              {[
+                {
+                  src: "/img/niodome/turkish-tea.webp",
+                  width: 768,
+                  height: 768,
+                },
+                { src: "/img/niodome/zenit.webp", width: 768, height: 768 },
+                {
+                  src: "/img/niodome/vintage-megaphone.webp",
+                  width: 768,
+                  height: 768,
+                },
+                { src: "/img/niodome/dome-lamp.webp", width: 768, height: 768 },
+                {
+                  src: "/img/niodome/cassette.webp",
+                  width: 637,
+                  height: 400,
+                },
+                {
+                  src: "/img/niodome/cat.webp",
+                  width: 400,
+                  height: 480,
+                },
+                {
+                  src: "/img/niodome/fish.webp",
+                  width: 485,
+                  height: 400,
+                },
+                {
+                  src: "/img/niodome/spinning-top.webp",
+                  width: 768,
+                  height: 768,
+                },
+                {
+                  src: "/img/niodome/paper-plane.webp",
+                  width: 768,
+                  height: 768,
+                },
+              ].map((image, index) => (
+                <CommonCursorTrailImage
+                  key={image.src}
+                  index={index}
+                  className="mxd-trail-transparent-image"
+                  alt=""
+                  sizes="240px"
+                  {...image}
+                />
+              ))}
             </CommonCursorTrailContent>
           </CommonCursorTrailWrapper>
           {/* Effect - Cursor Trail Transparent End */}
@@ -126,14 +103,14 @@ export default async function Divider() {
                       className="permanent reveal-type"
                       animation="revealType"
                     >
-                      {t("projectCta")}
+                      {narrative("contactTitle")}
                     </CommonAnimatedText>
                   </Link>
                 </div>
                 <div className="mxd-divider-gif">
                   <div className="mxd-divider-gif__back left accent">
                     <Image
-                      alt="Azurio Template Example Image"
+                      alt=""
                       src="/img/gifs/nice-thumbs-up.gif"
                       width={640}
                       height={440}
@@ -141,7 +118,7 @@ export default async function Divider() {
                   </div>
                   <div className="mxd-divider-gif__front">
                     <Image
-                      alt="Azurio Template Example Image"
+                      alt=""
                       src="/img/gifs/nice-thumbs-up.gif"
                       width={640}
                       height={440}
@@ -149,7 +126,7 @@ export default async function Divider() {
                   </div>
                   <div className="mxd-divider-gif__back right accent">
                     <Image
-                      alt="Azurio Template Example Image"
+                      alt=""
                       src="/img/gifs/nice-thumbs-up.gif"
                       width={640}
                       height={440}

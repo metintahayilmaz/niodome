@@ -1,5 +1,6 @@
 import { heroDigitalAgencyData } from "@/data/heroDigitalAgency";
 import ApprovedNarrative from "@/components/common/ApprovedNarrative";
+import Divider from "@/components/homes/index-digital-agency/Divider";
 import Footer3 from "@/components/footers/Footer3";
 import type { Metadata } from "next";
 import { organizationSchema, websiteSchema } from "@/lib/jsonLd";
@@ -326,7 +327,7 @@ export default async function HomePage() {
         <TestimonialsSticky testimonials={sanityTestimonials} />
         <ParallaxDividerImage src={sanityProjects.at(-1)?.bgImageSrc} alt={sanityProjects.at(-1)?.titleLines.join(" ")} />
         <BlogPreview posts={sanityPosts} />
-        <ApprovedNarrative part="contact" />
+        <Divider />
       </>
       <Footer3 settings={sanitySettings} />
     </>

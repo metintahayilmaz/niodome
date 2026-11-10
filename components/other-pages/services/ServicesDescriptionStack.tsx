@@ -2,7 +2,6 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import approvedServices from "@/data/approvedServices.json";
-import ServiceArtwork from "./ServiceArtwork";
 import Image from "next/image";
 import TextScramble from "@/components/animations/TextScramble";
 import CommonServicesStack, {
@@ -17,7 +16,7 @@ const IMG_H = 1300;
 const LOCAL_IMAGES = [
   "/img/services/services-stack/s01.webp",
   "/img/services/services-stack/s02.webp",
-  "/img/services/services-stack/s03.webp",
+  "/img/works/project-details/details03.webp",
   "/img/services/services-stack/s04.webp",
 ];
 
@@ -41,7 +40,7 @@ function ServicesBodyRenderer({ body }: { body: unknown[] | null }) {
         if (block._type !== "block") return null;
         const text = (block.children ?? []).map((s) => s.text).join("");
         return i === 0 ? (
-          <span key={block._key ?? i}>{text}{" "}</span>
+          <span key={block._key ?? i}>{text} </span>
         ) : (
           <span key={block._key ?? i} className="services-card__descr-span">
             {text}
@@ -113,12 +112,20 @@ function ServiceCard({
             </div>
             <ServicesStackSlot part="image" index={index}>
               <div className="services-card__image">
-                {imgSrc.includes("22ff4baf74499bb61f70ac2a535d3458cb4a5cda") || LOCAL_IMAGES.includes(imgSrc) ? <ServiceArtwork index={index} /> : <Image
-                  src={imgSrc}
-                  width={IMG_W}
-                  height={IMG_H}
-                  alt={item.title}
-                />}
+                {
+                  <Image
+                    src={
+                      imgSrc.includes(
+                        "22ff4baf74499bb61f70ac2a535d3458cb4a5cda",
+                      )
+                        ? LOCAL_IMAGES[index % LOCAL_IMAGES.length]
+                        : imgSrc
+                    }
+                    width={IMG_W}
+                    height={IMG_H}
+                    alt={item.title}
+                  />
+                }
                 <div className="services-card__cover" />
               </div>
             </ServicesStackSlot>
@@ -136,7 +143,9 @@ type Props = {
 export default function ServicesDescriptionStack({ services }: Props) {
   const locale = useLocale();
   const resolvedServices: ServiceDetailItem[] =
-    services && services.length > 0 ? services : approvedServices[locale === "en" ? "en" : "tr"].items;
+    services && services.length > 0
+      ? services
+      : approvedServices[locale === "en" ? "en" : "tr"].items;
 
   return (
     <div id="services" className="mxd-section">

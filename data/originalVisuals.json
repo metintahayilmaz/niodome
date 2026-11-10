@@ -1,0 +1,52 @@
+{
+  "createdAt": "2026-11-10",
+  "method": "built-in image generation",
+  "usage": "home contact cursor trail",
+  "assets": [
+    {
+      "name": "dome-lamp",
+      "path": "public/img/niodome/dome-lamp.webp",
+      "prompt": "Use case: stylized-concept. Asset type: single transparent cutout for the cursor trail on Niodome creative agency website. Subject: one imaginative sculptural dome-shaped desk lamp, blue enamel outer dome and polished chrome underside, warm ivory glowing bulb visible, playfully tilted three-quarter studio product photography. Premium art direction combining creative culture and technology, cobalt blue #002bba and silver chrome, realistic detailed materials. Object fills the center with 12% clear margin on every side. Fully transparent alpha background, no floor, no rectangular card, no text, no letters, no watermark, no logo. ONE isolated object, square canvas. Must be legible at 200px."
+    },
+    {
+      "name": "turkish-tea",
+      "path": "public/img/niodome/turkish-tea.webp",
+      "prompt": "Use case: product-mockup. Asset type: ONE transparent cutout for Niodome website mouse trail. Primary request: authentic Turkish tea with a CLASSIC Turkish red-and-white patterned tea saucer. Thin-waisted clear ince belli tea glass filled with deep ruby crimson tavsan kani tea, on the familiar traditional small white porcelain Turkish cay tabagi with red oval petal motifs around its rim and a red central ring, the everyday classic red-white Turkish tea saucer, absolutely NOT a modern blue saucer or minimalist plate. Tiny silver teaspoon resting on the saucer. Premium photorealistic product photograph from slightly elevated three-quarter view. Rich translucent deep red tea, realistic clear glass highlights, restrained wisps of steam. Entire ensemble centered, all edges inside frame with 12% clear margin, square canvas, true transparent alpha background. No floor, no card, no typography, no text, no branding, no teapot, no additional cups, no sugar cubes. Looks like real Turkish tea served at a tea house, not a stylized icon. Readable at 200px."
+    },
+    {
+      "name": "zenit",
+      "path": "public/img/niodome/zenit.webp",
+      "prompt": "Use case: product-mockup. Asset type: ONE photorealistic transparent cutout for creative agency Niodome mouse cursor trail. Subject: a very old Soviet Zenit-E 35mm film SLR camera with authentic raised pentaprism hump, large mechanical lens, worn black pebbled leatherette covering, weathered dull brushed aluminum top plate, engraved mechanical shutter-speed dial, subtle patina from decades of real use. Small authentic ZENIT lettering engraved on prism. Truly recognizable Zenit-E SLR silhouette, not a generic modern compact camera. Front three-quarter view slightly above, lens facing viewer diagonally. No blue, no glossy chrome styling, no unreal futuristic details, no props. Entire camera visible, centered with 12% clear margins, square canvas. Fully transparent alpha background, no floor, no rectangular card, no watermark. Tactile photorealistic studio product photography, crisp enough to read at 200px."
+    },
+    {
+      "name": "vintage-megaphone",
+      "path": "public/img/niodome/vintage-megaphone.webp",
+      "prompt": "Use case: product-mockup. Asset type: ONE original transparent cutout for creative agency Niodome mouse cursor trail. Subject: a charming genuinely old handheld megaphone, elongated conical horn in slightly faded warm ivory painted fiber material, deep muted red rolled rim around mouth, dark brown aged bakelite pistol grip underneath, short worn woven brown wrist strap. Subtle natural scuffs and small paint chips, 1960s vintage public-address object, beautifully imperfect. No modern translucent orange plastic, no blue, no chrome, no brand, no writing, no decals. Single complete object, three-quarter view showing open cone, angled diagonally, entire horn and handle inside frame, 12% clear margins all sides, square canvas. Premium photorealistic studio product photograph, truly transparent alpha background, no floor, no card, no watermark. Distinctive tactile materials readable at 200px."
+    },
+    {
+      "name": "cassette",
+      "path": "public/img/niodome/cassette.webp",
+      "prompt": "Use case: product-mockup. Asset type: ONE original transparent cutout for Niodome creative agency cursor trail. Subject: a classic vintage compact audio cassette from the 1980s, smokey transparent dark gray molded plastic shell, two visible ivory reels with real brown magnetic tape wound inside, off-white slightly aged paper label with a simple small burgundy stripe and empty handwritten label space. Entire rectangular cassette with mechanical holes, realistic tiny screws, very slight natural scuffs. Almost frontal view with a slight three-quarter tilt. Distinctly photographic, tangible, nostalgic. No invented writing, no logos, no branding, no blue, no chrome. One cassette only, centered with 12% transparent margin, square canvas, fully transparent alpha background, no floor, no rectangular backdrop, no watermark. Readable at 200px."
+    },
+    {
+      "name": "fish",
+      "path": "public/img/niodome/fish.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: ONE original transparent animal cutout for Niodome creative agency cursor trail. Subject: a vividly vermilion-red orange spiny rockfish in clean side profile, head facing right, one visible realistic round eye, fascinating jagged raised dorsal fin, translucent fan-shaped pectoral fins, subtle natural mottled scales and believable fish anatomy. Looks like an expressive real marine fish photographed in natural light, not a cartoon, not a cooked fish, not a toy. Whole fish from tail to mouth visible with 12% clear margin, centered, dynamic horizontal silhouette. No blue, no chrome, no artificial surface, no labels. Square canvas, truly transparent alpha background, no water, no bubbles, no floor, no text, no watermark. Detailed scales and fins legible at 200px."
+    },
+    {
+      "name": "spinning-top",
+      "path": "public/img/niodome/spinning-top.webp",
+      "prompt": "Use case: product-mockup. Asset type: ONE original transparent cutout for Niodome creative agency cursor trail. Subject: a beautiful nostalgic Turkish wooden spinning top, traditional conical armut topac with a short iron point underneath and small turned wooden peg at top, warm honey walnut wood grain with two thin faded forest-green painted bands around the widest circumference, a short cream cotton winding string loosely curled beside the top as part of the ensemble. Tactile handcrafted wood, gently worn from play, photographed in three-quarter view at a playful slight angle. No plastic, no blue, no chrome, no letters, no logos. Whole object and short string inside frame with 12% clear margin, centered, square canvas, genuinely transparent alpha background, no floor, no card, no watermark. Premium realistic product photography, sculptural and readable at 200px."
+    },
+    {
+      "name": "paper-plane",
+      "path": "public/img/niodome/paper-plane.webp",
+      "prompt": "Use case: product-mockup. Asset type: ONE original transparent cutout for Niodome creative agency cursor trail. Subject: one simple classic hand-folded paper airplane, elegant dart shape made from warm ivory lightly textured drawing paper, tiny subtle charcoal pencil doodles of loose abstract lines on the wings, no readable letters, no words. Clearly visible folded layered paper edges, natural creases and hand-made slight imperfections. Captured three-quarter view floating diagonally nose pointing upper right, entire wings and tail in frame. Honest physical paper texture, playful creative studio object, not glossy plastic or metal, no blue, no chrome. 12% transparent margin all sides, centered, square canvas, truly transparent alpha background, no floor, no stand, no rectangular card, no watermark. Premium photorealistic studio product photo, clear silhouette readable at 200px."
+    },
+    {
+      "name": "cat",
+      "path": "public/img/niodome/cat.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: ONE original transparent animal cutout for Niodome creative agency cursor trail. Subject: a playful real ginger-and-brown tabby domestic cat rearing up on its two hind paws, both front paws raised asymmetrically as if playfully reaching for a toy outside the frame, natural credible feline anatomy, fluffy tail curving aside, expressive alert green eyes, individual fine fur and whiskers, mouth closed. Warm realistic fur, not cartoon or plush, no human hands, no clothes, no accessories, no extra limbs, no toy in frame. Entire cat including all paws, ears and tail within frame, centered, 12% clear margin. Premium natural animal photography with soft studio light. Square canvas with truly transparent alpha background, no floor, no text, no watermark. Lively silhouette legible at 200px."
+    }
+  ]
+}
