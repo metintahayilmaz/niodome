@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import Link from "@/components/common/LocalizedLink";
 import UkiyoParallax from "@/components/animations/UkiyoParallax";
 import BlurSection from "@/components/animations/BlurSection";
@@ -16,8 +17,9 @@ const LOCAL_NEXT: NextProjectRef = {
   cursorText: "Solei",
 };
 
-export default function NextProjectLink({ nextProject }: Props) {
+export default async function NextProjectLink({ nextProject }: Props) {
   if (!nextProject) return null;
+  const t = await getTranslations("projectContent");
   const next = nextProject;
   const href = next.slug ? `/works/${next.slug}` : "#";
   const cursorText = next.cursorText ?? next.title;
@@ -42,7 +44,7 @@ export default function NextProjectLink({ nextProject }: Props) {
                 <div className="mxd-next-prj__info">
                   <div className="mxd-next-prj__caption">
                     <CommonAnimatedText as="p" className="mxd-split-lines" animation="splitLines">
-                      Next project
+                      {t("nextProject")}
                     </CommonAnimatedText>
                   </div>
                   <div className="mxd-next-prj__name">
@@ -68,7 +70,7 @@ export default function NextProjectLink({ nextProject }: Props) {
                 <div className="mxd-next-prj__image">
                   <UkiyoParallax className="parallax-img-small" scale={1.2} speed={1.5} externalRAF={false}>
                     <Image
-                      alt={`Next project: ${next.title}`}
+                      alt={`${t("nextProject")}: ${next.title}`}
                       src={imageSrc}
                       width={1920}
                       height={1200}

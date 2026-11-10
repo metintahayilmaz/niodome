@@ -1,0 +1,70 @@
+{
+  "classification": "Original Niodome concept studies; not commissioned client projects",
+  "generation": "built-in image_gen",
+  "visuals": {
+    "mola-packaging": {
+      "url": "https://cdn.sanity.io/images/cwm62f5w/production/cefc7aa2866071169e8e1de80be06fa6ec2c0594-1536x1024.png",
+      "assetId": "image-cefc7aa2866071169e8e1de80be06fa6ec2c0594-1536x1024-png",
+      "width": 1536,
+      "height": 1024
+    },
+    "kiyi-website": {
+      "url": "https://cdn.sanity.io/images/cwm62f5w/production/75e32101691ab3fb19f07c443c3a28f7a240cde9-1536x1024.png",
+      "assetId": "image-75e32101691ab3fb19f07c443c3a28f7a240cde9-1536x1024-png",
+      "width": 1536,
+      "height": 1024
+    },
+    "bir-araya-campaign": {
+      "url": "https://cdn.sanity.io/images/cwm62f5w/production/0305b9ef4db7adcfd5956d787d7f3a3b5978ebe7-1536x1024.png",
+      "assetId": "image-0305b9ef4db7adcfd5956d787d7f3a3b5978ebe7-1536x1024-png",
+      "width": 1536,
+      "height": 1024
+    },
+    "mola-detail": {
+      "url": "https://cdn.sanity.io/images/cwm62f5w/production/36d062b1889c40e92749947adac987b5a58a2bb2-1536x1024.png",
+      "assetId": "image-36d062b1889c40e92749947adac987b5a58a2bb2-1536x1024-png",
+      "width": 1536,
+      "height": 1024
+    },
+    "kiyi-detail": {
+      "url": "https://cdn.sanity.io/images/cwm62f5w/production/e9c431f5fa74120fe0aaa53c1a9aee27a87bb644-1536x1024.png",
+      "assetId": "image-e9c431f5fa74120fe0aaa53c1a9aee27a87bb644-1536x1024-png",
+      "width": 1536,
+      "height": 1024
+    },
+    "bir-araya-detail": {
+      "url": "https://cdn.sanity.io/images/cwm62f5w/production/5645b34315da5c2e4862c60a2830e6565f6a6d57-1536x1024.png",
+      "assetId": "image-5645b34315da5c2e4862c60a2830e6565f6a6d57-1536x1024-png",
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  "prompts": [
+    {
+      "key": "mola-packaging",
+      "prompt": "Use case: product-mockup. Create one exceptionally art-directed portfolio photograph of an original contemporary Turkish coffee packaging design concept named MOLA (fictional brand, not an existing brand). Landscape 3:2 composition. Three standing flat-bottom coffee pouches in warm ivory, dark aubergine and vivid vermilion, with a beautiful oversized custom geometric MOLA wordmark, very restrained small label text 'KAHVE' and '250 g', precise abstract cut-circle graphics indicating roast variants, tactile matte paper and crisp fold details. Photograph at a low three-quarter angle on a warm pale stone plinth with one pouch lying flat, subtle hard directional daylight, excellent material realism, considered shadows, editorial design award quality. Packaging is the actual designed subject, not generic blank objects; each variant is coherent but distinct. Large visible typography must be correctly spelled MOLA, KAHVE, 250 g. No placeholder text, no lorem ipsum, no decorative coffee beans, no mugs, no blue chrome, no watermark, no collage borders. Leave 8% breathing room around all edges. This is an original agency concept study."
+    },
+    {
+      "key": "kiyi-website",
+      "prompt": "Use case: ui-mockup. Landscape 3:2 high-end agency portfolio photograph showing a meticulously designed fictional Turkish arts and culture website called KIYI on a slim large desktop screen, with a smartphone beside it showing a convincing responsive version. The screen design is the primary subject: warm off-white editorial background, oversized black contemporary grotesk typography 'Şehirde yeni bir ses.', small black KIYI wordmark upper left, minimal nav 'Program' 'Mekânlar' 'Hakkında', vivid coral event detail and a big real editorial image of a sculptural red fabric installation in a bright concrete gallery, smaller programme cards arranged in a refined asymmetrical grid. No browser chrome. Desktop and phone display the SAME coherent brand and programme. Photograph screen mostly front-on with gentle perspective on a quiet warm grey desktop in a minimal architect studio, daylight, realistic readable interface, crisp premium screen rendering. All interface imagery original. Not a wireframe, not code, not stock app dashboard, not random tiny text soup, no blue gradients, no watermark. Complete legible design, calm breathing room. Original concept project, no real institution or client logos."
+    },
+    {
+      "key": "bir-araya-campaign",
+      "prompt": "Use case: ads-marketing. Landscape 3:2 highly art-directed photograph of an original Turkish cultural poster campaign concept. A row of three large street posters on a clean dark plum outdoor wall: distinctive large geometric neon-lime and warm lavender graphic shapes suggest separate arcs coming together into one circle, with assertive oversized black or white Swiss-style typography reading exactly 'Bir araya gel.' broken elegantly across two lines. Small footer typography 'Niodome — Konsept çalışma'. Three posters express the SAME design system with DIFFERENT arc compositions and scale. Sophisticated typography, excellent graphic composition, print texture, realistic daylight and slight natural paper wrinkles, a strong oblique perspective from the side, urban design editorial atmosphere. The posters themselves must carry a real finished design, not generic gradient placeholder art. No people, no bottles, no laptop, no Coca-Cola, no Bienal, no sponsor marks, no random gibberish, no lorem ipsum, no watermark. Restrained, memorable graphic-design agency portfolio quality. Leave clear breathing room at edges."
+    }
+  ],
+  "detailPrompts": [
+    {
+      "key": "mola-detail",
+      "prompt": "Create a second original portfolio application for the SAME fictional MOLA coffee packaging identity shown in the reference. Preserve the exact geometric MOLA wordmark, warm ivory/aubergine/vermilion colours, bold circle and quarter-circle graphic vocabulary. New composition: a top-down carefully art-directed flat lay of three printed packaging sleeves, small colour/material swatches and a premium square brand booklet bearing MOLA, neatly overlapping on a pale warm neutral studio tabletop. No standing coffee bags, no stone plinth, no coffee beans, no laptop. The printed designed pieces should fill most of the image with about 8% outer breathing room. Rich matte paper print detail, soft even daylight, sharp legible MOLA typography. Landscape 3:2. No gibberish, no watermark. This is a distinct brand-system detail image supporting the original concept, not a duplicate angle."
+    },
+    {
+      "key": "kiyi-detail",
+      "prompt": "Create a second original portfolio view of the SAME fictional KIYI Turkish culture website design in the reference. Preserve the exact black KIYI wordmark, warm off-white background, bold grotesk typography, coral event cards and red textile art-installation imagery. Show a close front-on designed web page without any physical devices, desktop or studio: the event detail page for 'Kırılgan Denge', big editorial title at upper left, beautiful large red fabric installation image at upper right, clear left information labels 'Sergi', '15 Oca — 23 Mar', 'Kıyı Depo', a coral action button 'Programı keşfet', and below a refined asymmetric row of three related programme cards. This should look like a finished highly legible professional website screenshot, ample grid spacing, precise typography, clear hierarchy, no browser chrome, no cursor, no code or wireframe. Landscape 3:2. Avoid invented sponsor logos, random microtext, watermark. Deliberately a different page and composition from the reference homepage."
+    },
+    {
+      "key": "bir-araya-detail",
+      "prompt": "Create a second original application of the SAME 'Bir araya gel.' cultural poster identity shown in the reference. Preserve exact lime green, lavender and dark plum colours, assertive oversized grotesk typography and graphic arcs joining into a circle. New scene: top-down photographed editorial layout of a large folded programme leaflet and two smaller invitation cards on a dark plum clean tabletop. The leaflet cover reads exactly 'Bir araya gel.' in two lines; small signature 'Niodome — Konsept çalışma'; the invitation cards use dynamic cropped lime and lavender arc graphics and restrained black type 'Birlikte düşünmek için.' The pieces are carefully spaced and slightly overlap, premium offset print on matte textured paper. No outdoor wall, no repeated row of posters, no coffee, no screens. Wide landscape 3:2, clean soft studio daylight, vivid yet sophisticated print design, no filler text or watermark."
+    }
+  ]
+}

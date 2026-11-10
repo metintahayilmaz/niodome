@@ -1,3 +1,4 @@
+import conceptVisuals from "@/data/conceptVisuals.json";
 import { homeCover } from "@/data/homeCover";
 import AboutProcess from "@/components/homes/index-digital-agency/AboutProcess";
 import ServicesList from "@/components/homes/index-digital-agency/ServicesList";
@@ -74,7 +75,12 @@ export default async function HomePage() {
     number: `[0${index + 1}]`,
     title: item.title,
     description: item.shortDescription,
-    cursorImageSrc: `/img/services/500x500_s0${index + 1}.webp`,
+    cursorImageSrc: [
+          "https://cdn.sanity.io/images/cwm62f5w/production/ea090f27813023151b7b038453ef153f3c697f9a-1586x992.jpg",
+          conceptVisuals.visuals["bir-araya-campaign"].url,
+          conceptVisuals.visuals["mola-packaging"].url,
+          conceptVisuals.visuals["kiyi-website"].url,
+        ][index],
     href: "/services",
   }));
 

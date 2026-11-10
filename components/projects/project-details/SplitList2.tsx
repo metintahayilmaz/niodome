@@ -42,7 +42,7 @@ export default async function SplitList2({
                           animation="splitLines"
                         >
                           {challengeLead}
-                          {challengeSpan && <span>{challengeSpan}</span>}
+                          {challengeSpan && <> <span>{challengeSpan}</span></>}
                         </CommonAnimatedText>
                       </div>
                     </div>

@@ -50,7 +50,7 @@ export default async function SplitList({
                           animation="splitLines"
                         >
                           {overviewLead}
-                          {overviewSpan && <span>{overviewSpan}</span>}
+                          {overviewSpan && <> <span>{overviewSpan}</span></>}
                         </CommonAnimatedText>
                         {validLiveUrl && <CommonScrollAnimated
                           className="btn btn-default-icon btn-default-accent slide-right anim-uni-in-up"

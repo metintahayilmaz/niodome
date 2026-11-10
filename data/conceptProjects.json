@@ -1,0 +1,515 @@
+[
+  {
+    "_id": "niodome-concept-mola-packaging",
+    "_type": "project",
+    "isDemo": false,
+    "feedbackApproved": false,
+    "order": 3,
+    "slug": {
+      "_type": "slug",
+      "current": "mola-ambalaj-konsepti"
+    },
+    "href": "/works/mola-ambalaj-konsepti",
+    "projectDate": "2026",
+    "industries": {
+      "tr": "Niodome / Konsept çalışma",
+      "en": "Niodome / Concept study"
+    },
+    "services": [
+      {
+        "_key": "identity",
+        "_type": "object",
+        "name": {
+          "tr": "Görsel kimlik",
+          "en": "Visual identity"
+        },
+        "description": {
+          "tr": "Geometrik sözcük işareti ve ortak grafik dil.",
+          "en": "A geometric wordmark and shared graphic language."
+        }
+      },
+      {
+        "_key": "packaging",
+        "_type": "object",
+        "name": {
+          "tr": "Ambalaj sistemi",
+          "en": "Packaging system"
+        },
+        "description": {
+          "tr": "Üç renk, tutarlı bilgi sırası ve ürün ailesi.",
+          "en": "Three colours, consistent information hierarchy and a unified product family."
+        }
+      }
+    ],
+    "techStack": [],
+    "titleLines": {
+      "tr": [
+        "Mola",
+        ""
+      ],
+      "en": [
+        "Mola",
+        ""
+      ]
+    },
+    "tagsColA": {
+      "tr": [
+        "Konsept çalışma",
+        "Marka kimliği"
+      ],
+      "en": [
+        "Concept study",
+        "Brand identity"
+      ]
+    },
+    "tagsColB": {
+      "tr": [
+        "Ambalaj tasarımı"
+      ],
+      "en": [
+        "Packaging design"
+      ]
+    },
+    "imageAlt": {
+      "tr": "Mola konsepti: krem, erik ve kırmızı kahve ambalajları",
+      "en": "Mola concept: ivory, plum and red coffee packaging"
+    },
+    "cardImageAlt": {
+      "tr": "Mola konsepti: krem, erik ve kırmızı kahve ambalajları",
+      "en": "Mola concept: ivory, plum and red coffee packaging"
+    },
+    "cursorText": {
+      "tr": "Konsepti incele",
+      "en": "Explore concept"
+    },
+    "imageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-cefc7aa2866071169e8e1de80be06fa6ec2c0594-1536x1024-png"
+      }
+    },
+    "bgImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-cefc7aa2866071169e8e1de80be06fa6ec2c0594-1536x1024-png"
+      }
+    },
+    "cardImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-cefc7aa2866071169e8e1de80be06fa6ec2c0594-1536x1024-png"
+      }
+    },
+    "galleryImages": [
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-cefc7aa2866071169e8e1de80be06fa6ec2c0594-1536x1024-png"
+        },
+        "_key": "main",
+        "alt": {
+          "tr": "Mola konsepti: krem, erik ve kırmızı kahve ambalajları",
+          "en": "Mola concept: ivory, plum and red coffee packaging"
+        },
+        "caption": {
+          "tr": "Niodome — Özgün konsept çalışma",
+          "en": "Niodome — Original concept study"
+        }
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-36d062b1889c40e92749947adac987b5a58a2bb2-1536x1024-png"
+        },
+        "_key": "detail",
+        "alt": {
+          "tr": "Mola — tasarım sistemi ve detay uygulaması",
+          "en": "Mola — design system and detail application"
+        }
+      }
+    ],
+    "title": {
+      "tr": "Mola — Ambalaj konsepti",
+      "en": "Mola — Packaging concept"
+    },
+    "subtitle": {
+      "tr": "Bir kahve markası için kimlik ve ambalaj araştırması.",
+      "en": "An identity and packaging study for a coffee brand."
+    },
+    "tags": {
+      "tr": [
+        "Konsept çalışma",
+        "Marka kimliği",
+        "Ambalaj tasarımı"
+      ],
+      "en": [
+        "Concept study",
+        "Brand identity",
+        "Packaging design"
+      ]
+    },
+    "overviewLead": {
+      "tr": "Mola, kahve ambalajında güçlü bir imza ile ürünler arasındaki ayrımı birlikte ele alan, Niodome için hazırlanmış özgün bir konsept çalışma.",
+      "en": "Mola is an original Niodome concept study exploring how a coffee pack can carry a strong signature while making each product distinct."
+    },
+    "overviewSpan": {
+      "tr": "Geometrik harfler, kesişen daireler ve üç renk üzerinden bir ambalaj ailesi kurduk. Bu çalışma bir müşteri siparişi veya satıştaki bir ürün değildir.",
+      "en": "Geometric lettering, intersecting circles and three colours create a coherent packaging family. This is a self-initiated study, not a commissioned project or a product on sale."
+    },
+    "challengeLead": {
+      "tr": "Aynı aileye ait üç ambalajın hem birlikte tanınması hem de tek başına karakter taşıması. Büyük marka imzasını ürün bilgileriyle yarışmadan kullanmak.",
+      "en": "Make three packs recognisable as one family while giving each its own character. Use a bold brand signature without competing with product information."
+    },
+    "challengeSpan": {
+      "tr": "Sözcük işaretini üst bölgede sabit tuttuk; renk ve grafik parçalarını çeşitler arasında değiştirdik. Mat kâğıt dokusu, koyu erik ve sıcak kırmızıyla dengelenen açık tonlar tasarımın maddi karşılığını oluşturdu.",
+      "en": "The wordmark stays in a consistent upper position while colour and graphic fragments vary. Matte paper, deep plum, warm red and light neutral tones give the design its material character."
+    }
+  },
+  {
+    "_id": "niodome-concept-kiyi-website",
+    "_type": "project",
+    "isDemo": false,
+    "feedbackApproved": false,
+    "order": 4,
+    "slug": {
+      "_type": "slug",
+      "current": "kiyi-web-konsepti"
+    },
+    "href": "/works/kiyi-web-konsepti",
+    "projectDate": "2026",
+    "industries": {
+      "tr": "Niodome / Konsept çalışma",
+      "en": "Niodome / Concept study"
+    },
+    "services": [
+      {
+        "_key": "ux",
+        "_type": "object",
+        "name": {
+          "tr": "Bilgi mimarisi",
+          "en": "Information architecture"
+        },
+        "description": {
+          "tr": "Program, mekân ve etkinlik ayrıntısı arasında açık bir sıra.",
+          "en": "A clear sequence between programme, venue and event detail."
+        }
+      },
+      {
+        "_key": "ui",
+        "_type": "object",
+        "name": {
+          "tr": "Arayüz tasarımı",
+          "en": "Interface design"
+        },
+        "description": {
+          "tr": "Masaüstü ve mobil ekranlar için ortak tipografi ve kart sistemi.",
+          "en": "A shared typography and card system for desktop and mobile screens."
+        }
+      }
+    ],
+    "techStack": [],
+    "titleLines": {
+      "tr": [
+        "Kıyı",
+        ""
+      ],
+      "en": [
+        "Kıyı",
+        ""
+      ]
+    },
+    "tagsColA": {
+      "tr": [
+        "Konsept çalışma",
+        "Web tasarımı"
+      ],
+      "en": [
+        "Concept study",
+        "Web design"
+      ]
+    },
+    "tagsColB": {
+      "tr": [
+        "Kullanıcı deneyimi"
+      ],
+      "en": [
+        "User experience"
+      ]
+    },
+    "imageAlt": {
+      "tr": "Kıyı konsepti: kültür platformunun masaüstü ve mobil web arayüzü",
+      "en": "Kıyı concept: desktop and mobile interfaces for a cultural platform"
+    },
+    "cardImageAlt": {
+      "tr": "Kıyı konsepti: kültür platformunun masaüstü ve mobil web arayüzü",
+      "en": "Kıyı concept: desktop and mobile interfaces for a cultural platform"
+    },
+    "cursorText": {
+      "tr": "Konsepti incele",
+      "en": "Explore concept"
+    },
+    "imageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-75e32101691ab3fb19f07c443c3a28f7a240cde9-1536x1024-png"
+      }
+    },
+    "bgImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-75e32101691ab3fb19f07c443c3a28f7a240cde9-1536x1024-png"
+      }
+    },
+    "cardImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-75e32101691ab3fb19f07c443c3a28f7a240cde9-1536x1024-png"
+      }
+    },
+    "galleryImages": [
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-75e32101691ab3fb19f07c443c3a28f7a240cde9-1536x1024-png"
+        },
+        "_key": "main",
+        "alt": {
+          "tr": "Kıyı konsepti: kültür platformunun masaüstü ve mobil web arayüzü",
+          "en": "Kıyı concept: desktop and mobile interfaces for a cultural platform"
+        },
+        "caption": {
+          "tr": "Niodome — Özgün konsept çalışma",
+          "en": "Niodome — Original concept study"
+        }
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-e9c431f5fa74120fe0aaa53c1a9aee27a87bb644-1536x1024-png"
+        },
+        "_key": "detail",
+        "alt": {
+          "tr": "Kıyı — tasarım sistemi ve detay uygulaması",
+          "en": "Kıyı — design system and detail application"
+        }
+      }
+    ],
+    "title": {
+      "tr": "Kıyı — Web deneyimi konsepti",
+      "en": "Kıyı — Web experience concept"
+    },
+    "subtitle": {
+      "tr": "Kültür programını keşfetmek için tasarlanmış bir dijital arayüz.",
+      "en": "A digital interface designed for discovering a cultural programme."
+    },
+    "tags": {
+      "tr": [
+        "Konsept çalışma",
+        "Web tasarımı",
+        "Kullanıcı deneyimi"
+      ],
+      "en": [
+        "Concept study",
+        "Web design",
+        "User experience"
+      ]
+    },
+    "overviewLead": {
+      "tr": "Kıyı, sergi, söyleşi ve atölyeleri ortak bir program içinde buluşturan hayalî bir kültür platformu için hazırladığımız web tasarımı konsepti.",
+      "en": "Kıyı is a web design concept for an imagined cultural platform bringing exhibitions, talks and workshops into one programme."
+    },
+    "overviewSpan": {
+      "tr": "Ziyaretçinin önce ilgisini çeken işi görmesini, ardından tarih, mekân ve etkinlik ayrıntısına kolayca ulaşmasını hedefledik. Görseller, masaüstü ve mobil arayüz tasarımını gösterir; yayında bir platform veya tamamlanmış bir yazılım ürünü değildir.",
+      "en": "The visitor first discovers the work, then finds dates, venues and event information. The images show desktop and mobile interface concepts, not a live platform or a completed software product."
+    },
+    "challengeLead": {
+      "tr": "Kültürel içeriğin görsel gücünü korurken program bilgisini kolay taranır hâle getirmek. Aynı düzeni küçük ekranda da anlaşılır tutmak.",
+      "en": "Keep the visual impact of cultural content while making programme information easy to scan. Make the same system clear on a smaller screen."
+    },
+    "challengeSpan": {
+      "tr": "Büyük tipografi ve geniş sanat görsellerini, tarih ve mekânı öne çıkaran mercan kartlarla dengeledik. Ana sayfa keşfe; etkinlik sayfası ise ayrıntıya odaklanıyor.",
+      "en": "Large typography and generous art imagery are balanced by coral cards that highlight dates and venues. The homepage supports discovery, while the event page focuses on detail."
+    }
+  },
+  {
+    "_id": "niodome-concept-bir-araya-campaign",
+    "_type": "project",
+    "isDemo": false,
+    "feedbackApproved": false,
+    "order": 5,
+    "slug": {
+      "_type": "slug",
+      "current": "bir-araya-gel-kampanya-konsepti"
+    },
+    "href": "/works/bir-araya-gel-kampanya-konsepti",
+    "projectDate": "2026",
+    "industries": {
+      "tr": "Niodome / Konsept çalışma",
+      "en": "Niodome / Concept study"
+    },
+    "services": [
+      {
+        "_key": "art",
+        "_type": "object",
+        "name": {
+          "tr": "Sanat yönetimi",
+          "en": "Art direction"
+        },
+        "description": {
+          "tr": "Renk, tipografi ve grafik hareketi tek bir fikirde buluşturmak.",
+          "en": "Bring colour, typography and graphic movement into one idea."
+        }
+      },
+      {
+        "_key": "campaign",
+        "_type": "object",
+        "name": {
+          "tr": "Kampanya uygulamaları",
+          "en": "Campaign applications"
+        },
+        "description": {
+          "tr": "Afişten davetiyeye ve program kitapçığına uzanan sistem.",
+          "en": "A system extending from posters to invitations and a printed programme."
+        }
+      }
+    ],
+    "techStack": [],
+    "titleLines": {
+      "tr": [
+        "Bir araya",
+        "gel."
+      ],
+      "en": [
+        "Bir araya",
+        "gel."
+      ]
+    },
+    "tagsColA": {
+      "tr": [
+        "Konsept çalışma",
+        "İletişim tasarımı"
+      ],
+      "en": [
+        "Concept study",
+        "Communication design"
+      ]
+    },
+    "tagsColB": {
+      "tr": [
+        "Sanat yönetimi"
+      ],
+      "en": [
+        "Art direction"
+      ]
+    },
+    "imageAlt": {
+      "tr": "Bir araya gel konsepti: limon yeşili ve lavanta afiş serisi",
+      "en": "Bir araya gel concept: lime and lavender poster series"
+    },
+    "cardImageAlt": {
+      "tr": "Bir araya gel konsepti: limon yeşili ve lavanta afiş serisi",
+      "en": "Bir araya gel concept: lime and lavender poster series"
+    },
+    "cursorText": {
+      "tr": "Konsepti incele",
+      "en": "Explore concept"
+    },
+    "imageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-0305b9ef4db7adcfd5956d787d7f3a3b5978ebe7-1536x1024-png"
+      }
+    },
+    "bgImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-0305b9ef4db7adcfd5956d787d7f3a3b5978ebe7-1536x1024-png"
+      }
+    },
+    "cardImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-0305b9ef4db7adcfd5956d787d7f3a3b5978ebe7-1536x1024-png"
+      }
+    },
+    "galleryImages": [
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-0305b9ef4db7adcfd5956d787d7f3a3b5978ebe7-1536x1024-png"
+        },
+        "_key": "main",
+        "alt": {
+          "tr": "Bir araya gel konsepti: limon yeşili ve lavanta afiş serisi",
+          "en": "Bir araya gel concept: lime and lavender poster series"
+        },
+        "caption": {
+          "tr": "Niodome — Özgün konsept çalışma",
+          "en": "Niodome — Original concept study"
+        }
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-5645b34315da5c2e4862c60a2830e6565f6a6d57-1536x1024-png"
+        },
+        "_key": "detail",
+        "alt": {
+          "tr": "Bir araya gel. — tasarım sistemi ve detay uygulaması",
+          "en": "Bir araya gel. — design system and detail application"
+        }
+      }
+    ],
+    "title": {
+      "tr": "Bir araya gel. — Kampanya konsepti",
+      "en": "Bir araya gel. — Campaign concept"
+    },
+    "subtitle": {
+      "tr": "Birlikte düşünme fikrini görünür kılan bir afiş sistemi.",
+      "en": "A poster system that makes the idea of thinking together visible."
+    },
+    "tags": {
+      "tr": [
+        "Konsept çalışma",
+        "İletişim tasarımı",
+        "Sanat yönetimi"
+      ],
+      "en": [
+        "Concept study",
+        "Communication design",
+        "Art direction"
+      ]
+    },
+    "overviewLead": {
+      "tr": "“Bir araya gel.”, Niodome için üretilmiş özgün bir kültürel iletişim konsepti. Ayrı parçaların buluşması fikrini, tamamlanan daireler ve kısa bir davet cümlesiyle anlattık.",
+      "en": "“Bir araya gel.” is an original cultural communication concept created for Niodome. Joining arcs and a short invitation express the idea of separate parts coming together."
+    },
+    "overviewSpan": {
+      "tr": "Afiş, davetiye ve basılı program aynı renk ve tipografi sistemiyle birbirine bağlanıyor. Görseller bir kampanya tasarımı araştırmasıdır; gerçekleşmiş bir etkinlik veya müşteri sponsorluğu iddiası taşımaz.",
+      "en": "Posters, invitations and a printed programme share one colour and typography system. This is a campaign design study, not a claim of an actual event or client sponsorship."
+    },
+    "challengeLead": {
+      "tr": "Tek bir cümlenin farklı yüzeylerde tanınmasını sağlamak; tekrara düşmeden aynı fikri sürdürmek.",
+      "en": "Make one short message recognisable across different formats while keeping each application distinct."
+    },
+    "challengeSpan": {
+      "tr": "Limon yeşili, lavanta ve koyu erik tonlarını; değişen ölçekte yay parçalarıyla birlikte kullandık. Her uygulamada tipografi sabit bir ses oluştururken grafikler farklı bir buluşmayı gösteriyor.",
+      "en": "Lime, lavender and deep plum are paired with arcs at changing scales. Typography provides a consistent voice while each composition stages a different meeting of forms."
+    }
+  }
+]
