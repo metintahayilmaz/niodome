@@ -64,3 +64,25 @@ test("Turkish and English article dates use the correct month names", () => {
   assert.equal(formatPostDate("2026-11-07", "en"), "7 November 2026");
   assert.equal(formatPostDate("", "tr"), "");
 });
+
+
+test("retained template pages are not indexed in either language", () => {
+  for (const path of ["/pricing", "/en/pricing", "/tr/team/", "/en/index-digital-agency", "/blog-article", "/en/project-details", "/preview"]) {
+    const response = middleware(new NextRequest(`https://niodome.com${path}`, {headers: {"accept-language": "tr"}}));
+    assert.equal(response.headers.get("X-Robots-Tag"), "noindex, follow", path);
+  }
+});
+
+test("published pages and real case studies remain indexable", () => {
+  for (const path of ["/", "/en", "/hakkimizda", "/en/about-us", "/hizmetler", "/iletisim", "/calismalar/just-waffle", "/en/works/noema", "/blog/pricing", "/en/blog/team"]) {
+    const response = middleware(new NextRequest(`https://niodome.com${path}`, {headers: {"accept-language": "tr"}}));
+    assert.equal(response.headers.get("X-Robots-Tag"), null, path);
+  }
+});
+
+test("preview deployments retain the stronger indexing restriction", () => {
+  for (const path of ["/", "/en/pricing", "/en/works/noema"]) {
+    const response = middleware(new NextRequest(`https://preview.vercel.app${path}`));
+    assert.equal(response.headers.get("X-Robots-Tag"), "noindex, nofollow", path);
+  }
+});

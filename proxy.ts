@@ -10,6 +10,30 @@ const BYPASS_KEY = process.env.MAINTENANCE_BYPASS_KEY?.trim();
 const BYPASS_COOKIE = "nio_preview";
 const MAINTENANCE_ON = process.env.MAINTENANCE_MODE === "true";
 
+// Keep retained theme examples accessible without indexing them as agency work.
+const TEMPLATE_PATHS = new Set([
+  "/index-branding-studio",
+  "/index-creative-agency",
+  "/index-design-studio",
+  "/index-digital-agency",
+  "/index-digital-designer",
+  "/index-freelancer-portfolio",
+  "/index-personal-portfolio",
+  "/index-software-development-company",
+  "/index-web-developer",
+  "/index-web-studio",
+  "/about-me",
+  "/faq",
+  "/pricing",
+  "/team",
+  "/blog-article",
+  "/blog-creative",
+  "/project-details",
+  "/works-grid",
+  "/works-grid-sticky",
+  "/preview",
+]);
+
 // Bakım modunda bile geçmesine izin verilen path prefix'leri
 const EXEMPT_PREFIXES = ["/maintenance", "/studio", "/_next", "/api"];
 
@@ -60,12 +84,21 @@ export default function middleware(req: NextRequest) {
   // Use English for every non-Turkish browser language, including languages
   // not offered by the site. next-intl still prioritizes URL and locale cookie.
   const headers = new Headers(req.headers);
-  headers.set("accept-language", browserLocale(req.headers.get("accept-language")));
+  headers.set(
+    "accept-language",
+    browserLocale(req.headers.get("accept-language")),
+  );
   const res = intlMiddleware(new NextRequest(req, { headers }));
 
   // noindex: bakım açıksa VEYA production host değilse
   if (MAINTENANCE_ON || !isProduction) {
     res.headers.set("X-Robots-Tag", "noindex, nofollow");
+  } else {
+    const pagePath =
+      pathname.replace(/^\/(tr|en)(?=\/|$)/, "").replace(/\/$/, "") || "/";
+    if (TEMPLATE_PATHS.has(pagePath)) {
+      res.headers.set("X-Robots-Tag", "noindex, follow");
+    }
   }
 
   return res;
