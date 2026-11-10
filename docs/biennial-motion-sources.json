@@ -2,8 +2,8 @@
   "type": "original-generated-concept-study",
   "reference": "https://www.rethinkideas.com/work/coors-lights-out",
   "durationSeconds": 9.6,
-  "poster": "public/img/niodome/coca-cola-17-bienal-poster.webp",
-  "video": "public/video/niodome-coca-cola-17-bienal.mp4",
+  "poster": "public/img/niodome/bienal-cover-v2.webp",
+  "video": "public/video/niodome-bienal-v2.mp4",
   "method": "built-in image generation; edited as a silent motion-poster loop",
   "images": [
     {
@@ -19,5 +19,13 @@
       "prompt": "Use case: stylized-concept. Asset type: original landscape art-exhibition concept photograph for Niodome Coca-Cola / 17. Istanbul Biennial CONCEPT motion poster. Replace an indoor frontal white-paper installation with an entirely different visual and camera angle. A perfectly VERTICAL BIRD'S-EYE TOP-DOWN photograph of a quiet open-air Istanbul cultural courtyard paved in aged pale limestone. At its center lies one huge flat circular mirror, flush with the ground, reflecting vivid clean blue sky and a few soft white clouds. An extremely thin vermilion-red crescent of enamel traces ONLY one section of the mirror rim, providing a restrained Coca-Cola-red accent. Architectural shadows of an unseen tree and a balustrade cut diagonally across the pale stone, creating a striking minimal geometric composition. Museum-quality original fictional contemporary installation, not documentation of an existing artwork or real event. Camera directly overhead looking straight down, NO horizon, NO windows in perspective, NO interior room, NO frontal architecture, NO red fabric, NO paper strips, NO amber monoliths. Wide landscape 16:9 photograph, restrained photographic realism, real stone texture and blue-sky reflection, dramatic contrast of circle and diagonal shadow. No people, no text, no logos, no labels, no watermark."
     }
   ],
-  "note": "Tamamen özgün, kurgusal sanat yerleştirmeleriyle hazırlanmıştır. Gerçek bienal sanat eseri veya arşiv fotoğrafı kullanılmamıştır. Gerçek sponsorluk veya müşteri işi olarak portfolyoya eklenmez."
+  "note": "Tamamen özgün, kurgusal sanat yerleştirmeleriyle hazırlanmıştır. Gerçek bienal sanat eseri veya arşiv fotoğrafı kullanılmamıştır. Gerçek sponsorluk veya müşteri işi olarak portfolyoya eklenmez.",
+  "logoSources": {
+    "archive": "https://bienal.iksv.org/tr/bienal-arsivi/17-istanbul-bienali",
+    "biennial": "https://bienal.iksv.org/i/assets/bienal/images/site/bienal-logo-tr.png",
+    "ministry": "https://bienal.iksv.org/i/assets/iksv/images/content/kultur-turizm.svg",
+    "koc": "https://bienal.iksv.org/i/assets/bienal/images/site/koc-logo.png",
+    "eczacibasi": "https://bienal.iksv.org/i/assets/iksv/images/content/eczacibasii.svg"
+  },
+  "layout": "Full-bleed original scenes; small identical institutional logo row at bottom right on all three scenes. Coca-Cola frame, mark and concept-study graphic removed."
 }
