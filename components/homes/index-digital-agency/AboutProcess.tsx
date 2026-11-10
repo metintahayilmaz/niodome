@@ -12,9 +12,15 @@ type Props = {
   /** Sanity'den gelen süreç adımları.
    *  Layout 3 sabit slot beklediğinden, tam 3 adım gelmezse local data kullanılır. */
   steps?: ProcessStep[];
+  manifestLead?: string;
+  manifestSpan?: string;
 };
 
-export default async function AboutProcess({ steps }: Props) {
+export default async function AboutProcess({
+  steps,
+  manifestLead,
+  manifestSpan,
+}: Props) {
   const t = await getTranslations("homeAbout");
   const resolvedSteps =
     steps && steps.length >= 3 ? steps : (t.raw("steps") as ProcessStep[]);
@@ -39,7 +45,8 @@ export default async function AboutProcess({ steps }: Props) {
                             className="manifest manifest-m manifest-accent mxd-split-lines active-cursor-permanent"
                             animation="splitLines"
                           >
-                            {t("manifestLead")} <span>{t("manifestSpan")}</span>
+                            {manifestLead ?? t("manifestLead")}{" "}
+                            <span>{manifestSpan ?? t("manifestSpan")}</span>
                           </CommonAnimatedText>
                         </Link>
                       </div>
@@ -73,11 +80,13 @@ export default async function AboutProcess({ steps }: Props) {
                         {resolvedSteps[0].description}
                       </p>
                     </div>
-                    <div className="mxd-process-points__time">
-                      <span className="tag tag-m tag-permanent">
-                        {resolvedSteps[0].durationLabel}
-                      </span>
-                    </div>
+                    {resolvedSteps[0].durationLabel && (
+                      <div className="mxd-process-points__time">
+                        <span className="tag tag-m tag-permanent">
+                          {resolvedSteps[0].durationLabel}
+                        </span>
+                      </div>
+                    )}
                   </CommonCardBatchAnimated>
                   {/* process item 2 */}
                   <CommonCardBatchAnimated
@@ -101,11 +110,13 @@ export default async function AboutProcess({ steps }: Props) {
                         {resolvedSteps[1].description}
                       </p>
                     </div>
-                    <div className="mxd-process-points__time">
-                      <span className="tag tag-m tag-permanent">
-                        {resolvedSteps[1].durationLabel}
-                      </span>
-                    </div>
+                    {resolvedSteps[1].durationLabel && (
+                      <div className="mxd-process-points__time">
+                        <span className="tag tag-m tag-permanent">
+                          {resolvedSteps[1].durationLabel}
+                        </span>
+                      </div>
+                    )}
                   </CommonCardBatchAnimated>
                   {/* process item 3 */}
                   <CommonCardBatchAnimated
@@ -129,11 +140,13 @@ export default async function AboutProcess({ steps }: Props) {
                         {resolvedSteps[2].description}
                       </p>
                     </div>
-                    <div className="mxd-process-points__time">
-                      <span className="tag tag-m tag-permanent">
-                        {resolvedSteps[2].durationLabel}
-                      </span>
-                    </div>
+                    {resolvedSteps[2].durationLabel && (
+                      <div className="mxd-process-points__time">
+                        <span className="tag tag-m tag-permanent">
+                          {resolvedSteps[2].durationLabel}
+                        </span>
+                      </div>
+                    )}
                     <CommonScrollAnimated
                       className="mxd-process-points__divider bottom accent anim-uni-clip-in"
                       as="div"

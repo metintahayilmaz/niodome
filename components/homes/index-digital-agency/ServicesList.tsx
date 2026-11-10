@@ -10,15 +10,15 @@ import { servicesListDigitalAgencyData } from "@/data/servicesListDigitalAgency"
 import type { ServiceListItem } from "@/types/servicesList";
 
 // Bölüm-seviyesi sabitler data dosyasından gelmeye devam eder
-const { allServicesHref, items: localItems } =
-  servicesListDigitalAgencyData;
+const { allServicesHref, items: localItems } = servicesListDigitalAgencyData;
 
 type Props = {
   /** Sanity'den gelen items. Verilmezse veya boşsa local data kullanılır. */
   items?: ServiceListItem[];
+  title?: string;
 };
 
-export default function ServicesList({ items }: Props) {
+export default function ServicesList({ items, title }: Props) {
   const t = useTranslations("homeContent");
   // Fallback: Sanity boş / erişilemezse local data'ya dön
   const resolvedItems = items && items.length > 0 ? items : localItems;
@@ -42,7 +42,7 @@ export default function ServicesList({ items }: Props) {
                           className="reveal-type"
                           animation="revealType"
                         >
-                          {t("servicesTitle")}
+                          {title ?? t("servicesTitle")}
                         </CommonAnimatedText>
                       </div>
                     </div>

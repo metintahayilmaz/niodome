@@ -1,5 +1,7 @@
 import { homeCover } from "@/data/homeCover";
-import ApprovedNarrative from "@/components/common/ApprovedNarrative";
+import AboutProcess from "@/components/homes/index-digital-agency/AboutProcess";
+import ServicesList from "@/components/homes/index-digital-agency/ServicesList";
+import approvedServices from "@/data/approvedServices.json";
 import Divider from "@/components/homes/index-digital-agency/Divider";
 import Footer3 from "@/components/footers/Footer3";
 import type { Metadata } from "next";
@@ -59,6 +61,22 @@ export async function generateMetadata({
 export default async function HomePage() {
   const locale = await getLocale();
   const narrative = await getTranslations("narrative");
+  const aboutLabels = await getTranslations("homeAbout");
+  const processLabels = aboutLabels.raw("steps") as { title: string }[];
+  const processDescriptions = [
+    ...(narrative.raw("homeParagraphs") as string[]),
+    narrative("aboutEndParagraph"),
+  ];
+  const serviceItems = approvedServices[
+    locale === "en" ? "en" : "tr"
+  ].items.map((item, index) => ({
+    _id: item._id,
+    number: `[0${index + 1}]`,
+    title: item.title,
+    description: item.shortDescription,
+    cursorImageSrc: `/img/services/500x500_s0${index + 1}.webp`,
+    href: "/services",
+  }));
 
   // --- siteSettings ---
   let sanitySettings: SiteSettingsData | undefined;
@@ -335,11 +353,20 @@ export default async function HomePage() {
             scrollLabel: narrative("explore"),
           }}
         />
-        <ApprovedNarrative part="home" />
+        <AboutProcess
+          manifestLead={narrative("homeIntro")}
+          manifestSpan={narrative("homeTitle")}
+          steps={processLabels.map((step, index) => ({
+            stepNumber: `0${index + 1}`,
+            title: step.title,
+            description: processDescriptions[index],
+            durationLabel: "",
+          }))}
+        />
         <div id="selected-work">
           <ProjectsShowcase projects={sanityProjects} />
         </div>
-        <ApprovedNarrative part="services" />
+        <ServicesList title={narrative("servicesTitle")} items={serviceItems} />
         <ParallaxDividerVideo />
         <TestimonialsSticky testimonials={sanityTestimonials} />
         <ParallaxDividerImage
