@@ -9,5 +9,4 @@
   .cover .still { display: block; }
 }
 
-.outro { width: min(900px, calc(100% - 48px)); padding: 0; }
-.outro p { font-size: clamp(26px, 3.4vw, 48px); line-height: 1.18; letter-spacing: -0.025em; }
+.outro { width: min(1100px, calc(100% - 48px)); padding: 0; }
