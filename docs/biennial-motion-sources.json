@@ -2,8 +2,8 @@
   "type": "original-generated-concept-study",
   "reference": "https://www.rethinkideas.com/work/coors-lights-out",
   "durationSeconds": 9.6,
-  "poster": "public/img/niodome/bienal-cover-v2.webp",
-  "video": "public/video/niodome-bienal-v2.mp4",
+  "poster": "public/img/niodome/bienal-cover-v3.webp",
+  "video": "public/video/niodome-bienal-v3.mp4",
   "method": "built-in image generation; edited as a silent motion-poster loop",
   "images": [
     {
@@ -21,11 +21,7 @@
   ],
   "note": "Tamamen özgün, kurgusal sanat yerleştirmeleriyle hazırlanmıştır. Gerçek bienal sanat eseri veya arşiv fotoğrafı kullanılmamıştır. Gerçek sponsorluk veya müşteri işi olarak portfolyoya eklenmez.",
   "logoSources": {
-    "archive": "https://bienal.iksv.org/tr/bienal-arsivi/17-istanbul-bienali",
-    "biennial": "https://bienal.iksv.org/i/assets/bienal/images/site/bienal-logo-tr.png",
-    "ministry": "https://bienal.iksv.org/i/assets/iksv/images/content/kultur-turizm.svg",
-    "koc": "https://bienal.iksv.org/i/assets/bienal/images/site/koc-logo.png",
-    "eczacibasi": "https://bienal.iksv.org/i/assets/iksv/images/content/eczacibasii.svg"
+    "biennial": "https://bienal.iksv.org/i/assets/bienal/images/site/bienal-logo-tr.png"
   },
-  "layout": "Full-bleed original scenes; small identical institutional logo row at bottom right on all three scenes. Coca-Cola frame, mark and concept-study graphic removed."
+  "layout": "Full-bleed original scenes; only the transparent Bienal wordmark, with no box, badge or background. White on amber and courtyard scenes; dark on fabric scene. All institutional sponsor logos removed."
 }

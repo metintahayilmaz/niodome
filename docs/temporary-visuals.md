@@ -17,7 +17,7 @@ Niodome’un gerçek proje görselleri ve yönetim fotoğrafları korunur. Şabl
 
 ## Ana sayfa kültürel kapak
 
-Noema kapak alanı kaldırıldı. 17. İstanbul Bienali kavramsal videosu kullanılıyor. Üç sahnede de bienal, Bakanlık, Koç ve Eczacıbaşı logoları küçük bir sıra hâlinde görsellerin üzerinde yer alıyor; Coca-Cola çerçevesi ve logosu kaldırıldı. Bu alan gerçek müşteri işi veya sponsorluk kaydı olarak portfolyoya eklenmedi. Özgün görsellerin üretim kaydı: `docs/biennial-motion-sources.json`. Video ve kapak birlikte `data/homeCover.ts` üzerinden değiştirilir.
+Noema kapak alanı kaldırıldı. 17. İstanbul Bienali kavramsal videosu kullanılıyor. Üç sahnede de yalnızca zeminsiz bienal logosu kullanılıyor. Beyaz kutu ve tüm sponsor logoları kaldırıldı; fotoğraf üzerindeki kontrasta göre koyu veya dişi logo tercih edildi. Bu alan gerçek müşteri işi veya sponsorluk kaydı olarak portfolyoya eklenmedi. Özgün görsellerin üretim kaydı: `docs/biennial-motion-sources.json`. Video ve kapak birlikte `data/homeCover.ts` üzerinden değiştirilir.
 
 ## Tam dosya listesi
 

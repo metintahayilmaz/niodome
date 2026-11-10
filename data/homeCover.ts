@@ -1,7 +1,7 @@
 /** Homepage cultural concept; replace the video and poster together. */
 export const homeCover = {
-  video: "/video/niodome-bienal-v2.mp4",
-  poster: "/img/niodome/bienal-cover-v2.webp",
+  video: "/video/niodome-bienal-v3.mp4",
+  poster: "/img/niodome/bienal-cover-v3.webp",
   width: 1600,
   height: 900,
   alt: {
