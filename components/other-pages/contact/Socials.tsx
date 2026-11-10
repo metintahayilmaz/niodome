@@ -68,6 +68,7 @@ export default async function Socials({ socials }: Props) {
                         key={social.href}
                         className={`socials-list__item${index === 0 ? " no-margin" : ""} slide-right-up`}
                         href={social.href}
+                        lang="en"
                         target="_blank"
                       >
                         <CommonScrollAnimated

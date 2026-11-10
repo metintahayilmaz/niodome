@@ -146,6 +146,7 @@ export default async function Footer2({ name, settings }: Props) {
                                 <CommonScrollAnimated
                                   className="anim-uni-slide-down"
                                   href={`mailto:${s.email}`}
+                                  lang="en"
                                   as="a"
                                   animation="slideDownLine"
                                 >
@@ -226,6 +227,7 @@ export default async function Footer2({ name, settings }: Props) {
                                 key={social.href}
                                 className="socials-list__item slide-right-up"
                                 href={social.href}
+                                lang="en"
                                 target="_blank"
                               >
                                 <CommonScrollAnimated
@@ -342,7 +344,7 @@ export default async function Footer2({ name, settings }: Props) {
                     animation="fadeIn"
                   >
                     <p className="footer-data">
-                      <span>{s.copyrightText}</span>
+                      <span>{s.copyrightText.replace(/niodome/gi, "NIODOME")}</span>
                     </p>
                   </CommonScrollAnimated>
                 </div>

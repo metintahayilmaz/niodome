@@ -183,6 +183,7 @@ export default function Hero({
                           <a
                             className="mxd-socials-line__link permanent loading-item"
                             href={link.href}
+                            lang="en"
                             target="_blank"
                           >
                             <TextScramble className="mxd-scramble">

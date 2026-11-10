@@ -258,6 +258,7 @@ export default function Nav({
                           ref={contactSlots[3]}
                           className="tag tag-m"
                           href="https://instagram.com/niodome"
+                          lang="en"
                           target="_blank"
                         >
                           <TextScramble
@@ -273,6 +274,7 @@ export default function Nav({
                           ref={contactSlots[4]}
                           className="tag tag-m"
                           href="https://linkedin.com/company/niodome"
+                          lang="en"
                           target="_blank"
                         >
                           <TextScramble
@@ -288,6 +290,7 @@ export default function Nav({
                           ref={contactSlots[5]}
                           className="tag tag-m"
                           href="https://behance.net/niodome"
+                          lang="en"
                           target="_blank"
                         >
                           <TextScramble

@@ -66,6 +66,7 @@ export default function Footer3({ name, settings }: Props) {
                   <CommonScrollAnimated
                     className="anim-uni-slide-down"
                     href={`mailto:${s.email}`}
+                    lang="en"
                     as="a"
                     animation="slideDownLine"
                   >
@@ -112,7 +113,7 @@ export default function Footer3({ name, settings }: Props) {
                   animation="slideDownLine"
                 >
                   <span className="mxd-slide-down">
-                    {s.copyrightText}
+                    {s.copyrightText.replace(/niodome/gi, "NIODOME")}
                   </span>
                 </CommonScrollAnimated>
               </div>
@@ -138,7 +139,10 @@ export default function Footer3({ name, settings }: Props) {
                     width={0}
                     height={0}
                     sizes="(max-width: 768px) 60vw, 40vw"
-                    style={{ width: "auto", height: "clamp(60px, 10vw, 140px)" }}
+                    style={{
+                      width: "auto",
+                      height: "clamp(60px, 10vw, 140px)",
+                    }}
                     priority={false}
                   />
                 ) : (
@@ -171,6 +175,7 @@ export default function Footer3({ name, settings }: Props) {
                       <a
                         className="mxd-socials-line__link"
                         href={social.href}
+                        lang="en"
                         target="_blank"
                       >
                         <TextScramble className="mxd-scramble">
