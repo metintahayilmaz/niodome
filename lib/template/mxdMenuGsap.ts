@@ -154,7 +154,16 @@ export function bindMxdMenuGsap(
     activeTimeline = null;
   };
 
+  const setAccessibleState = (open: boolean) => {
+    nav.inert = !open;
+    nav.setAttribute("aria-hidden", String(!open));
+    hamburgerIcon?.setAttribute("aria-expanded", String(open));
+  };
+  setAccessibleState(false);
+
   const resetMenu = () => {
+    if (nav.contains(document.activeElement)) hamburgerIcon?.focus();
+    setAccessibleState(false);
     killTimeline();
     gsap.set(menuOverlay, {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
@@ -168,11 +177,9 @@ export function bindMxdMenuGsap(
       gsap.set(menuMediaWrapper, { scale: 1.4 });
     }
 
-    flatLines([
-      ...headerSplits,
-      ...mainMenuSplits,
-      ...footerSplits,
-    ]).forEach((line) => gsap.set(line, { y: "-114%" }));
+    flatLines([...headerSplits, ...mainMenuSplits, ...footerSplits]).forEach(
+      (line) => gsap.set(line, { y: "-114%" }),
+    );
     gsap.set(contactRevealTargets, { display: "inline-block", y: "-114%" });
     gsap.set(menuDividers, { clipPath: "inset(0% 100% 0% 0%)" });
     gsap.set(menuArrows, { opacity: 0 });
@@ -186,7 +193,9 @@ export function bindMxdMenuGsap(
   };
 
   const closeMenuAnimated = () => {
-    if (!isMenuOpen || isAnimating) return;
+    if (!isMenuOpen) return;
+    if (nav.contains(document.activeElement)) hamburgerIcon?.focus();
+    setAccessibleState(false);
     killTimeline();
     const tl = gsap.timeline({
       onStart: () => {
@@ -244,6 +253,10 @@ export function bindMxdMenuGsap(
 
   const onToggleClick = (e: Event) => {
     e.preventDefault();
+    if (isMenuOpen) {
+      closeMenuAnimated();
+      return;
+    }
     if (isAnimating) return;
 
     killTimeline();
@@ -259,6 +272,7 @@ export function bindMxdMenuGsap(
     activeTimeline = tl;
 
     if (!isMenuOpen) {
+      setAccessibleState(true);
       lenis?.stop();
       hamburgerIcon?.classList.add("active");
       const isMobile = window.matchMedia("(max-width: 1024px)").matches;
@@ -399,21 +413,50 @@ export function bindMxdMenuGsap(
     closeMenuAnimated();
   };
 
+  const onKeyDown = (e: KeyboardEvent) => {
+    if ((e.key === " " || e.key === "Enter") && e.target === hamburgerIcon) {
+      e.preventDefault();
+      onToggleClick(e);
+      return;
+    }
+    if (!isMenuOpen) return;
+    if (e.key === "Escape") {
+      e.preventDefault();
+      closeMenuAnimated();
+      hamburgerIcon?.focus();
+    } else if (e.key === "Tab") {
+      const links = Array.from(
+        nav.querySelectorAll<HTMLElement>('a[href], button, [tabindex="0"]'),
+      );
+      const targets = [hamburgerIcon, ...links].filter(
+        (node): node is HTMLElement => !!node && !node.closest("[inert]"),
+      );
+      const index = targets.indexOf(document.activeElement as HTMLElement);
+      if (
+        index < 0 ||
+        (!e.shiftKey && index === targets.length - 1) ||
+        (e.shiftKey && index === 0)
+      ) {
+        e.preventDefault();
+        targets[e.shiftKey ? targets.length - 1 : 0]?.focus();
+      }
+    }
+  };
+  document.addEventListener("keydown", onKeyDown);
   toggle.addEventListener("click", onToggleClick);
   nav.addEventListener("click", onAccordionClick, true);
   nav.addEventListener("click", onNavLinkClick);
 
   const dispose = () => {
+    document.removeEventListener("keydown", onKeyDown);
     toggle.removeEventListener("click", onToggleClick);
     nav.removeEventListener("click", onAccordionClick, true);
     nav.removeEventListener("click", onNavLinkClick);
     killTimeline();
     resetSubmenus(menuRows);
-    [
-      ...headerSplits,
-      ...mainMenuSplits,
-      ...footerSplits,
-    ].forEach((s) => s.revert());
+    [...headerSplits, ...mainMenuSplits, ...footerSplits].forEach((s) =>
+      s.revert(),
+    );
     lenis?.start();
   };
 

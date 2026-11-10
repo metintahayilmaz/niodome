@@ -24,6 +24,9 @@ export default function NavTrigger({
               href="#0"
               className="mxd-menu__hamburger"
               aria-label={t("menu")}
+              role="button"
+              aria-controls="site-menu"
+              aria-expanded={false}
               ref={setHamburgerNode}
             >
               <div className="hamburger__line" />

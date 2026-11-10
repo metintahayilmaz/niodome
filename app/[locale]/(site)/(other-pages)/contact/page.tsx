@@ -1,5 +1,6 @@
+import { getApprovedWorkImages } from "@/lib/approvedWorkImages";
 import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { SITE_URL } from "@/lib/site";
 import InnerHeadline from "@/components/other-pages/contact/InnerHeadline";
 import Socials from "@/components/other-pages/contact/Socials";
@@ -41,6 +42,8 @@ export async function generateMetadata({
 }
 
 export default async function ContactPage() {
+  const locale = await getLocale();
+  const workImages = await getApprovedWorkImages(locale);
   // siteSettings → Sanity'den çek; hata olursa undefined → bileşenler local data'ya döner
   let sanitySettings: SiteSettingsData | undefined;
   try {
@@ -51,7 +54,7 @@ export default async function ContactPage() {
       phoneHref: string | null;
       address: string | null;
       socials: { label: string; href: string }[] | null;
-    } | null>(siteSettingsQuery);
+    } | null>(siteSettingsQuery, { locale });
 
     if (raw) {
       sanitySettings = {
@@ -78,7 +81,7 @@ export default async function ContactPage() {
           emailHref={sanitySettings?.emailHref}
         />
         <Socials socials={sanitySettings?.socials} />
-        <ParallaxDividerImage />
+        <ParallaxDividerImage src={workImages[0]?.src} alt={workImages[0]?.alt} />
         <SectionTitle
           email={sanitySettings?.email}
           emailHref={sanitySettings?.emailHref}
@@ -86,7 +89,7 @@ export default async function ContactPage() {
           phoneHref={sanitySettings?.phoneHref}
           address={sanitySettings?.address}
         />
-        <CTAWithMarquee />
+        <CTAWithMarquee images={workImages} />
       </div>
     </>
   );

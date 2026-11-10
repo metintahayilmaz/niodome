@@ -324,7 +324,7 @@ export default async function HomePage() {
         <ApprovedNarrative part="services" />
         <ParallaxDividerVideo />
         <TestimonialsSticky testimonials={sanityTestimonials} />
-        <ParallaxDividerImage />
+        <ParallaxDividerImage src={sanityProjects.at(-1)?.bgImageSrc} alt={sanityProjects.at(-1)?.titleLines.join(" ")} />
         <BlogPreview posts={sanityPosts} />
         <ApprovedNarrative part="contact" />
       </>

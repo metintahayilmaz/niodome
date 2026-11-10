@@ -22,11 +22,13 @@ export default async function SectionTitle({
 }: Props) {
   const t = await getTranslations("contact");
   // Sanity değeri geldiyse kullan; yoksa local siteSettings'e dön
-  const resolvedEmail    = email    || localSettings.email;
-  const resolvedEmailHref = emailHref || localSettings.emailHref;
-  const resolvedPhone    = phone    || localSettings.phone;
+  const resolvedEmail = email || localSettings.email;
+  const resolvedEmailHref = emailHref?.startsWith("mailto:")
+    ? emailHref
+    : `mailto:${resolvedEmail}`;
+  const resolvedPhone = phone || localSettings.phone;
   const resolvedPhoneHref = phoneHref || localSettings.phoneHref;
-  const resolvedAddress  = address  || localSettings.address;
+  const resolvedAddress = address || localSettings.address;
 
   return (
     <>
@@ -99,6 +101,7 @@ export default async function SectionTitle({
                               animation="inUp"
                             >
                               <a
+                                lang="en"
                                 href={resolvedEmailHref}
                                 className="tag tag-s-mobile"
                               >

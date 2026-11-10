@@ -17,7 +17,7 @@ import { useMemo, useRef } from "react";
 import TextScramble from "@/components/animations/TextScramble";
 import SmoothAnchorLink from "@/components/common/SmoothAnchorLink";
 
-export default function InnerHeadline() {
+export default function InnerHeadline({ images = [] }: { images?: { src: string; alt: string }[] }) {
   const t = useTranslations("aboutContent");
   const bannersHoverRef = useRef<HTMLDivElement>(null);
   const trigger1Ref = useRef<HTMLAnchorElement>(null);
@@ -122,89 +122,89 @@ export default function InnerHeadline() {
                         ref={heroBanner1_0}
                         className="headline-banner-01 landscape image-01"
                       >
-                        <Image
+                        {images[0] && <Image
                           alt=""
-                          src="/img/illustrations/about-us-01.webp"
+                          src={images[0].src}
                           width={640}
                           height={480}
-                        />
+                        />}
                       </div>
                       <div
                         ref={heroBanner1_1}
                         className="headline-banner-01 portrait image-02"
                       >
-                        <Image
+                        {images[1] && <Image
                           alt=""
-                          src="/img/illustrations/about-us-02.webp"
+                          src={images[1].src}
                           width={560}
                           height={700}
-                        />
+                        />}
                       </div>
                       <div
                         ref={heroBanner1_2}
                         className="headline-banner-01 landscape image-03"
                       >
-                        <Image
+                        {images[2] && <Image
                           alt=""
-                          src="/img/illustrations/about-us-03.webp"
+                          src={images[2].src}
                           width={640}
                           height={480}
-                        />
+                        />}
                       </div>
                       <div
                         ref={heroBanner1_3}
                         className="headline-banner-01 portrait image-04"
                       >
-                        <Image
+                        {images[3] && <Image
                           alt=""
-                          src="/img/illustrations/about-us-04.webp"
+                          src={images[3].src}
                           width={560}
                           height={700}
-                        />
+                        />}
                       </div>
                       <div
                         ref={heroBanner2_0}
                         className="headline-banner-02 portrait image-05"
                       >
-                        <Image
+                        {images[4] && <Image
                           alt=""
-                          src="/img/illustrations/about-us-05.webp"
+                          src={images[4].src}
                           width={560}
                           height={700}
-                        />
+                        />}
                       </div>
                       <div
                         ref={heroBanner2_1}
                         className="headline-banner-02 landscape image-06"
                       >
-                        <Image
+                        {images[5] && <Image
                           alt=""
-                          src="/img/illustrations/about-us-06.webp"
+                          src={images[5].src}
                           width={640}
                           height={480}
-                        />
+                        />}
                       </div>
                       <div
                         ref={heroBanner2_2}
                         className="headline-banner-02 portrait image-07"
                       >
-                        <Image
+                        {images[6] && <Image
                           alt=""
-                          src="/img/illustrations/about-us-07.webp"
+                          src={images[6].src}
                           width={560}
                           height={700}
-                        />
+                        />}
                       </div>
                       <div
                         ref={heroBanner2_3}
                         className="headline-banner-02 landscape image-08"
                       >
-                        <Image
+                        {images[7] && <Image
                           alt=""
-                          src="/img/illustrations/about-us-08.webp"
+                          src={images[7].src}
                           width={640}
                           height={480}
-                        />
+                        />}
                       </div>
                     </div>
                   </div>

@@ -1,8 +1,9 @@
+import { getApprovedWorkImages } from "@/lib/approvedWorkImages";
 import ApprovedNarrative from "@/components/common/ApprovedNarrative";
 import { Metadata } from "next";
 import InnerHeadline from "@/components/other-pages/about-us/InnerHeadline";
 import ParallaxDividerImage from "@/components/other-pages/about-us/ParallaxDividerImage";
-import DoubleMarqueeDivider, { type WorkStripImage } from "@/components/other-pages/about-us/DoubleMarqueeDivider";
+import DoubleMarqueeDivider from "@/components/other-pages/about-us/DoubleMarqueeDivider";
 import TeamGrid from "@/components/other-pages/about-us/TeamGrid";
 import ParallaxDividerImage2 from "@/components/other-pages/about-us/ParallaxDividerImage2";
 import BlogPreview from "@/components/other-pages/about-us/BlogPreview";
@@ -47,28 +48,7 @@ export async function generateMetadata({
 
 export default async function AboutUsPage() {
   const locale = await getLocale();
-  let workImages: WorkStripImage[] = [];
-  try {
-    const projects = await client.fetch<{
-      title: string; slug: string;
-      images: (Parameters<typeof urlFor>[0] & { asset: { _ref: string }; alt?: { tr?: string; en?: string }; caption?: { tr?: string; en?: string } })[];
-    }[]>(`*[_type == "project" && coalesce(isDemo, false) == false && defined(slug.current)] | order(order asc) {
-      "title": coalesce(title[$locale], title.tr), "slug": slug.current,
-      "images": galleryImages[0..3]
-    }`, { locale });
-    const seen = new Set<string>();
-    const language = locale === "en" ? "en" : "tr";
-    workImages = projects.flatMap(project => (project.images ?? []).flatMap(image => {
-      const ref = image.asset?._ref;
-      if (!ref || seen.has(ref)) return [];
-      seen.add(ref);
-      return [{ src: urlFor(image).width(1200).quality(85).auto("format").url(),
-        alt: image.alt?.[language] || image.caption?.[language] || project.title,
-        href: `/works/${project.slug}` }];
-    }));
-  } catch {
-    // Do not substitute template artwork when approved project media is unavailable.
-  }
+  const workImages = await getApprovedWorkImages(locale);
 
   // --- team members ---
   let sanityMembers: TeamMember[] = [];
@@ -141,7 +121,7 @@ export default async function AboutUsPage() {
   return (
     <>
       <>
-        <InnerHeadline />
+        <InnerHeadline images={workImages} />
         <ParallaxDividerImage src={workImages[0]?.src} alt={workImages[0]?.alt} />
         <ApprovedNarrative part="aboutStart" />
         <DoubleMarqueeDivider images={workImages} />

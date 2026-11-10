@@ -11,7 +11,9 @@ import { siteSettings } from "@/data/siteSettings";
 import TextScramble from "@/components/animations/TextScramble";
 
 function isActiveRoute(pathname: string, href: string): boolean {
-  return href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
+  return href === "/"
+    ? pathname === "/"
+    : pathname === href || pathname.startsWith(`${href}/`);
 }
 
 function makeSlotters<T>(
@@ -68,7 +70,13 @@ export default function Nav({
   useMxdMenuGsap(navNode, toggleNode, hamburgerNode, registerMenuReset, g);
 
   return (
-    <nav className="mxd-menu mxd-menu--gsap" ref={setNavNode}>
+    <nav
+      id="site-menu"
+      className="mxd-menu mxd-menu--gsap"
+      ref={setNavNode}
+      inert
+      aria-hidden="true"
+    >
       <div ref={g.backdrop} className="mxd-menu__backdrop" />
       {/* Menu Overlay Start */}
       <div ref={g.overlay} className="mxd-menu__overlay">
@@ -130,19 +138,58 @@ export default function Nav({
                       {links.map((link, index) => {
                         const active = isActiveRoute(pathname, link.href);
                         return (
-                          <li key={link.href} ref={liSlots[index]}
-                            className={`main-menu__item${active ? " main-menu__item--current" : ""}`}>
-                            {index === 0 && <div ref={dividerSlots[0]} className="main-menu__divider divider-top" />}
-                            <div ref={toggleSlots[index]} className="main-menu__toggle">
-                              <Link href={link.href} className="main-menu__link main-menu__link--direct" aria-current={active ? "page" : undefined}>
-                                <span ref={mainSlots[index * 2]} className="main-menu__number">/ {String(index + 1).padStart(2, "0")}</span>
-                                <span ref={mainSlots[index * 2 + 1]} className="main-menu__caption">{link.label}</span>
-                                <span ref={arrowSlots[index]} className="main-menu__arrow" aria-hidden="true">
-                                  <svg viewBox="0 0 18 18" fill="none"><path d="M3 9h11M9 3l6 6-6 6" stroke="currentColor" strokeWidth="2" fill="none" /></svg>
+                          <li
+                            key={link.href}
+                            ref={liSlots[index]}
+                            className={`main-menu__item${active ? " main-menu__item--current" : ""}`}
+                          >
+                            {index === 0 && (
+                              <div
+                                ref={dividerSlots[0]}
+                                className="main-menu__divider divider-top"
+                              />
+                            )}
+                            <div
+                              ref={toggleSlots[index]}
+                              className="main-menu__toggle"
+                            >
+                              <Link
+                                href={link.href}
+                                className="main-menu__link main-menu__link--direct"
+                                aria-current={active ? "page" : undefined}
+                              >
+                                <span
+                                  ref={mainSlots[index * 2]}
+                                  className="main-menu__number"
+                                >
+                                  / {String(index + 1).padStart(2, "0")}
+                                </span>
+                                <span
+                                  ref={mainSlots[index * 2 + 1]}
+                                  className="main-menu__caption"
+                                >
+                                  {link.label}
+                                </span>
+                                <span
+                                  ref={arrowSlots[index]}
+                                  className="main-menu__arrow"
+                                  aria-hidden="true"
+                                >
+                                  <svg viewBox="0 0 18 18" fill="none">
+                                    <path
+                                      d="M3 9h11M9 3l6 6-6 6"
+                                      stroke="currentColor"
+                                      strokeWidth="2"
+                                      fill="none"
+                                    />
+                                  </svg>
                                 </span>
                               </Link>
                             </div>
-                            <div ref={dividerSlots[index + 1]} className="main-menu__divider divider-bottom" />
+                            <div
+                              ref={dividerSlots[index + 1]}
+                              className="main-menu__divider divider-bottom"
+                            />
                           </li>
                         );
                       })}
@@ -159,6 +206,7 @@ export default function Nav({
                         <a
                           ref={contactSlots[0]}
                           className="tag tag-m"
+                          lang="en"
                           href="mailto:hello@niodome.com?subject=Web%20Sitesinden%20Mesaj"
                         >
                           <TextScramble
@@ -258,15 +306,15 @@ export default function Nav({
               <div className="mxd-menu__shadow" />
               <div className="mxd-menu__data">
                 <div className="menu-data__left">
-                  <p ref={footerSlots[0]} className="menu-data__text">
+                  <p ref={footerSlots[0]} className="menu-data__text" lang="en">
                     hello@niodome.com
                   </p>
                 </div>
                 <div className="menu-data__right">
-                  <p ref={footerSlots[2]} className="menu-data__text">
+                  <p ref={footerSlots[2]} className="menu-data__text" lang="en">
                     © Niodome
                   </p>
-                  <p ref={footerSlots[3]} className="menu-data__text">
+                  <p ref={footerSlots[3]} className="menu-data__text" lang="en">
                     ©{new Date().getFullYear()}
                   </p>
                 </div>
