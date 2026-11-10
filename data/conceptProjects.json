@@ -173,172 +173,172 @@
   {
     "_id": "niodome-concept-kiyi-website",
     "_type": "project",
-    "isDemo": false,
+    "bgImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-75e32101691ab3fb19f07c443c3a28f7a240cde9-1536x1024-png",
+        "_type": "reference"
+      }
+    },
+    "cardImageAlt": {
+      "en": "Kıyı concept: desktop and mobile interfaces for a cultural platform",
+      "tr": "Kıyı konsepti: kültür platformunun masaüstü ve mobil web arayüzü"
+    },
+    "cardImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-75e32101691ab3fb19f07c443c3a28f7a240cde9-1536x1024-png",
+        "_type": "reference"
+      }
+    },
+    "challengeLead": {
+      "en": "Keep the visual impact of cultural content while making programme information easy to scan. Make the same system clear on a smaller screen.",
+      "tr": "Kültürel içeriğin görsel gücünü korurken program bilgisini kolay taranır hâle getirmek. Aynı düzeni küçük ekranda da anlaşılır tutmak."
+    },
+    "challengeSpan": {
+      "en": "Large typography and generous art imagery are balanced by coral cards that highlight dates and venues. The homepage supports discovery, while the event page focuses on detail.",
+      "tr": "Büyük tipografi ve geniş sanat görsellerini, tarih ve mekânı öne çıkaran mercan kartlarla dengeledik. Ana sayfa keşfe; etkinlik sayfası ise ayrıntıya odaklanıyor."
+    },
+    "cursorText": {
+      "en": "Explore concept",
+      "tr": "Konsepti incele"
+    },
     "feedbackApproved": false,
-    "order": 4,
-    "slug": {
-      "_type": "slug",
-      "current": "kiyi-web-konsepti"
-    },
+    "galleryImages": [
+      {
+        "_key": "main",
+        "_type": "image",
+        "alt": {
+          "en": "Kıyı concept: desktop and mobile interfaces for a cultural platform",
+          "tr": "Kıyı konsepti: kültür platformunun masaüstü ve mobil web arayüzü"
+        },
+        "asset": {
+          "_ref": "image-75e32101691ab3fb19f07c443c3a28f7a240cde9-1536x1024-png",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "Niodome — Original concept study",
+          "tr": "Niodome — Özgün konsept çalışma"
+        }
+      },
+      {
+        "_key": "detail",
+        "_type": "image",
+        "alt": {
+          "en": "Kıyı — design system and detail application",
+          "tr": "Kıyı — tasarım sistemi ve detay uygulaması"
+        },
+        "asset": {
+          "_ref": "image-e9c431f5fa74120fe0aaa53c1a9aee27a87bb644-1536x1024-png",
+          "_type": "reference"
+        }
+      }
+    ],
     "href": "/works/kiyi-web-konsepti",
-    "projectDate": "2026",
-    "industries": {
-      "tr": "Niodome / Konsept çalışma",
-      "en": "Niodome / Concept study"
+    "imageAlt": {
+      "en": "Kıyı concept: desktop and mobile interfaces for a cultural platform",
+      "tr": "Kıyı konsepti: kültür platformunun masaüstü ve mobil web arayüzü"
     },
+    "imageSrc": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-75e32101691ab3fb19f07c443c3a28f7a240cde9-1536x1024-png",
+        "_type": "reference"
+      }
+    },
+    "industries": {
+      "en": "Niodome / Concept study",
+      "tr": "Niodome / Konsept çalışma"
+    },
+    "isDemo": false,
+    "order": 4,
+    "overviewLead": {
+      "en": "Kıyı is a web design concept for an imagined cultural platform bringing exhibitions, talks and workshops into one programme.",
+      "tr": "Kıyı, sergi, söyleşi ve atölyeleri ortak bir program içinde buluşturan hayalî bir kültür platformu için hazırladığımız web tasarımı konsepti."
+    },
+    "overviewSpan": {
+      "en": "The visitor first discovers the work, then finds dates, venues and event information.",
+      "tr": "Ziyaretçinin önce ilgisini çeken işi görmesini, ardından tarih, mekân ve etkinlik ayrıntısına kolayca ulaşmasını hedefledik."
+    },
+    "projectDate": "2026",
     "services": [
       {
         "_key": "ux",
         "_type": "object",
-        "name": {
-          "tr": "Bilgi mimarisi",
-          "en": "Information architecture"
-        },
         "description": {
-          "tr": "Program, mekân ve etkinlik ayrıntısı arasında açık bir sıra.",
-          "en": "A clear sequence between programme, venue and event detail."
+          "en": "A clear sequence between programme, venue and event detail.",
+          "tr": "Program, mekân ve etkinlik ayrıntısı arasında açık bir sıra."
+        },
+        "name": {
+          "en": "Information architecture",
+          "tr": "Bilgi mimarisi"
         }
       },
       {
         "_key": "ui",
         "_type": "object",
-        "name": {
-          "tr": "Arayüz tasarımı",
-          "en": "Interface design"
-        },
         "description": {
-          "tr": "Masaüstü ve mobil ekranlar için ortak tipografi ve kart sistemi.",
-          "en": "A shared typography and card system for desktop and mobile screens."
+          "en": "A shared typography and card system for desktop and mobile screens.",
+          "tr": "Masaüstü ve mobil ekranlar için ortak tipografi ve kart sistemi."
+        },
+        "name": {
+          "en": "Interface design",
+          "tr": "Arayüz tasarımı"
         }
       }
     ],
-    "techStack": [],
-    "titleLines": {
-      "tr": [
-        "Kıyı",
-        ""
-      ],
-      "en": [
-        "Kıyı",
-        ""
-      ]
-    },
-    "tagsColA": {
-      "tr": [
-        "Konsept çalışma",
-        "Web tasarımı"
-      ],
-      "en": [
-        "Concept study",
-        "Web design"
-      ]
-    },
-    "tagsColB": {
-      "tr": [
-        "Kullanıcı deneyimi"
-      ],
-      "en": [
-        "User experience"
-      ]
-    },
-    "imageAlt": {
-      "tr": "Kıyı konsepti: kültür platformunun masaüstü ve mobil web arayüzü",
-      "en": "Kıyı concept: desktop and mobile interfaces for a cultural platform"
-    },
-    "cardImageAlt": {
-      "tr": "Kıyı konsepti: kültür platformunun masaüstü ve mobil web arayüzü",
-      "en": "Kıyı concept: desktop and mobile interfaces for a cultural platform"
-    },
-    "cursorText": {
-      "tr": "Konsepti incele",
-      "en": "Explore concept"
-    },
-    "imageSrc": {
-      "_type": "image",
-      "asset": {
-        "_type": "reference",
-        "_ref": "image-75e32101691ab3fb19f07c443c3a28f7a240cde9-1536x1024-png"
-      }
-    },
-    "bgImageSrc": {
-      "_type": "image",
-      "asset": {
-        "_type": "reference",
-        "_ref": "image-75e32101691ab3fb19f07c443c3a28f7a240cde9-1536x1024-png"
-      }
-    },
-    "cardImageSrc": {
-      "_type": "image",
-      "asset": {
-        "_type": "reference",
-        "_ref": "image-75e32101691ab3fb19f07c443c3a28f7a240cde9-1536x1024-png"
-      }
-    },
-    "galleryImages": [
-      {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-75e32101691ab3fb19f07c443c3a28f7a240cde9-1536x1024-png"
-        },
-        "_key": "main",
-        "alt": {
-          "tr": "Kıyı konsepti: kültür platformunun masaüstü ve mobil web arayüzü",
-          "en": "Kıyı concept: desktop and mobile interfaces for a cultural platform"
-        },
-        "caption": {
-          "tr": "Niodome — Özgün konsept çalışma",
-          "en": "Niodome — Original concept study"
-        }
-      },
-      {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-e9c431f5fa74120fe0aaa53c1a9aee27a87bb644-1536x1024-png"
-        },
-        "_key": "detail",
-        "alt": {
-          "tr": "Kıyı — tasarım sistemi ve detay uygulaması",
-          "en": "Kıyı — design system and detail application"
-        }
-      }
-    ],
-    "title": {
-      "tr": "Kıyı — Web deneyimi konsepti",
-      "en": "Kıyı — Web experience concept"
+    "slug": {
+      "_type": "slug",
+      "current": "kiyi-web-konsepti"
     },
     "subtitle": {
-      "tr": "Kültür programını keşfetmek için tasarlanmış bir dijital arayüz.",
-      "en": "A digital interface designed for discovering a cultural programme."
+      "en": "A digital interface designed for discovering a cultural programme.",
+      "tr": "Kültür programını keşfetmek için tasarlanmış bir dijital arayüz."
     },
     "tags": {
-      "tr": [
-        "Konsept çalışma",
-        "Web tasarımı",
-        "Kullanıcı deneyimi"
-      ],
       "en": [
         "Concept study",
         "Web design",
         "User experience"
+      ],
+      "tr": [
+        "Konsept çalışma",
+        "Web tasarımı",
+        "Kullanıcı deneyimi"
       ]
     },
-    "overviewLead": {
-      "tr": "Kıyı, sergi, söyleşi ve atölyeleri ortak bir program içinde buluşturan hayalî bir kültür platformu için hazırladığımız web tasarımı konsepti.",
-      "en": "Kıyı is a web design concept for an imagined cultural platform bringing exhibitions, talks and workshops into one programme."
+    "tagsColA": {
+      "en": [
+        "Concept study",
+        "Web design"
+      ],
+      "tr": [
+        "Konsept çalışma",
+        "Web tasarımı"
+      ]
     },
-    "overviewSpan": {
-      "tr": "Ziyaretçinin önce ilgisini çeken işi görmesini, ardından tarih, mekân ve etkinlik ayrıntısına kolayca ulaşmasını hedefledik. Görseller, masaüstü ve mobil arayüz tasarımını gösterir; yayında bir platform veya tamamlanmış bir yazılım ürünü değildir.",
-      "en": "The visitor first discovers the work, then finds dates, venues and event information. The images show desktop and mobile interface concepts, not a live platform or a completed software product."
+    "tagsColB": {
+      "en": [
+        "User experience"
+      ],
+      "tr": [
+        "Kullanıcı deneyimi"
+      ]
     },
-    "challengeLead": {
-      "tr": "Kültürel içeriğin görsel gücünü korurken program bilgisini kolay taranır hâle getirmek. Aynı düzeni küçük ekranda da anlaşılır tutmak.",
-      "en": "Keep the visual impact of cultural content while making programme information easy to scan. Make the same system clear on a smaller screen."
+    "techStack": [],
+    "title": {
+      "en": "Kıyı — Web experience concept",
+      "tr": "Kıyı — Web deneyimi konsepti"
     },
-    "challengeSpan": {
-      "tr": "Büyük tipografi ve geniş sanat görsellerini, tarih ve mekânı öne çıkaran mercan kartlarla dengeledik. Ana sayfa keşfe; etkinlik sayfası ise ayrıntıya odaklanıyor.",
-      "en": "Large typography and generous art imagery are balanced by coral cards that highlight dates and venues. The homepage supports discovery, while the event page focuses on detail."
+    "titleLines": {
+      "en": [
+        "Kıyı",
+        ""
+      ],
+      "tr": [
+        "Kıyı",
+        ""
+      ]
     }
   },
   {
@@ -352,8 +352,8 @@
       }
     },
     "cardImageAlt": {
-      "tr": "Bir ara gel, Bir araya gelelim ve Birlikte düşünelim yazılı üç afiş",
-      "en": "Three posters reading Bir ara gel, Bir araya gelelim and Birlikte düşünelim"
+      "en": "Three posters reading Bir ara gel, Bir araya gelelim and Birlikte düşünelim",
+      "tr": "Bir ara gel, Bir araya gelelim ve Birlikte düşünelim yazılı üç afiş"
     },
     "cardImageSrc": {
       "_type": "image",
@@ -363,8 +363,8 @@
       }
     },
     "challengeLead": {
-      "tr": "“Bir ara gel.”, “Bir araya gelelim.” ve “Birlikte düşünelim.” Üç ayrı cümleyi, birbirini tamamlayan bir afiş serisinde aynı sesle buluşturmak.",
-      "en": "“Bir ara gel.”, “Bir araya gelelim.” and “Birlikte düşünelim.” Bring three distinct messages into a complementary poster series with one consistent voice."
+      "en": "“Bir ara gel.”, “Bir araya gelelim.” and “Birlikte düşünelim.” Bring three distinct messages into a complementary poster series with one consistent voice.",
+      "tr": "“Bir ara gel.”, “Bir araya gelelim.” ve “Birlikte düşünelim.” Üç ayrı cümleyi, birbirini tamamlayan bir afiş serisinde aynı sesle buluşturmak."
     },
     "challengeSpan": {
       "en": "Lime, lavender and deep plum are paired with arcs at changing scales. Typography provides a consistent voice while each composition stages a different meeting of forms.",
@@ -380,8 +380,8 @@
         "_key": "main",
         "_type": "image",
         "alt": {
-          "tr": "Bir ara gel, Bir araya gelelim ve Birlikte düşünelim yazılı üç afiş",
-          "en": "Three posters reading Bir ara gel, Bir araya gelelim and Birlikte düşünelim"
+          "en": "Three posters reading Bir ara gel, Bir araya gelelim and Birlikte düşünelim",
+          "tr": "Bir ara gel, Bir araya gelelim ve Birlikte düşünelim yazılı üç afiş"
         },
         "asset": {
           "_ref": "image-1fea278f1a3bf427566ba0508c0724606c90eb46-1536x1024-png",
@@ -407,8 +407,8 @@
     ],
     "href": "/works/bir-araya-gel-kampanya-konsepti",
     "imageAlt": {
-      "tr": "Bir ara gel, Bir araya gelelim ve Birlikte düşünelim yazılı üç afiş",
-      "en": "Three posters reading Bir ara gel, Bir araya gelelim and Birlikte düşünelim"
+      "en": "Three posters reading Bir ara gel, Bir araya gelelim and Birlikte düşünelim",
+      "tr": "Bir ara gel, Bir araya gelelim ve Birlikte düşünelim yazılı üç afiş"
     },
     "imageSrc": {
       "_type": "image",
@@ -424,12 +424,12 @@
     "isDemo": false,
     "order": 5,
     "overviewLead": {
-      "tr": "“Bir ara gel.”, Niodome için üretilmiş özgün bir kültürel iletişim konsepti. Kişisel bir davet, ortak bir buluşmaya ve birlikte düşünme çağrısına dönüşüyor.",
-      "en": "“Bir ara gel.” is an original cultural communication concept created for Niodome. A personal invitation develops into a shared meeting and a call to think together."
+      "en": "“Bir ara gel.” is an original cultural communication concept created for Niodome. A personal invitation develops into a shared meeting and a call to think together.",
+      "tr": "“Bir ara gel.”, Niodome için üretilmiş özgün bir kültürel iletişim konsepti. Kişisel bir davet, ortak bir buluşmaya ve birlikte düşünme çağrısına dönüşüyor."
     },
     "overviewSpan": {
-      "en": "Posters, invitations and a printed programme share one colour and typography system. This is a campaign design study, not a claim of an actual event or client sponsorship.",
-      "tr": "Afiş, davetiye ve basılı program aynı renk ve tipografi sistemiyle birbirine bağlanıyor. Görseller bir kampanya tasarımı araştırmasıdır; gerçekleşmiş bir etkinlik veya müşteri sponsorluğu iddiası taşımaz."
+      "en": "Posters, invitations and a printed programme share one colour and typography system.",
+      "tr": "Afiş, davetiye ve basılı program aynı renk ve tipografi sistemiyle birbirine bağlanıyor."
     },
     "projectDate": "2026",
     "services": [
@@ -498,15 +498,15 @@
     },
     "techStack": [],
     "title": {
-      "tr": "Bir ara gel. — Kampanya konsepti",
-      "en": "Bir ara gel. — Campaign concept"
+      "en": "Bir ara gel. — Campaign concept",
+      "tr": "Bir ara gel. — Kampanya konsepti"
     },
     "titleLines": {
-      "tr": [
+      "en": [
         "Bir ara",
         "gel."
       ],
-      "en": [
+      "tr": [
         "Bir ara",
         "gel."
       ]
