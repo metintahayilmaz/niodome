@@ -2,172 +2,172 @@
   {
     "_id": "niodome-concept-mola-packaging",
     "_type": "project",
-    "isDemo": false,
+    "bgImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-e64fd23162fb93029eeae75bec98d47f8d13829e-1536x1024-png",
+        "_type": "reference"
+      }
+    },
+    "cardImageAlt": {
+      "tr": "Mola kahve ambalajları, yürüyen merdiven basamağı ve dev bilardo topuyla sarı stüdyo sahnesinde",
+      "en": "Mola coffee packaging on an escalator step beside an oversized billiard ball in a yellow studio set"
+    },
+    "cardImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-e64fd23162fb93029eeae75bec98d47f8d13829e-1536x1024-png",
+        "_type": "reference"
+      }
+    },
+    "challengeLead": {
+      "en": "Make three packs recognisable as one family while giving each its own character. Use a bold brand signature without competing with product information.",
+      "tr": "Aynı aileye ait üç ambalajın hem birlikte tanınması hem de tek başına karakter taşıması. Büyük marka imzasını ürün bilgileriyle yarışmadan kullanmak."
+    },
+    "challengeSpan": {
+      "en": "The wordmark stays in a consistent upper position while colour and graphic fragments vary. Matte paper, deep plum, warm red and light neutral tones give the design its material character.",
+      "tr": "Sözcük işaretini üst bölgede sabit tuttuk; renk ve grafik parçalarını çeşitler arasında değiştirdik. Mat kâğıt dokusu, koyu erik ve sıcak kırmızıyla dengelenen açık tonlar tasarımın maddi karşılığını oluşturdu."
+    },
+    "cursorText": {
+      "en": "Explore concept",
+      "tr": "Konsepti incele"
+    },
     "feedbackApproved": false,
-    "order": 3,
-    "slug": {
-      "_type": "slug",
-      "current": "mola-ambalaj-konsepti"
-    },
+    "galleryImages": [
+      {
+        "_key": "main",
+        "_type": "image",
+        "alt": {
+          "tr": "Mola kahve ambalajları, yürüyen merdiven basamağı ve dev bilardo topuyla sarı stüdyo sahnesinde",
+          "en": "Mola coffee packaging on an escalator step beside an oversized billiard ball in a yellow studio set"
+        },
+        "asset": {
+          "_ref": "image-e64fd23162fb93029eeae75bec98d47f8d13829e-1536x1024-png",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "Niodome — Original concept study",
+          "tr": "Niodome — Özgün konsept çalışma"
+        }
+      },
+      {
+        "_key": "detail",
+        "_type": "image",
+        "alt": {
+          "tr": "Mola kimlik uygulamaları, mavi stadyum koltuğu ve dev metal yayla kırmızı fonda",
+          "en": "Mola identity applications on a blue stadium chair with an oversized metal spring against red"
+        },
+        "asset": {
+          "_ref": "image-bd94f912be96e63fd5932bd820ea38114a0d0614-1536x1024-png",
+          "_type": "reference"
+        }
+      }
+    ],
     "href": "/works/mola-ambalaj-konsepti",
-    "projectDate": "2026",
-    "industries": {
-      "tr": "Niodome / Konsept çalışma",
-      "en": "Niodome / Concept study"
+    "imageAlt": {
+      "tr": "Mola kahve ambalajları, yürüyen merdiven basamağı ve dev bilardo topuyla sarı stüdyo sahnesinde",
+      "en": "Mola coffee packaging on an escalator step beside an oversized billiard ball in a yellow studio set"
     },
+    "imageSrc": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-e64fd23162fb93029eeae75bec98d47f8d13829e-1536x1024-png",
+        "_type": "reference"
+      }
+    },
+    "industries": {
+      "en": "Niodome / Concept study",
+      "tr": "Niodome / Konsept çalışma"
+    },
+    "isDemo": false,
+    "order": 3,
+    "overviewLead": {
+      "en": "Mola is an original Niodome concept study exploring how a coffee pack can carry a strong signature while making each product distinct.",
+      "tr": "Mola, kahve ambalajında güçlü bir imza ile ürünler arasındaki ayrımı birlikte ele alan, Niodome için hazırlanmış özgün bir konsept çalışma."
+    },
+    "overviewSpan": {
+      "en": "Geometric lettering, intersecting circles and three colours create a coherent packaging family. This is a self-initiated study, not a commissioned project or a product on sale.",
+      "tr": "Geometrik harfler, kesişen daireler ve üç renk üzerinden bir ambalaj ailesi kurduk. Bu çalışma bir müşteri siparişi veya satıştaki bir ürün değildir."
+    },
+    "projectDate": "2026",
     "services": [
       {
         "_key": "identity",
         "_type": "object",
-        "name": {
-          "tr": "Görsel kimlik",
-          "en": "Visual identity"
-        },
         "description": {
-          "tr": "Geometrik sözcük işareti ve ortak grafik dil.",
-          "en": "A geometric wordmark and shared graphic language."
+          "en": "A geometric wordmark and shared graphic language.",
+          "tr": "Geometrik sözcük işareti ve ortak grafik dil."
+        },
+        "name": {
+          "en": "Visual identity",
+          "tr": "Görsel kimlik"
         }
       },
       {
         "_key": "packaging",
         "_type": "object",
-        "name": {
-          "tr": "Ambalaj sistemi",
-          "en": "Packaging system"
-        },
         "description": {
-          "tr": "Üç renk, tutarlı bilgi sırası ve ürün ailesi.",
-          "en": "Three colours, consistent information hierarchy and a unified product family."
+          "en": "Three colours, consistent information hierarchy and a unified product family.",
+          "tr": "Üç renk, tutarlı bilgi sırası ve ürün ailesi."
+        },
+        "name": {
+          "en": "Packaging system",
+          "tr": "Ambalaj sistemi"
         }
       }
     ],
-    "techStack": [],
-    "titleLines": {
-      "tr": [
-        "Mola",
-        ""
-      ],
-      "en": [
-        "Mola",
-        ""
-      ]
-    },
-    "tagsColA": {
-      "tr": [
-        "Konsept çalışma",
-        "Marka kimliği"
-      ],
-      "en": [
-        "Concept study",
-        "Brand identity"
-      ]
-    },
-    "tagsColB": {
-      "tr": [
-        "Ambalaj tasarımı"
-      ],
-      "en": [
-        "Packaging design"
-      ]
-    },
-    "imageAlt": {
-      "tr": "Mola konsepti: krem, erik ve kırmızı kahve ambalajları",
-      "en": "Mola concept: ivory, plum and red coffee packaging"
-    },
-    "cardImageAlt": {
-      "tr": "Mola konsepti: krem, erik ve kırmızı kahve ambalajları",
-      "en": "Mola concept: ivory, plum and red coffee packaging"
-    },
-    "cursorText": {
-      "tr": "Konsepti incele",
-      "en": "Explore concept"
-    },
-    "imageSrc": {
-      "_type": "image",
-      "asset": {
-        "_type": "reference",
-        "_ref": "image-cefc7aa2866071169e8e1de80be06fa6ec2c0594-1536x1024-png"
-      }
-    },
-    "bgImageSrc": {
-      "_type": "image",
-      "asset": {
-        "_type": "reference",
-        "_ref": "image-cefc7aa2866071169e8e1de80be06fa6ec2c0594-1536x1024-png"
-      }
-    },
-    "cardImageSrc": {
-      "_type": "image",
-      "asset": {
-        "_type": "reference",
-        "_ref": "image-cefc7aa2866071169e8e1de80be06fa6ec2c0594-1536x1024-png"
-      }
-    },
-    "galleryImages": [
-      {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-cefc7aa2866071169e8e1de80be06fa6ec2c0594-1536x1024-png"
-        },
-        "_key": "main",
-        "alt": {
-          "tr": "Mola konsepti: krem, erik ve kırmızı kahve ambalajları",
-          "en": "Mola concept: ivory, plum and red coffee packaging"
-        },
-        "caption": {
-          "tr": "Niodome — Özgün konsept çalışma",
-          "en": "Niodome — Original concept study"
-        }
-      },
-      {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-36d062b1889c40e92749947adac987b5a58a2bb2-1536x1024-png"
-        },
-        "_key": "detail",
-        "alt": {
-          "tr": "Mola — tasarım sistemi ve detay uygulaması",
-          "en": "Mola — design system and detail application"
-        }
-      }
-    ],
-    "title": {
-      "tr": "Mola — Ambalaj konsepti",
-      "en": "Mola — Packaging concept"
+    "slug": {
+      "_type": "slug",
+      "current": "mola-ambalaj-konsepti"
     },
     "subtitle": {
-      "tr": "Bir kahve markası için kimlik ve ambalaj araştırması.",
-      "en": "An identity and packaging study for a coffee brand."
+      "en": "An identity and packaging study for a coffee brand.",
+      "tr": "Bir kahve markası için kimlik ve ambalaj araştırması."
     },
     "tags": {
-      "tr": [
-        "Konsept çalışma",
-        "Marka kimliği",
-        "Ambalaj tasarımı"
-      ],
       "en": [
         "Concept study",
         "Brand identity",
         "Packaging design"
+      ],
+      "tr": [
+        "Konsept çalışma",
+        "Marka kimliği",
+        "Ambalaj tasarımı"
       ]
     },
-    "overviewLead": {
-      "tr": "Mola, kahve ambalajında güçlü bir imza ile ürünler arasındaki ayrımı birlikte ele alan, Niodome için hazırlanmış özgün bir konsept çalışma.",
-      "en": "Mola is an original Niodome concept study exploring how a coffee pack can carry a strong signature while making each product distinct."
+    "tagsColA": {
+      "en": [
+        "Concept study",
+        "Brand identity"
+      ],
+      "tr": [
+        "Konsept çalışma",
+        "Marka kimliği"
+      ]
     },
-    "overviewSpan": {
-      "tr": "Geometrik harfler, kesişen daireler ve üç renk üzerinden bir ambalaj ailesi kurduk. Bu çalışma bir müşteri siparişi veya satıştaki bir ürün değildir.",
-      "en": "Geometric lettering, intersecting circles and three colours create a coherent packaging family. This is a self-initiated study, not a commissioned project or a product on sale."
+    "tagsColB": {
+      "en": [
+        "Packaging design"
+      ],
+      "tr": [
+        "Ambalaj tasarımı"
+      ]
     },
-    "challengeLead": {
-      "tr": "Aynı aileye ait üç ambalajın hem birlikte tanınması hem de tek başına karakter taşıması. Büyük marka imzasını ürün bilgileriyle yarışmadan kullanmak.",
-      "en": "Make three packs recognisable as one family while giving each its own character. Use a bold brand signature without competing with product information."
+    "techStack": [],
+    "title": {
+      "en": "Mola — Packaging concept",
+      "tr": "Mola — Ambalaj konsepti"
     },
-    "challengeSpan": {
-      "tr": "Sözcük işaretini üst bölgede sabit tuttuk; renk ve grafik parçalarını çeşitler arasında değiştirdik. Mat kâğıt dokusu, koyu erik ve sıcak kırmızıyla dengelenen açık tonlar tasarımın maddi karşılığını oluşturdu.",
-      "en": "The wordmark stays in a consistent upper position while colour and graphic fragments vary. Matte paper, deep plum, warm red and light neutral tones give the design its material character."
+    "titleLines": {
+      "en": [
+        "Mola",
+        ""
+      ],
+      "tr": [
+        "Mola",
+        ""
+      ]
     }
   },
   {
@@ -344,172 +344,172 @@
   {
     "_id": "niodome-concept-bir-araya-campaign",
     "_type": "project",
-    "isDemo": false,
+    "bgImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-1fea278f1a3bf427566ba0508c0724606c90eb46-1536x1024-png",
+        "_type": "reference"
+      }
+    },
+    "cardImageAlt": {
+      "tr": "Bir ara gel, Bir araya gelelim ve Birlikte düşünelim yazılı üç afiş",
+      "en": "Three posters reading Bir ara gel, Bir araya gelelim and Birlikte düşünelim"
+    },
+    "cardImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-1fea278f1a3bf427566ba0508c0724606c90eb46-1536x1024-png",
+        "_type": "reference"
+      }
+    },
+    "challengeLead": {
+      "tr": "“Bir ara gel.”, “Bir araya gelelim.” ve “Birlikte düşünelim.” Üç ayrı cümleyi, birbirini tamamlayan bir afiş serisinde aynı sesle buluşturmak.",
+      "en": "“Bir ara gel.”, “Bir araya gelelim.” and “Birlikte düşünelim.” Bring three distinct messages into a complementary poster series with one consistent voice."
+    },
+    "challengeSpan": {
+      "en": "Lime, lavender and deep plum are paired with arcs at changing scales. Typography provides a consistent voice while each composition stages a different meeting of forms.",
+      "tr": "Limon yeşili, lavanta ve koyu erik tonlarını; değişen ölçekte yay parçalarıyla birlikte kullandık. Her uygulamada tipografi sabit bir ses oluştururken grafikler farklı bir buluşmayı gösteriyor."
+    },
+    "cursorText": {
+      "en": "Explore concept",
+      "tr": "Konsepti incele"
+    },
     "feedbackApproved": false,
-    "order": 5,
-    "slug": {
-      "_type": "slug",
-      "current": "bir-araya-gel-kampanya-konsepti"
-    },
+    "galleryImages": [
+      {
+        "_key": "main",
+        "_type": "image",
+        "alt": {
+          "tr": "Bir ara gel, Bir araya gelelim ve Birlikte düşünelim yazılı üç afiş",
+          "en": "Three posters reading Bir ara gel, Bir araya gelelim and Birlikte düşünelim"
+        },
+        "asset": {
+          "_ref": "image-1fea278f1a3bf427566ba0508c0724606c90eb46-1536x1024-png",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "Niodome — Original concept study",
+          "tr": "Niodome — Özgün konsept çalışma"
+        }
+      },
+      {
+        "_key": "detail",
+        "_type": "image",
+        "alt": {
+          "en": "Bir araya gel. — design system and detail application",
+          "tr": "Bir araya gel. — tasarım sistemi ve detay uygulaması"
+        },
+        "asset": {
+          "_ref": "image-9f6d92f78aac5458003879b83dc67a9dc4bddfcf-1536x1024-png",
+          "_type": "reference"
+        }
+      }
+    ],
     "href": "/works/bir-araya-gel-kampanya-konsepti",
-    "projectDate": "2026",
-    "industries": {
-      "tr": "Niodome / Konsept çalışma",
-      "en": "Niodome / Concept study"
+    "imageAlt": {
+      "tr": "Bir ara gel, Bir araya gelelim ve Birlikte düşünelim yazılı üç afiş",
+      "en": "Three posters reading Bir ara gel, Bir araya gelelim and Birlikte düşünelim"
     },
+    "imageSrc": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-1fea278f1a3bf427566ba0508c0724606c90eb46-1536x1024-png",
+        "_type": "reference"
+      }
+    },
+    "industries": {
+      "en": "Niodome / Concept study",
+      "tr": "Niodome / Konsept çalışma"
+    },
+    "isDemo": false,
+    "order": 5,
+    "overviewLead": {
+      "tr": "“Bir ara gel.”, Niodome için üretilmiş özgün bir kültürel iletişim konsepti. Kişisel bir davet, ortak bir buluşmaya ve birlikte düşünme çağrısına dönüşüyor.",
+      "en": "“Bir ara gel.” is an original cultural communication concept created for Niodome. A personal invitation develops into a shared meeting and a call to think together."
+    },
+    "overviewSpan": {
+      "en": "Posters, invitations and a printed programme share one colour and typography system. This is a campaign design study, not a claim of an actual event or client sponsorship.",
+      "tr": "Afiş, davetiye ve basılı program aynı renk ve tipografi sistemiyle birbirine bağlanıyor. Görseller bir kampanya tasarımı araştırmasıdır; gerçekleşmiş bir etkinlik veya müşteri sponsorluğu iddiası taşımaz."
+    },
+    "projectDate": "2026",
     "services": [
       {
         "_key": "art",
         "_type": "object",
-        "name": {
-          "tr": "Sanat yönetimi",
-          "en": "Art direction"
-        },
         "description": {
-          "tr": "Renk, tipografi ve grafik hareketi tek bir fikirde buluşturmak.",
-          "en": "Bring colour, typography and graphic movement into one idea."
+          "en": "Bring colour, typography and graphic movement into one idea.",
+          "tr": "Renk, tipografi ve grafik hareketi tek bir fikirde buluşturmak."
+        },
+        "name": {
+          "en": "Art direction",
+          "tr": "Sanat yönetimi"
         }
       },
       {
         "_key": "campaign",
         "_type": "object",
-        "name": {
-          "tr": "Kampanya uygulamaları",
-          "en": "Campaign applications"
-        },
         "description": {
-          "tr": "Afişten davetiyeye ve program kitapçığına uzanan sistem.",
-          "en": "A system extending from posters to invitations and a printed programme."
+          "en": "A system extending from posters to invitations and a printed programme.",
+          "tr": "Afişten davetiyeye ve program kitapçığına uzanan sistem."
+        },
+        "name": {
+          "en": "Campaign applications",
+          "tr": "Kampanya uygulamaları"
         }
       }
     ],
-    "techStack": [],
-    "titleLines": {
-      "tr": [
-        "Bir araya",
-        "gel."
-      ],
-      "en": [
-        "Bir araya",
-        "gel."
-      ]
-    },
-    "tagsColA": {
-      "tr": [
-        "Konsept çalışma",
-        "İletişim tasarımı"
-      ],
-      "en": [
-        "Concept study",
-        "Communication design"
-      ]
-    },
-    "tagsColB": {
-      "tr": [
-        "Sanat yönetimi"
-      ],
-      "en": [
-        "Art direction"
-      ]
-    },
-    "imageAlt": {
-      "tr": "Bir araya gel konsepti: limon yeşili ve lavanta afiş serisi",
-      "en": "Bir araya gel concept: lime and lavender poster series"
-    },
-    "cardImageAlt": {
-      "tr": "Bir araya gel konsepti: limon yeşili ve lavanta afiş serisi",
-      "en": "Bir araya gel concept: lime and lavender poster series"
-    },
-    "cursorText": {
-      "tr": "Konsepti incele",
-      "en": "Explore concept"
-    },
-    "imageSrc": {
-      "_type": "image",
-      "asset": {
-        "_type": "reference",
-        "_ref": "image-0305b9ef4db7adcfd5956d787d7f3a3b5978ebe7-1536x1024-png"
-      }
-    },
-    "bgImageSrc": {
-      "_type": "image",
-      "asset": {
-        "_type": "reference",
-        "_ref": "image-0305b9ef4db7adcfd5956d787d7f3a3b5978ebe7-1536x1024-png"
-      }
-    },
-    "cardImageSrc": {
-      "_type": "image",
-      "asset": {
-        "_type": "reference",
-        "_ref": "image-0305b9ef4db7adcfd5956d787d7f3a3b5978ebe7-1536x1024-png"
-      }
-    },
-    "galleryImages": [
-      {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-0305b9ef4db7adcfd5956d787d7f3a3b5978ebe7-1536x1024-png"
-        },
-        "_key": "main",
-        "alt": {
-          "tr": "Bir araya gel konsepti: limon yeşili ve lavanta afiş serisi",
-          "en": "Bir araya gel concept: lime and lavender poster series"
-        },
-        "caption": {
-          "tr": "Niodome — Özgün konsept çalışma",
-          "en": "Niodome — Original concept study"
-        }
-      },
-      {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-5645b34315da5c2e4862c60a2830e6565f6a6d57-1536x1024-png"
-        },
-        "_key": "detail",
-        "alt": {
-          "tr": "Bir araya gel. — tasarım sistemi ve detay uygulaması",
-          "en": "Bir araya gel. — design system and detail application"
-        }
-      }
-    ],
-    "title": {
-      "tr": "Bir araya gel. — Kampanya konsepti",
-      "en": "Bir araya gel. — Campaign concept"
+    "slug": {
+      "_type": "slug",
+      "current": "bir-araya-gel-kampanya-konsepti"
     },
     "subtitle": {
-      "tr": "Birlikte düşünme fikrini görünür kılan bir afiş sistemi.",
-      "en": "A poster system that makes the idea of thinking together visible."
+      "en": "A poster system that makes the idea of thinking together visible.",
+      "tr": "Birlikte düşünme fikrini görünür kılan bir afiş sistemi."
     },
     "tags": {
-      "tr": [
-        "Konsept çalışma",
-        "İletişim tasarımı",
-        "Sanat yönetimi"
-      ],
       "en": [
         "Concept study",
         "Communication design",
         "Art direction"
+      ],
+      "tr": [
+        "Konsept çalışma",
+        "İletişim tasarımı",
+        "Sanat yönetimi"
       ]
     },
-    "overviewLead": {
-      "tr": "“Bir araya gel.”, Niodome için üretilmiş özgün bir kültürel iletişim konsepti. Ayrı parçaların buluşması fikrini, tamamlanan daireler ve kısa bir davet cümlesiyle anlattık.",
-      "en": "“Bir araya gel.” is an original cultural communication concept created for Niodome. Joining arcs and a short invitation express the idea of separate parts coming together."
+    "tagsColA": {
+      "en": [
+        "Concept study",
+        "Communication design"
+      ],
+      "tr": [
+        "Konsept çalışma",
+        "İletişim tasarımı"
+      ]
     },
-    "overviewSpan": {
-      "tr": "Afiş, davetiye ve basılı program aynı renk ve tipografi sistemiyle birbirine bağlanıyor. Görseller bir kampanya tasarımı araştırmasıdır; gerçekleşmiş bir etkinlik veya müşteri sponsorluğu iddiası taşımaz.",
-      "en": "Posters, invitations and a printed programme share one colour and typography system. This is a campaign design study, not a claim of an actual event or client sponsorship."
+    "tagsColB": {
+      "en": [
+        "Art direction"
+      ],
+      "tr": [
+        "Sanat yönetimi"
+      ]
     },
-    "challengeLead": {
-      "tr": "Tek bir cümlenin farklı yüzeylerde tanınmasını sağlamak; tekrara düşmeden aynı fikri sürdürmek.",
-      "en": "Make one short message recognisable across different formats while keeping each application distinct."
+    "techStack": [],
+    "title": {
+      "tr": "Bir ara gel. — Kampanya konsepti",
+      "en": "Bir ara gel. — Campaign concept"
     },
-    "challengeSpan": {
-      "tr": "Limon yeşili, lavanta ve koyu erik tonlarını; değişen ölçekte yay parçalarıyla birlikte kullandık. Her uygulamada tipografi sabit bir ses oluştururken grafikler farklı bir buluşmayı gösteriyor.",
-      "en": "Lime, lavender and deep plum are paired with arcs at changing scales. Typography provides a consistent voice while each composition stages a different meeting of forms."
+    "titleLines": {
+      "tr": [
+        "Bir ara",
+        "gel."
+      ],
+      "en": [
+        "Bir ara",
+        "gel."
+      ]
     }
   }
 ]

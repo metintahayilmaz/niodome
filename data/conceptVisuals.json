@@ -3,8 +3,8 @@
   "generation": "built-in image_gen",
   "visuals": {
     "mola-packaging": {
-      "url": "https://cdn.sanity.io/images/cwm62f5w/production/cefc7aa2866071169e8e1de80be06fa6ec2c0594-1536x1024.png",
-      "assetId": "image-cefc7aa2866071169e8e1de80be06fa6ec2c0594-1536x1024-png",
+      "url": "https://cdn.sanity.io/images/cwm62f5w/production/e64fd23162fb93029eeae75bec98d47f8d13829e-1536x1024.png",
+      "assetId": "image-e64fd23162fb93029eeae75bec98d47f8d13829e-1536x1024-png",
       "width": 1536,
       "height": 1024
     },
@@ -15,14 +15,14 @@
       "height": 1024
     },
     "bir-araya-campaign": {
-      "url": "https://cdn.sanity.io/images/cwm62f5w/production/0305b9ef4db7adcfd5956d787d7f3a3b5978ebe7-1536x1024.png",
-      "assetId": "image-0305b9ef4db7adcfd5956d787d7f3a3b5978ebe7-1536x1024-png",
+      "url": "https://cdn.sanity.io/images/cwm62f5w/production/1fea278f1a3bf427566ba0508c0724606c90eb46-1536x1024.png",
+      "assetId": "image-1fea278f1a3bf427566ba0508c0724606c90eb46-1536x1024-png",
       "width": 1536,
       "height": 1024
     },
     "mola-detail": {
-      "url": "https://cdn.sanity.io/images/cwm62f5w/production/36d062b1889c40e92749947adac987b5a58a2bb2-1536x1024.png",
-      "assetId": "image-36d062b1889c40e92749947adac987b5a58a2bb2-1536x1024-png",
+      "url": "https://cdn.sanity.io/images/cwm62f5w/production/bd94f912be96e63fd5932bd820ea38114a0d0614-1536x1024.png",
+      "assetId": "image-bd94f912be96e63fd5932bd820ea38114a0d0614-1536x1024-png",
       "width": 1536,
       "height": 1024
     },
@@ -33,8 +33,8 @@
       "height": 1024
     },
     "bir-araya-detail": {
-      "url": "https://cdn.sanity.io/images/cwm62f5w/production/5645b34315da5c2e4862c60a2830e6565f6a6d57-1536x1024.png",
-      "assetId": "image-5645b34315da5c2e4862c60a2830e6565f6a6d57-1536x1024-png",
+      "url": "https://cdn.sanity.io/images/cwm62f5w/production/9f6d92f78aac5458003879b83dc67a9dc4bddfcf-1536x1024.png",
+      "assetId": "image-9f6d92f78aac5458003879b83dc67a9dc4bddfcf-1536x1024-png",
       "width": 1536,
       "height": 1024
     }
@@ -65,6 +65,29 @@
     {
       "key": "bir-araya-detail",
       "prompt": "Create a second original application of the SAME 'Bir araya gel.' cultural poster identity shown in the reference. Preserve exact lime green, lavender and dark plum colours, assertive oversized grotesk typography and graphic arcs joining into a circle. New scene: top-down photographed editorial layout of a large folded programme leaflet and two smaller invitation cards on a dark plum clean tabletop. The leaflet cover reads exactly 'Bir araya gel.' in two lines; small signature 'Niodome — Konsept çalışma'; the invitation cards use dynamic cropped lime and lavender arc graphics and restrained black type 'Birlikte düşünmek için.' The pieces are carefully spaced and slightly overlap, premium offset print on matte textured paper. No outdoor wall, no repeated row of posters, no coffee, no screens. Wide landscape 3:2, clean soft studio daylight, vivid yet sophisticated print design, no filler text or watermark."
+    }
+  ],
+  "revisions": [
+    {
+      "method": "built-in image_gen",
+      "edits": [
+        {
+          "key": "bir-araya-campaign-v2",
+          "file": "bir-araya-campaign.png",
+          "prompt": "Edit only the three large poster headlines in this exact image. Preserve photograph, poster positions, perspective, colours, arcs, paper texture, dark plum wall, shadows and small footer text. LEFT lime poster must read exactly 'Bir ara gel.' (line breaks: Bir ara / gel.). MIDDLE lavender poster must read exactly 'Bir araya gelelim.' (line breaks: Bir araya / gelelim.). RIGHT lime poster must read exactly 'Birlikte düşünelim.' (line breaks: Birlikte / düşünelim.). Keep the existing bold grotesk type treatment and fit the longer phrases elegantly inside the existing posters, with clear margins. Turkish spelling must be exact, especially ü and ş. Do not repeat the same phrase on multiple posters. No other changes."
+        },
+        {
+          "key": "mola-packaging-v2",
+          "file": "mola-packaging.png",
+          "prompt": "Replace the entire environment and ground of this MOLA coffee packaging photograph with a deliberately absurd but physically photographed art-directed set: the three exact original coffee pouches sit among the parallel black rubber ribs of a stationary escalator step, an unexpectedly gigantic polished red billiard ball rests beside them, while the background is a seamless saturated acid-yellow photography cyclorama. Escalator hardware visible as a precise sliced sculptural stage, real aluminium side edges and utilitarian rubber grooves, no actual shopping mall. Keep all three original MOLA packaging designs, their exact geometric wordmarks, colourways ivory/plum/vermilion, paper materials and readable KAHVE / 250 g intact. Editorial still-life photography shot with hard direct studio flash, slightly gritty photographic realism, crisp shadows, purposeful absurdity, not dreamy CGI. Landscape 3:2, packages fully visible and central, 8% breathing room. Absolutely no beige stone, travertine, sandstone, marble, warm neutral plaster, generic podiums, botanical shadows, coffee beans or floating objects. The absurd set should feel like a real witty design magazine shoot."
+        },
+        {
+          "key": "mola-detail-v2",
+          "file": "mola-detail.png",
+          "prompt": "Change only the setting of this MOLA brand-system flat lay, preserving the exact printed packaging sleeves, booklet, MOLA geometric typography, three colourways, graphic arcs and material swatches. New absurd editorial set: arrange these exact printed items neatly across the seat and bright cobalt moulded-plastic back of a huge overturned plastic stadium chair, photographed from directly above on a saturated tomato-red seamless studio floor; one shiny oversized chrome spring curves beside the chair. Coherent physical objects, a staged real studio photograph with hard direct flash and clear shadows, subtly gritty magazine photography. Wide landscape 3:2, all printed items remain legible and unclipped, each item retains its original design. No stone, no beige tabletop, no wood, no plants, no soft luxury mockup backdrop, no gradients, no floating things, no melting or morphing packaging. Distinct viewpoint and composition from the escalator main image, while sharing the same deliberately absurd visual world."
+        }
+      ],
+      "supportingPrintEdit": "Edit only the large headlines on the three printed pieces. Preserve exact layout, lime/lavender/plum colours, typography, arcs, paper folds, shadows and footer. LEFT folded leaflet must read exactly 'Bir ara gel.'; TOP RIGHT lavender card must read exactly 'Bir araya gelelim.'; BOTTOM RIGHT lime card must read exactly 'Birlikte düşünelim.'. Fit naturally with the same bold grotesk type and ample margins. Exact Turkish spelling with ü and ş. Do not retain the old headlines. No other changes."
     }
   ]
 }
