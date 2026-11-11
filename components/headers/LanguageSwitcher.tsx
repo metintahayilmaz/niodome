@@ -16,7 +16,8 @@ export default function LanguageSwitcher() {
         <a
           key={language}
           href={localizeHref(pathname, language)}
-          onClick={() => {
+          onClick={(event) => {
+            event.currentTarget.href = localizeHref(pathname, language) + window.location.search + window.location.hash;
             // Save the explicit choice before opening an unprefixed Turkish URL.
             document.cookie = `NEXT_LOCALE=${language}; path=/; max-age=31536000; samesite=lax`;
           }}

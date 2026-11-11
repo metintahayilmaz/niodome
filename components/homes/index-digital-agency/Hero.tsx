@@ -1,4 +1,7 @@
 "use client";
+import { useLocale } from "next-intl";
+import geoCopy from "@/data/geo.json";
+import geoStyles from "@/components/geo/Geo.module.css";
 import Link from "@/components/common/LocalizedLink";
 import Image from "next/image";
 import AutoplayLoopVideo from "@/components/media/AutoplayLoopVideo";
@@ -34,6 +37,7 @@ type HeroSettings = {
 
 type Props = {
   scrollTargetId?: string;
+  geoActions?: boolean;
   coverVideo?: string;
   /**
    * Sanity'den çekilen sosyal linkler.
@@ -79,10 +83,13 @@ const galleryImageStyle = {
 
 export default function Hero({
   socials,
+  geoActions = false,
   heroSettings,
   coverVideo,
   scrollTargetId = "about",
 }: Props) {
+  const locale = useLocale() === "en" ? "en" : "tr";
+  const geo = geoCopy[locale];
   const resolvedSocials =
     socials && socials.length > 0 ? socials : siteSettings.socials;
   const local = heroDigitalAgencyData;
@@ -248,10 +255,11 @@ export default function Hero({
               )}
             </CommonHero3DCover>
             {/* headlines */}
-            <div className="mxd-hero-02__intro">
+            <div className={`mxd-hero-02__intro ${geoActions ? geoStyles.heroIntro : ""}`}>
               <CommonHero3DIntroText>
-                <h1 className="medium permanent">{headline}</h1>
+                <h1 className={`medium permanent ${geoActions ? geoStyles.heroQuestion : ""}`}>{headline}</h1>
               </CommonHero3DIntroText>
+                {geoActions && <div className={geoStyles.heroActions} data-hero-actions><SmoothAnchorLink targetId="geo-review">{geo.primary} ↗</SmoothAnchorLink><Link href="/geo">{geo.secondary}</Link></div>}
             </div>
             <div
               className={`mxd-hero-02__outro ${coverVideo ? coverStyles.outro : ""}`}

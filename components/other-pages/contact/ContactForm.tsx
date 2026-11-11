@@ -1,7 +1,10 @@
 "use client";
 
 import { type FormEvent, useState } from "react";
-import { useTranslations } from "next-intl";
+import { Suspense } from "react";
+import { useSearchParams } from "next/navigation";
+import geoData from "@/data/geo.json";
+import { useLocale, useTranslations } from "next-intl";
 import { CommonLoadItem } from "@/components/animations/CommonLoadAnimation";
 import TextScramble from "@/components/animations/TextScramble";
 
@@ -15,8 +18,12 @@ type Web3Response = { success: boolean; message?: string };
  * Web3Forms React example: FormData from the form, `access_key` appended, then POST to their API.
  * The key is public (inlined at build) — set `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` in `.env.local` (not hardcoded).
  */
-export default function ContactForm() {
+function ContactFormContent() {
   const t = useTranslations("contact");
+  const locale = useLocale() === "en" ? "en" : "tr";
+  const params = useSearchParams();
+  const plan = geoData.plans.find(item => item.id === params.get("plan"));
+  const geoPlan = params.get("service") === "geo" && plan ? plan.name[locale] : "";
   const key = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY?.trim();
   const [status, setStatus] = useState<FormStatus>("idle");
   const [feedback, setFeedback] = useState("");
@@ -37,6 +44,10 @@ export default function ContactForm() {
     const form = e.currentTarget;
     const formData = new FormData(form);
     formData.append("access_key", key);
+    if (geoPlan) {
+      formData.set("subject", `Niodome — ${geoPlan}`);
+      formData.append("geo_plan", geoPlan);
+    }
 
     try {
       const res = await fetch(WEB3_SUBMIT, { method: "POST", body: formData });
@@ -78,6 +89,7 @@ export default function ContactForm() {
           </div>
         )}
 
+        {geoPlan && <p className="reply__text" style={{marginBottom:"2.4rem"}}>{locale === "en" ? "Selected plan: " : "Seçilen paket: "}{geoPlan}</p>}
         <form
           className={`form contact-form${status === "success" ? " is-hidden" : ""}`}
           id="contact-form"
@@ -195,4 +207,8 @@ export default function ContactForm() {
       </div>
     </div>
   );
+}
+
+export default function ContactForm() {
+  return <Suspense fallback={null}><ContactFormContent /></Suspense>;
 }

@@ -1,3 +1,5 @@
+import geoCopy from "@/data/geo.json";
+import { GeoOverview, GeoLead } from "@/components/geo/GeoSections";
 import conceptVisuals from "@/data/conceptVisuals.json";
 import { homeCover } from "@/data/homeCover";
 import AboutProcess from "@/components/homes/index-digital-agency/AboutProcess";
@@ -343,7 +345,8 @@ export default async function HomePage() {
       <>
         <Hero
           coverVideo={homeCover.video}
-          scrollTargetId="selected-work"
+          scrollTargetId="geo-review"
+          geoActions
           socials={sanitySettings?.socials}
           heroSettings={{
             ...sanityHero,
@@ -354,11 +357,13 @@ export default async function HomePage() {
               height: homeCover.height,
             },
             galleryImages: sanityHero?.galleryImages ?? [],
-            headline: narrative("heroTitle"),
+            headline: geoCopy[locale === "en" ? "en" : "tr"].title,
             subline: narrative("heroSubline"),
-            scrollLabel: narrative("explore"),
+            scrollLabel: geoCopy[locale === "en" ? "en" : "tr"].primary,
           }}
         />
+        <GeoLead locale={locale} />
+        <GeoOverview locale={locale} />
         <AboutProcess
           manifestLead={narrative("homeIntro")}
           manifestSpan={narrative("homeTitle")}

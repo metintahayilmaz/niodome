@@ -9,4 +9,4 @@
   .cover .still { display: block; }
 }
 
-.outro { width: min(1100px, calc(100% - 48px)); padding: 0; }
+.outro { pointer-events: none; width: min(1100px, calc(100% - 48px)); padding: 0; }

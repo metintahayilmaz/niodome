@@ -1,0 +1,262 @@
+{
+  "tr": {
+    "title": "Müşteriniz yapay zekâya sorduğunda, cevapta siz var mısınız?",
+    "description": "Markanızın hangi cevaplarda yer aldığını ölçüyor; web sitenizi, içeriğinizi ve marka bilginizi bu yeni keşif yolculuğu için geliştiriyoruz.",
+    "primary": "Markamı kontrol edin",
+    "secondary": "GEO paketlerini inceleyin",
+    "eyebrow": "Yapay zekâ görünürlüğü / GEO",
+    "leadTitle": "Önce nerede durduğunuzu görelim.",
+    "leadText": "Web sitenizi paylaşın. Markanızı üç satın alma sorusunda, üç yapay zekâ platformunda inceleyelim; gözlenen rakipleri ve başlayabileceğiniz üç adımı gösterelim.",
+    "leadNote": "Ücretsiz mini kontrol, talebiniz değerlendirildikten sonra ekibimiz tarafından hazırlanır. Anlık otomatik sonuç değildir.",
+    "segmentTitle": "İşinizin ölçeğine göre başlayalım.",
+    "smb": "KOBİ’ler için",
+    "enterprise": "Kurumsal markalar için",
+    "smbTitle": "Bir sonraki müşteriniz sizi bulabilsin.",
+    "enterpriseTitle": "Kategoriniz konuşulurken markanız da konuşulsun.",
+    "smbText": "Öncelikli ürün ve hizmetlerinizden başlayalım. Görünürlüğünüzü ölçelim, eksik sayfaları geliştirelim, uygulanabilir adımlarla ilerleyelim.",
+    "enterpriseText": "Rakipleri, marka bilginizi ve kaynakları birlikte izleyelim. İçerik, teknoloji ve marka ekiplerinizi ortak bir planda buluşturalım.",
+    "smbCta": "KOBİ paketlerini görün",
+    "enterpriseCta": "Kurumsal paketleri görün",
+    "hooks": [
+      "Rakipleriniz hangi cevaplarda karşınıza çıkıyor?",
+      "Yapay zekâ markanızı doğru mu anlatıyor?",
+      "Adınız var. Peki kaynağı siz misiniz?"
+    ],
+    "processTitle": "Ölçeriz. Geliştiririz. Yeniden ölçeriz.",
+    "processText": "Müşterinizin sorularıyla başlangıç durumunu kaydeder; uzman bilginizi içeriğe dönüştürür ve teknik engelleri gideririz. Aynı sorularla değişimi takip eder, marka anılmasıyla sitenize verilen kaynak bağlantılarını ayrı raporlarız.",
+    "pricing": "GEO paketleri",
+    "monthly": "TL / ay",
+    "starting": "’den başlayan",
+    "setup": "İlk kurulum",
+    "once": "tek sefer",
+    "cta": "Bu paketi konuşalım",
+    "vat": "Fiyatlar KDV hariçtir. İlk kurulum ayrıca, bir kez ücretlendirilir. İlk değerlendirme dönemi 90 gündür. Sonraki çalışma dönemi birlikte planlanır.",
+    "scope": "Tek marka ve tek alan adı. Çoklu Pazar dışında Türkiye ve Türkçe. Bir içerik birimi, en fazla 1.200 kelimelik yeni sayfa veya kapsamlı sayfa revizyonudur; bir toplu revizyon turu dahildir.",
+    "exclusions": "Yeniden site yapımı, özel yazılım, ücretli medya ve üçüncü taraf yayın/üyelik bedelleri dahil değildir. Kaynak geliştirme; uygun sektör kaynakları için iletişim ve başvuru çalışmasıdır, yayın garantisi değildir.",
+    "guarantee": "Yapay zekâ cevapları değişkendir. Sıralama, kaynak gösterilme veya satış sonucu garantisi vermeyiz.",
+    "auditTitle": "Önce yalnızca yol haritası mı?",
+    "auditText": "KOBİ için 15.000 TL, kurumsal için 40.000 TL’den başlayan tek seferlik GEO Yol Haritası. Başlangıç ölçümü, teknik inceleme ve 90 günlük öncelikli plan içerir; uygulama ve içerik üretimi dahil değildir.",
+    "form": {
+      "company": "Şirket adı",
+      "website": "Web sitesi",
+      "email": "İş e-postası",
+      "type": "Şirket türü (isteğe bağlı)",
+      "choose": "Seçiniz",
+      "submit": "Mini kontrol talep et",
+      "sending": "Gönderiliyor…",
+      "success": "Talebiniz ulaştı. Kapsamı netleştirmek için iş e-postanızdan size ulaşacağız.",
+      "error": "Talebiniz gönderilemedi. Yeniden deneyebilir veya hello@niodome.com adresine yazabilirsiniz.",
+      "unavailable": "Form şu anda kullanılamıyor. hello@niodome.com adresine yazabilirsiniz.",
+      "privacy": "Bu bilgiler yalnızca talebinizi değerlendirmek ve sizinle iletişime geçmek için kullanılır. Gönderim, mevcut iletişim formumuz gibi Web3Forms üzerinden iletilir; pazarlama aboneliği oluşturulmaz."
+    },
+    "faqTitle": "Başlamadan önce",
+    "faqs": [
+      [
+        "SEO’nun yerini mi alıyor?",
+        "GEO, arama görünürlüğü çalışmalarını yapay zekâ cevapları açısından da ele alır. Taranabilirlik, indekslenebilirlik ve yararlı içerik gibi SEO temelleri önemini korur."
+      ],
+      [
+        "Hangi platformları takip ediyoruz?",
+        "ChatGPT arama, Gemini ve Perplexity. Büyüme ve kurumsal paketlerde Google AI sonuçlarını da gözlemleriz; AI sonucu oluşma oranını ayrıca raporlarız."
+      ],
+      [
+        "Sonuçları nasıl ölçüyorsunuz?",
+        "Sabit soru setinde marka anılması ve sitenize kaynak bağlantısı verilmesini ayrı ölçeriz. Tarih, dil, ülke, platform ve yanıtları kaydederiz. Erişim sağlandığında yönlendirme trafiği ve form talepleri de incelenir."
+      ],
+      [
+        "Teknik uygulamaya neler dahil?",
+        "Mevcut CMS üzerinde erişim, iç bağlantı, metadata, uygun yapılandırılmış veri ve sayfa düzeni düzeltmeleri; paketteki aylık saat sınırı içinde. Büyük altyapı geliştirmeleri ayrıca kapsamlandırılır."
+      ]
+    ],
+    "bridge": "Bulunmak başlangıç. Etki bırakmak markanın işi.",
+    "bridgeText": "Marka kimliğinden ambalaja, web sitesinden kampanyaya uzanan tasarım gücümüzle, keşfedildikten sonraki deneyimi de birlikte kuruyoruz.",
+    "works": "Çalışmalarımızı görün"
+  },
+  "en": {
+    "title": "When your customers ask AI, is your brand in the answer?",
+    "description": "We measure where your brand appears, then improve your website, content and brand information to support how people discover you.",
+    "primary": "Check my brand",
+    "secondary": "Explore GEO plans",
+    "eyebrow": "AI search visibility / GEO",
+    "leadTitle": "Let’s see where you stand.",
+    "leadText": "Share your website. We’ll review your brand across three buying questions on three AI platforms, identify observed competitors and suggest three steps to start with.",
+    "leadNote": "Our team prepares the free mini review after assessing your request. This is not an instant automated result.",
+    "segmentTitle": "Start at the right scale for your business.",
+    "smb": "For small and medium businesses",
+    "enterprise": "For enterprise brands",
+    "smbTitle": "Help your next customer find you.",
+    "enterpriseTitle": "Be part of the conversation in your category.",
+    "smbText": "Start with your priority products and services. Measure visibility, improve the pages that matter, and follow a practical plan.",
+    "enterpriseText": "Track competitors, brand accuracy and cited sources, with a shared plan for your content, technology and brand teams.",
+    "smbCta": "Explore SMB plans",
+    "enterpriseCta": "Explore enterprise plans",
+    "hooks": [
+      "Which answers mention your competitors?",
+      "Is AI describing your brand accurately?",
+      "Your name is in the answer. Is your website the source?"
+    ],
+    "processTitle": "Measure. Improve. Measure again.",
+    "processText": "We establish a baseline using customer questions, turn your expertise into useful content and address technical barriers. We repeat the same questions and report brand mentions separately from links to your website.",
+    "pricing": "GEO plans",
+    "monthly": "TRY / month",
+    "starting": "from ",
+    "setup": "One-time setup",
+    "once": "one time",
+    "cta": "Discuss this plan",
+    "vat": "Prices exclude VAT. Setup is charged once, separately. The first review period is 90 days; we agree the next phase together.",
+    "scope": "One brand and one domain. Turkey and Turkish unless the Multi-market plan is selected. A content unit is one new page of up to 1,200 words or a substantial page revision, including one consolidated revision round.",
+    "exclusions": "Website rebuilds, custom software, paid media and third-party publication or membership fees are excluded. Source development covers outreach and applications to relevant industry sources; publication is not guaranteed.",
+    "guarantee": "AI answers vary. We do not guarantee rankings, citations or sales outcomes.",
+    "auditTitle": "Prefer a roadmap first?",
+    "auditText": "A one-time GEO Roadmap: TRY 15,000 for SMBs, from TRY 40,000 for enterprise. Includes baseline measurement, technical review and a prioritised 90-day plan. Implementation and content production are excluded.",
+    "form": {
+      "company": "Company name",
+      "website": "Website",
+      "email": "Work email",
+      "type": "Company type (optional)",
+      "choose": "Select",
+      "submit": "Request a mini review",
+      "sending": "Sending…",
+      "success": "Your request has arrived. We’ll contact you at your work email to clarify the scope.",
+      "error": "Your request could not be sent. Please retry or email hello@niodome.com.",
+      "unavailable": "The form is currently unavailable. Please email hello@niodome.com.",
+      "privacy": "We use these details only to assess and respond to your request. Like our existing contact form, submission is delivered through Web3Forms. It does not create a marketing subscription."
+    },
+    "faqTitle": "Before we start",
+    "faqs": [
+      [
+        "Does GEO replace SEO?",
+        "GEO also considers search visibility through AI answers. SEO fundamentals such as crawlability, indexability and useful content remain relevant."
+      ],
+      [
+        "Which platforms do you track?",
+        "ChatGPT search, Gemini and Perplexity. Growth and enterprise plans also observe Google AI results; we report how often an AI result appears separately."
+      ],
+      [
+        "How do you measure progress?",
+        "We measure brand mentions and citations to your website separately using a fixed question set. We record date, language, country, platform and answers. Referral traffic and enquiries are reviewed when access is available."
+      ],
+      [
+        "What does technical implementation include?",
+        "Access, internal links, metadata, appropriate structured data and page structure fixes on your existing CMS, within the plan’s monthly hour allowance. Major infrastructure work is scoped separately."
+      ]
+    ],
+    "bridge": "Discovery is the beginning. Your brand makes the impression.",
+    "bridgeText": "From identity and packaging to websites and campaigns, our design practice supports the experience people have after discovering you.",
+    "works": "Explore our work"
+  },
+  "plans": [
+    {
+      "id": "start",
+      "price": 22500,
+      "setup": 12500,
+      "enterprise": false,
+      "name": {
+        "tr": "GEO Başlangıç",
+        "en": "GEO Starter"
+      },
+      "features": {
+        "tr": [
+          "20 soru · 3 platform · 3 rakip",
+          "Ayda 2 içerik birimi",
+          "Ayda 3 saat teknik uygulama",
+          "Aylık ölçüm: soru/platform başına 2 yanıt",
+          "Aylık rapor + 30 dk görüşme"
+        ],
+        "en": [
+          "20 questions · 3 platforms · 3 competitors",
+          "2 content units per month",
+          "3 technical hours per month",
+          "Monthly measurement: 2 answers per question/platform",
+          "Monthly report + 30-minute meeting"
+        ]
+      }
+    },
+    {
+      "id": "growth",
+      "price": 37500,
+      "setup": 20000,
+      "enterprise": false,
+      "name": {
+        "tr": "GEO Büyüme",
+        "en": "GEO Growth"
+      },
+      "features": {
+        "tr": [
+          "40 soru · 5 rakip · Google AI gözlemi",
+          "Ayda 4 içerik birimi",
+          "Ayda 5 saat teknik uygulama",
+          "Aylık tam ölçüm × 2 tekrar",
+          "Haftalık 10 kritik soru × 1 tekrar",
+          "Aylık rapor + 45 dk görüşme"
+        ],
+        "en": [
+          "40 questions · 5 competitors · Google AI observation",
+          "4 content units per month",
+          "5 technical hours per month",
+          "Monthly full measurement × 2 repeats",
+          "10 key questions weekly × 1 repeat",
+          "Monthly report + 45-minute meeting"
+        ]
+      }
+    },
+    {
+      "id": "enterprise",
+      "price": 75000,
+      "setup": 40000,
+      "enterprise": true,
+      "name": {
+        "tr": "GEO Kurumsal",
+        "en": "GEO Enterprise"
+      },
+      "features": {
+        "tr": [
+          "80 soru · 8 rakip · 3 kategori",
+          "Ayda 6 içerik birimi + 1 uzman görüşmesi",
+          "Ayda 10 saat teknik uygulama",
+          "Aylık tam ölçüm × 2; haftalık 20 kritik soru × 1",
+          "Ayda 2 kaynak için iletişim/başvuru",
+          "Aylık toplantı + 90 günde yönetici özeti"
+        ],
+        "en": [
+          "80 questions · 8 competitors · 3 categories",
+          "6 content units + 1 expert interview per month",
+          "10 technical hours per month",
+          "Monthly full set × 2; 20 key questions weekly × 1",
+          "Outreach/applications to 2 sources per month",
+          "Monthly meeting + quarterly executive summary"
+        ]
+      }
+    },
+    {
+      "id": "multi",
+      "price": 125000,
+      "setup": 65000,
+      "enterprise": true,
+      "name": {
+        "tr": "GEO Çoklu Pazar",
+        "en": "GEO Multi-market"
+      },
+      "features": {
+        "tr": [
+          "150 soru · 10 rakip · 5 kategori",
+          "2 ülke · Türkçe + 1 dil",
+          "Ayda toplam 10 içerik birimi + 2 uzman görüşmesi",
+          "Ayda 16 saat teknik uygulama",
+          "Aylık tam ölçüm × 2; haftalık 30 kritik soru × 1",
+          "Ayda 4 kaynak için iletişim/başvuru",
+          "Aylık toplantı + ülke/dil karşılaştırması"
+        ],
+        "en": [
+          "150 questions · 10 competitors · 5 categories",
+          "2 countries · Turkish + 1 language",
+          "10 content units total + 2 expert interviews per month",
+          "16 technical hours per month",
+          "Monthly full set × 2; 30 key questions weekly × 1",
+          "Outreach/applications to 4 sources per month",
+          "Monthly meeting + country/language comparison"
+        ]
+      }
+    }
+  ]
+}

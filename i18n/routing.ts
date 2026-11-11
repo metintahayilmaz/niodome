@@ -10,6 +10,8 @@ export const routing = defineRouting({
   pathnames: {
     "/": "/",
 
+    "/geo": "/geo",
+
     "/services": {
       tr: "/hizmetler",
       en: "/services",

@@ -114,6 +114,7 @@ export default function CommonHero3DImages({
     );
     if (!container || !coverImg || !introHeader || !outroHeader || !images.length) return;
 
+    const introActions = container.querySelector<HTMLElement>("[data-hero-actions]");
     const introHeaderSplit = SplitText.create(introHeader, { type: "words, chars" });
     const outroHeaderSplit = SplitText.create(outroHeader, { type: "words, chars" });
     gsap.set(introHeaderSplit.chars, { opacity: 1 });
@@ -163,6 +164,12 @@ export default function CommonHero3DImages({
       },
       onUpdate: (self) => {
         const progress = self.progress;
+        if (introActions) {
+          gsap.set(introActions, {
+            autoAlpha: Math.max(0, 1 - Math.max(0, progress - 0.55) / 0.1),
+            pointerEvents: progress < 0.65 ? "auto" : "none",
+          });
+        }
 
         images.forEach((img, index) => {
           const staggerDelay = index * 0.03;
@@ -242,6 +249,7 @@ export default function CommonHero3DImages({
 
     return () => {
       trigger.kill();
+      if (introActions) gsap.set(introActions, { clearProps: "opacity,visibility,pointerEvents" });
       introHeaderSplit.revert();
       outroHeaderSplit.revert();
     };
