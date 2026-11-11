@@ -41,7 +41,7 @@ export default function MarketingPlans({ service, locale }: { service: Marketing
     <section className={styles.section} id="plans" aria-labelledby="plans-title"><h2 id="plans-title">{t.plansTitle}</h2><p className={styles.text}>{t.included}</p>
       <div className={local.grid}>{t.plans.map((plan, index) => <article className={`${styles.card} ${local.card}`} key={plan.id}>
         <h3>{plan.name}</h3><p className={local.who}>{plan.who}</p><p>{plan.summary}</p>
-        <p className={styles.price}>{index === 2 && en ? "from " : ""}{money(plan.price)} <span>{en ? "TRY / month" : "TL / ay"}{index === 2 && !en ? " · başlangıç fiyatı" : ""}</span></p>
+        <p className={`${styles.price} ${local.price}`}>{index === 2 && en ? "from " : ""}{money(plan.price)} <span>{en ? "TRY / month" : "TL / ay"}{index === 2 && !en ? " · başlangıç fiyatı" : ""}</span></p>
         <p className={local.cost}>{en ? "First month, standard scope: " : "İlk ay, standart kapsam: "}<strong>{index === 2 && en ? "from " : ""}{money(plan.price)} {en ? "TRY" : "TL"}{index === 2 && !en ? "’den" : ""}</strong></p>
         <p className={styles.note}>{en ? "Excludes VAT, media spend and separately approved additional work." : "KDV, reklam bütçesi ve ayrıca onaylanan ek çalışmalar hariç."}</p>
         <ul>{plan.deliverables.map(item => <li key={item}>{item}</li>)}</ul>
