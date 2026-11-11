@@ -100,3 +100,16 @@ test("marketing pages keep their language and selected enquiry across localized 
     assert.equal(rewrite ? new URL(rewrite).pathname : path, expected);
   }
 });
+
+test("digital advertising links preserve language and platform enquiry", () => {
+  assert.equal(localizeHref("/digital-advertising#platforms", "tr"), "/dijital-reklam-yonetimi#platforms");
+  assert.equal(localizeHref("/dijital-reklam-yonetimi", "en"), "/en/digital-advertising");
+  assert.equal(localizeHref("/contact?service=advertising&platform=meta", "tr"), "/iletisim?service=advertising&platform=meta");
+  assert.equal(localizeHref("/iletisim?service=advertising&platform=linkedin", "en"), "/en/contact?service=advertising&platform=linkedin");
+  for (const [path, expected] of [["/dijital-reklam-yonetimi", "/tr/digital-advertising"], ["/en/digital-advertising", "/en/digital-advertising"]]) {
+    const response = middleware(new NextRequest(`https://niodome.com${path}`, {headers:{"accept-language":"tr"}}));
+    assert.equal(response.headers.get("location"), null);
+    const rewrite = response.headers.get("x-middleware-rewrite");
+    assert.equal(rewrite ? new URL(rewrite).pathname : path, expected);
+  }
+});

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "@/components/common/LocalizedLink";
+import advertising from "@/data/digitalAdvertising.json";
 import data from "@/data/marketingPlans.json";
 import styles from "@/components/geo/Geo.module.css";
 import local from "./MarketingPlans.module.css";
@@ -23,10 +24,10 @@ export function MarketingOverview({ locale }: { locale: string }) {
   return <section className={styles.section} aria-labelledby="marketing-plans-title">
     <p className={styles.eyebrow}>{lang === "tr" ? "Sosyal medya ve reklam" : "Social media & advertising"}</p>
     <h2 id="marketing-plans-title">{lang === "tr" ? "Görünürlükten ilişkiye. İlgiden talebe." : "From visibility to connection. From interest to demand."}</h2>
-    <div className={styles.grid}>{(Object.keys(data) as MarketingService[]).map(key => {
-      const item = data[key]; const t = item[lang];
-      return <article className={styles.card} key={key}><p className={styles.eyebrow}>{t.label}</p><h3>{t.title}</h3><p>{t.description}</p><Link className={styles.button} href={item.route}>{lang === "tr" ? "Paketleri inceleyin" : "Explore plans"} ↗</Link></article>;
-    })}</div>
+    <div className={styles.grid}>
+      <article className={styles.card}><p className={styles.eyebrow}>{data.social[lang].label}</p><h3>{data.social[lang].title}</h3><p>{data.social[lang].description}</p><Link className={styles.button} href="/social-media">{lang === "tr" ? "İçerik paketlerini inceleyin" : "Explore content plans"} ↗</Link></article>
+      <article className={styles.card}><p className={styles.eyebrow}>{advertising[lang].label}</p><h3>{advertising[lang].title}</h3><p>{advertising[lang].description}</p><Link className={styles.button} href="/digital-advertising">{lang === "tr" ? "Reklam yönetimini inceleyin" : "Explore advertising management"} ↗</Link></article>
+    </div>
   </section>;
 }
 
@@ -52,6 +53,6 @@ export default function MarketingPlans({ service, locale }: { service: Marketing
     </section>
     <section className={styles.section}><h2>{en ? "Before we start" : "Başlamadan önce"}</h2><div className={styles.faq}>{t.faqs.map(([q,a]) => <details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div></section>
     <section className={`${styles.section} ${styles.dark}`}><h2>{en ? "Let’s find the right starting point." : "İşinize uygun başlangıcı birlikte belirleyelim."}</h2><p className={styles.text}>{en ? "Start with a 20-minute needs conversation. We’ll review your goals, existing materials and budget before agreeing the scope." : "20 dakikalık ihtiyaç görüşmesiyle başlayalım. Hedefinizi, mevcut malzemelerinizi ve bütçenizi konuşup kapsamı netleştirelim."}</p><Link className={`${styles.button} ${styles.primary}`} href={`/contact?service=${service}`}>{t.cta} ↗</Link></section>
-    <section className={styles.section}><p className={styles.eyebrow}>{en ? "Explore more" : "Diğer hizmetler"}</p><div className={styles.actions}><Link className={styles.button} href={service === "social" ? "/google-ads" : "/social-media"}>{service === "social" ? data.google[lang].label : data.social[lang].label} ↗</Link><Link className={styles.button} href="/geo">GEO ↗</Link></div></section>
+    <section className={styles.section}><p className={styles.eyebrow}>{en ? "Explore more" : "Diğer hizmetler"}</p><div className={styles.actions}><Link className={styles.button} href="/digital-advertising">{advertising[lang].label} ↗</Link><Link className={styles.button} href={service === "social" ? "/google-ads" : "/social-media"}>{service === "social" ? data.google[lang].label : data.social[lang].label} ↗</Link><Link className={styles.button} href="/geo">GEO ↗</Link></div></section>
   </main>;
 }

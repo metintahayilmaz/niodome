@@ -43,7 +43,6 @@ export default function Nav({
   const t = useTranslations("nav");
   const tMenu = useTranslations("menu");
   const pathname = usePathname();
-  const g = useMxdMenuGsapRefs();
 
   const links = [
     { href: "/", label: t("home") },
@@ -55,18 +54,20 @@ export default function Nav({
     { href: "/contact", label: t("contact") },
   ] as const;
 
+  const g = useMxdMenuGsapRefs(links.length);
+
   const headerSlots = useMemo(() => makeSlotters(g.headerSplitTargets, 3), [g]);
-  const mainSlots = useMemo(() => makeSlotters(g.mainMenuLinkSpans, 14), [g]);
+  const mainSlots = useMemo(() => makeSlotters(g.mainMenuLinkSpans, g.rowCount * 2), [g]);
   const contactSlots = useMemo(() => makeSlotters(g.contactAnchors, 8), [g]);
   const contactRevealSlots = useMemo(
     () => makeSlotters(g.contactRevealTargets, 8),
     [g],
   );
   const footerSlots = useMemo(() => makeSlotters(g.footerSplitTargets, 4), [g]);
-  const dividerSlots = useMemo(() => makeSlotters(g.dividers, 8), [g]);
-  const arrowSlots = useMemo(() => makeSlotters(g.arrows, 7), [g]);
-  const liSlots = useMemo(() => makeSlotters(g.menuItemLis, 7), [g]);
-  const toggleSlots = useMemo(() => makeSlotters(g.menuToggles, 7), [g]);
+  const dividerSlots = useMemo(() => makeSlotters(g.dividers, g.rowCount + 1), [g]);
+  const arrowSlots = useMemo(() => makeSlotters(g.arrows, g.rowCount), [g]);
+  const liSlots = useMemo(() => makeSlotters(g.menuItemLis, g.rowCount), [g]);
+  const toggleSlots = useMemo(() => makeSlotters(g.menuToggles, g.rowCount), [g]);
 
   useMxdMenuGsap(navNode, toggleNode, hamburgerNode, registerMenuReset, g);
 

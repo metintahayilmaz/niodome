@@ -3,6 +3,7 @@
 import { type FormEvent, useState } from "react";
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import advertisingData from "@/data/digitalAdvertising.json";
 import marketingData from "@/data/marketingPlans.json";
 import geoData from "@/data/geo.json";
 import { useLocale, useTranslations } from "next-intl";
@@ -28,7 +29,9 @@ function ContactFormContent() {
   const geo = geoData.plans.find(item => item.id === planId);
   const marketing = service === "social" || service === "google" ? marketingData[service][locale] : null;
   const marketingPlan = marketing?.plans.find(item => item.id === planId);
-  const selectedOffer = service === "geo" ? geo?.name[locale] ?? "GEO" : marketingPlan?.name ?? marketing?.label ?? "";
+  const platform = Object.entries(advertisingData[locale].platformLabels).find(([key]) => key === params.get("platform"));
+  const advertisingOffer = service === "advertising" ? [advertisingData[locale].label, platform?.[1]].filter(Boolean).join(" — ") : "";
+  const selectedOffer = service === "geo" ? geo?.name[locale] ?? "GEO" : advertisingOffer || marketingPlan?.name || marketing?.label || "";
   const key = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY?.trim();
   const [status, setStatus] = useState<FormStatus>("idle");
   const [feedback, setFeedback] = useState("");

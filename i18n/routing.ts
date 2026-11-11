@@ -13,6 +13,7 @@ export const routing = defineRouting({
     "/geo": "/geo",
     "/social-media": { tr: "/sosyal-medya", en: "/social-media" },
     "/google-ads": "/google-ads",
+    "/digital-advertising": { tr: "/dijital-reklam-yonetimi", en: "/digital-advertising" },
 
     "/services": {
       tr: "/hizmetler",
