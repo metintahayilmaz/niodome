@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import Link from "@/components/common/LocalizedLink";
 import Image from "next/image";
 import AutoplayLoopVideo from "@/components/media/AutoplayLoopVideo";
 import CommonLoadAnimation, {

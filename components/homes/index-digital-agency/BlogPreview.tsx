@@ -112,7 +112,7 @@ export default function BlogPreview({ posts }: Props) {
                           <div className="mxd-blog-list__title">
                             <p>{post.title}</p>
                             <div className="mxd-blog-list__data">
-                              <span className="meta-author comma-tag">
+                              <span className="meta-author comma-tag" lang={/^niodome$/i.test(post.author) ? "en" : undefined}>
                                 {post.author}
                               </span>
                               <span className="meta-date">
