@@ -9,6 +9,8 @@ const BASE = SITE_URL;
 // Localeprefix "as-needed" → TR'de prefix yok, EN'de /en var.
 // Sitemap URL'leri redirect vermemeli — son canonical URL kullanılmalı.
 const PATHNAMES: { tr: string; en: string; freq: MetadataRoute.Sitemap[number]["changeFrequency"]; priority: number }[] = [
+  { tr: "/sosyal-medya", en: "/en/social-media", freq: "monthly", priority: 0.8 },
+  { tr: "/google-ads", en: "/en/google-ads", freq: "monthly", priority: 0.8 },
   { tr: "/geo", en: "/en/geo", freq: "monthly", priority: 0.9 },
   { tr: "/",          en: "/en",          freq: "weekly",  priority: 1.0 },
   { tr: "/hakkimizda", en: "/en/about-us", freq: "monthly", priority: 0.8 },

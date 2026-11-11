@@ -11,6 +11,8 @@ export const routing = defineRouting({
     "/": "/",
 
     "/geo": "/geo",
+    "/social-media": { tr: "/sosyal-medya", en: "/social-media" },
+    "/google-ads": "/google-ads",
 
     "/services": {
       tr: "/hizmetler",

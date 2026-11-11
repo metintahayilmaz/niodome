@@ -1,3 +1,4 @@
+import { MarketingOverview } from "@/components/marketing/MarketingPlans";
 import { GeoOverview } from "@/components/geo/GeoSections";
 import { Metadata } from "next";
 import InnerHeadline from "@/components/other-pages/services/InnerHeadline";
@@ -139,6 +140,7 @@ export default async function ServicesPage() {
       <>
         <InnerHeadline />
         <GeoOverview locale={locale} />
+        <MarketingOverview locale={locale} />
         <ServicesNarrative />
         <ServicesDescriptionStack services={sanityServices} />
         <ParallaxDividerImage />

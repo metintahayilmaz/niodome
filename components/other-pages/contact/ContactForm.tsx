@@ -3,6 +3,7 @@
 import { type FormEvent, useState } from "react";
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import marketingData from "@/data/marketingPlans.json";
 import geoData from "@/data/geo.json";
 import { useLocale, useTranslations } from "next-intl";
 import { CommonLoadItem } from "@/components/animations/CommonLoadAnimation";
@@ -22,8 +23,12 @@ function ContactFormContent() {
   const t = useTranslations("contact");
   const locale = useLocale() === "en" ? "en" : "tr";
   const params = useSearchParams();
-  const plan = geoData.plans.find(item => item.id === params.get("plan"));
-  const geoPlan = params.get("service") === "geo" && plan ? plan.name[locale] : "";
+  const service = params.get("service");
+  const planId = params.get("plan");
+  const geo = geoData.plans.find(item => item.id === planId);
+  const marketing = service === "social" || service === "google" ? marketingData[service][locale] : null;
+  const marketingPlan = marketing?.plans.find(item => item.id === planId);
+  const selectedOffer = service === "geo" ? geo?.name[locale] ?? "GEO" : marketingPlan?.name ?? marketing?.label ?? "";
   const key = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY?.trim();
   const [status, setStatus] = useState<FormStatus>("idle");
   const [feedback, setFeedback] = useState("");
@@ -44,9 +49,10 @@ function ContactFormContent() {
     const form = e.currentTarget;
     const formData = new FormData(form);
     formData.append("access_key", key);
-    if (geoPlan) {
-      formData.set("subject", `Niodome — ${geoPlan}`);
-      formData.append("geo_plan", geoPlan);
+    if (selectedOffer) {
+      formData.set("subject", `Niodome — ${selectedOffer}`);
+      formData.append("selected_offer", selectedOffer);
+      formData.append("request_type", service ?? "");
     }
 
     try {
@@ -89,7 +95,7 @@ function ContactFormContent() {
           </div>
         )}
 
-        {geoPlan && <p className="reply__text" style={{marginBottom:"2.4rem"}}>{locale === "en" ? "Selected plan: " : "Seçilen paket: "}{geoPlan}</p>}
+        {selectedOffer && <p className="reply__text" style={{marginBottom:"2.4rem"}}>{locale === "en" ? "Selected plan: " : "Seçilen paket: "}{selectedOffer}</p>}
         <form
           className={`form contact-form${status === "success" ? " is-hidden" : ""}`}
           id="contact-form"

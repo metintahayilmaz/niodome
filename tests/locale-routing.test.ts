@@ -86,3 +86,17 @@ test("preview deployments retain the stronger indexing restriction", () => {
     assert.equal(response.headers.get("X-Robots-Tag"), "noindex, nofollow", path);
   }
 });
+
+test("marketing pages keep their language and selected enquiry across localized links", () => {
+  assert.equal(localizeHref("/social-media#plans", "tr"), "/sosyal-medya#plans");
+  assert.equal(localizeHref("/sosyal-medya#plans", "en"), "/en/social-media#plans");
+  assert.equal(localizeHref("/google-ads", "en"), "/en/google-ads");
+  assert.equal(localizeHref("/contact?service=social&plan=social-start", "tr"), "/iletisim?service=social&plan=social-start");
+  assert.equal(localizeHref("/iletisim?service=google&plan=google-growth", "en"), "/en/contact?service=google&plan=google-growth");
+  for (const [path, expected] of [["/sosyal-medya", "/tr/social-media"], ["/google-ads", "/tr/google-ads"], ["/en/social-media", "/en/social-media"], ["/en/google-ads", "/en/google-ads"]]) {
+    const response = middleware(new NextRequest(`https://niodome.com${path}`, { headers: { "accept-language": "tr" } }));
+    assert.equal(response.headers.get("location"), null, path);
+    const rewrite = response.headers.get("x-middleware-rewrite");
+    assert.equal(rewrite ? new URL(rewrite).pathname : path, expected);
+  }
+});

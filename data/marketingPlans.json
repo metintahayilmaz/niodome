@@ -1,0 +1,388 @@
+{
+  "social": {
+    "route": "/social-media",
+    "trPath": "/sosyal-medya",
+    "enPath": "/en/social-media",
+    "tr": {
+      "label": "Sosyal medya yönetimi",
+      "title": "Markanız için anlatacak bir şeyimiz olsun.",
+      "description": "Strateji, içerik üretimi ve topluluk yönetimini birlikte ele alıyor; markanıza uygun fikirleri düzenli bir yayın planına dönüştürüyoruz.",
+      "cta": "Sosyal medya planımı konuşalım",
+      "plansTitle": "İhtiyacınız kadar kapsam. Baştan belli bir ücret.",
+      "included": "Standart hesap incelemesi, ilk içerik yönü ve yayın planı aylık hizmete dahil. Zorunlu, ayrı bir başlangıç bedeli yok.",
+      "exclusions": "Reklam bütçesi, ücretli reklam yönetimi, çekim, creator/oyuncu, özel animasyon ve üçüncü taraf lisansları dahil değildir. Bunlar ihtiyaç halinde ayrı brief ve onaylı bütçeyle ele alınır.",
+      "process": [
+        "Önce markanın sosyal rolünü, hedef kitleyi ve içerik konularını belirleriz.",
+        "İçeriği üretir, birlikte onaylar ve seçilen kanallarda yayımlarız.",
+        "Her ay neyin karşılık bulduğunu değerlendirir, gelecek ayın planını geliştiririz."
+      ],
+      "faqs": [
+        [
+          "Kısa video ve çekim dahil mi?",
+          "Başlangıç paketi mevcut müşteri görselleriyle hazırlanır; video içermez. Diğer paketlerde belirtilen kısa videolar, müşterinin sağladığı kullanılabilir kayıtlardan kurgu ve basit hareketli grafikle hazırlanır. Yerinde çekim ayrıca bütçelenir."
+        ],
+        [
+          "İçerik adetleri nasıl sayılıyor?",
+          "Adetler tüm kanallardaki toplam özgün ana içeriktir; her kanal için ayrı kota değildir. Bir carousel en fazla 5 kare, bir story seti en fazla 3 karedir. Kısa videolar ana içerik toplamının içindedir. Aynı içeriğin basit çapraz yayını yeni özgün içerik sayılmaz."
+        ],
+        [
+          "Mesaj ve yorumları ne zaman yanıtlıyorsunuz?",
+          "Hafta içi 09.00–18.00 Türkiye saati, resmi tatiller hariç; ilk yanıt hedefi 1 iş günüdür. Bir konuşma, aynı kullanıcıyla aynı gündeki tek konu ve en fazla 3 ajans yanıtıdır. Sipariş/iade operasyonu, 7/24 müşteri hizmeti ve kriz nöbeti kapsam dışıdır."
+        ],
+        [
+          "Reklam yönetimi de dahil mi?",
+          "Bu paketler organik içerik ve topluluk yönetimidir. Meta, LinkedIn veya TikTok reklam yönetimi hedef, bütçe ve kanal sayısına göre ayrıca teklif edilir. Reklam harcaması doğrudan müşterinin hesabından platforma ödenir."
+        ],
+        [
+          "Onay ve revizyon nasıl ilerliyor?",
+          "Aylık takvim için 1 toplu revizyon, içeriklere 1 toplu uygulama düzeltmesi dahildir. Yeni brief veya onay sonrası yeni konsept ayrıca kapsamlandırılır. İlk yayın takvimi bilgi, materyal ve erişimler tamamlandıktan sonra belirlenir."
+        ]
+      ],
+      "plans": [
+        {
+          "id": "social-start",
+          "price": 25000,
+          "name": "Sosyal Başlangıç",
+          "who": "Düzenli bir sosyal varlık isteyen küçük işletmeler.",
+          "summary": "Mevcut görsellerinizle markanızın sesini ve yayın düzenini kurarız.",
+          "deliverables": [
+            "1 ana kanal",
+            "Ayda 6 görsel / carousel içerik",
+            "Ayda 4 story seti",
+            "İş günlerinde yorum ve mesaj takibi"
+          ],
+          "details": [
+            "Video ve çekim dahil değildir; müşteri görselleri kullanılır.",
+            "İş gününde 1 kontrol; ayda en fazla 40 konuşma.",
+            "Aylık rapor ve 30 dakika görüşme."
+          ]
+        },
+        {
+          "id": "social-growth",
+          "price": 45000,
+          "name": "Sosyal Büyüme",
+          "who": "Ürün ve hizmetlerini içerik serileriyle anlatmak isteyen markalar.",
+          "summary": "Farklı içerik formatlarını dener, karşılık bulan fikirleri geliştiririz.",
+          "deliverables": [
+            "2 ana kanal",
+            "Ayda 10 ana içerik; 2 kısa video dahil",
+            "Ayda 6 story seti",
+            "Aylık içerik serileri ve değerlendirme"
+          ],
+          "details": [
+            "8 görsel/carousel + 2 kısa video; adetler kanalların toplamıdır.",
+            "Her video en fazla 30 saniye; video başına en fazla 10 dakika müşteri kaydı.",
+            "İş gününde 2 kontrol; ayda en fazla 120 konuşma.",
+            "Aylık rapor ve 45 dakika görüşme."
+          ]
+        },
+        {
+          "id": "social-brand",
+          "price": 75000,
+          "name": "Sosyal Marka",
+          "who": "Birden fazla kitleye ve kanala seslenen kurumsal markalar.",
+          "summary": "Kanalları ortak marka stratejisinde buluşturur, içerik ve topluluk öğrenimlerini birleştiririz.",
+          "deliverables": [
+            "3 ana kanal",
+            "Ayda 14 ana içerik; 4 kısa video dahil",
+            "Ayda 10 story seti",
+            "Çeyreklik içerik yönü ve koordinasyon"
+          ],
+          "details": [
+            "10 görsel/carousel + 4 kısa video; adetler kanalların toplamıdır.",
+            "Her video en fazla 30 saniye; video başına en fazla 10 dakika müşteri kaydı.",
+            "İş gününde 2 kontrol; ayda en fazla 250 konuşma. Hassas konular marka yetkilisine aktarılır.",
+            "Aylık 60 dakika görüşme ve çeyreklik değerlendirme."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "label": "Social media management",
+      "title": "Give your brand something worth saying.",
+      "description": "We bring strategy, content production and community management together, turning ideas that fit your brand into a consistent publishing plan.",
+      "cta": "Discuss my social media plan",
+      "plansTitle": "A clear scope. A clear monthly fee.",
+      "included": "Standard account review, initial content direction and publishing plan are included in the monthly service. No mandatory separate onboarding fee.",
+      "exclusions": "Media spend, paid advertising management, shoots, creators/talent, advanced animation and third-party licences are excluded. These are scoped and approved separately when needed.",
+      "process": [
+        "Define your brand’s role on social, its audience and content themes.",
+        "Produce, approve and publish content for the selected channels.",
+        "Review what resonates each month and improve the next plan."
+      ],
+      "faqs": [
+        [
+          "Are video and shoots included?",
+          "Starter uses existing client images and excludes video. The other plans include the stated number of short edits from usable client footage, with subtitles and simple motion graphics. On-location shoots are priced separately."
+        ],
+        [
+          "How are content quantities counted?",
+          "Counts are total original main content across all channels, not a separate allowance per channel. A carousel has up to 5 frames; a story set up to 3. Short videos are part of the main content total. Simple cross-posting is not a new original piece."
+        ],
+        [
+          "When do you respond to comments and messages?",
+          "Weekdays, 09:00–18:00 Turkey time, excluding public holidays; first response target is 1 business day. A conversation is one topic with one user on the same day, with up to 3 agency replies. Order/returns operations, 24/7 support and crisis shifts are excluded."
+        ],
+        [
+          "Does this include paid advertising?",
+          "These plans cover organic content and community management. Meta, LinkedIn or TikTok advertising is scoped separately by goals, budget and platforms. Clients pay media spend directly to the platforms from their own accounts."
+        ],
+        [
+          "How do approvals and revisions work?",
+          "One consolidated calendar revision and one consolidated content correction round are included. A new brief or a new concept after approval is scoped separately. The first publishing schedule is agreed after information, materials and access are ready."
+        ]
+      ],
+      "plans": [
+        {
+          "id": "social-start",
+          "price": 25000,
+          "name": "Social Starter",
+          "who": "Small businesses seeking a consistent social presence.",
+          "summary": "Build your brand voice and publishing rhythm using your existing images.",
+          "deliverables": [
+            "1 main channel",
+            "6 image / carousel pieces per month",
+            "4 story sets per month",
+            "Weekday comment and message monitoring"
+          ],
+          "details": [
+            "Client images; no video or shoots included.",
+            "1 check each business day; up to 40 conversations per month.",
+            "Monthly report and 30-minute meeting."
+          ]
+        },
+        {
+          "id": "social-growth",
+          "price": 45000,
+          "name": "Social Growth",
+          "who": "Brands ready to tell product and service stories through content series.",
+          "summary": "Test content formats and develop the ideas your audience responds to.",
+          "deliverables": [
+            "2 main channels",
+            "10 main pieces per month, including 2 short videos",
+            "6 story sets per month",
+            "Content series and monthly review"
+          ],
+          "details": [
+            "8 image/carousel pieces + 2 short videos; total across channels.",
+            "Up to 30 seconds per video, from up to 10 minutes of client footage each.",
+            "2 checks each business day; up to 120 conversations per month.",
+            "Monthly report and 45-minute meeting."
+          ]
+        },
+        {
+          "id": "social-brand",
+          "price": 75000,
+          "name": "Social Brand",
+          "who": "Enterprise brands serving multiple audiences and channels.",
+          "summary": "Connect channels through a shared brand strategy and combine content and community learnings.",
+          "deliverables": [
+            "3 main channels",
+            "14 main pieces per month, including 4 short videos",
+            "10 story sets per month",
+            "Quarterly content direction and coordination"
+          ],
+          "details": [
+            "10 image/carousel pieces + 4 short videos; total across channels.",
+            "Up to 30 seconds per video, from up to 10 minutes of client footage each.",
+            "2 checks each business day; up to 250 conversations per month. Sensitive topics go to the brand contact.",
+            "Monthly 60-minute meeting and quarterly review."
+          ]
+        }
+      ]
+    }
+  },
+  "google": {
+    "route": "/google-ads",
+    "trPath": "/google-ads",
+    "enPath": "/en/google-ads",
+    "tr": {
+      "label": "Google Ads yönetimi",
+      "title": "Tıklamanın ardından ne oluyor?",
+      "description": "Arama niyetinden reklam mesajına, açılış sayfasından başvurunun niteliğine kadar bütün yolu değerlendiriyor; bütçenizi iş hedefinize göre yönetiyoruz.",
+      "cta": "Reklam hesabımı değerlendirin",
+      "plansTitle": "Hedefinize uygun plan. Görünür hizmet bedeli.",
+      "included": "Standart hesap incelemesi, kampanya planı, reklam metinleri ve mevcut dönüşüm ölçümünün kontrolü aylık hizmete dahil. Zorunlu ayrı başlangıç bedeli yok.",
+      "exclusions": "Reklam bütçesi doğrudan Google’a ödenir; hizmet bedeline dahil değildir. Eksik ölçüm altyapısının kurulumu, özel veri/CRM entegrasyonu, yeni açılış sayfası, ürün çekimi ve özgün video üretimi gerekiyorsa önceden ayrı teklif verilir.",
+      "process": [
+        "Hedefi, hesabı ve dönüşüm ölçümünün doğruluğunu inceleriz.",
+        "Arama niyeti, reklam mesajı ve açılış sayfasını birlikte ele alırız.",
+        "Sonuçları değerlendirir, bütçe ve test kararlarını veriye göre geliştiririz."
+      ],
+      "faqs": [
+        [
+          "Reklam bütçesi dahil mi?",
+          "Hayır. Tablodaki tutar Niodome’un aylık yönetim bedelidir. Medya bütçesini kendi Google Ads hesabınızdan doğrudan Google’a ödersiniz. Bütçe ve kapsam değişikliği önceden onayınızla yapılır; otomatik harcama yüzdesi eklemeyiz."
+        ],
+        [
+          "Başlangıçta ayrıca ödeme gerekiyor mu?",
+          "Standart hesap incelemesi ve kampanya başlangıcı dahildir. Ölçüm altyapınız eksikse, CRM bağlantısı veya kapsamlı hesap dönüşümü gerekiyorsa ayrı iş tanımı ve teklif hazırlanır. Onayınız olmadan ek çalışma ücretlendirilmez."
+        ],
+        [
+          "Her kampanya türünü açıyor musunuz?",
+          "Hayır. Paket adetleri üst sınırdır; hesap hedefi ve veri yeterliliğine göre seçim yapılır. Shopping ve Performance Max için uygun mağaza ve kullanılabilir ürün akışı gerekir. Yeniden pazarlama uygun veri ve izin koşullarına bağlıdır."
+        ],
+        [
+          "Satış veya ROAS garantisi var mı?",
+          "Hayır. Sonuçlar teklifiniz, rekabet, bütçe, site deneyimi ve satış sürecinizden de etkilenir. Form gönderimini otomatik satış saymayız; uygun veri varsa nitelikli talep, sipariş ve geliri ayrı değerlendiririz."
+        ],
+        [
+          "Optimizasyon ve sayfa çalışması nasıl ilerliyor?",
+          "İş günlerinde bütçe ve kritik hesap sağlığı kontrolü; haftalık planlı sorgu, negatif kelime, reklam ve hedefleme değerlendirmesi yapılır. Sayfa saatleri mevcut şablondaki başlık, metin, çağrı veya form iyileştirmeleridir. Yeni sayfa ve özel yazılım dahil değildir."
+        ]
+      ],
+      "plans": [
+        {
+          "id": "google-demand",
+          "price": 12500,
+          "name": "Google Talep",
+          "who": "Tek ana ürün veya hizmet için müşteri talebi isteyen KOBİ’ler.",
+          "summary": "Arama niyetine uygun reklamlarla öncelikli teklifinizi görünür kılarız.",
+          "deliverables": [
+            "Arama Ağı odaklı yönetim",
+            "1 ürün / hizmet grubu",
+            "Aylık rapor ve karar görüşmesi",
+            "Mevcut sayfada ayda 1 saat iyileştirme"
+          ],
+          "details": [
+            "Bir hesap, bir alan adı, Türkiye / Türkçe.",
+            "Aylık en fazla 75.000 TL medya harcaması; medya bütçesi ayrıca.",
+            "En fazla 3 aktif kampanya; ayda 1 mesaj/teklif hipotezi."
+          ]
+        },
+        {
+          "id": "google-growth",
+          "price": 25000,
+          "name": "Google Büyüme",
+          "who": "E-ticaret veya birden fazla teklif geliştiren markalar.",
+          "summary": "Kampanya, ürün bilgisi ve sayfa deneyimini birlikte geliştiririz.",
+          "deliverables": [
+            "3 ürün / hizmet grubu",
+            "Arama + uygun Shopping / Performance Max planı",
+            "Mevcut sayfada ayda 3 saat iyileştirme",
+            "İki haftada durum özeti ve aylık görüşme"
+          ],
+          "details": [
+            "Bir hesap, bir alan adı, Türkiye / Türkçe.",
+            "Aylık en fazla 300.000 TL medya harcaması; medya bütçesi ayrıca.",
+            "En fazla 6 aktif kampanya; ayda 2 test hipotezi.",
+            "Shopping için en fazla 500 aktif ürün: mevcut akışta tanı ve temel kural düzeltmeleri."
+          ]
+        },
+        {
+          "id": "google-scale",
+          "price": 45000,
+          "name": "Google Ölçek",
+          "who": "Kategori ve kanal çeşitliliği olan kurumsal markalar.",
+          "summary": "Kategori önceliklerini, medya planını ve dönüşüm öğrenimlerini birlikte yönetiriz.",
+          "deliverables": [
+            "6 ürün / hizmet grubu",
+            "Uygun hedef ve materyalle YouTube / Demand Gen",
+            "Mevcut sayfada ayda 6 saat iyileştirme",
+            "Haftalık durum özeti ve aylık görüşme"
+          ],
+          "details": [
+            "Bir hesap, bir alan adı, Türkiye / Türkçe; ek pazar ve dil ayrıca kapsamlandırılır.",
+            "Aylık en fazla 1.000.000 TL medya harcaması; medya bütçesi ayrıca.",
+            "En fazla 12 aktif kampanya; ayda 3 test hipotezi.",
+            "Shopping için en fazla 3.000 aktif ürün; veri girişi ve entegrasyon yazılımı dahil değildir."
+          ]
+        }
+      ]
+    },
+    "en": {
+      "label": "Google Ads management",
+      "title": "What happens after the click?",
+      "description": "From search intent and ad messaging to landing pages and lead quality, we review the whole journey and manage your budget around your business goals.",
+      "cta": "Review my advertising needs",
+      "plansTitle": "The right scope. A transparent service fee.",
+      "included": "Standard account review, campaign planning, ad copy and checks of existing conversion measurement are included in the monthly service. No mandatory separate onboarding fee.",
+      "exclusions": "Media spend is paid directly to Google and is not included. Missing measurement setup, custom data/CRM integrations, new landing pages, product photography and original video production are quoted separately before work begins.",
+      "process": [
+        "Review your goals, account and conversion measurement.",
+        "Connect search intent, ad messaging and landing pages.",
+        "Evaluate results and improve budget allocation and testing decisions."
+      ],
+      "faqs": [
+        [
+          "Is media spend included?",
+          "No. Listed prices are Niodome’s monthly management fees. You pay Google directly from your own Google Ads account. Budget and scope changes require prior approval; we do not automatically add a percentage of spend."
+        ],
+        [
+          "Is there an extra onboarding charge?",
+          "Standard account review and campaign onboarding are included. Missing measurement, CRM integration or a substantial account transformation requires a separate scope and quote. No additional work is charged without approval."
+        ],
+        [
+          "Do you launch every campaign type?",
+          "No. Plan quantities are limits, not a reason to fragment the account. We select campaign types based on goals and data. Shopping and Performance Max require an eligible store and usable product feed. Remarketing depends on suitable data and permissions."
+        ],
+        [
+          "Do you guarantee sales or ROAS?",
+          "No. Your offer, competition, budget, website and sales process also affect results. A form submission is not automatically a sale. We review qualified leads, orders and revenue separately when the data is available."
+        ],
+        [
+          "What does ongoing optimisation include?",
+          "Weekday budget and critical account-health monitoring, with weekly search-term, negative-keyword, ad and targeting reviews. Page hours cover small changes to existing templates, such as headlines, copy, calls to action and forms. New pages and custom software are excluded."
+        ]
+      ],
+      "plans": [
+        {
+          "id": "google-demand",
+          "price": 12500,
+          "name": "Google Demand",
+          "who": "SMBs seeking demand for one priority product or service.",
+          "summary": "Make your priority offer visible with ads aligned to search intent.",
+          "deliverables": [
+            "Search-focused management",
+            "1 product / service group",
+            "Monthly report and decision meeting",
+            "1 hour of existing-page improvements per month"
+          ],
+          "details": [
+            "One account, one domain, Turkey / Turkish.",
+            "Up to TRY 75,000 monthly media spend; paid separately.",
+            "Up to 3 active campaigns; 1 message/offer hypothesis per month."
+          ]
+        },
+        {
+          "id": "google-growth",
+          "price": 25000,
+          "name": "Google Growth",
+          "who": "Ecommerce brands and businesses developing multiple offers.",
+          "summary": "Improve campaigns, product information and the page experience together.",
+          "deliverables": [
+            "3 product / service groups",
+            "Search + suitable Shopping / Performance Max plan",
+            "3 hours of existing-page improvements per month",
+            "Fortnightly update and monthly meeting"
+          ],
+          "details": [
+            "One account, one domain, Turkey / Turkish.",
+            "Up to TRY 300,000 monthly media spend; paid separately.",
+            "Up to 6 active campaigns; 2 test hypotheses per month.",
+            "Up to 500 active products: existing-feed diagnosis and basic rule fixes."
+          ]
+        },
+        {
+          "id": "google-scale",
+          "price": 45000,
+          "name": "Google Scale",
+          "who": "Enterprise brands with multiple categories and channels.",
+          "summary": "Connect category priorities, media planning and conversion learnings.",
+          "deliverables": [
+            "6 product / service groups",
+            "YouTube / Demand Gen when goals and assets support it",
+            "6 hours of existing-page improvements per month",
+            "Weekly update and monthly meeting"
+          ],
+          "details": [
+            "One account, one domain, Turkey / Turkish; extra markets/languages scoped separately.",
+            "Up to TRY 1,000,000 monthly media spend; paid separately.",
+            "Up to 12 active campaigns; 3 test hypotheses per month.",
+            "Up to 3,000 active products; data entry and integration software excluded."
+          ]
+        }
+      ]
+    }
+  }
+}
