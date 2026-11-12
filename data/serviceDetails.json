@@ -485,8 +485,8 @@
         },
         "items": [
           {
-            "tr": "1 dilde tek sayfa, en fazla 7 bölüm",
-            "en": "Single page in 1 language, up to 7 sections"
+            "tr": "Türkçe ve İngilizce: 2 dilde tek sayfa, en fazla 7 bölüm",
+            "en": "Turkish and English: single page in 2 languages, up to 7 sections"
           },
           {
             "tr": "Markaya uyarlanan tasarım sistemi",
@@ -512,8 +512,8 @@
         },
         "items": [
           {
-            "tr": "1 dilde en fazla 7 sayfa",
-            "en": "Up to 7 pages in 1 language"
+            "tr": "Türkçe, İngilizce ve Arapça: 3 dilde en fazla 7 benzersiz sayfa",
+            "en": "Turkish, English and Arabic: up to 7 unique pages in 3 languages"
           },
           {
             "tr": "Markaya uyarlanan tasarım ve içerik yönetimi",
@@ -522,6 +522,10 @@
           {
             "tr": "Hizmetler, blog veya projeler",
             "en": "Services, blog or projects"
+          },
+          {
+            "tr": "Arapça sayfalarda sağdan sola (RTL) yerleşim",
+            "en": "Right-to-left (RTL) layout for Arabic pages"
           }
         ],
         "priceTry": 34900,
@@ -556,8 +560,8 @@
       }
     ],
     "limits": {
-      "tr": "Tüm fiyatlar tek seferlik proje bedelidir; KDV hariçtir. Her pakete mobil uyumluluk, temel teknik SEO, temel analiz kurulumu, iki revizyon turu, yayınlama ve 30 gün teslim hatası desteği dahildir. İçerikleri müşteri sağlar; metin yazımı, çeviri, çekim, alan adı, barındırma, ücretli lisanslar ve özel entegrasyonlar ayrıca fiyatlandırılır. Sayfa sayısı benzersiz sayfaları ifade eder; Plus paketinde aynı sayfaların ikinci dil karşılıkları bu sınıra ayrıca sayılmaz. Blog / proje kayıtları ve ilk içerik giriş adedi teklif aşamasında belirlenir. Esnaf Destek, Başlangıç ve Kurumsal paketleri mevcut tasarım sistemlerinin markaya uyarlanmasını kapsar; sıfırdan özel tasarım, e-ticaret ve özel yazılım ayrıca tekliflendirilir.",
-      "en": "All prices are one-off project fees excluding VAT. Every package includes responsive layout, essential technical SEO, basic analytics setup, two revision rounds, launch and 30 days of defect support. Clients supply content; copywriting, translation, shoots, domains, hosting, paid licences and custom integrations are priced separately. Page limits count unique pages; translated versions of those pages do not count again in Plus. Blog / project records and initial content-entry volume are agreed in the proposal. Local Business Support, Starter and Corporate adapt established design systems to your brand; fully bespoke design, ecommerce and custom software are quoted separately."
+      "tr": "Tüm fiyatlar tek seferlik proje bedelidir; KDV hariçtir. Her pakete mobil uyumluluk, temel teknik SEO, temel analiz kurulumu, iki revizyon turu, yayınlama ve 30 gün teslim hatası desteği dahildir. İçerikleri müşteri sağlar; metin yazımı, çeviri, çekim, alan adı, barındırma, ücretli lisanslar ve özel entegrasyonlar ayrıca fiyatlandırılır. Sayfa sayısı benzersiz sayfaları ifade eder; Çok dilli paketlerde aynı sayfaların diğer dil karşılıkları bu sınıra ayrıca sayılmaz. Blog / proje kayıtları ve ilk içerik giriş adedi teklif aşamasında belirlenir. Esnaf Destek, Başlangıç ve Kurumsal paketleri mevcut tasarım sistemlerinin markaya uyarlanmasını kapsar; sıfırdan özel tasarım, e-ticaret ve özel yazılım ayrıca tekliflendirilir.",
+      "en": "All prices are one-off project fees excluding VAT. Every package includes responsive layout, essential technical SEO, basic analytics setup, two revision rounds, launch and 30 days of defect support. Clients supply content; copywriting, translation, shoots, domains, hosting, paid licences and custom integrations are priced separately. Page limits count unique pages; translated versions of those pages do not count again in multilingual packages. Blog / project records and initial content-entry volume are agreed in the proposal. Local Business Support, Starter and Corporate adapt established design systems to your brand; fully bespoke design, ecommerce and custom software are quoted separately."
     },
     "faq": [
       {
