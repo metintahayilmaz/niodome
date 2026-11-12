@@ -1,5 +1,5 @@
-import { MarketingOverview } from "@/components/marketing/MarketingPlans";
-import { GeoOverview } from "@/components/geo/GeoSections";
+import ServiceDirectory from "@/components/services/ServiceDirectory";
+import catalog from "@/data/serviceCatalog.json";
 import { Metadata } from "next";
 import InnerHeadline from "@/components/other-pages/services/InnerHeadline";
 import ServicesDescriptionStack from "@/components/other-pages/services/ServicesDescriptionStack";
@@ -123,9 +123,9 @@ export default async function ServicesPage() {
   }
 
   const ldServices = serviceListSchema(
-    sanityServices.map((s) => ({
-      name: s.title,
-      shortDescription: s.shortDescription,
+    catalog.map((s) => ({
+      name: s.label[locale === "en" ? "en" : "tr"],
+      shortDescription: s.description[locale === "en" ? "en" : "tr"],
     }))
   );
 
@@ -139,8 +139,7 @@ export default async function ServicesPage() {
       )}
       <>
         <InnerHeadline />
-        <GeoOverview locale={locale} />
-        <MarketingOverview locale={locale} />
+        <ServiceDirectory locale={locale} />
         <ServicesNarrative />
         <ServicesDescriptionStack services={sanityServices} />
         <ParallaxDividerImage />

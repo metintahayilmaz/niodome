@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { client } from "@/sanity/lib/client";
 import { postSlugsSitemapQuery, projectSlugsSitemapQuery } from "@/sanity/lib/queries";
 import { SITE_URL } from "@/lib/site";
+import { agencyServicePaths } from "@/i18n/servicePaths";
 
 const BASE = SITE_URL;
 
@@ -9,6 +10,7 @@ const BASE = SITE_URL;
 // Localeprefix "as-needed" → TR'de prefix yok, EN'de /en var.
 // Sitemap URL'leri redirect vermemeli — son canonical URL kullanılmalı.
 const PATHNAMES: { tr: string; en: string; freq: MetadataRoute.Sitemap[number]["changeFrequency"]; priority: number }[] = [
+  ...Object.values(agencyServicePaths).map(path => ({tr:path.tr,en:`/en${path.en}`,freq:"monthly" as const,priority:0.8})),
   { tr: "/dijital-reklam-yonetimi", en: "/en/digital-advertising", freq: "monthly", priority: 0.8 },
   { tr: "/sosyal-medya", en: "/en/social-media", freq: "monthly", priority: 0.8 },
   { tr: "/google-ads", en: "/en/google-ads", freq: "monthly", priority: 0.8 },

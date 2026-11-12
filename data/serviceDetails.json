@@ -1,0 +1,1710 @@
+[
+  {
+    "id": "strategy",
+    "href": "/brand-strategy",
+    "trPath": "/hizmetler/marka-stratejisi",
+    "enPath": "/services/brand-strategy",
+    "label": {
+      "tr": "Marka stratejisi",
+      "en": "Brand strategy"
+    },
+    "category": "brand",
+    "title": {
+      "tr": "Önce neyi değiştireceğimizi bulalım.",
+      "en": "First, decide what needs to change."
+    },
+    "description": {
+      "tr": "Markanızın hedefini, müşterinizin beklentisini ve rekabetin kurallarını birlikte inceleriz. Konumlandırmayı bir sunumda bırakmaz; kimlik, içerik ve ürün kararlarına yön veren bir çerçeveye dönüştürürüz.",
+      "en": "We examine your business ambition, customer expectations and competitive context together. Positioning becomes a framework for identity, content and product decisions, beyond the presentation."
+    },
+    "deliverables": [
+      {
+        "tr": "Marka ve rekabet incelemesi",
+        "en": "Brand and competitor review"
+      },
+      {
+        "tr": "Hedef kitle ve ihtiyaç çerçevesi",
+        "en": "Audience and needs framework"
+      },
+      {
+        "tr": "Konumlandırma, değer önerisi ve mesaj hiyerarşisi",
+        "en": "Positioning, value proposition and message hierarchy"
+      },
+      {
+        "tr": "Marka mimarisi ve yaratıcı brief",
+        "en": "Brand architecture and creative brief"
+      }
+    ],
+    "plans": [
+      {
+        "id": "discovery",
+        "name": {
+          "tr": "Marka Keşfi",
+          "en": "Brand Discovery"
+        },
+        "audience": {
+          "tr": "Nereden başlayacağını netleştirmek isteyen markalar.",
+          "en": "Brands seeking a clear starting point."
+        },
+        "items": [
+          {
+            "tr": "1 marka için mevcut durum incelemesi",
+            "en": "Current-state review for 1 brand"
+          },
+          {
+            "tr": "1 ekip atölyesi",
+            "en": "1 team workshop"
+          },
+          {
+            "tr": "Önceliklendirilmiş karar ve araştırma planı",
+            "en": "Prioritised decisions and research plan"
+          }
+        ]
+      },
+      {
+        "id": "positioning",
+        "name": {
+          "tr": "Konumlandırma",
+          "en": "Positioning"
+        },
+        "audience": {
+          "tr": "Yeni bir marka veya yön değiştiren işletmeler.",
+          "en": "New brands or businesses changing direction."
+        },
+        "items": [
+          {
+            "tr": "Keşif ve kategori incelemesi",
+            "en": "Discovery and category review"
+          },
+          {
+            "tr": "Konumlandırma ve ana mesaj çerçevesi",
+            "en": "Positioning and core messaging framework"
+          },
+          {
+            "tr": "Yaratıcı çalışmalara geçiş brief’i",
+            "en": "Brief for the creative work"
+          }
+        ]
+      },
+      {
+        "id": "architecture",
+        "name": {
+          "tr": "Marka Mimarisi",
+          "en": "Brand Architecture"
+        },
+        "audience": {
+          "tr": "Birden fazla ürün veya alt markayı yöneten şirketler.",
+          "en": "Companies managing multiple products or sub-brands."
+        },
+        "items": [
+          {
+            "tr": "Marka portföyü ve ilişki haritası",
+            "en": "Brand portfolio and relationship map"
+          },
+          {
+            "tr": "İsimlendirme ve hiyerarşi ilkeleri",
+            "en": "Naming and hierarchy principles"
+          },
+          {
+            "tr": "Geçiş öncelikleri ve kullanım senaryoları",
+            "en": "Transition priorities and use cases"
+          }
+        ]
+      }
+    ],
+    "limits": {
+      "tr": "Saha araştırması, ücretli veri, isim tescili ve tasarım üretimi ayrıca kapsamlandırılır. Görüşme sayısı ve pazar sayısı teklifte belirlenir.",
+      "en": "Field research, paid data, trademark registration and design production are scoped separately. Interview and market counts are agreed in the proposal."
+    },
+    "faq": [
+      {
+        "question": {
+          "tr": "Logo da dahil mi?",
+          "en": "Is the logo included?"
+        },
+        "answer": {
+          "tr": "Bu çalışma strateji içindir. Kimlik tasarımı ayrı hizmettir; aynı proje içinde birlikte planlanabilir.",
+          "en": "This scope covers strategy. Identity design is a separate service and can be planned within the same project."
+        }
+      }
+    ],
+    "projects": []
+  },
+  {
+    "id": "identity",
+    "href": "/brand-identity",
+    "trPath": "/hizmetler/marka-kimligi",
+    "enPath": "/services/brand-identity",
+    "label": {
+      "tr": "Logo ve marka kimliği",
+      "en": "Logo and brand identity"
+    },
+    "category": "brand",
+    "title": {
+      "tr": "Her yerde aynı markayı hissettirelim.",
+      "en": "Make the same brand felt everywhere."
+    },
+    "description": {
+      "tr": "Logo, tipografi, renk ve marka dilini birlikte tasarlarız. Kimliği kartvizitten araç giydirmeye, dijital ekrandan ambalaja uzanan kullanımlarıyla düşünürüz.",
+      "en": "We design the logo, typography, colour and brand language together, considering how the identity lives across stationery, vehicle graphics, digital screens and packaging."
+    },
+    "deliverables": [
+      {
+        "tr": "Logo sistemi ve farklı kullanım biçimleri",
+        "en": "Logo system and usage variants"
+      },
+      {
+        "tr": "Renk, tipografi ve grafik dil",
+        "en": "Colour, typography and graphic language"
+      },
+      {
+        "tr": "Kurumsal malzeme uygulamaları",
+        "en": "Corporate material applications"
+      },
+      {
+        "tr": "Uygulamalı kimlik kılavuzu ve teslim dosyaları",
+        "en": "Practical identity guide and final files"
+      }
+    ],
+    "plans": [
+      {
+        "id": "signature",
+        "name": {
+          "tr": "Marka İmzası",
+          "en": "Brand Signature"
+        },
+        "audience": {
+          "tr": "Görsel temelini kuran yeni markalar.",
+          "en": "New brands establishing their visual foundation."
+        },
+        "items": [
+          {
+            "tr": "Logo ve temel varyasyonlar",
+            "en": "Logo and core variants"
+          },
+          {
+            "tr": "Renk ve tipografi sistemi",
+            "en": "Colour and typography system"
+          },
+          {
+            "tr": "Kısa kullanım kılavuzu",
+            "en": "Concise usage guide"
+          }
+        ]
+      },
+      {
+        "id": "system",
+        "name": {
+          "tr": "Kimlik Sistemi",
+          "en": "Identity System"
+        },
+        "audience": {
+          "tr": "Farklı temas noktalarında tutarlılık arayan markalar.",
+          "en": "Brands seeking consistency across touchpoints."
+        },
+        "items": [
+          {
+            "tr": "Marka İmzası kapsamı",
+            "en": "Brand Signature scope"
+          },
+          {
+            "tr": "Kartvizit, antet ve sunum şablonu",
+            "en": "Business card, letterhead and presentation template"
+          },
+          {
+            "tr": "Dijital profil ve temel paylaşım şablonları",
+            "en": "Digital profile and core post templates"
+          }
+        ]
+      },
+      {
+        "id": "world",
+        "name": {
+          "tr": "Marka Dünyası",
+          "en": "Brand World"
+        },
+        "audience": {
+          "tr": "Fiziksel ve dijital uygulamaları birlikte yenileyen şirketler.",
+          "en": "Companies renewing physical and digital applications together."
+        },
+        "items": [
+          {
+            "tr": "Kimlik Sistemi kapsamı",
+            "en": "Identity System scope"
+          },
+          {
+            "tr": "Seçilen 5 temas noktası için uygulama",
+            "en": "Applications for 5 selected touchpoints"
+          },
+          {
+            "tr": "Kapsamlı kimlik kılavuzu ve ekip aktarımı",
+            "en": "Extended identity guide and team handover"
+          }
+        ]
+      }
+    ],
+    "limits": {
+      "tr": "Tescil araştırması, font lisansları, baskı ve fiziksel üretim bedelleri ayrıca belirlenir. Tasarım yönü ve revizyon turları işe başlamadan yazılır.",
+      "en": "Trademark checks, font licences, printing and physical production are specified separately. Creative directions and revision rounds are agreed before work begins."
+    },
+    "faq": [
+      {
+        "question": {
+          "tr": "Mevcut logoyu koruyabilir miyiz?",
+          "en": "Can we keep the existing logo?"
+        },
+        "answer": {
+          "tr": "Evet. Kapsam, logoyu değiştirmeden görsel sistemi ve uygulamaları yenilemek üzerine kurulabilir.",
+          "en": "Yes. We can renew the visual system and applications while retaining the logo."
+        }
+      }
+    ],
+    "projects": [
+      "elba",
+      "beckers",
+      "kabev"
+    ]
+  },
+  {
+    "id": "packaging",
+    "href": "/packaging-design",
+    "trPath": "/hizmetler/ambalaj-tasarimi",
+    "enPath": "/services/packaging-design",
+    "label": {
+      "tr": "Ambalaj tasarımı",
+      "en": "Packaging design"
+    },
+    "category": "brand",
+    "title": {
+      "tr": "Ürünün kendine ait bir yeri olsun.",
+      "en": "Give the product a place of its own."
+    },
+    "description": {
+      "tr": "Ambalajı raftaki ilk bakıştan kullanımdaki son ana kadar ele alırız. Marka imzasını, ürün bilgisini ve farklı çeşitleri birlikte çalışan bir sisteme dönüştürürüz.",
+      "en": "We consider packaging from the first glance on the shelf to the final moment of use, bringing the brand signature, product information and variants into one system."
+    },
+    "deliverables": [
+      {
+        "tr": "Kategori, raf ve ambalaj formatı incelemesi",
+        "en": "Category, shelf and pack-format review"
+      },
+      {
+        "tr": "Ön yüz hiyerarşisi ve grafik tasarım",
+        "en": "Front-of-pack hierarchy and graphic design"
+      },
+      {
+        "tr": "Ürün varyantları ve seri mantığı",
+        "en": "Product variants and range system"
+      },
+      {
+        "tr": "Mockup, baskı dosyası ve matbaa aktarımı",
+        "en": "Mockups, print files and printer handover"
+      }
+    ],
+    "plans": [
+      {
+        "id": "single",
+        "name": {
+          "tr": "Tek Ürün",
+          "en": "Single Product"
+        },
+        "audience": {
+          "tr": "Bir ürününü pazara hazırlayan markalar.",
+          "en": "Brands preparing one product for market."
+        },
+        "items": [
+          {
+            "tr": "1 ambalaj formatı / 1 ürün çeşidi (SKU)",
+            "en": "1 packaging format / 1 SKU"
+          },
+          {
+            "tr": "Ön ve arka yüz tasarımı",
+            "en": "Front and back design"
+          },
+          {
+            "tr": "1 sunum mockup’ı ve baskı dosyası",
+            "en": "1 presentation mockup and print file"
+          }
+        ]
+      },
+      {
+        "id": "range",
+        "name": {
+          "tr": "Ürün Ailesi",
+          "en": "Product Range"
+        },
+        "audience": {
+          "tr": "Aynı seride farklı çeşitleri olan markalar.",
+          "en": "Brands with variants in one range."
+        },
+        "items": [
+          {
+            "tr": "1 ana tasarım ve 4 varyant uyarlaması",
+            "en": "1 master design and 4 variant adaptations"
+          },
+          {
+            "tr": "Renk ve ürün bilgisi sistemi",
+            "en": "Colour and product information system"
+          },
+          {
+            "tr": "Seri mockup’ları ve baskı dosyaları",
+            "en": "Range mockups and print files"
+          }
+        ]
+      },
+      {
+        "id": "portfolio",
+        "name": {
+          "tr": "Ambalaj Sistemi",
+          "en": "Packaging System"
+        },
+        "audience": {
+          "tr": "Farklı hacim ve formatlara yayılan ürün portföyleri.",
+          "en": "Portfolios spanning multiple sizes and formats."
+        },
+        "items": [
+          {
+            "tr": "Ambalaj ve ürün çeşidi haritası, tasarım sistemi",
+            "en": "Format / SKU matrix and design system"
+          },
+          {
+            "tr": "Öncelikli ürün grubu uygulamaları",
+            "en": "Priority product-group applications"
+          },
+          {
+            "tr": "Uyarlama kılavuzu ve üretim aktarımı",
+            "en": "Adaptation guide and production handover"
+          }
+        ]
+      }
+    ],
+    "limits": {
+      "tr": "Bıçak kalıbı ve ürün bilgileri onaylı olarak sağlanır. Mevzuat ve içerik doğrulaması müşteri sorumluluğundadır; kalıp üretimi, numune ve baskı ayrıca bütçelenir.",
+      "en": "Approved dielines and product information are supplied. Regulatory and content approval remain with the client; tooling, samples and printing are budgeted separately."
+    },
+    "faq": [
+      {
+        "question": {
+          "tr": "Ürün çekimi dahil mi?",
+          "en": "Is product photography included?"
+        },
+        "answer": {
+          "tr": "Paketlerde tasarım mockup’ı vardır. Gerçek ürün çekimi ayrıca planlanır.",
+          "en": "Packages include design mockups. Physical product photography is planned separately."
+        }
+      }
+    ],
+    "projects": [
+      "beckers",
+      "namli-zeytin",
+      "ambalaj-seckisi",
+      "biberzade"
+    ]
+  },
+  {
+    "id": "web",
+    "href": "/web-design",
+    "trPath": "/hizmetler/web-tasarimi",
+    "enPath": "/services/web-design",
+    "label": {
+      "tr": "Web tasarımı ve geliştirme",
+      "en": "Web design and development"
+    },
+    "category": "digital",
+    "title": {
+      "tr": "İyi görünen. Kolay kullanılan. İşe yarayan.",
+      "en": "Looks right. Works well. Serves a purpose."
+    },
+    "description": {
+      "tr": "Sitenizi sayfa sayısıyla değil, ziyaretçinin yapmak istediği işle planlarız. İçerik, tasarım, mobil deneyim ve geliştirmeyi ortak bir akışta kurarız.",
+      "en": "We plan your website around what visitors need to do, bringing content, design, mobile experience and development into one flow."
+    },
+    "deliverables": [
+      {
+        "tr": "Site haritası ve kullanıcı akışları",
+        "en": "Sitemap and user journeys"
+      },
+      {
+        "tr": "İçerik yapısı ve arayüz tasarımı",
+        "en": "Content structure and interface design"
+      },
+      {
+        "tr": "Mobil uyumlu geliştirme ve içerik yönetimi",
+        "en": "Responsive development and content management"
+      },
+      {
+        "tr": "Formlar, temel ölçüm ve yayın kontrolü",
+        "en": "Forms, essential measurement and launch checks"
+      }
+    ],
+    "plans": [
+      {
+        "id": "launch",
+        "name": {
+          "tr": "Lansman Sitesi",
+          "en": "Launch Website"
+        },
+        "audience": {
+          "tr": "Tek hedefe odaklanan ürün ve kampanyalar.",
+          "en": "Products and campaigns with one clear objective."
+        },
+        "items": [
+          {
+            "tr": "1 dilde tek sayfa, en fazla 7 bölüm",
+            "en": "Single page in 1 language, up to 7 sections"
+          },
+          {
+            "tr": "1 iletişim / talep formu",
+            "en": "1 contact / enquiry form"
+          },
+          {
+            "tr": "Mobil uyarlama ve yayın aktarımı",
+            "en": "Mobile adaptation and launch handover"
+          }
+        ]
+      },
+      {
+        "id": "corporate",
+        "name": {
+          "tr": "Kurumsal Site",
+          "en": "Corporate Website"
+        },
+        "audience": {
+          "tr": "Hizmetlerini ve işlerini anlatan markalar.",
+          "en": "Brands presenting their services and work."
+        },
+        "items": [
+          {
+            "tr": "1 dilde en fazla 8 sayfa şablonu",
+            "en": "Up to 8 page templates in 1 language"
+          },
+          {
+            "tr": "İçerik yönetimi ve 2 içerik türü",
+            "en": "CMS and 2 content collections"
+          },
+          {
+            "tr": "Form, temel SEO ve ekip eğitimi",
+            "en": "Form, essential SEO and team training"
+          }
+        ]
+      },
+      {
+        "id": "experience",
+        "name": {
+          "tr": "Özel Web Deneyimi",
+          "en": "Custom Web Experience"
+        },
+        "audience": {
+          "tr": "Özel akış, entegrasyon veya birden fazla pazar ihtiyacı.",
+          "en": "Custom journeys, integrations or multiple markets."
+        },
+        "items": [
+          {
+            "tr": "Keşif ve teknik kapsam dokümanı",
+            "en": "Discovery and technical scope document"
+          },
+          {
+            "tr": "Özel arayüzler ve kararlaştırılan entegrasyonlar",
+            "en": "Custom interfaces and agreed integrations"
+          },
+          {
+            "tr": "Test planı, yayın ve bakım seçenekleri",
+            "en": "Test plan, launch and maintenance options"
+          }
+        ]
+      }
+    ],
+    "limits": {
+      "tr": "Alan adı, barındırma, ücretli lisanslar ve üçüncü taraf servisleri ayrı giderlerdir. Metin, dil, içerik giriş adedi ve entegrasyon listesi teklifte netleştirilir.",
+      "en": "Domains, hosting, paid licences and third-party services are separate costs. Copy, languages, content-entry volume and integrations are specified in the proposal."
+    },
+    "faq": [
+      {
+        "question": {
+          "tr": "Yayın sonrası destek var mı?",
+          "en": "Is there post-launch support?"
+        },
+        "answer": {
+          "tr": "Teslim hataları için kontrol dönemi ve devam eden bakım ayrı belirtilir. Yeni özellikler bakım kapsamına otomatik girmez.",
+          "en": "The defect-review period and ongoing maintenance are stated separately. New features are not automatically included in maintenance."
+        }
+      }
+    ],
+    "projects": [
+      "just-waffle",
+      "elba"
+    ]
+  },
+  {
+    "id": "app",
+    "href": "/application-development",
+    "trPath": "/hizmetler/uygulama-gelistirme",
+    "enPath": "/services/application-development",
+    "label": {
+      "tr": "Uygulama ve dijital ürün",
+      "en": "Apps and digital products"
+    },
+    "category": "digital",
+    "title": {
+      "tr": "Fikri, insanların kullanacağı bir ürüne çevirelim.",
+      "en": "Turn the idea into a product people can use."
+    },
+    "description": {
+      "tr": "Mobil uygulama, web uygulaması ve iş araçlarını gerçek bir ihtiyacı çözmek için tasarlarız. Ürün keşfiyle başlar, öncelikli akışları prototipler ve geliştirme kapsamını görünür hale getiririz.",
+      "en": "We design mobile apps, web apps and business tools around a real need, starting with discovery, prototyping priority journeys and making the development scope clear."
+    },
+    "deliverables": [
+      {
+        "tr": "Ürün hedefi, kullanıcı rolleri ve gereksinimler",
+        "en": "Product goals, user roles and requirements"
+      },
+      {
+        "tr": "Akışlar, arayüzler ve etkileşimli prototip",
+        "en": "Flows, interfaces and interactive prototype"
+      },
+      {
+        "tr": "Önceliklendirilmiş geliştirme ve entegrasyonlar",
+        "en": "Prioritised development and integrations"
+      },
+      {
+        "tr": "Test, sürüm planı ve ürün aktarımı",
+        "en": "Testing, release plan and product handover"
+      }
+    ],
+    "plans": [
+      {
+        "id": "discovery",
+        "name": {
+          "tr": "Ürün Keşfi",
+          "en": "Product Discovery"
+        },
+        "audience": {
+          "tr": "Geliştirmeden önce fikrini netleştirmek isteyen ekipler.",
+          "en": "Teams clarifying an idea before development."
+        },
+        "items": [
+          {
+            "tr": "1 temel kullanıcı yolculuğu",
+            "en": "1 core user journey"
+          },
+          {
+            "tr": "Tıklanabilir prototip ve kapsam haritası",
+            "en": "Clickable prototype and scope map"
+          },
+          {
+            "tr": "MVP iş listesi; yazılım geliştirme dahil değildir",
+            "en": "MVP backlog; software development excluded"
+          }
+        ]
+      },
+      {
+        "id": "mvp",
+        "name": {
+          "tr": "İlk Çalışan Ürün (MVP)",
+          "en": "MVP Development"
+        },
+        "audience": {
+          "tr": "Öncelikli ihtiyacı çalışan bir ürünle sınamak.",
+          "en": "Test a priority need with a working product."
+        },
+        "items": [
+          {
+            "tr": "Keşifte onaylanan temel akışlar",
+            "en": "Core journeys approved in discovery"
+          },
+          {
+            "tr": "Seçilen platform için tasarım ve geliştirme",
+            "en": "Design and development for the chosen platform"
+          },
+          {
+            "tr": "Test ortamı, pilot ve ekip aktarımı",
+            "en": "Test environment, pilot and team handover"
+          }
+        ]
+      },
+      {
+        "id": "evolution",
+        "name": {
+          "tr": "Ürün Gelişimi",
+          "en": "Product Evolution"
+        },
+        "audience": {
+          "tr": "Kullanılan ürünü düzenli geliştiren ekipler.",
+          "en": "Teams continuously improving an active product."
+        },
+        "items": [
+          {
+            "tr": "Aylık önceliklendirme ve kapasite planı",
+            "en": "Monthly prioritisation and capacity plan"
+          },
+          {
+            "tr": "Kararlaştırılan özellik ve iyileştirmeler",
+            "en": "Agreed features and improvements"
+          },
+          {
+            "tr": "Sürüm, hata ve performans takibi",
+            "en": "Release, defect and performance tracking"
+          }
+        ]
+      }
+    ],
+    "limits": {
+      "tr": "MVP bir sabit özellik listesi değildir; platform, ekranlar, roller, veri ve entegrasyonlar keşiften sonra fiyatlanır. Mağaza hesapları, altyapı ve üçüncü taraf bedelleri ayrıdır.",
+      "en": "An MVP is not an unlimited feature list. Platforms, screens, roles, data and integrations are priced after discovery. Store accounts, infrastructure and third-party costs are separate."
+    },
+    "faq": [
+      {
+        "question": {
+          "tr": "iOS ve Android birlikte mi?",
+          "en": "Are iOS and Android both included?"
+        },
+        "answer": {
+          "tr": "Hedef platformlar ve yerel / ortak kod yaklaşımı keşifte kararlaştırılır; iki platform otomatik olarak tek kapsam sayılmaz.",
+          "en": "Target platforms and native or shared-code approaches are agreed in discovery; two platforms are not automatically one scope."
+        }
+      }
+    ],
+    "projects": []
+  },
+  {
+    "id": "commerce",
+    "href": "/ecommerce",
+    "trPath": "/hizmetler/e-ticaret",
+    "enPath": "/services/ecommerce",
+    "label": {
+      "tr": "E-ticaret deneyimi",
+      "en": "E-commerce experience"
+    },
+    "category": "digital",
+    "title": {
+      "tr": "Ürünü bulmaktan satın almaya kadar.",
+      "en": "From finding the product to buying it."
+    },
+    "description": {
+      "tr": "Kategorileri, ürün sunumunu, sepeti ve ödeme yolculuğunu birlikte tasarlarız. Mağaza deneyimini içerik, operasyon ve ölçüm ihtiyaçlarıyla aynı planda ele alırız.",
+      "en": "We design categories, product presentation, cart and checkout together, connecting the storefront experience with content, operations and measurement."
+    },
+    "deliverables": [
+      {
+        "tr": "Kategori ve ürün bilgi yapısı",
+        "en": "Category and product information structure"
+      },
+      {
+        "tr": "Mağaza ve ürün sayfası tasarımı",
+        "en": "Storefront and product-page design"
+      },
+      {
+        "tr": "Ödeme, kargo ve seçilen bağlantılar",
+        "en": "Payment, shipping and selected connections"
+      },
+      {
+        "tr": "Sipariş akışı, mobil test ve eğitim",
+        "en": "Order flow, mobile testing and training"
+      }
+    ],
+    "plans": [
+      {
+        "id": "store",
+        "name": {
+          "tr": "Mağaza Kurulumu",
+          "en": "Store Setup"
+        },
+        "audience": {
+          "tr": "İlk çevrim içi satış kanalını kuran markalar.",
+          "en": "Brands building their first online sales channel."
+        },
+        "items": [
+          {
+            "tr": "1 dil, 1 pazar ve 1 mağaza",
+            "en": "1 language, 1 market and 1 store"
+          },
+          {
+            "tr": "En fazla 20 örnek ürün girişi",
+            "en": "Entry of up to 20 sample products"
+          },
+          {
+            "tr": "Standart ödeme / kargo yapılandırması",
+            "en": "Standard payment / shipping configuration"
+          }
+        ]
+      },
+      {
+        "id": "brand-store",
+        "name": {
+          "tr": "Marka Mağazası",
+          "en": "Brand Store"
+        },
+        "audience": {
+          "tr": "Mağaza deneyimini markasına göre özelleştiren işletmeler.",
+          "en": "Businesses tailoring the store to their brand."
+        },
+        "items": [
+          {
+            "tr": "Özgün temel sayfa tasarımları",
+            "en": "Custom core page designs"
+          },
+          {
+            "tr": "Ürün varyantları ve içerik şablonları",
+            "en": "Product variants and content templates"
+          },
+          {
+            "tr": "Dönüşüm ölçüm planı ve yayın kontrolü",
+            "en": "Conversion measurement plan and launch checks"
+          }
+        ]
+      },
+      {
+        "id": "integrated",
+        "name": {
+          "tr": "Entegre Ticaret",
+          "en": "Integrated Commerce"
+        },
+        "audience": {
+          "tr": "Farklı sistem veya pazarlara bağlanan mağazalar.",
+          "en": "Stores connecting systems or markets."
+        },
+        "items": [
+          {
+            "tr": "Entegrasyon ve veri eşleme keşfi",
+            "en": "Integration and data-mapping discovery"
+          },
+          {
+            "tr": "Onaylı ERP / stok / CRM bağlantıları",
+            "en": "Approved ERP / stock / CRM connections"
+          },
+          {
+            "tr": "Pilot siparişler ve aktarım planı",
+            "en": "Pilot orders and migration plan"
+          }
+        ]
+      }
+    ],
+    "limits": {
+      "tr": "Platform aboneliği, ödeme komisyonu, kargo, ERP ve eklenti bedelleri ayrı giderlerdir. Ürün içeriği ve yasal satış metinleri müşteri onayından geçer.",
+      "en": "Platform subscriptions, payment fees, shipping, ERP and plugin costs are separate. Product content and legal sales copy require client approval."
+    },
+    "faq": [
+      {
+        "question": {
+          "tr": "Reklam yönetimi dahil mi?",
+          "en": "Is advertising management included?"
+        },
+        "answer": {
+          "tr": "Hayır. Google Ads ve dijital reklam yönetimi paketleri mağazaya ayrıca bağlanabilir.",
+          "en": "No. Google Ads and digital advertising management can be added separately."
+        }
+      }
+    ],
+    "projects": []
+  },
+  {
+    "id": "seo",
+    "href": "/seo-content",
+    "trPath": "/hizmetler/seo-ve-icerik",
+    "enPath": "/services/seo-content",
+    "label": {
+      "tr": "SEO ve içerik",
+      "en": "SEO and content"
+    },
+    "category": "growth",
+    "title": {
+      "tr": "Bulunmaya değer içerik. Bulunabilir bir yapı.",
+      "en": "Content worth finding. A structure that can be found."
+    },
+    "description": {
+      "tr": "Arama niyetini, site yapısını ve uzman bilginizi birlikte ele alırız. Teknik sorunları önceliklendirir, insanların sorularına karşılık veren içerik planı kurarız.",
+      "en": "We connect search intent, site structure and your expertise, prioritising technical issues and planning content that answers real questions."
+    },
+    "deliverables": [
+      {
+        "tr": "Teknik SEO ve içerik incelemesi",
+        "en": "Technical SEO and content review"
+      },
+      {
+        "tr": "Arama niyeti ve sayfa haritası",
+        "en": "Search intent and page mapping"
+      },
+      {
+        "tr": "Uzmanlık temelli içerik üretimi / revizyonu",
+        "en": "Expertise-led content production / revision"
+      },
+      {
+        "tr": "Organik trafik ve dönüşüm değerlendirmesi",
+        "en": "Organic traffic and conversion review"
+      }
+    ],
+    "plans": [
+      {
+        "id": "audit",
+        "name": {
+          "tr": "SEO Yol Haritası",
+          "en": "SEO Roadmap"
+        },
+        "audience": {
+          "tr": "Tek seferlik inceleme ve öncelik planı.",
+          "en": "One-off review and prioritised plan."
+        },
+        "items": [
+          {
+            "tr": "1 alan adı için teknik ve içerik incelemesi",
+            "en": "Technical and content review for 1 domain"
+          },
+          {
+            "tr": "Öncelikli sayfa ve sorun listesi",
+            "en": "Priority page and issue list"
+          },
+          {
+            "tr": "90 günlük uygulama planı; üretim hariç",
+            "en": "90-day implementation plan; production excluded"
+          }
+        ]
+      },
+      {
+        "id": "content",
+        "name": {
+          "tr": "İçerik Gelişimi",
+          "en": "Content Development"
+        },
+        "audience": {
+          "tr": "Düzenli uzmanlık içeriği isteyen markalar.",
+          "en": "Brands building regular expert content."
+        },
+        "items": [
+          {
+            "tr": "Aylık konu ve sayfa planı",
+            "en": "Monthly topic and page plan"
+          },
+          {
+            "tr": "Ayda 4 içerik birimi",
+            "en": "4 content units per month"
+          },
+          {
+            "tr": "Aylık değerlendirme ve güncelleme listesi",
+            "en": "Monthly review and update list"
+          }
+        ]
+      },
+      {
+        "id": "organic",
+        "name": {
+          "tr": "Organik Gelişim",
+          "en": "Organic Development"
+        },
+        "audience": {
+          "tr": "Teknik ve editoryal çalışmayı birleştiren ekipler.",
+          "en": "Teams combining technical and editorial work."
+        },
+        "items": [
+          {
+            "tr": "Ayda 6 içerik birimi",
+            "en": "6 content units per month"
+          },
+          {
+            "tr": "Ayda 6 saat teknik uygulama",
+            "en": "6 hours of technical implementation per month"
+          },
+          {
+            "tr": "Aylık rapor ve öncelik toplantısı",
+            "en": "Monthly report and prioritisation meeting"
+          }
+        ]
+      }
+    ],
+    "limits": {
+      "tr": "Bir içerik birimi en fazla 1.200 kelimelik yeni sayfa veya kapsamlı revizyondur; 1 toplu revizyon turu içerir. Yeniden site yapımı ve ücretli yayınlar hariçtir. Sıralama garantisi verilmez.",
+      "en": "A content unit is a new page or substantial revision of up to 1,200 words, with 1 consolidated revision round. Site rebuilds and paid placements are excluded. Rankings are not guaranteed."
+    },
+    "faq": [
+      {
+        "question": {
+          "tr": "GEO ile farkı nedir?",
+          "en": "How does this differ from GEO?"
+        },
+        "answer": {
+          "tr": "SEO organik arama yapısı ve içeriğine odaklanır. GEO, yapay zekâ cevaplarında marka anılması ve kaynak bağlantılarını ayrıca ölçer. İki çalışma aynı plan içinde koordine edilebilir.",
+          "en": "SEO focuses on organic search structure and content. GEO separately measures brand mentions and citations in AI answers. Both can be coordinated in one plan."
+        }
+      }
+    ],
+    "projects": []
+  },
+  {
+    "id": "campaign",
+    "href": "/creative-campaigns",
+    "trPath": "/hizmetler/yaratici-kampanyalar",
+    "enPath": "/services/creative-campaigns",
+    "label": {
+      "tr": "Yaratıcı kampanyalar",
+      "en": "Creative campaigns"
+    },
+    "category": "communication",
+    "title": {
+      "tr": "Bir fikir. İnsanlarla buluşacak pek çok biçim.",
+      "en": "One idea. Many ways to meet people."
+    },
+    "description": {
+      "tr": "Kampanyayı bir görselle sınırlamayız. İnsanların katılacağı fikri, markanın mesajını ve yayınlanacağı kanalları birlikte geliştiririz.",
+      "en": "We look beyond a single visual, developing the idea people can engage with, the brand message and the channels together."
+    },
+    "deliverables": [
+      {
+        "tr": "Kampanya hedefi ve yaratıcı brief",
+        "en": "Campaign objective and creative brief"
+      },
+      {
+        "tr": "Ana fikir, metin ve görsel yön",
+        "en": "Core idea, copy and visual direction"
+      },
+      {
+        "tr": "Dijital, sosyal ve açıkhava uyarlamaları",
+        "en": "Digital, social and outdoor adaptations"
+      },
+      {
+        "tr": "Prodüksiyon ve yayın koordinasyonu",
+        "en": "Production and rollout coordination"
+      }
+    ],
+    "plans": [
+      {
+        "id": "concept",
+        "name": {
+          "tr": "Kampanya Fikri",
+          "en": "Campaign Concept"
+        },
+        "audience": {
+          "tr": "Bir lansmanın veya iletişim döneminin yaratıcı yönü.",
+          "en": "Creative direction for a launch or communication period."
+        },
+        "items": [
+          {
+            "tr": "1 onaylı brief için yaratıcı yön",
+            "en": "Creative direction for 1 approved brief"
+          },
+          {
+            "tr": "Ana mesaj, ana görsel ve örnek uygulamalar",
+            "en": "Core message, key visual and sample applications"
+          },
+          {
+            "tr": "Üretim ve kanal önerisi",
+            "en": "Production and channel recommendation"
+          }
+        ]
+      },
+      {
+        "id": "rollout",
+        "name": {
+          "tr": "Kampanya Yayılımı",
+          "en": "Campaign Rollout"
+        },
+        "audience": {
+          "tr": "Onaylı fikri farklı temas noktalarına taşımak.",
+          "en": "Extend an approved idea across touchpoints."
+        },
+        "items": [
+          {
+            "tr": "Ana fikir ve mesaj sistemi",
+            "en": "Core idea and messaging system"
+          },
+          {
+            "tr": "Kararlaştırılan kanal / format matrisi",
+            "en": "Agreed channel / format matrix"
+          },
+          {
+            "tr": "Üretim aktarımı ve yayın takvimi",
+            "en": "Production handover and rollout calendar"
+          }
+        ]
+      }
+    ],
+    "limits": {
+      "tr": "Medya satın alma, çekim, oyuncu, müzik, mekân ve üçüncü taraf üretimleri ayrı bütçelenir. Uyarlama adetleri ve kullanım hakları teklifte belirtilir.",
+      "en": "Media buying, shoots, talent, music, locations and third-party production are budgeted separately. Adaptation counts and usage rights are stated in the proposal."
+    },
+    "faq": [
+      {
+        "question": {
+          "tr": "Reklam bütçesi pakette mi?",
+          "en": "Is media spend included?"
+        },
+        "answer": {
+          "tr": "Yaratıcı çalışma ile medya yönetimi ayrı kapsamdır. Birlikte planlanabilir; bütçeleri ayrı gösterilir.",
+          "en": "Creative work and media management are separate scopes. They can be planned together with separate budgets."
+        }
+      }
+    ],
+    "projects": []
+  },
+  {
+    "id": "production",
+    "href": "/photo-video",
+    "trPath": "/hizmetler/fotograf-video",
+    "enPath": "/services/photo-video",
+    "label": {
+      "tr": "Fotoğraf, video ve hareketli tasarım",
+      "en": "Photography, video and motion"
+    },
+    "category": "communication",
+    "title": {
+      "tr": "Markanın anlatacağı şeyi görünür kılalım.",
+      "en": "Make the brand story visible."
+    },
+    "description": {
+      "tr": "Ürün fotoğrafı, marka filmi, kısa video ve hareketli grafik ihtiyaçlarını aynı yaratıcı fikirden hareketle planlarız. Çekim ve yapım modelini işin gerektirdiği ölçekte kurarız.",
+      "en": "We plan product photography, brand films, short-form video and motion graphics around one creative direction, shaping production to the project."
+    },
+    "deliverables": [
+      {
+        "tr": "Çekim brief’i, senaryo ve görsel yön",
+        "en": "Production brief, script and visual direction"
+      },
+      {
+        "tr": "Ürün ve marka fotoğrafı planlaması",
+        "en": "Product and brand photography planning"
+      },
+      {
+        "tr": "Kurgu, renk ve hareketli grafik",
+        "en": "Editing, colour and motion graphics"
+      },
+      {
+        "tr": "Kanal bazlı çıktı ve kullanım hakkı planı",
+        "en": "Channel deliverables and usage-rights plan"
+      }
+    ],
+    "plans": [],
+    "limits": {
+      "tr": "Her prodüksiyon; çekim günü, ürün / sahne adedi, ekip, mekân, format, süre ve kullanım hakkıyla ayrı teklif edilir. Stok lisansları, oyuncu ve özel ekipman ayrıca gösterilir.",
+      "en": "Each production is quoted by shoot days, products / scenes, crew, location, formats, duration and usage rights. Stock licences, talent and specialist equipment are listed separately."
+    },
+    "faq": [
+      {
+        "question": {
+          "tr": "Ürün çekimi mi, mockup mı?",
+          "en": "Photography or mockups?"
+        },
+        "answer": {
+          "tr": "İhtiyaca göre gerçek ürün çekimi, tasarım mockup’ı veya hareketli sunum planlanır. Hangi yöntemin kullanılacağı baştan belirtilir.",
+          "en": "Physical product photography, design mockups or motion presentations are planned as appropriate. The method is specified in advance."
+        }
+      }
+    ],
+    "projects": [
+      "beckers",
+      "just-waffle"
+    ]
+  },
+  {
+    "id": "editorial",
+    "href": "/editorial-design",
+    "trPath": "/hizmetler/katalog-yayin-tasarimi",
+    "enPath": "/services/editorial-design",
+    "label": {
+      "tr": "Katalog ve yayın tasarımı",
+      "en": "Catalogue and editorial design"
+    },
+    "category": "brand",
+    "title": {
+      "tr": "Bilgiyi okunur, markayı görünür kılalım.",
+      "en": "Make information readable and the brand visible."
+    },
+    "description": {
+      "tr": "Katalog, kitap, rapor ve sunumları içerik hiyerarşisinden başlayarak tasarlarız. Yoğun teknik bilgiyi anlaşılır bir düzenle, yayın serilerini ortak bir dille ele alırız.",
+      "en": "We design catalogues, books, reports and presentations from the information hierarchy up, giving technical content a clear structure and publication series a shared language."
+    },
+    "deliverables": [
+      {
+        "tr": "İçerik mimarisi ve yayın şablonu",
+        "en": "Content architecture and publication template"
+      },
+      {
+        "tr": "Kapak, sayfa ve tipografik sistem",
+        "en": "Cover, page and typographic system"
+      },
+      {
+        "tr": "Tablo, grafik ve bilgi görselleştirme",
+        "en": "Tables, charts and information design"
+      },
+      {
+        "tr": "Baskı ve dijital teslim dosyaları",
+        "en": "Print and digital delivery files"
+      }
+    ],
+    "plans": [
+      {
+        "id": "presentation",
+        "name": {
+          "tr": "Kurumsal Sunum",
+          "en": "Corporate Presentation"
+        },
+        "audience": {
+          "tr": "Hikâyesini toplantıda veya satışta anlatan ekipler.",
+          "en": "Teams presenting their story in meetings or sales."
+        },
+        "items": [
+          {
+            "tr": "En fazla 20 slayt için tasarım",
+            "en": "Design for up to 20 slides"
+          },
+          {
+            "tr": "Ana şablon ve grafik dili",
+            "en": "Master template and graphic language"
+          },
+          {
+            "tr": "Düzenlenebilir dosya ve PDF",
+            "en": "Editable file and PDF"
+          }
+        ]
+      },
+      {
+        "id": "publication",
+        "name": {
+          "tr": "Katalog / Rapor",
+          "en": "Catalogue / Report"
+        },
+        "audience": {
+          "tr": "Tek bir yayın hazırlayan markalar.",
+          "en": "Brands preparing one publication."
+        },
+        "items": [
+          {
+            "tr": "En fazla 32 sayfa için mizanpaj",
+            "en": "Layout for up to 32 pages"
+          },
+          {
+            "tr": "Kapak ve temel tablo / grafik düzeni",
+            "en": "Cover and core table / chart styling"
+          },
+          {
+            "tr": "Baskı PDF’i ve dijital PDF",
+            "en": "Print PDF and digital PDF"
+          }
+        ]
+      },
+      {
+        "id": "series",
+        "name": {
+          "tr": "Yayın Serisi",
+          "en": "Publication Series"
+        },
+        "audience": {
+          "tr": "Birden fazla kitapçık veya düzenli rapor yayımlayan kurumlar.",
+          "en": "Organisations publishing several booklets or recurring reports."
+        },
+        "items": [
+          {
+            "tr": "Seri kimliği ve ana sayfa sistemi",
+            "en": "Series identity and master page system"
+          },
+          {
+            "tr": "Başlık / dil / sayfa matrisi",
+            "en": "Title / language / page matrix"
+          },
+          {
+            "tr": "Örnek yayın ve uyarlama kılavuzu",
+            "en": "Pilot publication and adaptation guide"
+          }
+        ]
+      }
+    ],
+    "limits": {
+      "tr": "Metin, çeviri, görsel lisansı ve baskı ayrıca kapsamlandırılır. Tablo / grafik yoğunluğu ve içerik değişiklikleri toplam sayfa adediyle birlikte fiyatlanır.",
+      "en": "Copy, translation, image licences and printing are scoped separately. Table / chart complexity and content changes are priced alongside page counts."
+    },
+    "faq": [
+      {
+        "question": {
+          "tr": "Seriyi aynı anda hazırlayabilir miyiz?",
+          "en": "Can we develop a series together?"
+        },
+        "answer": {
+          "tr": "Evet. Önce ortak sistemi onaylar, bir pilot yayını tamamlar ve diğer başlıklara uygularız.",
+          "en": "Yes. We approve the shared system, complete a pilot publication and then apply it to the remaining titles."
+        }
+      }
+    ],
+    "projects": [
+      "kabev",
+      "elba"
+    ]
+  },
+  {
+    "id": "spatial",
+    "href": "/spatial-design",
+    "trPath": "/hizmetler/mekansal-marka-deneyimi",
+    "enPath": "/services/spatial-design",
+    "label": {
+      "tr": "Mekânsal marka deneyimi",
+      "en": "Spatial brand experience"
+    },
+    "category": "experience",
+    "title": {
+      "tr": "Marka, mekâna da yayılsın.",
+      "en": "Let the brand extend into space."
+    },
+    "description": {
+      "tr": "Mağaza, tabela, yönlendirme, araç ve fuar uygulamalarını ortak marka diliyle tasarlarız. Grafik fikir ile malzeme, ölçek ve kullanım koşullarını birlikte düşünürüz.",
+      "en": "We design retail graphics, signage, wayfinding, vehicles and exhibitions with one brand language, considering materials, scale and use conditions together."
+    },
+    "deliverables": [
+      {
+        "tr": "Mekân ve temas noktası incelemesi",
+        "en": "Space and touchpoint review"
+      },
+      {
+        "tr": "Tabela, yönlendirme ve çevresel grafik",
+        "en": "Signage, wayfinding and environmental graphics"
+      },
+      {
+        "tr": "Araç ve fuar grafik uygulamaları",
+        "en": "Vehicle and exhibition graphics"
+      },
+      {
+        "tr": "Malzeme önerisi, mockup ve üretim aktarımı",
+        "en": "Material recommendations, mockups and production handover"
+      }
+    ],
+    "plans": [],
+    "limits": {
+      "tr": "Ölçüm, uygulama yüzeyi, malzeme ve üretici koşullarına göre proje bazlı teklif edilir. Mimari / statik mühendislik, ruhsat, imalat ve montaj ayrı uzmanlık ve giderlerdir.",
+      "en": "Quoted by measurements, surfaces, materials and fabrication requirements. Architectural / structural engineering, permits, fabrication and installation are separate disciplines and costs."
+    },
+    "faq": [
+      {
+        "question": {
+          "tr": "Uygulamayı da takip ediyor musunuz?",
+          "en": "Do you coordinate production?"
+        },
+        "answer": {
+          "tr": "Üreticiyle tasarım aktarımı ve numune değerlendirmesi kapsama eklenebilir. İmalat ve montajın sınırları ayrıca yazılır.",
+          "en": "Design handover to fabricators and sample reviews can be included. Fabrication and installation responsibilities are specified separately."
+        }
+      }
+    ],
+    "projects": [
+      "elba",
+      "just-waffle"
+    ]
+  },
+  {
+    "id": "communications",
+    "href": "/brand-communications",
+    "trPath": "/hizmetler/marka-iletisimi",
+    "enPath": "/services/brand-communications",
+    "label": {
+      "tr": "Marka iletişimi ve iş birlikleri",
+      "en": "Brand communications and partnerships"
+    },
+    "category": "communication",
+    "title": {
+      "tr": "Doğru hikâye, doğru bağlamda karşılık bulur.",
+      "en": "The right story finds relevance in the right context."
+    },
+    "description": {
+      "tr": "Markanın mesajlarını, yayın gündemini ve iş birliklerini ortak bir iletişim planına dönüştürürüz. Basın, içerik üreticileri ve etkinlik temaslarını markanın anlatısıyla birlikte planlarız.",
+      "en": "We connect brand messages, editorial moments and partnerships in one communication plan, considering press, creators and events alongside the brand story."
+    },
+    "deliverables": [
+      {
+        "tr": "İletişim gündemi ve mesaj çerçevesi",
+        "en": "Communication agenda and messaging framework"
+      },
+      {
+        "tr": "Basın dosyası ve kurumsal içerik",
+        "en": "Press materials and corporate content"
+      },
+      {
+        "tr": "Creator / iş birliği brief’leri",
+        "en": "Creator / partnership briefs"
+      },
+      {
+        "tr": "Lansman ve etkinlik iletişimi planı",
+        "en": "Launch and event communication plan"
+      }
+    ],
+    "plans": [],
+    "limits": {
+      "tr": "Yayın veya haber garantisi verilmez. Creator, etkinlik, dağıtım ve üçüncü taraf bedelleri ayrı onaylanır. İletişim / erişim çalışmasının sorumlulukları teklif içinde netleştirilir.",
+      "en": "Coverage is not guaranteed. Creator, event, distribution and third-party costs require separate approval. Outreach responsibilities are specified in the proposal."
+    },
+    "faq": [
+      {
+        "question": {
+          "tr": "Sosyal medya yönetimiyle aynı mı?",
+          "en": "Is this the same as social media management?"
+        },
+        "answer": {
+          "tr": "Bu hizmet mesaj, gündem ve iş birliği planına odaklanır. Düzenli sosyal içerik ve hesap yönetimi ayrı paketlerle yürütülür.",
+          "en": "This service focuses on messaging, the communication agenda and partnerships. Regular social content and account management use separate packages."
+        }
+      }
+    ],
+    "projects": []
+  },
+  {
+    "id": "automation",
+    "href": "/ai-automation",
+    "trPath": "/hizmetler/yapay-zeka-otomasyon",
+    "enPath": "/services/ai-automation",
+    "label": {
+      "tr": "Yapay zekâ ve otomasyon",
+      "en": "AI and automation"
+    },
+    "category": "digital",
+    "title": {
+      "tr": "Tekrarlanan işi azaltalım. Kararı insanda tutalım.",
+      "en": "Reduce repetitive work. Keep people in control."
+    },
+    "description": {
+      "tr": "İçerik, bilgi ve operasyon akışlarındaki tekrarları inceleriz. Yapay zekâ destekli araçları mevcut sistemlere bağlarken veri erişimini, insan onayını ve ölçülebilir bir pilotu birlikte tasarlarız.",
+      "en": "We examine repetitive content, knowledge and operational workflows, designing access controls, human review and a measurable pilot as AI tools connect with existing systems."
+    },
+    "deliverables": [
+      {
+        "tr": "İş akışı ve veri erişimi keşfi",
+        "en": "Workflow and data-access discovery"
+      },
+      {
+        "tr": "Prototip, entegrasyon ve onay adımları",
+        "en": "Prototype, integration and approval steps"
+      },
+      {
+        "tr": "Örnek veriyle doğrulama ve hata senaryoları",
+        "en": "Validation with sample data and failure cases"
+      },
+      {
+        "tr": "Kullanım kılavuzu, izleme ve ekip aktarımı",
+        "en": "Usage guide, monitoring and team handover"
+      }
+    ],
+    "plans": [
+      {
+        "id": "assessment",
+        "name": {
+          "tr": "Otomasyon Keşfi",
+          "en": "Automation Discovery"
+        },
+        "audience": {
+          "tr": "Hangi işin otomasyona uygun olduğunu belirlemek.",
+          "en": "Identify which work is suitable for automation."
+        },
+        "items": [
+          {
+            "tr": "1 iş akışının haritalanması",
+            "en": "Mapping of 1 workflow"
+          },
+          {
+            "tr": "Veri, erişim ve insan onayı ihtiyaçları",
+            "en": "Data, access and human-review requirements"
+          },
+          {
+            "tr": "Pilot önerisi ve kapsam dokümanı",
+            "en": "Pilot proposal and scope document"
+          }
+        ]
+      },
+      {
+        "id": "pilot",
+        "name": {
+          "tr": "Kontrollü Pilot",
+          "en": "Controlled Pilot"
+        },
+        "audience": {
+          "tr": "Tek bir kullanım senaryosunu sınırlı veriyle sınamak.",
+          "en": "Test one use case with limited data."
+        },
+        "items": [
+          {
+            "tr": "1 kullanım senaryosu ve seçilen bağlantılar",
+            "en": "1 use case and selected connections"
+          },
+          {
+            "tr": "Test verisi ve başarı / hata ölçütleri",
+            "en": "Test data and success / failure criteria"
+          },
+          {
+            "tr": "İnsan onayı ve pilot aktarımı",
+            "en": "Human review and pilot handover"
+          }
+        ]
+      },
+      {
+        "id": "operations",
+        "name": {
+          "tr": "Canlı İş Akışı",
+          "en": "Production Workflow"
+        },
+        "audience": {
+          "tr": "Doğrulanmış pilotu kontrollü kullanıma taşımak.",
+          "en": "Move a validated pilot into controlled use."
+        },
+        "items": [
+          {
+            "tr": "Yetki, kayıt ve hata yönetimi",
+            "en": "Permissions, logging and error handling"
+          },
+          {
+            "tr": "Kararlaştırılan sistem entegrasyonları",
+            "en": "Agreed system integrations"
+          },
+          {
+            "tr": "İzleme, kullanım eğitimi ve destek kapsamı",
+            "en": "Monitoring, usage training and support scope"
+          }
+        ]
+      }
+    ],
+    "limits": {
+      "tr": "Model / API kullanımı, abonelikler ve altyapı ayrı giderlerdir. Kişisel veri, gizlilik ve erişim izinleri projeye göre değerlendirilir; otomatik sonuçların doğruluğu garanti edilmez.",
+      "en": "Model / API usage, subscriptions and infrastructure are separate costs. Personal data, privacy and access permissions are evaluated per project; automated output accuracy is not guaranteed."
+    },
+    "faq": [
+      {
+        "question": {
+          "tr": "İnsan onayı olmadan çalışır mı?",
+          "en": "Does it operate without human approval?"
+        },
+        "answer": {
+          "tr": "Gerekli kontrol adımları akışın parçasıdır. Dışarıya mesaj, yayın veya önemli kayıt değişikliği gibi işlemler için onay sınırları baştan kurulur.",
+          "en": "Review steps are part of the workflow. Approval boundaries for external messages, publication and consequential record changes are established in advance."
+        }
+      }
+    ],
+    "projects": []
+  },
+  {
+    "id": "ux",
+    "href": "/ux-ui-design",
+    "trPath": "/hizmetler/kullanici-deneyimi-arayuz",
+    "enPath": "/services/ux-ui-design",
+    "label": {
+      "tr": "Kullanıcı deneyimi ve arayüz",
+      "en": "UX and interface design"
+    },
+    "category": "digital",
+    "title": {
+      "tr": "Daha az sürtünme. Daha anlaşılır bir deneyim.",
+      "en": "Less friction. A clearer experience."
+    },
+    "description": {
+      "tr": "İnsanların bir üründe ne yapmak istediğini ve nerede takıldığını inceleriz. Araştırmayı akışlara, prototiplere ve geliştirilebilir bir arayüz sistemine dönüştürürüz.",
+      "en": "We examine what people need to do and where they struggle, translating research into flows, prototypes and an interface system ready for development."
+    },
+    "deliverables": [
+      {
+        "tr": "Kullanıcı yolculuğu ve kullanılabilirlik incelemesi",
+        "en": "User journey and usability review"
+      },
+      {
+        "tr": "Bilgi mimarisi ve ekran akışları",
+        "en": "Information architecture and screen flows"
+      },
+      {
+        "tr": "Etkileşimli prototip ve test planı",
+        "en": "Interactive prototype and test plan"
+      },
+      {
+        "tr": "Arayüz sistemi ve geliştirici aktarımı",
+        "en": "Interface system and developer handover"
+      }
+    ],
+    "plans": [
+      {
+        "id": "review",
+        "name": {
+          "tr": "Deneyim İncelemesi",
+          "en": "Experience Review"
+        },
+        "audience": {
+          "tr": "Mevcut web veya uygulamasındaki sorunları belirlemek.",
+          "en": "Identify issues in an existing website or app."
+        },
+        "items": [
+          {
+            "tr": "1 temel yolculuğun uzman incelemesi",
+            "en": "Expert review of 1 core journey"
+          },
+          {
+            "tr": "Öncelikli sorun ve iyileştirme listesi",
+            "en": "Prioritised issue and improvement list"
+          },
+          {
+            "tr": "Öneri akışları; yazılım geliştirme hariç",
+            "en": "Recommended flows; software development excluded"
+          }
+        ]
+      },
+      {
+        "id": "prototype",
+        "name": {
+          "tr": "Akış ve Prototip",
+          "en": "Flows and Prototype"
+        },
+        "audience": {
+          "tr": "Yeni bir deneyimi geliştirmeden önce sınamak.",
+          "en": "Test a new experience before development."
+        },
+        "items": [
+          {
+            "tr": "1 temel yolculuk ve en fazla 12 ekran",
+            "en": "1 core journey and up to 12 screens"
+          },
+          {
+            "tr": "Tıklanabilir prototip",
+            "en": "Clickable prototype"
+          },
+          {
+            "tr": "Test planı ve 1 değerlendirme turu",
+            "en": "Test plan and 1 review round"
+          }
+        ]
+      },
+      {
+        "id": "system",
+        "name": {
+          "tr": "Arayüz Sistemi",
+          "en": "Interface System"
+        },
+        "audience": {
+          "tr": "Birden fazla ekran ve ekibi aynı dilde buluşturmak.",
+          "en": "Unite screens and teams around one interface language."
+        },
+        "items": [
+          {
+            "tr": "Bileşen ve durum envanteri",
+            "en": "Component and state inventory"
+          },
+          {
+            "tr": "Öncelikli ekranlar ve tasarım sistemi",
+            "en": "Priority screens and design system"
+          },
+          {
+            "tr": "Kullanım notları ve geliştirici aktarımı",
+            "en": "Usage notes and developer handover"
+          }
+        ]
+      }
+    ],
+    "limits": {
+      "tr": "Kullanıcı katılımcısı bulma, teşvik, özel araştırma araçları ve yazılım geliştirme ayrıca kapsamlandırılır. Ekran ve durum adedi teklifte belirlenir.",
+      "en": "Participant recruitment, incentives, specialist research tools and software development are scoped separately. Screen and state counts are agreed in the proposal."
+    },
+    "faq": [
+      {
+        "question": {
+          "tr": "Arayüz tasarımı yazılımla birlikte mi?",
+          "en": "Does interface design include development?"
+        },
+        "answer": {
+          "tr": "Bu sayfadaki kapsam tasarım ve aktarım içindir. Web veya uygulama geliştirme hizmetiyle birleştirilebilir.",
+          "en": "These scopes cover design and handover. They can be combined with web or application development."
+        }
+      }
+    ],
+    "projects": []
+  },
+  {
+    "id": "media",
+    "href": "/media-planning",
+    "trPath": "/hizmetler/medya-planlama",
+    "enPath": "/services/media-planning",
+    "label": {
+      "tr": "Medya planlama ve ölçüm",
+      "en": "Media planning and measurement"
+    },
+    "category": "growth",
+    "title": {
+      "tr": "Her kanalda olmak yerine, doğru yerde karşılık bulalım.",
+      "en": "Find relevance in the right places."
+    },
+    "description": {
+      "tr": "Kitle, mesaj, zamanlama ve bütçeyi ortak bir medya planında buluştururuz. Dijital kanallarla birlikte ihtiyaç halinde açıkhava, yayın ve diğer temas noktalarını değerlendirecek ölçüm çerçevesini kurarız.",
+      "en": "We connect audiences, messages, timing and budget in one media plan, building a measurement framework that can include outdoor, publishing and other touchpoints alongside digital channels."
+    },
+    "deliverables": [
+      {
+        "tr": "Hedef, kitle ve kanal çerçevesi",
+        "en": "Objectives, audiences and channel framework"
+      },
+      {
+        "tr": "Bütçe senaryoları ve yayın takvimi",
+        "en": "Budget scenarios and rollout calendar"
+      },
+      {
+        "tr": "Format ihtiyaçları ve ölçüm planı",
+        "en": "Format requirements and measurement plan"
+      },
+      {
+        "tr": "Yayın / kampanya sonuç değerlendirmesi",
+        "en": "Rollout / campaign results review"
+      }
+    ],
+    "plans": [
+      {
+        "id": "roadmap",
+        "name": {
+          "tr": "Medya Yol Haritası",
+          "en": "Media Roadmap"
+        },
+        "audience": {
+          "tr": "Kampanya bütçesini nereye ayıracağını belirlemek.",
+          "en": "Decide where to allocate campaign budget."
+        },
+        "items": [
+          {
+            "tr": "1 kampanya brief’i için kanal planı",
+            "en": "Channel plan for 1 campaign brief"
+          },
+          {
+            "tr": "Bütçe dağılım senaryoları",
+            "en": "Budget-allocation scenarios"
+          },
+          {
+            "tr": "Ölçüm göstergeleri ve takvim",
+            "en": "Measurement indicators and calendar"
+          }
+        ]
+      },
+      {
+        "id": "coordination",
+        "name": {
+          "tr": "Kanal Koordinasyonu",
+          "en": "Channel Coordination"
+        },
+        "audience": {
+          "tr": "Birden fazla kanalı ortak planda yönetmek.",
+          "en": "Coordinate multiple channels in one plan."
+        },
+        "items": [
+          {
+            "tr": "Onaylı kanal ve bütçe matrisi",
+            "en": "Approved channel and budget matrix"
+          },
+          {
+            "tr": "Yaratıcı format ve yayın koordinasyonu",
+            "en": "Creative-format and rollout coordination"
+          },
+          {
+            "tr": "Dönemsel değerlendirme ve sonraki adımlar",
+            "en": "Periodic review and next steps"
+          }
+        ]
+      }
+    ],
+    "limits": {
+      "tr": "Medya harcaması, yayıncı / mecra satın alımı, araştırma araçları ve yaratıcı üretim dahil değildir. Satın alma sorumluluğu ve yönetim bedeli ayrı yazılır; Google Ads ve dijital reklam yönetimi kapsamlarıyla çift ücretlendirilmez.",
+      "en": "Media spend, publisher / placement purchases, research tools and creative production are excluded. Buying responsibilities and management fees are stated separately, with no duplicate scope charging against Google Ads or digital advertising management."
+    },
+    "faq": [
+      {
+        "question": {
+          "tr": "Reklam yönetiminin yerine mi geçiyor?",
+          "en": "Does this replace advertising management?"
+        },
+        "answer": {
+          "tr": "Planlama, bütçe ve kanallar arası koordinasyona odaklanır. Hesap içindeki günlük reklam yönetimi ilgili hizmetle ayrıca tanımlanır.",
+          "en": "Planning focuses on budget and cross-channel coordination. Day-to-day account management is defined through the relevant service."
+        }
+      }
+    ],
+    "projects": []
+  }
+]

@@ -125,3 +125,8 @@
 button.main-menu__link--direct { background: none; border: 0; padding: 0; width: 100%; text-align: left; color: inherit; }
 .main-menu__link:focus-visible, .submenu__item a:focus-visible { outline: 2px solid currentColor; outline-offset: 6px; }
 .submenu__item a[aria-current="page"] { text-decoration: underline; text-underline-offset: .3em; }
+
+.agency-service-menu { font-size: 0; }
+.agency-service-menu .submenu__item { display: inline-flex; vertical-align: top; box-sizing: border-box; width: 50%; padding: .35rem 1.5rem .7rem 0; margin: 0; }
+.agency-service-menu .submenu__item a { font-size: clamp(1.6rem,1.5vw,2.1rem); line-height: 1.4; }
+@media(max-width:600px){ .agency-service-menu .submenu__item { width: 100%; } .agency-service-menu .submenu__item a { font-size: 1.8rem; } }

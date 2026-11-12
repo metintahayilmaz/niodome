@@ -1,0 +1,372 @@
+[
+  {
+    "service": "agency-strategy",
+    "label": {
+      "tr": "Marka stratejisi",
+      "en": "Brand strategy"
+    },
+    "plans": [
+      {
+        "id": "discovery",
+        "name": {
+          "tr": "Marka Keşfi",
+          "en": "Brand Discovery"
+        }
+      },
+      {
+        "id": "positioning",
+        "name": {
+          "tr": "Konumlandırma",
+          "en": "Positioning"
+        }
+      },
+      {
+        "id": "architecture",
+        "name": {
+          "tr": "Marka Mimarisi",
+          "en": "Brand Architecture"
+        }
+      }
+    ]
+  },
+  {
+    "service": "agency-identity",
+    "label": {
+      "tr": "Logo ve marka kimliği",
+      "en": "Logo and brand identity"
+    },
+    "plans": [
+      {
+        "id": "signature",
+        "name": {
+          "tr": "Marka İmzası",
+          "en": "Brand Signature"
+        }
+      },
+      {
+        "id": "system",
+        "name": {
+          "tr": "Kimlik Sistemi",
+          "en": "Identity System"
+        }
+      },
+      {
+        "id": "world",
+        "name": {
+          "tr": "Marka Dünyası",
+          "en": "Brand World"
+        }
+      }
+    ]
+  },
+  {
+    "service": "agency-packaging",
+    "label": {
+      "tr": "Ambalaj tasarımı",
+      "en": "Packaging design"
+    },
+    "plans": [
+      {
+        "id": "single",
+        "name": {
+          "tr": "Tek Ürün",
+          "en": "Single Product"
+        }
+      },
+      {
+        "id": "range",
+        "name": {
+          "tr": "Ürün Ailesi",
+          "en": "Product Range"
+        }
+      },
+      {
+        "id": "portfolio",
+        "name": {
+          "tr": "Ambalaj Sistemi",
+          "en": "Packaging System"
+        }
+      }
+    ]
+  },
+  {
+    "service": "agency-web",
+    "label": {
+      "tr": "Web tasarımı ve geliştirme",
+      "en": "Web design and development"
+    },
+    "plans": [
+      {
+        "id": "launch",
+        "name": {
+          "tr": "Lansman Sitesi",
+          "en": "Launch Website"
+        }
+      },
+      {
+        "id": "corporate",
+        "name": {
+          "tr": "Kurumsal Site",
+          "en": "Corporate Website"
+        }
+      },
+      {
+        "id": "experience",
+        "name": {
+          "tr": "Özel Web Deneyimi",
+          "en": "Custom Web Experience"
+        }
+      }
+    ]
+  },
+  {
+    "service": "agency-app",
+    "label": {
+      "tr": "Uygulama ve dijital ürün",
+      "en": "Apps and digital products"
+    },
+    "plans": [
+      {
+        "id": "discovery",
+        "name": {
+          "tr": "Ürün Keşfi",
+          "en": "Product Discovery"
+        }
+      },
+      {
+        "id": "mvp",
+        "name": {
+          "tr": "İlk Çalışan Ürün (MVP)",
+          "en": "MVP Development"
+        }
+      },
+      {
+        "id": "evolution",
+        "name": {
+          "tr": "Ürün Gelişimi",
+          "en": "Product Evolution"
+        }
+      }
+    ]
+  },
+  {
+    "service": "agency-commerce",
+    "label": {
+      "tr": "E-ticaret deneyimi",
+      "en": "E-commerce experience"
+    },
+    "plans": [
+      {
+        "id": "store",
+        "name": {
+          "tr": "Mağaza Kurulumu",
+          "en": "Store Setup"
+        }
+      },
+      {
+        "id": "brand-store",
+        "name": {
+          "tr": "Marka Mağazası",
+          "en": "Brand Store"
+        }
+      },
+      {
+        "id": "integrated",
+        "name": {
+          "tr": "Entegre Ticaret",
+          "en": "Integrated Commerce"
+        }
+      }
+    ]
+  },
+  {
+    "service": "agency-seo",
+    "label": {
+      "tr": "SEO ve içerik",
+      "en": "SEO and content"
+    },
+    "plans": [
+      {
+        "id": "audit",
+        "name": {
+          "tr": "SEO Yol Haritası",
+          "en": "SEO Roadmap"
+        }
+      },
+      {
+        "id": "content",
+        "name": {
+          "tr": "İçerik Gelişimi",
+          "en": "Content Development"
+        }
+      },
+      {
+        "id": "organic",
+        "name": {
+          "tr": "Organik Gelişim",
+          "en": "Organic Development"
+        }
+      }
+    ]
+  },
+  {
+    "service": "agency-campaign",
+    "label": {
+      "tr": "Yaratıcı kampanyalar",
+      "en": "Creative campaigns"
+    },
+    "plans": [
+      {
+        "id": "concept",
+        "name": {
+          "tr": "Kampanya Fikri",
+          "en": "Campaign Concept"
+        }
+      },
+      {
+        "id": "rollout",
+        "name": {
+          "tr": "Kampanya Yayılımı",
+          "en": "Campaign Rollout"
+        }
+      }
+    ]
+  },
+  {
+    "service": "agency-production",
+    "label": {
+      "tr": "Fotoğraf, video ve hareketli tasarım",
+      "en": "Photography, video and motion"
+    },
+    "plans": []
+  },
+  {
+    "service": "agency-editorial",
+    "label": {
+      "tr": "Katalog ve yayın tasarımı",
+      "en": "Catalogue and editorial design"
+    },
+    "plans": [
+      {
+        "id": "presentation",
+        "name": {
+          "tr": "Kurumsal Sunum",
+          "en": "Corporate Presentation"
+        }
+      },
+      {
+        "id": "publication",
+        "name": {
+          "tr": "Katalog / Rapor",
+          "en": "Catalogue / Report"
+        }
+      },
+      {
+        "id": "series",
+        "name": {
+          "tr": "Yayın Serisi",
+          "en": "Publication Series"
+        }
+      }
+    ]
+  },
+  {
+    "service": "agency-spatial",
+    "label": {
+      "tr": "Mekânsal marka deneyimi",
+      "en": "Spatial brand experience"
+    },
+    "plans": []
+  },
+  {
+    "service": "agency-communications",
+    "label": {
+      "tr": "Marka iletişimi ve iş birlikleri",
+      "en": "Brand communications and partnerships"
+    },
+    "plans": []
+  },
+  {
+    "service": "agency-automation",
+    "label": {
+      "tr": "Yapay zekâ ve otomasyon",
+      "en": "AI and automation"
+    },
+    "plans": [
+      {
+        "id": "assessment",
+        "name": {
+          "tr": "Otomasyon Keşfi",
+          "en": "Automation Discovery"
+        }
+      },
+      {
+        "id": "pilot",
+        "name": {
+          "tr": "Kontrollü Pilot",
+          "en": "Controlled Pilot"
+        }
+      },
+      {
+        "id": "operations",
+        "name": {
+          "tr": "Canlı İş Akışı",
+          "en": "Production Workflow"
+        }
+      }
+    ]
+  },
+  {
+    "service": "agency-ux",
+    "label": {
+      "tr": "Kullanıcı deneyimi ve arayüz",
+      "en": "UX and interface design"
+    },
+    "plans": [
+      {
+        "id": "review",
+        "name": {
+          "tr": "Deneyim İncelemesi",
+          "en": "Experience Review"
+        }
+      },
+      {
+        "id": "prototype",
+        "name": {
+          "tr": "Akış ve Prototip",
+          "en": "Flows and Prototype"
+        }
+      },
+      {
+        "id": "system",
+        "name": {
+          "tr": "Arayüz Sistemi",
+          "en": "Interface System"
+        }
+      }
+    ]
+  },
+  {
+    "service": "agency-media",
+    "label": {
+      "tr": "Medya planlama ve ölçüm",
+      "en": "Media planning and measurement"
+    },
+    "plans": [
+      {
+        "id": "roadmap",
+        "name": {
+          "tr": "Medya Yol Haritası",
+          "en": "Media Roadmap"
+        }
+      },
+      {
+        "id": "coordination",
+        "name": {
+          "tr": "Kanal Koordinasyonu",
+          "en": "Channel Coordination"
+        }
+      }
+    ]
+  }
+]

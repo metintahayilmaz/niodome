@@ -7,8 +7,8 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import AutoplayLoopVideo from "@/components/media/AutoplayLoopVideo";
 import { useMxdMenuGsap, useMxdMenuGsapRefs } from "@/hooks/useMxdMenuGsap";
-import advertisingCopy from "@/data/digitalAdvertising.json";
-import marketingCopy from "@/data/marketingPlans.json";
+import serviceCatalog from "@/data/serviceCatalog.json";
+import LocalizedLink from "@/components/common/LocalizedLink";
 import { useLocale } from "next-intl";
 import { siteSettings } from "@/data/siteSettings";
 import TextScramble from "@/components/animations/TextScramble";
@@ -59,11 +59,8 @@ export default function Nav({
 
   const serviceLinks = [
     { href: "/services", label: language === "tr" ? "Tüm hizmetler" : "All services" },
-    { href: "/geo", label: "GEO" },
-    { href: "/digital-advertising", label: advertisingCopy[language].label },
-    { href: "/google-ads", label: marketingCopy.google[language].label },
-    { href: "/social-media", label: marketingCopy.social[language].label },
-  ] as const;
+    ...serviceCatalog.map(service => ({href:service.href,label:service.label[language]})),
+  ];
   const g = useMxdMenuGsapRefs(links.length);
 
   const submenuSlots = useMemo(() => makeSlotters(g.menuSubmenus, g.rowCount), [g]);
@@ -178,8 +175,8 @@ export default function Nav({
                                 <Link href={link.href} className="main-menu__link main-menu__link--direct" aria-current={active ? "page" : undefined}>{label}</Link>
                               )}
                             </div>
-                            {hasChildren && <ul id="services-submenu" className="submenu" ref={submenuSlots[index]}>
-                              {serviceLinks.map(child => <li className="submenu__item" key={child.href}><Link href={child.href} aria-current={isActiveRoute(pathname, child.href) ? "page" : undefined}>{child.label}</Link></li>)}
+                            {hasChildren && <ul id="services-submenu" className="submenu agency-service-menu" ref={submenuSlots[index]}>
+                              {serviceLinks.map(child => <li className="submenu__item" key={child.href}><LocalizedLink href={child.href} aria-current={isActiveRoute(pathname, child.href) ? "page" : undefined}>{child.label}</LocalizedLink></li>)}
                             </ul>}
                             <div
                               ref={dividerSlots[index + 1]}

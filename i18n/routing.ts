@@ -1,4 +1,5 @@
 import { defineRouting } from "next-intl/routing";
+import { agencyServicePaths } from "./servicePaths";
 
 export const routing = defineRouting({
   locales: ["tr", "en"],
@@ -8,6 +9,7 @@ export const routing = defineRouting({
   localePrefix: "as-needed",
 
   pathnames: {
+    ...agencyServicePaths,
     "/": "/",
 
     "/geo": "/geo",

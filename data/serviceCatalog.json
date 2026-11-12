@@ -1,0 +1,306 @@
+[
+  {
+    "id": "geo",
+    "href": "/geo",
+    "trPath": "/geo",
+    "enPath": "/geo",
+    "label": {
+      "tr": "GEO / Yapay zekâ görünürlüğü",
+      "en": "GEO / AI visibility"
+    },
+    "category": "growth",
+    "description": {
+      "tr": "Yapay zekâ cevaplarında marka anılması ve kaynak görünürlüğü.",
+      "en": "Brand mentions and source visibility in AI answers."
+    },
+    "hasPackages": true
+  },
+  {
+    "id": "web",
+    "href": "/web-design",
+    "trPath": "/hizmetler/web-tasarimi",
+    "enPath": "/services/web-design",
+    "label": {
+      "tr": "Web tasarımı ve geliştirme",
+      "en": "Web design and development"
+    },
+    "category": "digital",
+    "description": {
+      "tr": "Sitenizi sayfa sayısıyla değil, ziyaretçinin yapmak istediği işle planlarız. İçerik, tasarım, mobil deneyim ve geliştirmeyi ortak bir akışta kurarız.",
+      "en": "We plan your website around what visitors need to do, bringing content, design, mobile experience and development into one flow."
+    },
+    "hasPackages": true
+  },
+  {
+    "id": "social",
+    "href": "/social-media",
+    "trPath": "/sosyal-medya",
+    "enPath": "/social-media",
+    "label": {
+      "tr": "Sosyal medya yönetimi",
+      "en": "Social media management"
+    },
+    "category": "communication",
+    "description": {
+      "tr": "Strateji, içerik üretimi, yayın ve topluluk yönetimi.",
+      "en": "Strategy, content production, publishing and community management."
+    },
+    "hasPackages": true
+  },
+  {
+    "id": "app",
+    "href": "/application-development",
+    "trPath": "/hizmetler/uygulama-gelistirme",
+    "enPath": "/services/application-development",
+    "label": {
+      "tr": "Uygulama ve dijital ürün",
+      "en": "Apps and digital products"
+    },
+    "category": "digital",
+    "description": {
+      "tr": "Mobil uygulama, web uygulaması ve iş araçlarını gerçek bir ihtiyacı çözmek için tasarlarız. Ürün keşfiyle başlar, öncelikli akışları prototipler ve geliştirme kapsamını görünür hale getiririz.",
+      "en": "We design mobile apps, web apps and business tools around a real need, starting with discovery, prototyping priority journeys and making the development scope clear."
+    },
+    "hasPackages": true
+  },
+  {
+    "id": "ux",
+    "href": "/ux-ui-design",
+    "trPath": "/hizmetler/kullanici-deneyimi-arayuz",
+    "enPath": "/services/ux-ui-design",
+    "label": {
+      "tr": "Kullanıcı deneyimi ve arayüz",
+      "en": "UX and interface design"
+    },
+    "category": "digital",
+    "description": {
+      "tr": "İnsanların bir üründe ne yapmak istediğini ve nerede takıldığını inceleriz. Araştırmayı akışlara, prototiplere ve geliştirilebilir bir arayüz sistemine dönüştürürüz.",
+      "en": "We examine what people need to do and where they struggle, translating research into flows, prototypes and an interface system ready for development."
+    },
+    "hasPackages": true
+  },
+  {
+    "id": "strategy",
+    "href": "/brand-strategy",
+    "trPath": "/hizmetler/marka-stratejisi",
+    "enPath": "/services/brand-strategy",
+    "label": {
+      "tr": "Marka stratejisi",
+      "en": "Brand strategy"
+    },
+    "category": "brand",
+    "description": {
+      "tr": "Markanızın hedefini, müşterinizin beklentisini ve rekabetin kurallarını birlikte inceleriz. Konumlandırmayı bir sunumda bırakmaz; kimlik, içerik ve ürün kararlarına yön veren bir çerçeveye dönüştürürüz.",
+      "en": "We examine your business ambition, customer expectations and competitive context together. Positioning becomes a framework for identity, content and product decisions, beyond the presentation."
+    },
+    "hasPackages": true
+  },
+  {
+    "id": "identity",
+    "href": "/brand-identity",
+    "trPath": "/hizmetler/marka-kimligi",
+    "enPath": "/services/brand-identity",
+    "label": {
+      "tr": "Logo ve marka kimliği",
+      "en": "Logo and brand identity"
+    },
+    "category": "brand",
+    "description": {
+      "tr": "Logo, tipografi, renk ve marka dilini birlikte tasarlarız. Kimliği kartvizitten araç giydirmeye, dijital ekrandan ambalaja uzanan kullanımlarıyla düşünürüz.",
+      "en": "We design the logo, typography, colour and brand language together, considering how the identity lives across stationery, vehicle graphics, digital screens and packaging."
+    },
+    "hasPackages": true
+  },
+  {
+    "id": "packaging",
+    "href": "/packaging-design",
+    "trPath": "/hizmetler/ambalaj-tasarimi",
+    "enPath": "/services/packaging-design",
+    "label": {
+      "tr": "Ambalaj tasarımı",
+      "en": "Packaging design"
+    },
+    "category": "brand",
+    "description": {
+      "tr": "Ambalajı raftaki ilk bakıştan kullanımdaki son ana kadar ele alırız. Marka imzasını, ürün bilgisini ve farklı çeşitleri birlikte çalışan bir sisteme dönüştürürüz.",
+      "en": "We consider packaging from the first glance on the shelf to the final moment of use, bringing the brand signature, product information and variants into one system."
+    },
+    "hasPackages": true
+  },
+  {
+    "id": "commerce",
+    "href": "/ecommerce",
+    "trPath": "/hizmetler/e-ticaret",
+    "enPath": "/services/ecommerce",
+    "label": {
+      "tr": "E-ticaret deneyimi",
+      "en": "E-commerce experience"
+    },
+    "category": "digital",
+    "description": {
+      "tr": "Kategorileri, ürün sunumunu, sepeti ve ödeme yolculuğunu birlikte tasarlarız. Mağaza deneyimini içerik, operasyon ve ölçüm ihtiyaçlarıyla aynı planda ele alırız.",
+      "en": "We design categories, product presentation, cart and checkout together, connecting the storefront experience with content, operations and measurement."
+    },
+    "hasPackages": true
+  },
+  {
+    "id": "advertising",
+    "href": "/digital-advertising",
+    "trPath": "/dijital-reklam-yonetimi",
+    "enPath": "/digital-advertising",
+    "label": {
+      "tr": "Dijital reklam yönetimi",
+      "en": "Digital advertising management"
+    },
+    "category": "growth",
+    "description": {
+      "tr": "Google, Meta, LinkedIn ve TikTok reklamlarını ortak planda yönetmek.",
+      "en": "Manage Google, Meta, LinkedIn and TikTok advertising in one plan."
+    },
+    "hasPackages": true
+  },
+  {
+    "id": "google",
+    "href": "/google-ads",
+    "trPath": "/google-ads",
+    "enPath": "/google-ads",
+    "label": {
+      "tr": "Google Ads yönetimi",
+      "en": "Google Ads management"
+    },
+    "category": "growth",
+    "description": {
+      "tr": "Arama niyetini kampanya ve dönüşüm ölçümüyle buluşturmak.",
+      "en": "Connect search intent with campaigns and conversion measurement."
+    },
+    "hasPackages": true
+  },
+  {
+    "id": "media",
+    "href": "/media-planning",
+    "trPath": "/hizmetler/medya-planlama",
+    "enPath": "/services/media-planning",
+    "label": {
+      "tr": "Medya planlama ve ölçüm",
+      "en": "Media planning and measurement"
+    },
+    "category": "growth",
+    "description": {
+      "tr": "Kitle, mesaj, zamanlama ve bütçeyi ortak bir medya planında buluştururuz. Dijital kanallarla birlikte ihtiyaç halinde açıkhava, yayın ve diğer temas noktalarını değerlendirecek ölçüm çerçevesini kurarız.",
+      "en": "We connect audiences, messages, timing and budget in one media plan, building a measurement framework that can include outdoor, publishing and other touchpoints alongside digital channels."
+    },
+    "hasPackages": true
+  },
+  {
+    "id": "seo",
+    "href": "/seo-content",
+    "trPath": "/hizmetler/seo-ve-icerik",
+    "enPath": "/services/seo-content",
+    "label": {
+      "tr": "SEO ve içerik",
+      "en": "SEO and content"
+    },
+    "category": "growth",
+    "description": {
+      "tr": "Arama niyetini, site yapısını ve uzman bilginizi birlikte ele alırız. Teknik sorunları önceliklendirir, insanların sorularına karşılık veren içerik planı kurarız.",
+      "en": "We connect search intent, site structure and your expertise, prioritising technical issues and planning content that answers real questions."
+    },
+    "hasPackages": true
+  },
+  {
+    "id": "campaign",
+    "href": "/creative-campaigns",
+    "trPath": "/hizmetler/yaratici-kampanyalar",
+    "enPath": "/services/creative-campaigns",
+    "label": {
+      "tr": "Yaratıcı kampanyalar",
+      "en": "Creative campaigns"
+    },
+    "category": "communication",
+    "description": {
+      "tr": "Kampanyayı bir görselle sınırlamayız. İnsanların katılacağı fikri, markanın mesajını ve yayınlanacağı kanalları birlikte geliştiririz.",
+      "en": "We look beyond a single visual, developing the idea people can engage with, the brand message and the channels together."
+    },
+    "hasPackages": true
+  },
+  {
+    "id": "production",
+    "href": "/photo-video",
+    "trPath": "/hizmetler/fotograf-video",
+    "enPath": "/services/photo-video",
+    "label": {
+      "tr": "Fotoğraf, video ve hareketli tasarım",
+      "en": "Photography, video and motion"
+    },
+    "category": "communication",
+    "description": {
+      "tr": "Ürün fotoğrafı, marka filmi, kısa video ve hareketli grafik ihtiyaçlarını aynı yaratıcı fikirden hareketle planlarız. Çekim ve yapım modelini işin gerektirdiği ölçekte kurarız.",
+      "en": "We plan product photography, brand films, short-form video and motion graphics around one creative direction, shaping production to the project."
+    },
+    "hasPackages": false
+  },
+  {
+    "id": "editorial",
+    "href": "/editorial-design",
+    "trPath": "/hizmetler/katalog-yayin-tasarimi",
+    "enPath": "/services/editorial-design",
+    "label": {
+      "tr": "Katalog ve yayın tasarımı",
+      "en": "Catalogue and editorial design"
+    },
+    "category": "brand",
+    "description": {
+      "tr": "Katalog, kitap, rapor ve sunumları içerik hiyerarşisinden başlayarak tasarlarız. Yoğun teknik bilgiyi anlaşılır bir düzenle, yayın serilerini ortak bir dille ele alırız.",
+      "en": "We design catalogues, books, reports and presentations from the information hierarchy up, giving technical content a clear structure and publication series a shared language."
+    },
+    "hasPackages": true
+  },
+  {
+    "id": "spatial",
+    "href": "/spatial-design",
+    "trPath": "/hizmetler/mekansal-marka-deneyimi",
+    "enPath": "/services/spatial-design",
+    "label": {
+      "tr": "Mekânsal marka deneyimi",
+      "en": "Spatial brand experience"
+    },
+    "category": "experience",
+    "description": {
+      "tr": "Mağaza, tabela, yönlendirme, araç ve fuar uygulamalarını ortak marka diliyle tasarlarız. Grafik fikir ile malzeme, ölçek ve kullanım koşullarını birlikte düşünürüz.",
+      "en": "We design retail graphics, signage, wayfinding, vehicles and exhibitions with one brand language, considering materials, scale and use conditions together."
+    },
+    "hasPackages": false
+  },
+  {
+    "id": "communications",
+    "href": "/brand-communications",
+    "trPath": "/hizmetler/marka-iletisimi",
+    "enPath": "/services/brand-communications",
+    "label": {
+      "tr": "Marka iletişimi ve iş birlikleri",
+      "en": "Brand communications and partnerships"
+    },
+    "category": "communication",
+    "description": {
+      "tr": "Markanın mesajlarını, yayın gündemini ve iş birliklerini ortak bir iletişim planına dönüştürürüz. Basın, içerik üreticileri ve etkinlik temaslarını markanın anlatısıyla birlikte planlarız.",
+      "en": "We connect brand messages, editorial moments and partnerships in one communication plan, considering press, creators and events alongside the brand story."
+    },
+    "hasPackages": false
+  },
+  {
+    "id": "automation",
+    "href": "/ai-automation",
+    "trPath": "/hizmetler/yapay-zeka-otomasyon",
+    "enPath": "/services/ai-automation",
+    "label": {
+      "tr": "Yapay zekâ ve otomasyon",
+      "en": "AI and automation"
+    },
+    "category": "digital",
+    "description": {
+      "tr": "İçerik, bilgi ve operasyon akışlarındaki tekrarları inceleriz. Yapay zekâ destekli araçları mevcut sistemlere bağlarken veri erişimini, insan onayını ve ölçülebilir bir pilotu birlikte tasarlarız.",
+      "en": "We examine repetitive content, knowledge and operational workflows, designing access controls, human review and a measurable pilot as AI tools connect with existing systems."
+    },
+    "hasPackages": true
+  }
+]

@@ -1,5 +1,3 @@
-import geoCopy from "@/data/geo.json";
-import { GeoOverview, GeoLead } from "@/components/geo/GeoSections";
 import conceptVisuals from "@/data/conceptVisuals.json";
 import { homeCover } from "@/data/homeCover";
 import AboutProcess from "@/components/homes/index-digital-agency/AboutProcess";
@@ -83,7 +81,7 @@ export default async function HomePage() {
           conceptVisuals.visuals["mola-packaging"].url,
           conceptVisuals.visuals["kiyi-website"].url,
         ][index],
-    href: "/services",
+    href: ["/brand-strategy", "/brand-communications", "/brand-identity", "/application-development"][index] ?? "/services",
   }));
 
   // --- siteSettings ---
@@ -345,8 +343,7 @@ export default async function HomePage() {
       <>
         <Hero
           coverVideo={homeCover.video}
-          scrollTargetId="geo-review"
-          geoActions
+          scrollTargetId="selected-work"
           socials={sanitySettings?.socials}
           heroSettings={{
             ...sanityHero,
@@ -357,13 +354,11 @@ export default async function HomePage() {
               height: homeCover.height,
             },
             galleryImages: sanityHero?.galleryImages ?? [],
-            headline: geoCopy[locale === "en" ? "en" : "tr"].title,
+            headline: narrative("heroTitle"),
             subline: narrative("heroSubline"),
-            scrollLabel: geoCopy[locale === "en" ? "en" : "tr"].primary,
+            scrollLabel: narrative("explore"),
           }}
         />
-        <GeoLead locale={locale} />
-        <GeoOverview locale={locale} />
         <AboutProcess
           manifestLead={narrative("homeIntro")}
           manifestSpan={narrative("homeTitle")}

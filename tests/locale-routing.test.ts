@@ -113,3 +113,37 @@ test("digital advertising links preserve language and platform enquiry", () => {
     assert.equal(rewrite ? new URL(rewrite).pathname : path, expected);
   }
 });
+
+
+test("agency service pages resolve both localised paths and retain package enquiries", () => {
+  const pairs = [
+    ["/web-design", "/hizmetler/web-tasarimi", "/services/web-design"],
+    ["/application-development", "/hizmetler/uygulama-gelistirme", "/services/application-development"],
+    ["/brand-identity", "/hizmetler/marka-kimligi", "/services/brand-identity"],
+    ["/packaging-design", "/hizmetler/ambalaj-tasarimi", "/services/packaging-design"],
+    ["/ecommerce", "/hizmetler/e-ticaret", "/services/ecommerce"],
+    ["/seo-content", "/hizmetler/seo-ve-icerik", "/services/seo-content"],
+    ["/brand-strategy", "/hizmetler/marka-stratejisi", "/services/brand-strategy"],
+    ["/creative-campaigns", "/hizmetler/yaratici-kampanyalar", "/services/creative-campaigns"],
+    ["/photo-video", "/hizmetler/fotograf-video", "/services/photo-video"],
+    ["/editorial-design", "/hizmetler/katalog-yayin-tasarimi", "/services/editorial-design"],
+    ["/spatial-design", "/hizmetler/mekansal-marka-deneyimi", "/services/spatial-design"],
+    ["/brand-communications", "/hizmetler/marka-iletisimi", "/services/brand-communications"],
+    ["/ux-ui-design", "/hizmetler/kullanici-deneyimi-arayuz", "/services/ux-ui-design"],
+    ["/media-planning", "/hizmetler/medya-planlama", "/services/media-planning"],
+    ["/ai-automation", "/hizmetler/yapay-zeka-otomasyon", "/services/ai-automation"],
+  ];
+  for (const [internal,tr,en] of pairs) {
+    assert.equal(localizeHref(internal,"tr"),tr);
+    assert.equal(localizeHref(tr+"#packages","en"),"/en"+en+"#packages");
+    assert.equal(localizeHref("/en"+en,"tr"),tr);
+    for (const [url,expected] of [[tr,"/tr"+internal],["/en"+en,"/en"+internal]]) {
+      const response=middleware(new NextRequest(`https://niodome.com${url}`,{headers:{"accept-language":"tr"}}));
+      assert.equal(response.headers.get("location"),null,url);
+      assert.equal(new URL(response.headers.get("x-middleware-rewrite")!).pathname,expected,url);
+      assert.equal(response.headers.get("X-Robots-Tag"),null,url);
+    }
+  }
+  assert.equal(localizeHref("/contact?service=agency-web&plan=corporate","tr"),"/iletisim?service=agency-web&plan=corporate");
+  assert.equal(localizeHref("/iletisim?service=agency-app&plan=mvp","en"),"/en/contact?service=agency-app&plan=mvp");
+});

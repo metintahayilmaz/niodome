@@ -1,0 +1,17 @@
+export const agencyServicePaths = {
+  "/brand-strategy": { tr: "/hizmetler/marka-stratejisi", en: "/services/brand-strategy" },
+  "/brand-identity": { tr: "/hizmetler/marka-kimligi", en: "/services/brand-identity" },
+  "/packaging-design": { tr: "/hizmetler/ambalaj-tasarimi", en: "/services/packaging-design" },
+  "/web-design": { tr: "/hizmetler/web-tasarimi", en: "/services/web-design" },
+  "/application-development": { tr: "/hizmetler/uygulama-gelistirme", en: "/services/application-development" },
+  "/ecommerce": { tr: "/hizmetler/e-ticaret", en: "/services/ecommerce" },
+  "/seo-content": { tr: "/hizmetler/seo-ve-icerik", en: "/services/seo-content" },
+  "/creative-campaigns": { tr: "/hizmetler/yaratici-kampanyalar", en: "/services/creative-campaigns" },
+  "/photo-video": { tr: "/hizmetler/fotograf-video", en: "/services/photo-video" },
+  "/editorial-design": { tr: "/hizmetler/katalog-yayin-tasarimi", en: "/services/editorial-design" },
+  "/spatial-design": { tr: "/hizmetler/mekansal-marka-deneyimi", en: "/services/spatial-design" },
+  "/brand-communications": { tr: "/hizmetler/marka-iletisimi", en: "/services/brand-communications" },
+  "/ai-automation": { tr: "/hizmetler/yapay-zeka-otomasyon", en: "/services/ai-automation" },
+  "/ux-ui-design": { tr: "/hizmetler/kullanici-deneyimi-arayuz", en: "/services/ux-ui-design" },
+  "/media-planning": { tr: "/hizmetler/medya-planlama", en: "/services/media-planning" },
+} as const;
