@@ -2,20 +2,444 @@
   {
     "_id": "niodome-project-beckers",
     "_type": "project",
-    "isDemo": false,
+    "bgImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-8f447b92bd3eeda8c8c6c7bdd1289557de59837b-2362x1575-jpg",
+        "_type": "reference"
+      },
+      "crop": {
+        "_type": "sanity.imageCrop",
+        "bottom": 0.02,
+        "left": 0,
+        "right": 0,
+        "top": 0.12
+      },
+      "hotspot": {
+        "_type": "sanity.imageHotspot",
+        "height": 0.68,
+        "width": 0.9,
+        "x": 0.53,
+        "y": 0.62
+      }
+    },
+    "cardImageAlt": {
+      "en": "Becker’s — retail and foodservice product family",
+      "tr": "Becker’s — perakende ve EDT ürün ailesi"
+    },
+    "cardImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-8f447b92bd3eeda8c8c6c7bdd1289557de59837b-2362x1575-jpg",
+        "_type": "reference"
+      },
+      "crop": {
+        "_type": "sanity.imageCrop",
+        "bottom": 0.02,
+        "left": 0,
+        "right": 0,
+        "top": 0.12
+      },
+      "hotspot": {
+        "_type": "sanity.imageHotspot",
+        "height": 0.68,
+        "width": 0.9,
+        "x": 0.53,
+        "y": 0.62
+      }
+    },
+    "challengeLead": {
+      "en": "Across an expanding product family, every label needed to be recognisable as Becker’s and clearly express its flavour.",
+      "tr": "Genişleyen bir ürün ailesinde her yeni etiketin hem Becker’s olarak tanınması hem de lezzetini açıkça anlatması gerekiyordu."
+    },
+    "challengeSpan": {
+      "en": "We considered the logo, product name and information hierarchy together across different bottles and jars.",
+      "tr": "Şişe ve kavanozların değişen yüzeylerinde logo, ürün adı ve bilgi hiyerarşisini birlikte ele aldık."
+    },
+    "clientName": "Becker’s",
+    "cursorText": {
+      "en": "Explore project",
+      "tr": "Projeyi incele"
+    },
     "feedbackApproved": false,
-    "title": {
-      "tr": "Becker’s",
-      "en": "Becker’s"
+    "galleryImages": [
+      {
+        "_key": "family-landscape",
+        "_type": "image",
+        "alt": {
+          "en": "Becker’s — Product family — close landscape crop",
+          "tr": "Becker’s — Ürün ailesi — sıkı yatay kadraj"
+        },
+        "asset": {
+          "_ref": "image-8f447b92bd3eeda8c8c6c7bdd1289557de59837b-2362x1575-jpg",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "Product family — close landscape crop",
+          "tr": "Ürün ailesi — sıkı yatay kadraj"
+        },
+        "crop": {
+          "_type": "sanity.imageCrop",
+          "bottom": 0.02,
+          "left": 0,
+          "right": 0,
+          "top": 0.12
+        },
+        "fit": "cover",
+        "hotspot": {
+          "_type": "sanity.imageHotspot",
+          "height": 0.68,
+          "width": 0.9,
+          "x": 0.53,
+          "y": 0.62
+        }
+      },
+      {
+        "_key": "family-squeeze",
+        "_type": "image",
+        "alt": {
+          "en": "Becker’s — Squeeze bottle packaging family",
+          "tr": "Becker’s — Sıkma şişe ambalaj ailesi"
+        },
+        "asset": {
+          "_ref": "image-a92af147f0c49b53f95b77d6ee33e65aa486083a-5847x4134-jpg",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "Squeeze bottle packaging family",
+          "tr": "Sıkma şişe ambalaj ailesi"
+        },
+        "fit": "cover"
+      },
+      {
+        "_key": "edt-burger",
+        "_type": "image",
+        "alt": {
+          "en": "Becker’s — Foodservice Burger Sauce packaging",
+          "tr": "Becker’s — EDT Burger Sos ambalajı"
+        },
+        "asset": {
+          "_ref": "image-c73f3f0b42d6ee494783a8f6a2decbbf12070243-1492x1946-png",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "Foodservice Burger Sauce packaging",
+          "tr": "EDT Burger Sos ambalajı"
+        },
+        "fit": "contain"
+      },
+      {
+        "_key": "edt-hot",
+        "_type": "image",
+        "alt": {
+          "en": "Becker’s — Foodservice Hot Chili packaging",
+          "tr": "Becker’s — EDT Hot Chili ambalajı"
+        },
+        "asset": {
+          "_ref": "image-2045375b39187c8ed524f44ec487497005b1fc6c-1492x1946-png",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "Foodservice Hot Chili packaging",
+          "tr": "EDT Hot Chili ambalajı"
+        },
+        "fit": "contain"
+      },
+      {
+        "_key": "edt-bbq",
+        "_type": "image",
+        "alt": {
+          "en": "Becker’s — Foodservice Barbecue Sauce packaging",
+          "tr": "Becker’s — EDT Barbekü Sos ambalajı"
+        },
+        "asset": {
+          "_ref": "image-3bce26a64838f012d4bb127452db4f156f603ed7-1492x1946-png",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "Foodservice Barbecue Sauce packaging",
+          "tr": "EDT Barbekü Sos ambalajı"
+        },
+        "fit": "contain"
+      },
+      {
+        "_key": "edt-creamy",
+        "_type": "image",
+        "alt": {
+          "en": "Becker’s — Foodservice Creamy Jalapeno packaging",
+          "tr": "Becker’s — EDT Creamy Jalapeno ambalajı"
+        },
+        "asset": {
+          "_ref": "image-b14ae63427da26049dd68626d8028acb80ce8824-1492x1946-png",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "Foodservice Creamy Jalapeno packaging",
+          "tr": "EDT Creamy Jalapeno ambalajı"
+        },
+        "fit": "contain"
+      },
+      {
+        "_key": "image-016",
+        "_type": "image",
+        "alt": {
+          "en": "Becker’s — Hot Chili label design",
+          "tr": "Becker’s — Hot Chili etiket tasarımı"
+        },
+        "asset": {
+          "_ref": "image-25f0d8df1fa68bbc6caee79ea7ca937619c709be-1569x2200-webp",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "Hot Chili label design",
+          "tr": "Hot Chili etiket tasarımı"
+        },
+        "fit": "contain"
+      },
+      {
+        "_key": "image-067",
+        "_type": "image",
+        "alt": {
+          "en": "Becker’s — Sweet Chili label design",
+          "tr": "Becker’s — Sweet Chili etiket tasarımı"
+        },
+        "asset": {
+          "_ref": "image-581567aa10b74dee436bbb05de3595f274976682-1569x2200-webp",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "Sweet Chili label design",
+          "tr": "Sweet Chili etiket tasarımı"
+        },
+        "fit": "contain"
+      },
+      {
+        "_key": "aci-stick",
+        "_type": "image",
+        "alt": {
+          "en": "Becker’s — 12 g Hot Sauce sachet packaging — mockup",
+          "tr": "Becker’s — 12 g Acı Sos stick ambalajı — mockup"
+        },
+        "asset": {
+          "_ref": "image-18cde9edbe49e4359c455c3dba3eceb323b3f047-1536x1024-png",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "12 g Hot Sauce sachet packaging — mockup",
+          "tr": "12 g Acı Sos stick ambalajı — mockup"
+        },
+        "fit": "cover"
+      },
+      {
+        "_key": "eksi-stick",
+        "_type": "image",
+        "alt": {
+          "en": "Becker’s — 12 g Sour Sauce sachet packaging — mockup",
+          "tr": "Becker’s — 12 g Ekşi Sos stick ambalajı — mockup"
+        },
+        "asset": {
+          "_ref": "image-4b0d866a5a62d706483367995029e09bbf4a27e5-1536x1024-png",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "12 g Sour Sauce sachet packaging — mockup",
+          "tr": "12 g Ekşi Sos stick ambalajı — mockup"
+        },
+        "fit": "cover"
+      },
+      {
+        "_key": "edt-launch",
+        "_type": "image",
+        "alt": {
+          "en": "Becker’s — Foodservice packaging — launch communication",
+          "tr": "Becker’s — EDT ambalajları — lansman iletişimi"
+        },
+        "asset": {
+          "_ref": "image-dadde5cf515d2ffcf0555693812a2920bc494c05-2023x1405-png",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "Foodservice packaging — launch communication",
+          "tr": "EDT ambalajları — lansman iletişimi"
+        },
+        "fit": "cover"
+      },
+      {
+        "_key": "image-015",
+        "_type": "image",
+        "alt": {
+          "en": "Becker’s — Cheddar social media application",
+          "tr": "Becker’s — Cheddar sosyal medya uygulaması"
+        },
+        "asset": {
+          "_ref": "image-1724505a3f1d0d5169d8df816a5baaa22eb0dd33-2200x1549-webp",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "Cheddar social media application",
+          "tr": "Cheddar sosyal medya uygulaması"
+        },
+        "fit": "cover"
+      },
+      {
+        "_key": "image-068",
+        "_type": "image",
+        "alt": {
+          "en": "Becker’s — Sriracha label design",
+          "tr": "Becker’s — Sriracha etiket tasarımı"
+        },
+        "asset": {
+          "_ref": "image-588081513e3466244cb4cebf536c89aa765647f1-1569x2200-webp",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "Sriracha label design",
+          "tr": "Sriracha etiket tasarımı"
+        },
+        "fit": "contain"
+      },
+      {
+        "_key": "image-069",
+        "_type": "image",
+        "alt": {
+          "en": "Becker’s — Ranch label design",
+          "tr": "Becker’s — Ranch etiket tasarımı"
+        },
+        "asset": {
+          "_ref": "image-1623c2d2bb155e79ea178b9ffa99a4035c7dda97-1569x2200-webp",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "Ranch label design",
+          "tr": "Ranch etiket tasarımı"
+        },
+        "fit": "contain"
+      },
+      {
+        "_key": "image-070",
+        "_type": "image",
+        "alt": {
+          "en": "Becker’s — Pesto label design",
+          "tr": "Becker’s — Pesto etiket tasarımı"
+        },
+        "asset": {
+          "_ref": "image-33c747f261d5c7e0a9a62ac363d0fe08fa5987bc-1353x2200-webp",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "Pesto label design",
+          "tr": "Pesto etiket tasarımı"
+        },
+        "fit": "contain"
+      },
+      {
+        "_key": "image-073",
+        "_type": "image",
+        "alt": {
+          "en": "Becker’s — Mustard label design",
+          "tr": "Becker’s — Mustard etiket tasarımı"
+        },
+        "asset": {
+          "_ref": "image-adbc0e037ae7786f5f0f68385b13dd7d3ec32d8b-1569x2200-webp",
+          "_type": "reference"
+        },
+        "caption": {
+          "en": "Mustard label design",
+          "tr": "Mustard etiket tasarımı"
+        },
+        "fit": "contain"
+      }
+    ],
+    "href": "/works/beckers",
+    "imageAlt": {
+      "en": "Becker’s — retail and foodservice product family",
+      "tr": "Becker’s — perakende ve EDT ürün ailesi"
     },
-    "titleLines": {
-      "tr": [
-        "Becker’s"
-      ],
-      "en": [
-        "Becker’s"
-      ]
+    "imageSrc": {
+      "_type": "image",
+      "asset": {
+        "_ref": "image-8f447b92bd3eeda8c8c6c7bdd1289557de59837b-2362x1575-jpg",
+        "_type": "reference"
+      },
+      "crop": {
+        "_type": "sanity.imageCrop",
+        "bottom": 0.02,
+        "left": 0,
+        "right": 0,
+        "top": 0.12
+      },
+      "hotspot": {
+        "_type": "sanity.imageHotspot",
+        "height": 0.68,
+        "width": 0.9,
+        "x": 0.53,
+        "y": 0.62
+      }
     },
+    "industries": {
+      "en": "Food / Sauces",
+      "tr": "Gıda / Soslar"
+    },
+    "isDemo": false,
+    "order": 3,
+    "overviewLead": {
+      "en": "For Becker’s, we created a design world spanning the logo, product labels, product photography and social media.",
+      "tr": "Becker’s için markanın logosundan ürün etiketlerine, ürün çekimlerinden sosyal medya iletişimine uzanan bir tasarım dünyası kurduk."
+    },
+    "overviewSpan": {
+      "en": "Different sauces and pack sizes share one brand signature while each product retains its own character.",
+      "tr": "Farklı sosları ve ambalaj boylarını aynı marka imzasında birleştirdik; her ürünün kendi karakterini koruduk."
+    },
+    "services": [
+      {
+        "_key": "service-0",
+        "_type": "object",
+        "description": {
+          "en": "The brand signature and shared design language of the product family.",
+          "tr": "Markanın görsel imzası ve ürün ailesinin ortak tasarım dili."
+        },
+        "name": {
+          "en": "Logo and brand identity",
+          "tr": "Logo ve marka kimliği"
+        }
+      },
+      {
+        "_key": "service-1",
+        "_type": "object",
+        "description": {
+          "en": "A label system for retail bottles, foodservice jugs and single-serving sachets.",
+          "tr": "Perakende şişeleri, EDT bidonları ve tek porsiyonluk stick ambalajlar için etiket sistemi."
+        },
+        "name": {
+          "en": "Labels and packaging",
+          "tr": "Etiket ve ambalaj"
+        }
+      },
+      {
+        "_key": "service-2",
+        "_type": "object",
+        "description": {
+          "en": "Individual product and product family imagery.",
+          "tr": "Ürünlerin tekil ve aile olarak görsel sunumu."
+        },
+        "name": {
+          "en": "Product photography",
+          "tr": "Ürün çekimleri"
+        }
+      },
+      {
+        "_key": "service-3",
+        "_type": "object",
+        "description": {
+          "en": "Digital content that extends the product identity.",
+          "tr": "Ürün kimliğini devam ettiren dijital içerikler."
+        },
+        "name": {
+          "en": "Social media",
+          "tr": "Sosyal medya"
+        }
+      }
+    ],
     "slug": {
       "_type": "slug",
       "current": "beckers"
@@ -24,297 +448,65 @@
       "_type": "slug",
       "current": "beckers"
     },
-    "href": "/works/beckers",
-    "order": 3,
-    "subtitle": {
-      "tr": "Bir logodan çok daha fazlası: bütün bir lezzet ailesi.",
-      "en": "More than a logo: a complete family of flavours."
+    "solutionLead": {
+      "en": "The logo, typography and colour system became the shared language of the label family. Product photography carried that language into digital communication.",
+      "tr": "Logo, tipografi ve renk sistemini etiket ailesinin ortak dili haline getirdik. Ürün çekimleriyle bu dili dijital iletişime taşıdık."
     },
-    "clientName": "Becker’s",
-    "industries": {
-      "tr": "Gıda / Soslar",
-      "en": "Food / Sauces"
+    "solutionSpan": {
+      "en": "Packaging, product presentation and social media became different expressions of the same brand.",
+      "tr": "Böylece ambalaj, ürün sunumu ve sosyal medya aynı markanın farklı ifadeleri olarak çalıştı."
+    },
+    "subtitle": {
+      "en": "More than a logo: a complete family of flavours.",
+      "tr": "Bir logodan çok daha fazlası: bütün bir lezzet ailesi."
     },
     "tags": {
-      "tr": [
-        "Logo ve marka kimliği",
-        "Etiket ve ambalaj",
-        "Ürün çekimleri",
-        "Sosyal medya"
-      ],
       "en": [
         "Logo and brand identity",
         "Labels and packaging",
         "Product photography",
         "Social media"
+      ],
+      "tr": [
+        "Logo ve marka kimliği",
+        "Etiket ve ambalaj",
+        "Ürün çekimleri",
+        "Sosyal medya"
       ]
     },
     "tagsColA": {
-      "tr": [
-        "Logo ve marka kimliği",
-        "Etiket ve ambalaj"
-      ],
       "en": [
         "Logo and brand identity",
         "Labels and packaging"
+      ],
+      "tr": [
+        "Logo ve marka kimliği",
+        "Etiket ve ambalaj"
       ]
     },
     "tagsColB": {
-      "tr": [
-        "Ürün çekimleri",
-        "Sosyal medya"
-      ],
       "en": [
         "Product photography",
         "Social media"
+      ],
+      "tr": [
+        "Ürün çekimleri",
+        "Sosyal medya"
       ]
     },
-    "cursorText": {
-      "tr": "Projeyi incele",
-      "en": "Explore project"
-    },
-    "overviewLead": {
-      "tr": "Becker’s için markanın logosundan ürün etiketlerine, ürün çekimlerinden sosyal medya iletişimine uzanan bir tasarım dünyası kurduk.",
-      "en": "For Becker’s, we created a design world spanning the logo, product labels, product photography and social media."
-    },
-    "overviewSpan": {
-      "tr": "Farklı sosları ve ambalaj boylarını aynı marka imzasında birleştirdik; her ürünün kendi karakterini koruduk.",
-      "en": "Different sauces and pack sizes share one brand signature while each product retains its own character."
-    },
-    "challengeLead": {
-      "tr": "Genişleyen bir ürün ailesinde her yeni etiketin hem Becker’s olarak tanınması hem de lezzetini açıkça anlatması gerekiyordu.",
-      "en": "Across an expanding product family, every label needed to be recognisable as Becker’s and clearly express its flavour."
-    },
-    "challengeSpan": {
-      "tr": "Şişe ve kavanozların değişen yüzeylerinde logo, ürün adı ve bilgi hiyerarşisini birlikte ele aldık.",
-      "en": "We considered the logo, product name and information hierarchy together across different bottles and jars."
-    },
-    "solutionLead": {
-      "tr": "Logo, tipografi ve renk sistemini etiket ailesinin ortak dili haline getirdik. Ürün çekimleriyle bu dili dijital iletişime taşıdık.",
-      "en": "The logo, typography and colour system became the shared language of the label family. Product photography carried that language into digital communication."
-    },
-    "solutionSpan": {
-      "tr": "Böylece ambalaj, ürün sunumu ve sosyal medya aynı markanın farklı ifadeleri olarak çalıştı.",
-      "en": "Packaging, product presentation and social media became different expressions of the same brand."
-    },
-    "services": [
-      {
-        "_key": "service-0",
-        "_type": "object",
-        "name": {
-          "tr": "Logo ve marka kimliği",
-          "en": "Logo and brand identity"
-        },
-        "description": {
-          "tr": "Markanın görsel imzası ve ürün ailesinin ortak tasarım dili.",
-          "en": "The brand signature and shared design language of the product family."
-        }
-      },
-      {
-        "_key": "service-1",
-        "_type": "object",
-        "name": {
-          "tr": "Etiket ve ambalaj",
-          "en": "Labels and packaging"
-        },
-        "description": {
-          "tr": "Farklı lezzetler ve ambalaj formatları için etiket sistemi.",
-          "en": "A label system for different flavours and packaging formats."
-        }
-      },
-      {
-        "_key": "service-2",
-        "_type": "object",
-        "name": {
-          "tr": "Ürün çekimleri",
-          "en": "Product photography"
-        },
-        "description": {
-          "tr": "Ürünlerin tekil ve aile olarak görsel sunumu.",
-          "en": "Individual product and product family imagery."
-        }
-      },
-      {
-        "_key": "service-3",
-        "_type": "object",
-        "name": {
-          "tr": "Sosyal medya",
-          "en": "Social media"
-        },
-        "description": {
-          "tr": "Ürün kimliğini devam ettiren dijital içerikler.",
-          "en": "Digital content that extends the product identity."
-        }
-      }
-    ],
     "techStack": [],
-    "imageSrc": {
-      "_type": "image",
-      "asset": {
-        "_type": "reference",
-        "_ref": "image-1724505a3f1d0d5169d8df816a5baaa22eb0dd33-2200x1549-webp"
-      }
+    "title": {
+      "en": "Becker’s",
+      "tr": "Becker’s"
     },
-    "bgImageSrc": {
-      "_type": "image",
-      "asset": {
-        "_type": "reference",
-        "_ref": "image-1724505a3f1d0d5169d8df816a5baaa22eb0dd33-2200x1549-webp"
-      }
-    },
-    "cardImageSrc": {
-      "_type": "image",
-      "asset": {
-        "_type": "reference",
-        "_ref": "image-1724505a3f1d0d5169d8df816a5baaa22eb0dd33-2200x1549-webp"
-      }
-    },
-    "imageAlt": {
-      "tr": "Becker’s — tasarım uygulaması",
-      "en": "Becker’s — design application"
-    },
-    "cardImageAlt": {
-      "tr": "Becker’s — tasarım uygulaması",
-      "en": "Becker’s — design application"
-    },
-    "galleryImages": [
-      {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-a0c325d5b0d2bd30e7dae4f08f429366c27fccbc-1733x2200-webp"
-        },
-        "_key": "image-014",
-        "alt": {
-          "tr": "Becker’s — Ürün ailesi",
-          "en": "Becker’s — Product family"
-        },
-        "caption": {
-          "tr": "Ürün ailesi",
-          "en": "Product family"
-        },
-        "fit": "contain"
-      },
-      {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-1724505a3f1d0d5169d8df816a5baaa22eb0dd33-2200x1549-webp"
-        },
-        "_key": "image-015",
-        "alt": {
-          "tr": "Becker’s — Cheddar sosyal medya uygulaması",
-          "en": "Becker’s — Cheddar social media application"
-        },
-        "caption": {
-          "tr": "Cheddar sosyal medya uygulaması",
-          "en": "Cheddar social media application"
-        },
-        "fit": "cover"
-      },
-      {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-25f0d8df1fa68bbc6caee79ea7ca937619c709be-1569x2200-webp"
-        },
-        "_key": "image-016",
-        "alt": {
-          "tr": "Becker’s — Hot Chili etiket tasarımı",
-          "en": "Becker’s — Hot Chili label design"
-        },
-        "caption": {
-          "tr": "Hot Chili etiket tasarımı",
-          "en": "Hot Chili label design"
-        },
-        "fit": "contain"
-      },
-      {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-581567aa10b74dee436bbb05de3595f274976682-1569x2200-webp"
-        },
-        "_key": "image-067",
-        "alt": {
-          "tr": "Becker’s — Sweet Chili etiket tasarımı",
-          "en": "Becker’s — Sweet Chili label design"
-        },
-        "caption": {
-          "tr": "Sweet Chili etiket tasarımı",
-          "en": "Sweet Chili label design"
-        },
-        "fit": "contain"
-      },
-      {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-588081513e3466244cb4cebf536c89aa765647f1-1569x2200-webp"
-        },
-        "_key": "image-068",
-        "alt": {
-          "tr": "Becker’s — Sriracha etiket tasarımı",
-          "en": "Becker’s — Sriracha label design"
-        },
-        "caption": {
-          "tr": "Sriracha etiket tasarımı",
-          "en": "Sriracha label design"
-        },
-        "fit": "contain"
-      },
-      {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-1623c2d2bb155e79ea178b9ffa99a4035c7dda97-1569x2200-webp"
-        },
-        "_key": "image-069",
-        "alt": {
-          "tr": "Becker’s — Ranch etiket tasarımı",
-          "en": "Becker’s — Ranch label design"
-        },
-        "caption": {
-          "tr": "Ranch etiket tasarımı",
-          "en": "Ranch label design"
-        },
-        "fit": "contain"
-      },
-      {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-33c747f261d5c7e0a9a62ac363d0fe08fa5987bc-1353x2200-webp"
-        },
-        "_key": "image-070",
-        "alt": {
-          "tr": "Becker’s — Pesto etiket tasarımı",
-          "en": "Becker’s — Pesto label design"
-        },
-        "caption": {
-          "tr": "Pesto etiket tasarımı",
-          "en": "Pesto label design"
-        },
-        "fit": "contain"
-      },
-      {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-adbc0e037ae7786f5f0f68385b13dd7d3ec32d8b-1569x2200-webp"
-        },
-        "_key": "image-073",
-        "alt": {
-          "tr": "Becker’s — Mustard etiket tasarımı",
-          "en": "Becker’s — Mustard label design"
-        },
-        "caption": {
-          "tr": "Mustard etiket tasarımı",
-          "en": "Mustard label design"
-        },
-        "fit": "contain"
-      }
-    ]
+    "titleLines": {
+      "en": [
+        "Becker’s"
+      ],
+      "tr": [
+        "Becker’s"
+      ]
+    }
   },
   {
     "_id": "niodome-project-elba",
