@@ -4,3 +4,6 @@
 .button{color:inherit}
 
 .featured{border:2px solid #789bff;background:#17213a}.featured>.eyebrow{color:#b9ccff}
+
+/* Opaque foreground for the directory that scrolls over the pinned hero. */
+.directory{position:relative;background:var(--base);isolation:isolate}
