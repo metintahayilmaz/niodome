@@ -439,14 +439,49 @@
     ],
     "plans": [
       {
+        "id": "local",
+        "name": {
+          "tr": "Esnaf Destek",
+          "en": "Local Business Support"
+        },
+        "priceTry": 9900,
+        "featured": false,
+        "audience": {
+          "tr": "Mahalle esnafı ve küçük yerel işletmeler için erişilebilir bir başlangıç.",
+          "en": "An accessible starting point for small local businesses."
+        },
+        "items": [
+          {
+            "tr": "1 dilde tek sayfa, en fazla 4 bölüm",
+            "en": "Single page in 1 language, up to 4 sections"
+          },
+          {
+            "tr": "Hazır düzenin logo, renk ve içerikle uyarlanması",
+            "en": "Ready-made layout adapted with your logo, colours and content"
+          },
+          {
+            "tr": "İşletme tanıtımı, hizmetler ve çalışma saatleri",
+            "en": "Business introduction, services and opening hours"
+          },
+          {
+            "tr": "Telefon, WhatsApp ve harita bağlantıları",
+            "en": "Phone, WhatsApp and map links"
+          },
+          {
+            "tr": "İçerik yönetim paneli ve özel tasarım dahil değildir",
+            "en": "CMS and bespoke design are not included"
+          }
+        ]
+      },
+      {
         "id": "launch",
         "name": {
-          "tr": "Lansman Sitesi",
-          "en": "Launch Website"
+          "tr": "Başlangıç",
+          "en": "Starter"
         },
         "audience": {
-          "tr": "Tek hedefe odaklanan ürün ve kampanyalar.",
-          "en": "Products and campaigns with one clear objective."
+          "tr": "Hızlı ve net bir tanıtım isteyen işletmeler.",
+          "en": "Businesses needing a focused introduction."
         },
         "items": [
           {
@@ -454,69 +489,75 @@
             "en": "Single page in 1 language, up to 7 sections"
           },
           {
-            "tr": "1 iletişim / talep formu",
-            "en": "1 contact / enquiry form"
+            "tr": "Markaya uyarlanan tasarım sistemi",
+            "en": "Established design system adapted to your brand"
           },
           {
-            "tr": "Mobil uyarlama ve yayın aktarımı",
-            "en": "Mobile adaptation and launch handover"
+            "tr": "İletişim formu ve WhatsApp bağlantısı",
+            "en": "Contact form and WhatsApp link"
           }
-        ]
+        ],
+        "priceTry": 19900,
+        "featured": false
       },
       {
         "id": "corporate",
         "name": {
-          "tr": "Kurumsal Site",
-          "en": "Corporate Website"
+          "tr": "Kurumsal",
+          "en": "Corporate"
         },
         "audience": {
-          "tr": "Hizmetlerini ve işlerini anlatan markalar.",
+          "tr": "Hizmetlerini ve çalışmalarını güçlü biçimde sunmak isteyen markalar.",
           "en": "Brands presenting their services and work."
         },
         "items": [
           {
-            "tr": "1 dilde en fazla 8 sayfa şablonu",
-            "en": "Up to 8 page templates in 1 language"
+            "tr": "1 dilde en fazla 7 sayfa",
+            "en": "Up to 7 pages in 1 language"
           },
           {
-            "tr": "İçerik yönetimi ve 2 içerik türü",
-            "en": "CMS and 2 content collections"
+            "tr": "Markaya uyarlanan tasarım ve içerik yönetimi",
+            "en": "Brand-adapted design and content management"
           },
           {
-            "tr": "Form, temel SEO ve ekip eğitimi",
-            "en": "Form, essential SEO and team training"
+            "tr": "Hizmetler, blog veya projeler",
+            "en": "Services, blog or projects"
           }
-        ]
+        ],
+        "priceTry": 34900,
+        "featured": true
       },
       {
         "id": "experience",
         "name": {
-          "tr": "Özel Web Deneyimi",
-          "en": "Custom Web Experience"
+          "tr": "Kurumsal Plus",
+          "en": "Corporate Plus"
         },
         "audience": {
-          "tr": "Özel akış, entegrasyon veya birden fazla pazar ihtiyacı.",
-          "en": "Custom journeys, integrations or multiple markets."
+          "tr": "İki dilde daha kapsamlı bir kurumsal site isteyen markalar.",
+          "en": "Brands needing a more extensive bilingual corporate website."
         },
         "items": [
           {
-            "tr": "Keşif ve teknik kapsam dokümanı",
-            "en": "Discovery and technical scope document"
+            "tr": "En fazla 12 benzersiz sayfa, 2 dil altyapısı",
+            "en": "Up to 12 unique pages, infrastructure for 2 languages"
           },
           {
-            "tr": "Özel arayüzler ve kararlaştırılan entegrasyonlar",
-            "en": "Custom interfaces and agreed integrations"
+            "tr": "Daha kapsamlı arayüz ve içerik yapısı",
+            "en": "More extensive interface and content structure"
           },
           {
-            "tr": "Test planı, yayın ve bakım seçenekleri",
-            "en": "Test plan, launch and maintenance options"
+            "tr": "İçerik yönetimi, hizmetler ve proje / blog yapısı",
+            "en": "CMS, services and project / blog structure"
           }
-        ]
+        ],
+        "priceTry": 59900,
+        "featured": false
       }
     ],
     "limits": {
-      "tr": "Alan adı, barındırma, ücretli lisanslar ve üçüncü taraf servisleri ayrı giderlerdir. Metin, dil, içerik giriş adedi ve entegrasyon listesi teklifte netleştirilir.",
-      "en": "Domains, hosting, paid licences and third-party services are separate costs. Copy, languages, content-entry volume and integrations are specified in the proposal."
+      "tr": "Tüm fiyatlar tek seferlik proje bedelidir; KDV hariçtir. Her pakete mobil uyumluluk, temel teknik SEO, temel analiz kurulumu, iki revizyon turu, yayınlama ve 30 gün teslim hatası desteği dahildir. İçerikleri müşteri sağlar; metin yazımı, çeviri, çekim, alan adı, barındırma, ücretli lisanslar ve özel entegrasyonlar ayrıca fiyatlandırılır. Sayfa sayısı benzersiz sayfaları ifade eder; Plus paketinde aynı sayfaların ikinci dil karşılıkları bu sınıra ayrıca sayılmaz. Blog / proje kayıtları ve ilk içerik giriş adedi teklif aşamasında belirlenir. Esnaf Destek, Başlangıç ve Kurumsal paketleri mevcut tasarım sistemlerinin markaya uyarlanmasını kapsar; sıfırdan özel tasarım, e-ticaret ve özel yazılım ayrıca tekliflendirilir.",
+      "en": "All prices are one-off project fees excluding VAT. Every package includes responsive layout, essential technical SEO, basic analytics setup, two revision rounds, launch and 30 days of defect support. Clients supply content; copywriting, translation, shoots, domains, hosting, paid licences and custom integrations are priced separately. Page limits count unique pages; translated versions of those pages do not count again in Plus. Blog / project records and initial content-entry volume are agreed in the proposal. Local Business Support, Starter and Corporate adapt established design systems to your brand; fully bespoke design, ecommerce and custom software are quoted separately."
     },
     "faq": [
       {
@@ -525,8 +566,8 @@
           "en": "Is there post-launch support?"
         },
         "answer": {
-          "tr": "Teslim hataları için kontrol dönemi ve devam eden bakım ayrı belirtilir. Yeni özellikler bakım kapsamına otomatik girmez.",
-          "en": "The defect-review period and ongoing maintenance are stated separately. New features are not automatically included in maintenance."
+          "tr": "Yayından sonra 30 gün boyunca teslim kapsamındaki hataları gideririz. Devam eden bakım, içerik değişiklikleri ve yeni özellikler ayrıca fiyatlandırılır.",
+          "en": "We fix defects within the delivered scope for 30 days after launch. Ongoing maintenance, content changes and new features are priced separately."
         }
       }
     ],

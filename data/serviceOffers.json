@@ -97,24 +97,31 @@
     },
     "plans": [
       {
+        "id": "local",
+        "name": {
+          "tr": "Esnaf Destek",
+          "en": "Local Business Support"
+        }
+      },
+      {
         "id": "launch",
         "name": {
-          "tr": "Lansman Sitesi",
-          "en": "Launch Website"
+          "tr": "Başlangıç",
+          "en": "Starter"
         }
       },
       {
         "id": "corporate",
         "name": {
-          "tr": "Kurumsal Site",
-          "en": "Corporate Website"
+          "tr": "Kurumsal",
+          "en": "Corporate"
         }
       },
       {
         "id": "experience",
         "name": {
-          "tr": "Özel Web Deneyimi",
-          "en": "Custom Web Experience"
+          "tr": "Kurumsal Plus",
+          "en": "Corporate Plus"
         }
       }
     ]

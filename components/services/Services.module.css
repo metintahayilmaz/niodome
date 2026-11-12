@@ -2,3 +2,5 @@
 @media(max-width:1000px){.catalogGrid,.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.hero{padding-top:12rem}.catalogGrid,.steps,.deliverables{grid-template-columns:1fr}.directory,.section,.hero{padding-inline:2rem}.categories{gap:1.2rem 1.8rem}.plan h3{font-size:2.9rem}.catalogCard h4{font-size:3rem}.caseLinks a{font-size:1.8rem;max-width:100%}}
 
 .button{color:inherit}
+
+.featured{border:2px solid #789bff;background:#17213a}.featured>.eyebrow{color:#b9ccff}
