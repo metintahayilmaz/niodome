@@ -65,7 +65,7 @@ export const projectsShowcaseQuery = groq`
  * ProjectsStack bileşeni için imageSrc dolu projeleri çeker (stack view).
  */
 export const projectsStackQuery = groq`
-  *[_type == "project" && coalesce(isDemo, false) == false && defined(imageSrc)] | order(_createdAt asc) {
+  *[_type == "project" && coalesce(isDemo, false) == false && defined(imageSrc)] | order(order asc, _createdAt asc) {
     _id,
     "title": coalesce(select(length(title[$locale]) > 0 => title[$locale]), title.tr),
     imageSrc,

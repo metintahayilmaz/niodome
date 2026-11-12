@@ -7,6 +7,9 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import AutoplayLoopVideo from "@/components/media/AutoplayLoopVideo";
 import { useMxdMenuGsap, useMxdMenuGsapRefs } from "@/hooks/useMxdMenuGsap";
+import advertisingCopy from "@/data/digitalAdvertising.json";
+import marketingCopy from "@/data/marketingPlans.json";
+import { useLocale } from "next-intl";
 import { siteSettings } from "@/data/siteSettings";
 import TextScramble from "@/components/animations/TextScramble";
 
@@ -43,19 +46,27 @@ export default function Nav({
   const t = useTranslations("nav");
   const tMenu = useTranslations("menu");
   const pathname = usePathname();
+  const language = useLocale() === "en" ? "en" : "tr";
 
   const links = [
     { href: "/", label: t("home") },
     { href: "/works", label: t("works") },
     { href: "/about-us", label: tMenu("aboutUs") },
     { href: "/services", label: tMenu("services") },
-    { href: "/geo", label: "GEO" },
     { href: "/blog", label: tMenu("blog") },
     { href: "/contact", label: t("contact") },
   ] as const;
 
+  const serviceLinks = [
+    { href: "/services", label: language === "tr" ? "Tüm hizmetler" : "All services" },
+    { href: "/geo", label: "GEO" },
+    { href: "/digital-advertising", label: advertisingCopy[language].label },
+    { href: "/google-ads", label: marketingCopy.google[language].label },
+    { href: "/social-media", label: marketingCopy.social[language].label },
+  ] as const;
   const g = useMxdMenuGsapRefs(links.length);
 
+  const submenuSlots = useMemo(() => makeSlotters(g.menuSubmenus, g.rowCount), [g]);
   const headerSlots = useMemo(() => makeSlotters(g.headerSplitTargets, 3), [g]);
   const mainSlots = useMemo(() => makeSlotters(g.mainMenuLinkSpans, g.rowCount * 2), [g]);
   const contactSlots = useMemo(() => makeSlotters(g.contactAnchors, 8), [g]);
@@ -138,7 +149,13 @@ export default function Nav({
                   <div className="main-menu__content">
                     <ul id="main-menu" className="main-menu__accordion">
                       {links.map((link, index) => {
-                        const active = isActiveRoute(pathname, link.href);
+                        const hasChildren = link.href === "/services";
+                        const active = isActiveRoute(pathname, link.href) || (hasChildren && serviceLinks.some(child => isActiveRoute(pathname, child.href)));
+                        const label = <>
+                          <span ref={mainSlots[index * 2]} className="main-menu__number">/ {String(index + 1).padStart(2, "0")}</span>
+                          <span ref={mainSlots[index * 2 + 1]} className="main-menu__caption">{link.label}</span>
+                          <span ref={arrowSlots[index]} className="main-menu__arrow" aria-hidden="true"><svg viewBox="0 0 18 18" fill="none"><path d="M3 9h11M9 3l6 6-6 6" stroke="currentColor" strokeWidth="2" fill="none" /></svg></span>
+                        </>;
                         return (
                           <li
                             key={link.href}
@@ -155,39 +172,15 @@ export default function Nav({
                               ref={toggleSlots[index]}
                               className="main-menu__toggle"
                             >
-                              <Link
-                                href={link.href}
-                                className="main-menu__link main-menu__link--direct"
-                                aria-current={active ? "page" : undefined}
-                              >
-                                <span
-                                  ref={mainSlots[index * 2]}
-                                  className="main-menu__number"
-                                >
-                                  / {String(index + 1).padStart(2, "0")}
-                                </span>
-                                <span
-                                  ref={mainSlots[index * 2 + 1]}
-                                  className="main-menu__caption"
-                                >
-                                  {link.label}
-                                </span>
-                                <span
-                                  ref={arrowSlots[index]}
-                                  className="main-menu__arrow"
-                                  aria-hidden="true"
-                                >
-                                  <svg viewBox="0 0 18 18" fill="none">
-                                    <path
-                                      d="M3 9h11M9 3l6 6-6 6"
-                                      stroke="currentColor"
-                                      strokeWidth="2"
-                                      fill="none"
-                                    />
-                                  </svg>
-                                </span>
-                              </Link>
+                              {hasChildren ? (
+                                <button type="button" className="main-menu__link main-menu__link--direct" aria-expanded="false" aria-controls="services-submenu">{label}</button>
+                              ) : (
+                                <Link href={link.href} className="main-menu__link main-menu__link--direct" aria-current={active ? "page" : undefined}>{label}</Link>
+                              )}
                             </div>
+                            {hasChildren && <ul id="services-submenu" className="submenu" ref={submenuSlots[index]}>
+                              {serviceLinks.map(child => <li className="submenu__item" key={child.href}><Link href={child.href} aria-current={isActiveRoute(pathname, child.href) ? "page" : undefined}>{child.label}</Link></li>)}
+                            </ul>}
                             <div
                               ref={dividerSlots[index + 1]}
                               className="main-menu__divider divider-bottom"

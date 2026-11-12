@@ -1,0 +1,1514 @@
+[
+  {
+    "_id": "niodome-project-beckers",
+    "_type": "project",
+    "isDemo": false,
+    "feedbackApproved": false,
+    "title": {
+      "tr": "Becker’s",
+      "en": "Becker’s"
+    },
+    "titleLines": {
+      "tr": [
+        "Becker’s"
+      ],
+      "en": [
+        "Becker’s"
+      ]
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "beckers"
+    },
+    "slug_en": {
+      "_type": "slug",
+      "current": "beckers"
+    },
+    "href": "/works/beckers",
+    "order": 3,
+    "subtitle": {
+      "tr": "Bir logodan çok daha fazlası: bütün bir lezzet ailesi.",
+      "en": "More than a logo: a complete family of flavours."
+    },
+    "clientName": "Becker’s",
+    "industries": {
+      "tr": "Gıda / Soslar",
+      "en": "Food / Sauces"
+    },
+    "tags": {
+      "tr": [
+        "Logo ve marka kimliği",
+        "Etiket ve ambalaj",
+        "Ürün çekimleri",
+        "Sosyal medya"
+      ],
+      "en": [
+        "Logo and brand identity",
+        "Labels and packaging",
+        "Product photography",
+        "Social media"
+      ]
+    },
+    "tagsColA": {
+      "tr": [
+        "Logo ve marka kimliği",
+        "Etiket ve ambalaj"
+      ],
+      "en": [
+        "Logo and brand identity",
+        "Labels and packaging"
+      ]
+    },
+    "tagsColB": {
+      "tr": [
+        "Ürün çekimleri",
+        "Sosyal medya"
+      ],
+      "en": [
+        "Product photography",
+        "Social media"
+      ]
+    },
+    "cursorText": {
+      "tr": "Projeyi incele",
+      "en": "Explore project"
+    },
+    "overviewLead": {
+      "tr": "Becker’s için markanın logosundan ürün etiketlerine, ürün çekimlerinden sosyal medya iletişimine uzanan bir tasarım dünyası kurduk.",
+      "en": "For Becker’s, we created a design world spanning the logo, product labels, product photography and social media."
+    },
+    "overviewSpan": {
+      "tr": "Farklı sosları ve ambalaj boylarını aynı marka imzasında birleştirdik; her ürünün kendi karakterini koruduk.",
+      "en": "Different sauces and pack sizes share one brand signature while each product retains its own character."
+    },
+    "challengeLead": {
+      "tr": "Genişleyen bir ürün ailesinde her yeni etiketin hem Becker’s olarak tanınması hem de lezzetini açıkça anlatması gerekiyordu.",
+      "en": "Across an expanding product family, every label needed to be recognisable as Becker’s and clearly express its flavour."
+    },
+    "challengeSpan": {
+      "tr": "Şişe ve kavanozların değişen yüzeylerinde logo, ürün adı ve bilgi hiyerarşisini birlikte ele aldık.",
+      "en": "We considered the logo, product name and information hierarchy together across different bottles and jars."
+    },
+    "solutionLead": {
+      "tr": "Logo, tipografi ve renk sistemini etiket ailesinin ortak dili haline getirdik. Ürün çekimleriyle bu dili dijital iletişime taşıdık.",
+      "en": "The logo, typography and colour system became the shared language of the label family. Product photography carried that language into digital communication."
+    },
+    "solutionSpan": {
+      "tr": "Böylece ambalaj, ürün sunumu ve sosyal medya aynı markanın farklı ifadeleri olarak çalıştı.",
+      "en": "Packaging, product presentation and social media became different expressions of the same brand."
+    },
+    "services": [
+      {
+        "_key": "service-0",
+        "_type": "object",
+        "name": {
+          "tr": "Logo ve marka kimliği",
+          "en": "Logo and brand identity"
+        },
+        "description": {
+          "tr": "Markanın görsel imzası ve ürün ailesinin ortak tasarım dili.",
+          "en": "The brand signature and shared design language of the product family."
+        }
+      },
+      {
+        "_key": "service-1",
+        "_type": "object",
+        "name": {
+          "tr": "Etiket ve ambalaj",
+          "en": "Labels and packaging"
+        },
+        "description": {
+          "tr": "Farklı lezzetler ve ambalaj formatları için etiket sistemi.",
+          "en": "A label system for different flavours and packaging formats."
+        }
+      },
+      {
+        "_key": "service-2",
+        "_type": "object",
+        "name": {
+          "tr": "Ürün çekimleri",
+          "en": "Product photography"
+        },
+        "description": {
+          "tr": "Ürünlerin tekil ve aile olarak görsel sunumu.",
+          "en": "Individual product and product family imagery."
+        }
+      },
+      {
+        "_key": "service-3",
+        "_type": "object",
+        "name": {
+          "tr": "Sosyal medya",
+          "en": "Social media"
+        },
+        "description": {
+          "tr": "Ürün kimliğini devam ettiren dijital içerikler.",
+          "en": "Digital content that extends the product identity."
+        }
+      }
+    ],
+    "techStack": [],
+    "imageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-1724505a3f1d0d5169d8df816a5baaa22eb0dd33-2200x1549-webp"
+      }
+    },
+    "bgImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-1724505a3f1d0d5169d8df816a5baaa22eb0dd33-2200x1549-webp"
+      }
+    },
+    "cardImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-1724505a3f1d0d5169d8df816a5baaa22eb0dd33-2200x1549-webp"
+      }
+    },
+    "imageAlt": {
+      "tr": "Becker’s — tasarım uygulaması",
+      "en": "Becker’s — design application"
+    },
+    "cardImageAlt": {
+      "tr": "Becker’s — tasarım uygulaması",
+      "en": "Becker’s — design application"
+    },
+    "galleryImages": [
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-a0c325d5b0d2bd30e7dae4f08f429366c27fccbc-1733x2200-webp"
+        },
+        "_key": "image-014",
+        "alt": {
+          "tr": "Becker’s — Ürün ailesi",
+          "en": "Becker’s — Product family"
+        },
+        "caption": {
+          "tr": "Ürün ailesi",
+          "en": "Product family"
+        },
+        "fit": "contain"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-1724505a3f1d0d5169d8df816a5baaa22eb0dd33-2200x1549-webp"
+        },
+        "_key": "image-015",
+        "alt": {
+          "tr": "Becker’s — Cheddar sosyal medya uygulaması",
+          "en": "Becker’s — Cheddar social media application"
+        },
+        "caption": {
+          "tr": "Cheddar sosyal medya uygulaması",
+          "en": "Cheddar social media application"
+        },
+        "fit": "cover"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-25f0d8df1fa68bbc6caee79ea7ca937619c709be-1569x2200-webp"
+        },
+        "_key": "image-016",
+        "alt": {
+          "tr": "Becker’s — Hot Chili etiket tasarımı",
+          "en": "Becker’s — Hot Chili label design"
+        },
+        "caption": {
+          "tr": "Hot Chili etiket tasarımı",
+          "en": "Hot Chili label design"
+        },
+        "fit": "contain"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-581567aa10b74dee436bbb05de3595f274976682-1569x2200-webp"
+        },
+        "_key": "image-067",
+        "alt": {
+          "tr": "Becker’s — Sweet Chili etiket tasarımı",
+          "en": "Becker’s — Sweet Chili label design"
+        },
+        "caption": {
+          "tr": "Sweet Chili etiket tasarımı",
+          "en": "Sweet Chili label design"
+        },
+        "fit": "contain"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-588081513e3466244cb4cebf536c89aa765647f1-1569x2200-webp"
+        },
+        "_key": "image-068",
+        "alt": {
+          "tr": "Becker’s — Sriracha etiket tasarımı",
+          "en": "Becker’s — Sriracha label design"
+        },
+        "caption": {
+          "tr": "Sriracha etiket tasarımı",
+          "en": "Sriracha label design"
+        },
+        "fit": "contain"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-1623c2d2bb155e79ea178b9ffa99a4035c7dda97-1569x2200-webp"
+        },
+        "_key": "image-069",
+        "alt": {
+          "tr": "Becker’s — Ranch etiket tasarımı",
+          "en": "Becker’s — Ranch label design"
+        },
+        "caption": {
+          "tr": "Ranch etiket tasarımı",
+          "en": "Ranch label design"
+        },
+        "fit": "contain"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-33c747f261d5c7e0a9a62ac363d0fe08fa5987bc-1353x2200-webp"
+        },
+        "_key": "image-070",
+        "alt": {
+          "tr": "Becker’s — Pesto etiket tasarımı",
+          "en": "Becker’s — Pesto label design"
+        },
+        "caption": {
+          "tr": "Pesto etiket tasarımı",
+          "en": "Pesto label design"
+        },
+        "fit": "contain"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-adbc0e037ae7786f5f0f68385b13dd7d3ec32d8b-1569x2200-webp"
+        },
+        "_key": "image-073",
+        "alt": {
+          "tr": "Becker’s — Mustard etiket tasarımı",
+          "en": "Becker’s — Mustard label design"
+        },
+        "caption": {
+          "tr": "Mustard etiket tasarımı",
+          "en": "Mustard label design"
+        },
+        "fit": "contain"
+      }
+    ]
+  },
+  {
+    "_id": "niodome-project-elba",
+    "_type": "project",
+    "isDemo": false,
+    "feedbackApproved": false,
+    "title": {
+      "tr": "Elba",
+      "en": "Elba"
+    },
+    "titleLines": {
+      "tr": [
+        "Elba"
+      ],
+      "en": [
+        "Elba"
+      ]
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "elba"
+    },
+    "slug_en": {
+      "_type": "slug",
+      "current": "elba"
+    },
+    "href": "/works/elba",
+    "order": 4,
+    "subtitle": {
+      "tr": "Sanayinin içinde, her temas noktasında aynı marka.",
+      "en": "One industrial brand, consistent at every touchpoint."
+    },
+    "clientName": "Elba",
+    "industries": {
+      "tr": "Sanayi / Yüzey koruma",
+      "en": "Industry / Surface protection"
+    },
+    "tags": {
+      "tr": [
+        "Logo ve kurumsal kimlik",
+        "Katalog ve yayın tasarımı",
+        "Mekânsal ve araç uygulamaları",
+        "Ambalaj ve dijital tasarım"
+      ],
+      "en": [
+        "Logo and corporate identity",
+        "Catalogue and publication design",
+        "Spatial and vehicle applications",
+        "Packaging and digital design"
+      ]
+    },
+    "tagsColA": {
+      "tr": [
+        "Logo ve kurumsal kimlik",
+        "Katalog ve yayın tasarımı"
+      ],
+      "en": [
+        "Logo and corporate identity",
+        "Catalogue and publication design"
+      ]
+    },
+    "tagsColB": {
+      "tr": [
+        "Mekânsal ve araç uygulamaları",
+        "Ambalaj ve dijital tasarım"
+      ],
+      "en": [
+        "Spatial and vehicle applications",
+        "Packaging and digital design"
+      ]
+    },
+    "cursorText": {
+      "tr": "Projeyi incele",
+      "en": "Explore project"
+    },
+    "overviewLead": {
+      "tr": "Elba için logodan kurumsal evraka, araç giydirmeden fuar iletişimine uzanan bütünlüklü bir marka dünyası tasarladık.",
+      "en": "For Elba, we designed a complete brand world, from the logo and stationery to vehicle graphics and exhibition communication."
+    },
+    "overviewSpan": {
+      "tr": "Katalog, web sitesi, tabela, koli, bant ve kartvizit gibi farklı ihtiyaçları aynı görsel sistem içinde ele aldık.",
+      "en": "Catalogues, the website, signage, boxes, tape and business cards were considered within the same visual system."
+    },
+    "challengeLead": {
+      "tr": "Teknik bir ürün dünyasını, üretimden satış görüşmesine kadar tutarlı bir kimlikle anlatmak.",
+      "en": "Express a technical product world through a consistent identity, from production to sales conversations."
+    },
+    "challengeSpan": {
+      "tr": "Kimliğin küçük bir bant yüzeyinde de büyük bir araç üzerinde de çalışması gerekiyordu.",
+      "en": "The identity needed to work on a narrow strip of tape as well as on a large vehicle."
+    },
+    "solutionLead": {
+      "tr": "Logo geometrisini, güçlü rengi ve tipografik düzeni farklı ölçeklere uyarladık.",
+      "en": "We adapted the logo geometry, distinctive colour and typographic structure across different scales."
+    },
+    "solutionSpan": {
+      "tr": "Kurumsal malzemeler, ürün sunumu ve fiziksel uygulamalar Elba’nın ortak tasarım dilinde buluştu.",
+      "en": "Corporate materials, product presentation and physical applications came together in Elba’s shared design language."
+    },
+    "services": [
+      {
+        "_key": "service-0",
+        "_type": "object",
+        "name": {
+          "tr": "Logo ve kurumsal kimlik",
+          "en": "Logo and corporate identity"
+        },
+        "description": {
+          "tr": "Logo, antetli kâğıt, kartvizit ve kurumsal uygulamalar.",
+          "en": "Logo, letterhead, business cards and corporate applications."
+        }
+      },
+      {
+        "_key": "service-1",
+        "_type": "object",
+        "name": {
+          "tr": "Katalog ve yayın tasarımı",
+          "en": "Catalogue and publication design"
+        },
+        "description": {
+          "tr": "Ürünleri ve teknik bilgileri düzenleyen katalog sistemi.",
+          "en": "A catalogue system organising products and technical information."
+        }
+      },
+      {
+        "_key": "service-2",
+        "_type": "object",
+        "name": {
+          "tr": "Mekânsal ve araç uygulamaları",
+          "en": "Spatial and vehicle applications"
+        },
+        "description": {
+          "tr": "Araç giydirme, tabela ve fuar iletişimi.",
+          "en": "Vehicle graphics, signage and exhibition communication."
+        }
+      },
+      {
+        "_key": "service-3",
+        "_type": "object",
+        "name": {
+          "tr": "Ambalaj ve dijital tasarım",
+          "en": "Packaging and digital design"
+        },
+        "description": {
+          "tr": "Koli, bant uygulamaları ve web sitesi tasarımı.",
+          "en": "Boxes, tape applications and website design."
+        }
+      }
+    ],
+    "techStack": [],
+    "imageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-6472bf1af228f316b6fda2a7a365a9b9d65b9783-2200x1400-webp"
+      }
+    },
+    "bgImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-6472bf1af228f316b6fda2a7a365a9b9d65b9783-2200x1400-webp"
+      }
+    },
+    "cardImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-6472bf1af228f316b6fda2a7a365a9b9d65b9783-2200x1400-webp"
+      }
+    },
+    "imageAlt": {
+      "tr": "Elba — tasarım uygulaması",
+      "en": "Elba — design application"
+    },
+    "cardImageAlt": {
+      "tr": "Elba — tasarım uygulaması",
+      "en": "Elba — design application"
+    },
+    "galleryImages": [
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-6472bf1af228f316b6fda2a7a365a9b9d65b9783-2200x1400-webp"
+        },
+        "_key": "image-022",
+        "alt": {
+          "tr": "Elba — Araç giydirme mockup’ı",
+          "en": "Elba — Vehicle graphics mockup"
+        },
+        "caption": {
+          "tr": "Araç giydirme mockup’ı",
+          "en": "Vehicle graphics mockup"
+        },
+        "fit": "cover"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-2b7f491068e3f77fe71e618dac633481c64bbc2a-2200x1467-webp"
+        },
+        "_key": "image-023",
+        "alt": {
+          "tr": "Elba — Koli tasarımı mockup’ı",
+          "en": "Elba — Shipping box design mockup"
+        },
+        "caption": {
+          "tr": "Koli tasarımı mockup’ı",
+          "en": "Shipping box design mockup"
+        },
+        "fit": "cover"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-7fb72572447e0376d9a81d21066fe6b93cf297ab-2200x1650-webp"
+        },
+        "_key": "image-025",
+        "alt": {
+          "tr": "Elba — Bant tasarımı mockup’ı",
+          "en": "Elba — Tape design mockup"
+        },
+        "caption": {
+          "tr": "Bant tasarımı mockup’ı",
+          "en": "Tape design mockup"
+        },
+        "fit": "cover"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-823593863bd28df1d5895b44e958d463b67f111d-2200x1467-webp"
+        },
+        "_key": "image-026",
+        "alt": {
+          "tr": "Elba — Masa takvimi mockup’ı",
+          "en": "Elba — Desk calendar mockup"
+        },
+        "caption": {
+          "tr": "Masa takvimi mockup’ı",
+          "en": "Desk calendar mockup"
+        },
+        "fit": "cover"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-31953788cf843c38759c3632d7360eb3e49f7eeb-2200x1650-webp"
+        },
+        "_key": "image-027",
+        "alt": {
+          "tr": "Elba — Kurumsal kupa mockup’ı",
+          "en": "Elba — Corporate mug mockup"
+        },
+        "caption": {
+          "tr": "Kurumsal kupa mockup’ı",
+          "en": "Corporate mug mockup"
+        },
+        "fit": "cover"
+      }
+    ]
+  },
+  {
+    "_id": "niodome-project-biberzade",
+    "_type": "project",
+    "isDemo": false,
+    "feedbackApproved": false,
+    "title": {
+      "tr": "Biberzade",
+      "en": "Biberzade"
+    },
+    "titleLines": {
+      "tr": [
+        "Biberzade"
+      ],
+      "en": [
+        "Biberzade"
+      ]
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "biberzade"
+    },
+    "slug_en": {
+      "_type": "slug",
+      "current": "biberzade"
+    },
+    "href": "/works/biberzade",
+    "order": 5,
+    "subtitle": {
+      "tr": "Lezzetin kimliğini her pakette sürdürmek.",
+      "en": "Carry the flavour’s identity into every pack."
+    },
+    "clientName": "Biberzade",
+    "industries": {
+      "tr": "Yeme içme / Perakende",
+      "en": "Food service / Retail"
+    },
+    "tags": {
+      "tr": [
+        "Ambalaj tasarımı",
+        "Marka uygulamaları"
+      ],
+      "en": [
+        "Packaging design",
+        "Brand applications"
+      ]
+    },
+    "tagsColA": {
+      "tr": [
+        "Ambalaj tasarımı",
+        "Marka uygulamaları"
+      ],
+      "en": [
+        "Packaging design",
+        "Brand applications"
+      ]
+    },
+    "tagsColB": {
+      "tr": [],
+      "en": []
+    },
+    "cursorText": {
+      "tr": "Projeyi incele",
+      "en": "Explore project"
+    },
+    "overviewLead": {
+      "tr": "Biberzade’nin marka dünyası için ambalaj ve iletişim uygulamaları hazırladık.",
+      "en": "We developed packaging and communication applications for Biberzade’s brand world."
+    },
+    "overviewSpan": {
+      "tr": "Çiğköfte kutusundan tako ambalajına uzanan çalışmalarda marka karakterini farklı ürün formatlarına taşıdık.",
+      "en": "From çiğköfte boxes to taco packs, the work carries the brand character across different product formats."
+    },
+    "challengeLead": {
+      "tr": "Farklı tüketim biçimlerine sahip ürünleri aynı marka çatısı altında anlatmak.",
+      "en": "Present products with different consumption occasions under one brand."
+    },
+    "challengeSpan": {
+      "tr": "Ambalajın formu değişirken markanın renk ve grafik karakterinin devam etmesine odaklandık.",
+      "en": "We focused on retaining the brand’s colour and graphic character as packaging forms changed."
+    },
+    "solutionLead": {
+      "tr": "Renk, logo kullanımı ve ürün anlatımını ambalajın kullanımına göre düzenledik.",
+      "en": "Colour, logo placement and product messaging were tailored to how each pack is used."
+    },
+    "solutionSpan": {
+      "tr": "Seçkideki bitmiş uygulamalar, kimliğin farklı ambalaj yüzeylerinde nasıl yaşadığını gösteriyor.",
+      "en": "The finished applications show how the identity lives across different packaging surfaces."
+    },
+    "services": [
+      {
+        "_key": "service-0",
+        "_type": "object",
+        "name": {
+          "tr": "Ambalaj tasarımı",
+          "en": "Packaging design"
+        },
+        "description": {
+          "tr": "Çiğköfte kutusu ve tako ambalajı uygulamaları.",
+          "en": "Çiğköfte box and taco packaging applications."
+        }
+      },
+      {
+        "_key": "service-1",
+        "_type": "object",
+        "name": {
+          "tr": "Marka uygulamaları",
+          "en": "Brand applications"
+        },
+        "description": {
+          "tr": "Ürünler arasında görsel devamlılık.",
+          "en": "Visual continuity between products."
+        }
+      }
+    ],
+    "techStack": [],
+    "imageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-1f5a8669661bef3c1ac9a42031cc0cae0d460b52-1200x1600-webp"
+      }
+    },
+    "bgImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-1f5a8669661bef3c1ac9a42031cc0cae0d460b52-1200x1600-webp"
+      }
+    },
+    "cardImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-1f5a8669661bef3c1ac9a42031cc0cae0d460b52-1200x1600-webp"
+      }
+    },
+    "imageAlt": {
+      "tr": "Biberzade — tasarım uygulaması",
+      "en": "Biberzade — design application"
+    },
+    "cardImageAlt": {
+      "tr": "Biberzade — tasarım uygulaması",
+      "en": "Biberzade — design application"
+    },
+    "galleryImages": [
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-c823e114261e05240b82b81957a5be891afb1eb7-567x578-webp"
+        },
+        "_key": "image-028",
+        "alt": {
+          "tr": "Biberzade — Çiğköfte kutusu mockup’ı",
+          "en": "Biberzade — Çiğköfte box mockup"
+        },
+        "caption": {
+          "tr": "Çiğköfte kutusu mockup’ı",
+          "en": "Çiğköfte box mockup"
+        },
+        "fit": "contain"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-1f5a8669661bef3c1ac9a42031cc0cae0d460b52-1200x1600-webp"
+        },
+        "_key": "image-029",
+        "alt": {
+          "tr": "Biberzade — Tako ambalajı mockup’ı",
+          "en": "Biberzade — Taco packaging mockup"
+        },
+        "caption": {
+          "tr": "Tako ambalajı mockup’ı",
+          "en": "Taco packaging mockup"
+        },
+        "fit": "contain"
+      }
+    ]
+  },
+  {
+    "_id": "niodome-project-kabev",
+    "_type": "project",
+    "isDemo": false,
+    "feedbackApproved": false,
+    "title": {
+      "tr": "KABEV",
+      "en": "KABEV"
+    },
+    "titleLines": {
+      "tr": [
+        "KABEV"
+      ],
+      "en": [
+        "KABEV"
+      ]
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "kabev"
+    },
+    "slug_en": {
+      "_type": "slug",
+      "current": "kabev"
+    },
+    "href": "/works/kabev",
+    "order": 6,
+    "subtitle": {
+      "tr": "Kamu için tasarım. Kimlikten teknik yayınlara.",
+      "en": "Design for the public sector. From identity to technical publications."
+    },
+    "clientName": "KABEV",
+    "industries": {
+      "tr": "Kamu / Enerji verimliliği",
+      "en": "Public sector / Energy efficiency"
+    },
+    "tags": {
+      "tr": [
+        "Logo ve kurumsal kimlik",
+        "Teknik yayın tasarımı",
+        "Bilgilendirme yayınları"
+      ],
+      "en": [
+        "Logo and corporate identity",
+        "Technical publication design",
+        "Information publications"
+      ]
+    },
+    "tagsColA": {
+      "tr": [
+        "Logo ve kurumsal kimlik",
+        "Teknik yayın tasarımı"
+      ],
+      "en": [
+        "Logo and corporate identity",
+        "Technical publication design"
+      ]
+    },
+    "tagsColB": {
+      "tr": [
+        "Bilgilendirme yayınları"
+      ],
+      "en": [
+        "Information publications"
+      ]
+    },
+    "cursorText": {
+      "tr": "Projeyi incele",
+      "en": "Explore project"
+    },
+    "overviewLead": {
+      "tr": "Kamu Binalarında Enerji Verimliliği Projesi için logo, kurumsal kimlik ve yayın tasarımı çalışmaları hazırladık.",
+      "en": "We developed the logo, corporate identity and publication designs for the Energy Efficiency in Public Buildings Project."
+    },
+    "overviewSpan": {
+      "tr": "Kimlik kılavuzu, teknik el kitapları ve bina türlerine göre hazırlanan yayınlar, aynı tasarım sisteminin parçaları olarak ele alındı.",
+      "en": "The identity guide, technical handbooks and building-type publications were considered as parts of one design system."
+    },
+    "challengeLead": {
+      "tr": "Kurumsal bir kimliği, yoğun teknik içeriği taşıyan ve farklı okurlara seslenen yayınlara uyarlamak.",
+      "en": "Adapt an institutional identity to publications carrying substantial technical content for different readers."
+    },
+    "challengeSpan": {
+      "tr": "Seri içindeki kitapların birlikte tanınması kadar, konularının ve kullanım amaçlarının ayrışması da önemliydi.",
+      "en": "The books needed to be recognisable as a series while making their individual subjects and purposes clear."
+    },
+    "solutionLead": {
+      "tr": "Ortak logo düzenini; konuya göre değişen renkler, kapak görselleri ve numaralandırmayla birleştirdik.",
+      "en": "We combined a consistent logo structure with subject-specific colours, cover imagery and numbering."
+    },
+    "solutionSpan": {
+      "tr": "Beş teknik el kitabı ile dört bina türü yayını, içeriklerini koruyan iki ayrı seri olarak sunuluyor.",
+      "en": "Five technical handbooks and four building-type publications are presented as two distinct series, retaining their original content."
+    },
+    "services": [
+      {
+        "_key": "service-0",
+        "_type": "object",
+        "name": {
+          "tr": "Logo ve kurumsal kimlik",
+          "en": "Logo and corporate identity"
+        },
+        "description": {
+          "tr": "KABEV logosu, kimlik kılavuzu ve kurumsal uygulamalar.",
+          "en": "KABEV logo, identity guide and corporate applications."
+        }
+      },
+      {
+        "_key": "service-1",
+        "_type": "object",
+        "name": {
+          "tr": "Teknik yayın tasarımı",
+          "en": "Technical publication design"
+        },
+        "description": {
+          "tr": "El kitabı serisi için kapak ve sayfa tasarımları.",
+          "en": "Cover and page designs for the handbook series."
+        }
+      },
+      {
+        "_key": "service-2",
+        "_type": "object",
+        "name": {
+          "tr": "Bilgilendirme yayınları",
+          "en": "Information publications"
+        },
+        "description": {
+          "tr": "Hastaneler, üniversiteler, okullar ve yurtlar, idari hizmet binaları için yayın serisi.",
+          "en": "A publication series for hospitals, universities, schools and dormitories, and administrative buildings."
+        }
+      }
+    ],
+    "techStack": [],
+    "imageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-fdf7a38b9601245d07e21178577fd9c6069e2eaa-1536x1024-png"
+      }
+    },
+    "bgImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-fdf7a38b9601245d07e21178577fd9c6069e2eaa-1536x1024-png"
+      }
+    },
+    "cardImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-fdf7a38b9601245d07e21178577fd9c6069e2eaa-1536x1024-png"
+      }
+    },
+    "imageAlt": {
+      "tr": "KABEV — tasarım uygulaması",
+      "en": "KABEV — design application"
+    },
+    "cardImageAlt": {
+      "tr": "KABEV — tasarım uygulaması",
+      "en": "KABEV — design application"
+    },
+    "galleryImages": [
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-fdf7a38b9601245d07e21178577fd9c6069e2eaa-1536x1024-png"
+        },
+        "_key": "image-kabev-technical",
+        "alt": {
+          "tr": "KABEV — Beş teknik el kitabı — seri mockup’ı",
+          "en": "KABEV — Five technical handbooks — series mockup"
+        },
+        "caption": {
+          "tr": "Beş teknik el kitabı — seri mockup’ı",
+          "en": "Five technical handbooks — series mockup"
+        },
+        "fit": "cover"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-0ddec175c051372f9f836fb5210b18d27f5ef628-1536x1024-png"
+        },
+        "_key": "image-kabev-buildings",
+        "alt": {
+          "tr": "KABEV — Dört bina türü yayını — seri mockup’ı",
+          "en": "KABEV — Four building-type publications — series mockup"
+        },
+        "caption": {
+          "tr": "Dört bina türü yayını — seri mockup’ı",
+          "en": "Four building-type publications — series mockup"
+        },
+        "fit": "cover"
+      }
+    ]
+  },
+  {
+    "_id": "niodome-project-namli-zeytin",
+    "_type": "project",
+    "isDemo": false,
+    "feedbackApproved": false,
+    "title": {
+      "tr": "Namlı Zeytin",
+      "en": "Namlı Zeytin"
+    },
+    "titleLines": {
+      "tr": [
+        "Namlı Zeytin"
+      ],
+      "en": [
+        "Namlı Zeytin"
+      ]
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "namli-zeytin"
+    },
+    "slug_en": {
+      "_type": "slug",
+      "current": "namli-zeytin"
+    },
+    "href": "/works/namli-zeytin",
+    "order": 7,
+    "subtitle": {
+      "tr": "Aynı imza, farklı çeşitler.",
+      "en": "One signature, different varieties."
+    },
+    "clientName": "Namlı Zeytin",
+    "industries": {
+      "tr": "Gıda / Zeytin",
+      "en": "Food / Olives"
+    },
+    "tags": {
+      "tr": [
+        "Ambalaj ve etiket",
+        "Ürün ailesi"
+      ],
+      "en": [
+        "Packaging and labels",
+        "Product family"
+      ]
+    },
+    "tagsColA": {
+      "tr": [
+        "Ambalaj ve etiket",
+        "Ürün ailesi"
+      ],
+      "en": [
+        "Packaging and labels",
+        "Product family"
+      ]
+    },
+    "tagsColB": {
+      "tr": [],
+      "en": []
+    },
+    "cursorText": {
+      "tr": "Projeyi incele",
+      "en": "Explore project"
+    },
+    "overviewLead": {
+      "tr": "Namlı için zeytin ambalajlarında ürün ailesini bir arada tutan bir tasarım dili geliştirdik.",
+      "en": "For Namlı, we developed a packaging language that brings the olive range together as one family."
+    },
+    "overviewSpan": {
+      "tr": "Teneke ve kavanoz formatlarında markanın imzasını, çeşitlerin ayrışmasını ve ürün bilgisini birlikte ele aldık.",
+      "en": "Across tins and jars, the work considers the brand signature, variety differentiation and product information together."
+    },
+    "challengeLead": {
+      "tr": "Farklı ambalaj hacimleri ve ürün çeşitlerinde tanınabilir bir aile kurmak.",
+      "en": "Build a recognisable family across pack sizes and product varieties."
+    },
+    "challengeSpan": {
+      "tr": "Renklerin çeşitler arasındaki ayrımı desteklemesini, logo ve ürün adının ise tutarlı kalmasını hedefledik.",
+      "en": "Colour helps distinguish varieties while the logo and product name retain a consistent hierarchy."
+    },
+    "solutionLead": {
+      "tr": "Markanın merkezde olduğu, renklerle ayrışan bir ambalaj sistemi oluşturduk.",
+      "en": "We created a packaging system centred on the brand and differentiated through colour."
+    },
+    "solutionSpan": {
+      "tr": "Teneke ve kavanoz uygulamaları, aynı kimliğin farklı formlardaki karşılığını gösteriyor.",
+      "en": "Tin and jar applications show how the same identity translates into different forms."
+    },
+    "services": [
+      {
+        "_key": "service-0",
+        "_type": "object",
+        "name": {
+          "tr": "Ambalaj ve etiket",
+          "en": "Packaging and labels"
+        },
+        "description": {
+          "tr": "Teneke ve kavanoz ürünleri için tasarım uygulamaları.",
+          "en": "Design applications for tin and jar products."
+        }
+      },
+      {
+        "_key": "service-1",
+        "_type": "object",
+        "name": {
+          "tr": "Ürün ailesi",
+          "en": "Product family"
+        },
+        "description": {
+          "tr": "Ürünler arasında renk ve bilgi hiyerarşisi.",
+          "en": "Colour and information hierarchy across the range."
+        }
+      }
+    ],
+    "techStack": [],
+    "imageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-a817d92176641fe09b66bb89c726892d3cb46f55-768x768-webp"
+      }
+    },
+    "bgImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-a817d92176641fe09b66bb89c726892d3cb46f55-768x768-webp"
+      }
+    },
+    "cardImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-a817d92176641fe09b66bb89c726892d3cb46f55-768x768-webp"
+      }
+    },
+    "imageAlt": {
+      "tr": "Namlı Zeytin — tasarım uygulaması",
+      "en": "Namlı Zeytin — design application"
+    },
+    "cardImageAlt": {
+      "tr": "Namlı Zeytin — tasarım uygulaması",
+      "en": "Namlı Zeytin — design application"
+    },
+    "galleryImages": [
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-a817d92176641fe09b66bb89c726892d3cb46f55-768x768-webp"
+        },
+        "_key": "image-059",
+        "alt": {
+          "tr": "Namlı Zeytin — Kırmızı teneke ambalaj",
+          "en": "Namlı Zeytin — Red tin packaging"
+        },
+        "caption": {
+          "tr": "Kırmızı teneke ambalaj",
+          "en": "Red tin packaging"
+        },
+        "fit": "contain"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-300ce7e4b906a2a23eca0f6a248cba1872db8dfa-768x768-webp"
+        },
+        "_key": "image-060",
+        "alt": {
+          "tr": "Namlı Zeytin — Sarı teneke ambalaj",
+          "en": "Namlı Zeytin — Yellow tin packaging"
+        },
+        "caption": {
+          "tr": "Sarı teneke ambalaj",
+          "en": "Yellow tin packaging"
+        },
+        "fit": "contain"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-ec3a8adc1b7160e8c34418bc0afe0d0aa036f525-768x768-webp"
+        },
+        "_key": "image-061",
+        "alt": {
+          "tr": "Namlı Zeytin — Siyah teneke ambalaj",
+          "en": "Namlı Zeytin — Black tin packaging"
+        },
+        "caption": {
+          "tr": "Siyah teneke ambalaj",
+          "en": "Black tin packaging"
+        },
+        "fit": "contain"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-23ff98997f74845f14bc47ba57dc1cc9448c8599-768x768-webp"
+        },
+        "_key": "image-062",
+        "alt": {
+          "tr": "Namlı Zeytin — Yeşil teneke ambalaj",
+          "en": "Namlı Zeytin — Green tin packaging"
+        },
+        "caption": {
+          "tr": "Yeşil teneke ambalaj",
+          "en": "Green tin packaging"
+        },
+        "fit": "contain"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-60f58d3c57409a2710d67ec0c18c01cd5fe77278-768x768-webp"
+        },
+        "_key": "image-063",
+        "alt": {
+          "tr": "Namlı Zeytin — Mor teneke ambalaj",
+          "en": "Namlı Zeytin — Purple tin packaging"
+        },
+        "caption": {
+          "tr": "Mor teneke ambalaj",
+          "en": "Purple tin packaging"
+        },
+        "fit": "contain"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-f9cca54514277263e3084dea0e9073c327bd4017-768x768-webp"
+        },
+        "_key": "image-064",
+        "alt": {
+          "tr": "Namlı Zeytin — Siyah etiketli kavanoz",
+          "en": "Namlı Zeytin — Jar with black label"
+        },
+        "caption": {
+          "tr": "Siyah etiketli kavanoz",
+          "en": "Jar with black label"
+        },
+        "fit": "contain"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-ab51dc89ca17ae78c193f4ac41188fb29ae77a76-768x768-webp"
+        },
+        "_key": "image-065",
+        "alt": {
+          "tr": "Namlı Zeytin — Sarı etiketli kavanoz",
+          "en": "Namlı Zeytin — Jar with yellow label"
+        },
+        "caption": {
+          "tr": "Sarı etiketli kavanoz",
+          "en": "Jar with yellow label"
+        },
+        "fit": "contain"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-2c016d1e50d7afce3f20394bdaa0195986268f5d-768x768-webp"
+        },
+        "_key": "image-066",
+        "alt": {
+          "tr": "Namlı Zeytin — Mor etiketli kavanoz",
+          "en": "Namlı Zeytin — Jar with purple label"
+        },
+        "caption": {
+          "tr": "Mor etiketli kavanoz",
+          "en": "Jar with purple label"
+        },
+        "fit": "contain"
+      }
+    ]
+  },
+  {
+    "_id": "niodome-project-ambalaj-seckisi",
+    "_type": "project",
+    "isDemo": false,
+    "feedbackApproved": false,
+    "title": {
+      "tr": "Ambalaj seçkisi",
+      "en": "Packaging selection"
+    },
+    "titleLines": {
+      "tr": [
+        "Ambalaj seçkisi"
+      ],
+      "en": [
+        "Packaging selection"
+      ]
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "ambalaj-seckisi"
+    },
+    "slug_en": {
+      "_type": "slug",
+      "current": "ambalaj-seckisi"
+    },
+    "href": "/works/ambalaj-seckisi",
+    "order": 8,
+    "subtitle": {
+      "tr": "Farklı markalar. Ürüne göre şekillenen tasarım.",
+      "en": "Different brands. Design shaped around the product."
+    },
+    "clientName": "Selam · Hassan · Seyidoğlu · Appetito",
+    "industries": {
+      "tr": "Gıda / Çok markalı ambalaj seçkisi",
+      "en": "Food / Multi-brand packaging selection"
+    },
+    "tags": {
+      "tr": [
+        "Ambalaj tasarımı",
+        "Ürün varyantları"
+      ],
+      "en": [
+        "Packaging design",
+        "Product variants"
+      ]
+    },
+    "tagsColA": {
+      "tr": [
+        "Ambalaj tasarımı",
+        "Ürün varyantları"
+      ],
+      "en": [
+        "Packaging design",
+        "Product variants"
+      ]
+    },
+    "tagsColB": {
+      "tr": [],
+      "en": []
+    },
+    "cursorText": {
+      "tr": "Projeyi incele",
+      "en": "Explore project"
+    },
+    "overviewLead": {
+      "tr": "Selam, Hassan, Seyidoğlu Çokomiss ve Appetito için hazırladığımız ambalaj çalışmalarından bir seçki.",
+      "en": "A selection of our packaging work for Selam, Hassan, Seyidoğlu Çokomiss and Appetito."
+    },
+    "overviewSpan": {
+      "tr": "Yoğurt, dondurma, kakaolu fındık kreması ve sade yağ gibi farklı kategorilerde her markanın kendi anlatımını geliştirdik.",
+      "en": "Across yoghurt, ice cream, cocoa hazelnut spread and clarified butter, each brand has its own visual expression."
+    },
+    "challengeLead": {
+      "tr": "Ambalajın ürünü anlatması, markayı taşıması ve kendi kategorisinin ihtiyaçlarına cevap vermesi.",
+      "en": "Packaging needs to communicate the product, carry the brand and respond to its category."
+    },
+    "challengeSpan": {
+      "tr": "Bu seçki tek bir kampanyaya değil, farklı markalar için yürüttüğümüz ayrı tasarım çalışmalarına ait.",
+      "en": "This selection brings together separate design projects for different brands rather than one campaign."
+    },
+    "solutionLead": {
+      "tr": "Marka imzası, ürün görseli, renk ve bilgi hiyerarşisini her ürün için yeniden kurduk.",
+      "en": "For each product, we reconsidered the brand signature, imagery, colour and information hierarchy."
+    },
+    "solutionSpan": {
+      "tr": "Uygulama görselleri, tasarımların farklı kap ve kutu biçimlerindeki karşılığını gösteriyor.",
+      "en": "Application visuals show the designs across different containers and cartons."
+    },
+    "services": [
+      {
+        "_key": "service-0",
+        "_type": "object",
+        "name": {
+          "tr": "Ambalaj tasarımı",
+          "en": "Packaging design"
+        },
+        "description": {
+          "tr": "Farklı gıda kategorileri için kap ve kutu tasarımları.",
+          "en": "Container and carton designs for different food categories."
+        }
+      },
+      {
+        "_key": "service-1",
+        "_type": "object",
+        "name": {
+          "tr": "Ürün varyantları",
+          "en": "Product variants"
+        },
+        "description": {
+          "tr": "Marka ve ürün bilgisi hiyerarşisinin çeşitlere uyarlanması.",
+          "en": "Adapting brand and product information hierarchy across variants."
+        }
+      }
+    ],
+    "techStack": [],
+    "imageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-f70151e4b20106199deb7c15fe5d417a2132cf76-1671x941-webp"
+      }
+    },
+    "bgImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-f70151e4b20106199deb7c15fe5d417a2132cf76-1671x941-webp"
+      }
+    },
+    "cardImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-f70151e4b20106199deb7c15fe5d417a2132cf76-1671x941-webp"
+      }
+    },
+    "imageAlt": {
+      "tr": "Ambalaj seçkisi — tasarım uygulaması",
+      "en": "Packaging selection — design application"
+    },
+    "cardImageAlt": {
+      "tr": "Ambalaj seçkisi — tasarım uygulaması",
+      "en": "Packaging selection — design application"
+    },
+    "galleryImages": [
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-f70151e4b20106199deb7c15fe5d417a2132cf76-1671x941-webp"
+        },
+        "_key": "image-052",
+        "alt": {
+          "tr": "Ambalaj seçkisi — Selam yoğurt ambalaj uygulaması",
+          "en": "Packaging selection — Selam yoghurt packaging application"
+        },
+        "caption": {
+          "tr": "Selam yoğurt ambalaj uygulaması",
+          "en": "Selam yoghurt packaging application"
+        },
+        "fit": "cover"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-999f5b6d2c4ec64483a298e2cb318db9eec164c8-1536x1024-webp"
+        },
+        "_key": "image-053",
+        "alt": {
+          "tr": "Ambalaj seçkisi — Hassan kayısılı dondurma ambalajı",
+          "en": "Packaging selection — Hassan apricot ice cream packaging"
+        },
+        "caption": {
+          "tr": "Hassan kayısılı dondurma ambalajı",
+          "en": "Hassan apricot ice cream packaging"
+        },
+        "fit": "cover"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-256f6af342495f66207575b7bded166ac7d62383-1536x1024-webp"
+        },
+        "_key": "image-054",
+        "alt": {
+          "tr": "Ambalaj seçkisi — Seyidoğlu Çokomiss ambalajı",
+          "en": "Packaging selection — Seyidoğlu Çokomiss packaging"
+        },
+        "caption": {
+          "tr": "Seyidoğlu Çokomiss ambalajı",
+          "en": "Seyidoğlu Çokomiss packaging"
+        },
+        "fit": "cover"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-635f67577ae5591bd7bf9730d1ae18304d3ccf8f-1672x941-webp"
+        },
+        "_key": "image-055",
+        "alt": {
+          "tr": "Ambalaj seçkisi — Appetito beyaz ambalaj",
+          "en": "Packaging selection — Appetito white packaging"
+        },
+        "caption": {
+          "tr": "Appetito beyaz ambalaj",
+          "en": "Appetito white packaging"
+        },
+        "fit": "cover"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-a6b6f5c0454c17147ba46518e095c7a35f9c1cf3-1672x941-webp"
+        },
+        "_key": "image-056",
+        "alt": {
+          "tr": "Ambalaj seçkisi — Appetito sarı ambalaj",
+          "en": "Packaging selection — Appetito yellow packaging"
+        },
+        "caption": {
+          "tr": "Appetito sarı ambalaj",
+          "en": "Appetito yellow packaging"
+        },
+        "fit": "cover"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-7588e63dd9d79915734b59e52f18d55da473b9dc-1536x1024-webp"
+        },
+        "_key": "image-057",
+        "alt": {
+          "tr": "Ambalaj seçkisi — Appetito krem ambalaj",
+          "en": "Packaging selection — Appetito cream packaging"
+        },
+        "caption": {
+          "tr": "Appetito krem ambalaj",
+          "en": "Appetito cream packaging"
+        },
+        "fit": "cover"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-4ba7d96b924fda7dd3f67d5373617d879993b835-1536x1024-webp"
+        },
+        "_key": "image-058",
+        "alt": {
+          "tr": "Ambalaj seçkisi — Appetito turuncu ambalaj",
+          "en": "Packaging selection — Appetito orange packaging"
+        },
+        "caption": {
+          "tr": "Appetito turuncu ambalaj",
+          "en": "Appetito orange packaging"
+        },
+        "fit": "cover"
+      }
+    ]
+  }
+]

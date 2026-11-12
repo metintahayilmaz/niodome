@@ -49,9 +49,15 @@ function flatLines(splits: SplitText[]): HTMLElement[] {
   return splits.flatMap((s) => s.lines);
 }
 
+function setSubmenuExpanded(item: HTMLElement, submenu: HTMLElement, expanded: boolean): void {
+  item.querySelector<HTMLButtonElement>("button[aria-controls]")?.setAttribute("aria-expanded", String(expanded));
+  submenu.inert = !expanded;
+}
+
 function resetSubmenus(rows: MxdMenuGsapMenuRow[]): void {
   rows.forEach(({ item, submenu }) => {
     if (!submenu) return;
+    setSubmenuExpanded(item, submenu, false);
     gsap.killTweensOf(submenu);
     submenu.style.display = "none";
     gsap.set(submenu, { clearProps: "height,overflow" });
@@ -60,6 +66,7 @@ function resetSubmenus(rows: MxdMenuGsapMenuRow[]): void {
 }
 
 function animateSubmenuOpen(sub: HTMLElement, item: HTMLElement): void {
+  setSubmenuExpanded(item, sub, true);
   gsap.killTweensOf(sub);
   item.classList.add("open");
   sub.style.display = "block";
@@ -76,6 +83,7 @@ function animateSubmenuOpen(sub: HTMLElement, item: HTMLElement): void {
 }
 
 function animateSubmenuClose(sub: HTMLElement, item: HTMLElement): void {
+  setSubmenuExpanded(item, sub, false);
   gsap.killTweensOf(sub);
   const h = sub.offsetHeight;
   if (h <= 0) {

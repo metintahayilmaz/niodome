@@ -120,3 +120,8 @@
 /* Keep the approved descriptions readable even when entering a pinned card directly. */
 .services-card__tags { opacity: 1 !important; }
 .services-card__descr .line { transform: none !important; }
+
+/* One disclosure under Services; all other primary destinations stay direct. */
+button.main-menu__link--direct { background: none; border: 0; padding: 0; width: 100%; text-align: left; color: inherit; }
+.main-menu__link:focus-visible, .submenu__item a:focus-visible { outline: 2px solid currentColor; outline-offset: 6px; }
+.submenu__item a[aria-current="page"] { text-decoration: underline; text-underline-offset: .3em; }

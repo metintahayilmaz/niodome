@@ -98,7 +98,7 @@ export async function generateMetadata({
 }
 
 // ── Raw types returned by Sanity (before urlFor) ────────────────────────────
-type RawGalleryImage = Parameters<typeof urlFor>[0] & { alt?: { tr?: string; en?: string }; caption?: { tr?: string; en?: string } };
+type RawGalleryImage = Parameters<typeof urlFor>[0] & { alt?: { tr?: string; en?: string }; caption?: { tr?: string; en?: string }; fit?: "cover" | "contain" };
 type RawProject = {
   _id: string;
   title: string | null;
@@ -167,7 +167,7 @@ export default async function WorksSlugPage({
       gallery = galleryImages.map((src, index) => {
         const image = raw.galleryImages?.[index];
         const language = locale === "en" ? "en" : "tr";
-        return { src, alt: image?.alt?.[language] || raw.title || "", caption: image?.caption?.[language] };
+        return { src, alt: image?.alt?.[language] || raw.title || "", caption: image?.caption?.[language], fit: image?.fit === "contain" ? "contain" : "cover" };
       });
 
       // Feedback author photo

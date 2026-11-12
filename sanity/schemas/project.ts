@@ -166,7 +166,7 @@ export const project = defineType({
       title: "Project Gallery",
       description: "Görseller sırayla gösterilir. Açıklama ve alternatif metinleri iki dilde girin.",
       type: "array",
-      of: [{ type: "image", options: { hotspot: true }, fields: [localeString("alt", "Alternative text"), localeString("caption", "Caption")] }],
+      of: [{ type: "image", options: { hotspot: true }, fields: [localeString("alt", "Alternative text"), localeString("caption", "Caption"), defineField({ name: "fit", title: "Görsel yerleşimi", type: "string", options: { list: [{ title: "Kadrajı doldur", value: "cover" }, { title: "Ürünün tamamını göster", value: "contain" }] } })] }],
       validation: (r) => r.max(30),
     }),
 

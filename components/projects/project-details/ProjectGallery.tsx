@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./ProjectGallery.module.css";
 
-export type ProjectGalleryItem = { src: string; alt: string; caption?: string };
+export type ProjectGalleryItem = { src: string; alt: string; caption?: string; fit?: "cover" | "contain" };
 
 export default function ProjectGallery({ images }: { images: ProjectGalleryItem[] }) {
   if (!images.length) return null;
@@ -23,7 +23,7 @@ export default function ProjectGallery({ images }: { images: ProjectGalleryItem[
             <figure className={styles.figure} key={image.src}>
               <Image src={image.src} alt={image.alt} fill
                 sizes={row.length === 2 ? "(max-width: 600px) 46vw, 44vw" : "(max-width: 600px) 30vw, 29vw"}
-                className={styles.image} />
+                className={styles.image} style={image.fit === "contain" ? { objectFit: "contain", background: "#fff" } : undefined} />
               {image.caption && <figcaption className={styles.caption}>{image.caption}</figcaption>}
             </figure>
           ))}
