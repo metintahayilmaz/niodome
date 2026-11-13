@@ -1,3 +1,4 @@
+import { verifiedSocials } from "@/lib/verifiedSocials";
 import type { SiteSettingsData } from "@/types/siteSettings";
 
 export const siteSettings: SiteSettingsData = {
@@ -22,9 +23,5 @@ export const siteSettings: SiteSettingsData = {
     { href: "/contact", label: "İletişim" },
   ],
 
-  socials: [
-    { href: "https://instagram.com/niodome", label: "Instagram" },
-    { href: "https://linkedin.com/company/niodome", label: "LinkedIn" },
-    { href: "https://behance.net/niodome", label: "Behance" },
-  ],
+  socials: verifiedSocials,
 };

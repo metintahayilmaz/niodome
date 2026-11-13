@@ -1,3 +1,4 @@
+import { getVerifiedSocials } from "@/lib/verifiedSocials";
 /**
  * JSON-LD schema helper'ları — her fonksiyon schema.org uyumlu nesne döner.
  * Boş/null alanlar yayılmaz; eksik veriyle geçersiz schema üretilmez.
@@ -16,15 +17,15 @@ const BASE = SITE_URL;
 function compact<T extends Record<string, unknown>>(obj: T): Partial<T> {
   return Object.fromEntries(
     Object.entries(obj).filter(
-      ([, v]) => v !== undefined && v !== null && v !== ""
-    )
+      ([, v]) => v !== undefined && v !== null && v !== "",
+    ),
   ) as Partial<T>;
 }
 
 // ── Organization ────────────────────────────────────────────────────────────
 
 export function organizationSchema(settings?: SiteSettingsData) {
-  const sameAs = (settings?.socials ?? [])
+  const sameAs = getVerifiedSocials(settings?.socials)
     .map((s) => s.href)
     .filter(Boolean);
 
@@ -106,7 +107,10 @@ export type ArticleSchemaInput = {
 };
 
 export function articleSchema(post: ArticleSchemaInput, locale = "tr") {
-  const url = locale === "en" ? `${BASE}/en/blog/${post.slug}` : `${BASE}/blog/${post.slug}`;
+  const url =
+    locale === "en"
+      ? `${BASE}/en/blog/${post.slug}`
+      : `${BASE}/blog/${post.slug}`;
   return compact({
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -135,7 +139,10 @@ export function articleSchema(post: ArticleSchemaInput, locale = "tr") {
 // ── CreativeWork (works/[slug]) ──────────────────────────────────────────────
 
 export function creativeWorkSchema(project: ProjectDetail, locale = "tr") {
-  const url = locale === "en" ? `${BASE}/en/works/${project.slug}` : `${BASE}/calismalar/${project.slug}`;
+  const url =
+    locale === "en"
+      ? `${BASE}/en/works/${project.slug}`
+      : `${BASE}/calismalar/${project.slug}`;
 
   const images = project.galleryImages.filter(Boolean);
   const about = [

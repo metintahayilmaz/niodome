@@ -58,24 +58,42 @@ export default function Nav({
   ] as const;
 
   const serviceLinks = [
-    { href: "/services", label: language === "tr" ? "Tüm hizmetler" : "All services" },
-    ...serviceCatalog.map(service => ({href:service.href,label:service.label[language]})),
+    {
+      href: "/services",
+      label: language === "tr" ? "Tüm hizmetler" : "All services",
+    },
+    ...serviceCatalog.map((service) => ({
+      href: service.href,
+      label: service.label[language],
+    })),
   ];
   const g = useMxdMenuGsapRefs(links.length);
 
-  const submenuSlots = useMemo(() => makeSlotters(g.menuSubmenus, g.rowCount), [g]);
+  const submenuSlots = useMemo(
+    () => makeSlotters(g.menuSubmenus, g.rowCount),
+    [g],
+  );
   const headerSlots = useMemo(() => makeSlotters(g.headerSplitTargets, 3), [g]);
-  const mainSlots = useMemo(() => makeSlotters(g.mainMenuLinkSpans, g.rowCount * 2), [g]);
+  const mainSlots = useMemo(
+    () => makeSlotters(g.mainMenuLinkSpans, g.rowCount * 2),
+    [g],
+  );
   const contactSlots = useMemo(() => makeSlotters(g.contactAnchors, 8), [g]);
   const contactRevealSlots = useMemo(
     () => makeSlotters(g.contactRevealTargets, 8),
     [g],
   );
   const footerSlots = useMemo(() => makeSlotters(g.footerSplitTargets, 4), [g]);
-  const dividerSlots = useMemo(() => makeSlotters(g.dividers, g.rowCount + 1), [g]);
+  const dividerSlots = useMemo(
+    () => makeSlotters(g.dividers, g.rowCount + 1),
+    [g],
+  );
   const arrowSlots = useMemo(() => makeSlotters(g.arrows, g.rowCount), [g]);
   const liSlots = useMemo(() => makeSlotters(g.menuItemLis, g.rowCount), [g]);
-  const toggleSlots = useMemo(() => makeSlotters(g.menuToggles, g.rowCount), [g]);
+  const toggleSlots = useMemo(
+    () => makeSlotters(g.menuToggles, g.rowCount),
+    [g],
+  );
 
   useMxdMenuGsap(navNode, toggleNode, hamburgerNode, registerMenuReset, g);
 
@@ -147,12 +165,42 @@ export default function Nav({
                     <ul id="main-menu" className="main-menu__accordion">
                       {links.map((link, index) => {
                         const hasChildren = link.href === "/services";
-                        const active = isActiveRoute(pathname, link.href) || (hasChildren && serviceLinks.some(child => isActiveRoute(pathname, child.href)));
-                        const label = <>
-                          <span ref={mainSlots[index * 2]} className="main-menu__number">/ {String(index + 1).padStart(2, "0")}</span>
-                          <span ref={mainSlots[index * 2 + 1]} className="main-menu__caption">{link.label}</span>
-                          <span ref={arrowSlots[index]} className="main-menu__arrow" aria-hidden="true"><svg viewBox="0 0 18 18" fill="none"><path d="M3 9h11M9 3l6 6-6 6" stroke="currentColor" strokeWidth="2" fill="none" /></svg></span>
-                        </>;
+                        const active =
+                          isActiveRoute(pathname, link.href) ||
+                          (hasChildren &&
+                            serviceLinks.some((child) =>
+                              isActiveRoute(pathname, child.href),
+                            ));
+                        const label = (
+                          <>
+                            <span
+                              ref={mainSlots[index * 2]}
+                              className="main-menu__number"
+                            >
+                              / {String(index + 1).padStart(2, "0")}
+                            </span>
+                            <span
+                              ref={mainSlots[index * 2 + 1]}
+                              className="main-menu__caption"
+                            >
+                              {link.label}
+                            </span>
+                            <span
+                              ref={arrowSlots[index]}
+                              className="main-menu__arrow"
+                              aria-hidden="true"
+                            >
+                              <svg viewBox="0 0 18 18" fill="none">
+                                <path
+                                  d="M3 9h11M9 3l6 6-6 6"
+                                  stroke="currentColor"
+                                  strokeWidth="2"
+                                  fill="none"
+                                />
+                              </svg>
+                            </span>
+                          </>
+                        );
                         return (
                           <li
                             key={link.href}
@@ -170,14 +218,49 @@ export default function Nav({
                               className="main-menu__toggle"
                             >
                               {hasChildren ? (
-                                <button type="button" className="main-menu__link main-menu__link--direct" aria-expanded="false" aria-controls="services-submenu">{label}</button>
+                                <button
+                                  type="button"
+                                  className="main-menu__link main-menu__link--direct"
+                                  aria-expanded="false"
+                                  aria-controls="services-submenu"
+                                >
+                                  {label}
+                                </button>
                               ) : (
-                                <Link href={link.href} className="main-menu__link main-menu__link--direct" aria-current={active ? "page" : undefined}>{label}</Link>
+                                <Link
+                                  href={link.href}
+                                  className="main-menu__link main-menu__link--direct"
+                                  aria-current={active ? "page" : undefined}
+                                >
+                                  {label}
+                                </Link>
                               )}
                             </div>
-                            {hasChildren && <ul id="services-submenu" className="submenu agency-service-menu" ref={submenuSlots[index]}>
-                              {serviceLinks.map(child => <li className="submenu__item" key={child.href}><LocalizedLink href={child.href} aria-current={isActiveRoute(pathname, child.href) ? "page" : undefined}>{child.label}</LocalizedLink></li>)}
-                            </ul>}
+                            {hasChildren && (
+                              <ul
+                                id="services-submenu"
+                                className="submenu agency-service-menu"
+                                ref={submenuSlots[index]}
+                              >
+                                {serviceLinks.map((child) => (
+                                  <li
+                                    className="submenu__item"
+                                    key={child.href}
+                                  >
+                                    <LocalizedLink
+                                      href={child.href}
+                                      aria-current={
+                                        isActiveRoute(pathname, child.href)
+                                          ? "page"
+                                          : undefined
+                                      }
+                                    >
+                                      {child.label}
+                                    </LocalizedLink>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
                             <div
                               ref={dividerSlots[index + 1]}
                               className="main-menu__divider divider-bottom"
@@ -243,58 +326,31 @@ export default function Nav({
                       </li>
                     </ul>
                   </div>
-                  <div className="menu-contact__item">
-                    <ul className="menu-contact__list">
-                      <li>
-                        <a
-                          ref={contactSlots[3]}
-                          className="tag tag-m"
-                          href="https://instagram.com/niodome"
-                          lang="en"
-                          target="_blank"
-                        >
-                          <TextScramble
-                            ref={contactRevealSlots[3]}
-                            className="mxd-scramble"
-                          >
-                            Instagram
-                          </TextScramble>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          ref={contactSlots[4]}
-                          className="tag tag-m"
-                          href="https://linkedin.com/company/niodome"
-                          lang="en"
-                          target="_blank"
-                        >
-                          <TextScramble
-                            ref={contactRevealSlots[4]}
-                            className="mxd-scramble"
-                          >
-                            LinkedIn
-                          </TextScramble>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          ref={contactSlots[5]}
-                          className="tag tag-m"
-                          href="https://behance.net/niodome"
-                          lang="en"
-                          target="_blank"
-                        >
-                          <TextScramble
-                            ref={contactRevealSlots[5]}
-                            className="mxd-scramble"
-                          >
-                            Behance
-                          </TextScramble>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                  {siteSettings.socials.length > 0 && (
+                    <div className="menu-contact__item">
+                      <ul className="menu-contact__list">
+                        {siteSettings.socials.map((social, index) => (
+                          <li key={social.href}>
+                            <a
+                              ref={contactSlots[index + 3]}
+                              className="tag tag-m"
+                              href={social.href}
+                              lang="en"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <TextScramble
+                                ref={contactRevealSlots[index + 3]}
+                                className="mxd-scramble"
+                              >
+                                {social.label}
+                              </TextScramble>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </div>
               {/* data bottom line */}

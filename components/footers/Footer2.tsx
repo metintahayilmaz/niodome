@@ -1,3 +1,4 @@
+import { getVerifiedSocials } from "@/lib/verifiedSocials";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import BlurSection from "@/components/animations/BlurSection";
@@ -51,7 +52,8 @@ type Props = {
 export default async function Footer2({ name, settings }: Props) {
   const t = await getTranslations("footer");
   // Sanity verisi gelmezse local data'ya dön
-  const s = settings ?? localSettings;
+  const base = settings ?? localSettings;
+  const s = { ...base, socials: getVerifiedSocials(base.socials) };
 
   // Büyük footer metni: açık name prop varsa o, yoksa logotype
   const displayName = name ?? s.logotype;
@@ -102,25 +104,67 @@ export default async function Footer2({ name, settings }: Props) {
                                 // Hardcoded fallback
                                 <>
                                   <li>
-                                    <CommonScrollAnimatedLink className="anim-uni-slide-down" href="/index-creative-agency" animation="slideDownLine"><span>{t("linkHome")}</span></CommonScrollAnimatedLink>
+                                    <CommonScrollAnimatedLink
+                                      className="anim-uni-slide-down"
+                                      href="/index-creative-agency"
+                                      animation="slideDownLine"
+                                    >
+                                      <span>{t("linkHome")}</span>
+                                    </CommonScrollAnimatedLink>
                                   </li>
                                   <li>
-                                    <CommonScrollAnimatedLink className="anim-uni-slide-down" href="/about-us" animation="slideDownLine"><span>{t("linkAboutUs")}</span></CommonScrollAnimatedLink>
+                                    <CommonScrollAnimatedLink
+                                      className="anim-uni-slide-down"
+                                      href="/about-us"
+                                      animation="slideDownLine"
+                                    >
+                                      <span>{t("linkAboutUs")}</span>
+                                    </CommonScrollAnimatedLink>
                                   </li>
                                   <li>
-                                    <CommonScrollAnimatedLink className="anim-uni-slide-down" href="/works-default" animation="slideDownLine"><span>{t("linkCaseStudies")}</span></CommonScrollAnimatedLink>
+                                    <CommonScrollAnimatedLink
+                                      className="anim-uni-slide-down"
+                                      href="/works-default"
+                                      animation="slideDownLine"
+                                    >
+                                      <span>{t("linkCaseStudies")}</span>
+                                    </CommonScrollAnimatedLink>
                                   </li>
                                   <li>
-                                    <CommonScrollAnimatedLink className="anim-uni-slide-down" href="/services" animation="slideDownLine"><span>{t("linkServices")}</span></CommonScrollAnimatedLink>
+                                    <CommonScrollAnimatedLink
+                                      className="anim-uni-slide-down"
+                                      href="/services"
+                                      animation="slideDownLine"
+                                    >
+                                      <span>{t("linkServices")}</span>
+                                    </CommonScrollAnimatedLink>
                                   </li>
                                   <li>
-                                    <CommonScrollAnimatedLink className="anim-uni-slide-down" href="/team" animation="slideDownLine"><span>{t("linkOurTeam")}</span></CommonScrollAnimatedLink>
+                                    <CommonScrollAnimatedLink
+                                      className="anim-uni-slide-down"
+                                      href="/team"
+                                      animation="slideDownLine"
+                                    >
+                                      <span>{t("linkOurTeam")}</span>
+                                    </CommonScrollAnimatedLink>
                                   </li>
                                   <li>
-                                    <CommonScrollAnimatedLink className="anim-uni-slide-down" href="/blog-standard" animation="slideDownLine"><span>{t("linkInsights")}</span></CommonScrollAnimatedLink>
+                                    <CommonScrollAnimatedLink
+                                      className="anim-uni-slide-down"
+                                      href="/blog-standard"
+                                      animation="slideDownLine"
+                                    >
+                                      <span>{t("linkInsights")}</span>
+                                    </CommonScrollAnimatedLink>
                                   </li>
                                   <li>
-                                    <CommonScrollAnimatedLink className="anim-uni-slide-down" href="/contact" animation="slideDownLine"><span>{t("linkContact")}</span></CommonScrollAnimatedLink>
+                                    <CommonScrollAnimatedLink
+                                      className="anim-uni-slide-down"
+                                      href="/contact"
+                                      animation="slideDownLine"
+                                    >
+                                      <span>{t("linkContact")}</span>
+                                    </CommonScrollAnimatedLink>
                                   </li>
                                 </>
                               )}
@@ -206,72 +250,76 @@ export default async function Footer2({ name, settings }: Props) {
                 </nav>
               </div>
               {/* Ecosystem / Socials */}
-              <div className="col-12 col-xl-6 mxd-footer__item mxd-grid-item">
-                <div className="mxd-footer__socials-list">
-                  <div className="container-fluid p-0">
-                    <div className="row g-0">
-                      <div className="col-12 mxd-footer-nav02__item">
-                        <div className="mxd-footer-nav02__block">
-                          <div className="mxd-footer-nav02__title">
-                            <CommonScrollAnimated
-                              className="footer-data anim-uni-slide-down"
-                              as="p"
-                              animation="slideDownLine"
-                            >
-                              <span>{t("ecosystem")}</span>
-                            </CommonScrollAnimated>
-                          </div>
-                          <div className="mxd-footer-nav02__list">
-                            {(s.socials ?? []).map((social, index) => (
-                              <a
-                                key={social.href}
-                                className="socials-list__item slide-right-up"
-                                href={social.href}
-                                lang="en"
-                                target="_blank"
+              {s.socials.length > 0 && (
+                <div className="col-12 col-xl-6 mxd-footer__item mxd-grid-item">
+                  <div className="mxd-footer__socials-list">
+                    <div className="container-fluid p-0">
+                      <div className="row g-0">
+                        <div className="col-12 mxd-footer-nav02__item">
+                          <div className="mxd-footer-nav02__block">
+                            <div className="mxd-footer-nav02__title">
+                              <CommonScrollAnimated
+                                className="footer-data anim-uni-slide-down"
+                                as="p"
+                                animation="slideDownLine"
                               >
-                                <CommonScrollAnimated
-                                  className="socials-list__divider divider-top anim-uni-clip-in"
-                                  as="div"
-                                  animation="clipIn"
-                                />
-                                <div className="socials-list__info">
-                                  <CommonScrollAnimated
-                                    className="socials-list__number anim-uni-slide-down"
-                                    as="div"
-                                    animation="slideDownLine"
-                                  >
-                                    <span>[{String(index + 1).padStart(2, "0")}]</span>
-                                  </CommonScrollAnimated>
-                                  <CommonScrollAnimated
-                                    className="socials-list__name anim-uni-slide-down"
-                                    as="div"
-                                    animation="slideDownLine"
-                                  >
-                                    <span>{social.label}</span>
-                                  </CommonScrollAnimated>
-                                </div>
-                                <CommonScrollAnimated
-                                  className="socials-list__arrow anim-uni-slide-down"
-                                  as="div"
-                                  animation="slideDownLine"
+                                <span>{t("ecosystem")}</span>
+                              </CommonScrollAnimated>
+                            </div>
+                            <div className="mxd-footer-nav02__list">
+                              {(s.socials ?? []).map((social, index) => (
+                                <a
+                                  key={social.href}
+                                  className="socials-list__item slide-right-up"
+                                  href={social.href}
+                                  lang="en"
+                                  target="_blank"
                                 >
-                                  <ArrowIcon />
-                                </CommonScrollAnimated>
-                                <CommonScrollAnimated
-                                  className="socials-list__divider divider-bottom anim-uni-clip-in"
-                                  as="div"
-                                  animation="clipIn"
-                                />
-                              </a>
-                            ))}
+                                  <CommonScrollAnimated
+                                    className="socials-list__divider divider-top anim-uni-clip-in"
+                                    as="div"
+                                    animation="clipIn"
+                                  />
+                                  <div className="socials-list__info">
+                                    <CommonScrollAnimated
+                                      className="socials-list__number anim-uni-slide-down"
+                                      as="div"
+                                      animation="slideDownLine"
+                                    >
+                                      <span>
+                                        [{String(index + 1).padStart(2, "0")}]
+                                      </span>
+                                    </CommonScrollAnimated>
+                                    <CommonScrollAnimated
+                                      className="socials-list__name anim-uni-slide-down"
+                                      as="div"
+                                      animation="slideDownLine"
+                                    >
+                                      <span>{social.label}</span>
+                                    </CommonScrollAnimated>
+                                  </div>
+                                  <CommonScrollAnimated
+                                    className="socials-list__arrow anim-uni-slide-down"
+                                    as="div"
+                                    animation="slideDownLine"
+                                  >
+                                    <ArrowIcon />
+                                  </CommonScrollAnimated>
+                                  <CommonScrollAnimated
+                                    className="socials-list__divider divider-bottom anim-uni-clip-in"
+                                    as="div"
+                                    animation="clipIn"
+                                  />
+                                </a>
+                              ))}
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
@@ -314,7 +362,10 @@ export default async function Footer2({ name, settings }: Props) {
                     width={0}
                     height={0}
                     sizes="(max-width: 768px) 60vw, 40vw"
-                    style={{ width: "auto", height: "clamp(60px, 10vw, 140px)" }}
+                    style={{
+                      width: "auto",
+                      height: "clamp(60px, 10vw, 140px)",
+                    }}
                     priority={false}
                   />
                 ) : (
@@ -344,7 +395,9 @@ export default async function Footer2({ name, settings }: Props) {
                     animation="fadeIn"
                   >
                     <p className="footer-data">
-                      <span>{s.copyrightText.replace(/niodome/gi, "NIODOME")}</span>
+                      <span>
+                        {s.copyrightText.replace(/niodome/gi, "NIODOME")}
+                      </span>
                     </p>
                   </CommonScrollAnimated>
                 </div>

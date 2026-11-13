@@ -1,7 +1,7 @@
+import { getVerifiedSocials } from "@/lib/verifiedSocials";
 import { getTranslations } from "next-intl/server";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
-import { siteSettings as localSettings } from "@/data/siteSettings";
 
 type SocialItem = { label: string; href: string };
 
@@ -35,8 +35,9 @@ function ArrowIcon() {
 export default async function Socials({ socials }: Props) {
   const t = await getTranslations("contact");
   // Sanity'den geldiyse kullan; yoksa local siteSettings.socials'a dön
-  const resolvedSocials: SocialItem[] =
-    socials && socials.length > 0 ? socials : localSettings.socials;
+  const resolvedSocials: SocialItem[] = getVerifiedSocials(socials);
+
+  if (!resolvedSocials.length) return null;
 
   return (
     <>

@@ -1,3 +1,4 @@
+import { getVerifiedSocials } from "@/lib/verifiedSocials";
 import Image from "next/image";
 import BlurSection from "@/components/animations/BlurSection";
 import CommonAnimatedText from "../animations/CommonAnimatedText";
@@ -26,7 +27,8 @@ type Props = {
 
 export default function Footer3({ name, settings }: Props) {
   // Sanity verisi gelmezse local data'ya dön
-  const s = settings ?? localSettings;
+  const base = settings ?? localSettings;
+  const s = { ...base, socials: getVerifiedSocials(base.socials) };
 
   // Büyük footer metni: açık name prop varsa o, yoksa logotype
   const displayName = name ?? s.logotype;

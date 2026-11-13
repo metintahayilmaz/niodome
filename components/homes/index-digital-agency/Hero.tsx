@@ -1,4 +1,5 @@
 "use client";
+import { getVerifiedSocials } from "@/lib/verifiedSocials";
 import { useLocale } from "next-intl";
 import geoCopy from "@/data/geo.json";
 import geoStyles from "@/components/geo/Geo.module.css";
@@ -19,7 +20,6 @@ import CommonHero3DImages, {
   CommonHero3DOutroText,
 } from "@/components/animations/CommonHero3DImages";
 import { heroDigitalAgencyData } from "@/data/heroDigitalAgency";
-import { siteSettings } from "@/data/siteSettings";
 import coverStyles from "./HeroCover.module.css";
 import type { SocialLinkItem } from "@/types/siteSettings";
 import type { HeroGalleryImage } from "@/types/heroDigitalAgency";
@@ -90,8 +90,7 @@ export default function Hero({
 }: Props) {
   const locale = useLocale() === "en" ? "en" : "tr";
   const geo = geoCopy[locale];
-  const resolvedSocials =
-    socials && socials.length > 0 ? socials : siteSettings.socials;
+  const resolvedSocials = getVerifiedSocials(socials);
   const local = heroDigitalAgencyData;
   const sanityGallery = heroSettings?.galleryImages ?? [];
 
@@ -255,11 +254,24 @@ export default function Hero({
               )}
             </CommonHero3DCover>
             {/* headlines */}
-            <div className={`mxd-hero-02__intro ${geoActions ? geoStyles.heroIntro : ""}`}>
+            <div
+              className={`mxd-hero-02__intro ${geoActions ? geoStyles.heroIntro : ""}`}
+            >
               <CommonHero3DIntroText>
-                <h1 className={`medium permanent ${geoActions ? geoStyles.heroQuestion : ""}`}>{headline}</h1>
+                <h1
+                  className={`medium permanent ${geoActions ? geoStyles.heroQuestion : ""}`}
+                >
+                  {headline}
+                </h1>
               </CommonHero3DIntroText>
-                {geoActions && <div className={geoStyles.heroActions} data-hero-actions><SmoothAnchorLink targetId="geo-review">{geo.primary} ↗</SmoothAnchorLink><Link href="/geo">{geo.secondary}</Link></div>}
+              {geoActions && (
+                <div className={geoStyles.heroActions} data-hero-actions>
+                  <SmoothAnchorLink targetId="geo-review">
+                    {geo.primary} ↗
+                  </SmoothAnchorLink>
+                  <Link href="/geo">{geo.secondary}</Link>
+                </div>
+              )}
             </div>
             <div
               className={`mxd-hero-02__outro ${coverVideo ? coverStyles.outro : ""}`}
