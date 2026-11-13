@@ -12,6 +12,8 @@ export const routing = defineRouting({
     ...agencyServicePaths,
     "/": "/",
 
+    "/privacy-policy": { tr: "/gizlilik-politikasi", en: "/privacy-policy" },
+    "/kvkk": "/kvkk",
     "/geo": "/geo",
     "/social-media": { tr: "/sosyal-medya", en: "/social-media" },
     "/google-ads": "/google-ads",

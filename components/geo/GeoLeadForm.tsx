@@ -2,6 +2,7 @@
 
 import { useRef, useState, type FormEvent } from "react";
 import { useLocale } from "next-intl";
+import FormPrivacyNotice from "@/components/legal/FormPrivacyNotice";
 import copy from "@/data/geo.json";
 import styles from "./Geo.module.css";
 
@@ -47,6 +48,7 @@ export default function GeoLeadForm() {
           <label>{t.form.type}<select name="company_type" defaultValue=""><option value="">{t.form.choose}</option><option value="SMB">{t.smb}</option><option value="Enterprise">{t.enterprise}</option></select></label>
           <input className={styles.honeypot} type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" aria-hidden="true" />
           <p id="geo-form-purpose" className={`${styles.note} ${styles.full}`}>{t.form.privacy}</p>
+          <div className={styles.full}><FormPrivacyNotice /></div>
           <div className={styles.full}><button className={`${styles.button} ${styles.primary}`} type="submit">{status === "sending" ? t.form.sending : t.form.submit}</button></div>
         </fieldset>
       </form>

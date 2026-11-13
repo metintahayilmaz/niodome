@@ -3,6 +3,7 @@
 import { type FormEvent, useState } from "react";
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import FormPrivacyNotice from "@/components/legal/FormPrivacyNotice";
 import advertisingData from "@/data/digitalAdvertising.json";
 import marketingData from "@/data/marketingPlans.json";
 import geoData from "@/data/geo.json";
@@ -180,6 +181,7 @@ function ContactFormContent() {
               </CommonLoadItem>
               <CommonLoadItem index={5}>
                 <div className="col-12 mxd-grid-item loading-item">
+                  <FormPrivacyNotice />
                   <button
                     className="btn btn-default-icon btn-default-accent slide-right"
                     type="submit"

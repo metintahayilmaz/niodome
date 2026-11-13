@@ -14,6 +14,8 @@ const PATHNAMES: { tr: string; en: string; freq: MetadataRoute.Sitemap[number]["
   { tr: "/dijital-reklam-yonetimi", en: "/en/digital-advertising", freq: "monthly", priority: 0.8 },
   { tr: "/sosyal-medya", en: "/en/social-media", freq: "monthly", priority: 0.8 },
   { tr: "/google-ads", en: "/en/google-ads", freq: "monthly", priority: 0.8 },
+  { tr: "/gizlilik-politikasi", en: "/en/privacy-policy", freq: "yearly", priority: 0.3 },
+  { tr: "/kvkk", en: "/en/kvkk", freq: "yearly", priority: 0.3 },
   { tr: "/geo", en: "/en/geo", freq: "monthly", priority: 0.9 },
   { tr: "/",          en: "/en",          freq: "weekly",  priority: 1.0 },
   { tr: "/hakkimizda", en: "/en/about-us", freq: "monthly", priority: 0.8 },

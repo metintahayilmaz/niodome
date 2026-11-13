@@ -1,0 +1,237 @@
+{
+  "controller": "Nio Danışmanlık Hizmetleri Limited Şirketi",
+  "address": "Halaskargazi Mah. Halaskargazi Cad. No. 12 Günaydın Apt. K. 5 D. 9 Şişli İstanbul",
+  "updated": "2026-11-14",
+  "privacy": {
+    "tr": {
+      "title": "Gizlilik Politikası",
+      "intro": "Niodome web sitesi ve Facebook / Instagram reklam formları üzerinden paylaştığınız bilgilerin nasıl kullanıldığını açıklıyoruz. Kişisel verilerin işlenmesine ilişkin ayrıntılar KVKK Aydınlatma Metni’nde yer alır.",
+      "sections": [
+        [
+          "Kapsam ve iletişim",
+          [
+            "Niodome, Nio Danışmanlık Hizmetleri Limited Şirketi’nin markasıdır. Bu politika niodome.com ziyaretlerini, iletişim ve teklif taleplerini, GEO değerlendirme formunu ve Niodome’un Meta (Facebook / Instagram) potansiyel müşteri formlarını kapsar. Gizlilik sorularınızı hello@niodome.com adresine iletebilirsiniz."
+          ]
+        ],
+        [
+          "Hangi bilgiler alınır?",
+          [
+            "Web sitesi formlarında ad soyad, şirket, e-posta, isteğe bağlı telefon, internet sitesi, şirket türü, seçilen hizmet / paket ve mesaj bilgileri alınabilir. Meta reklam formlarında yalnızca ilgili formda gösterilen alanlar (örneğin ad soyad, telefon, e-posta, firma, hizmet ihtiyacı ve proje bilgileri) toplanır. Zorunlu alanlar formda belirtilir. Lütfen mesaj alanlarına özel nitelikli kişisel veri veya gereksiz üçüncü kişi bilgisi yazmayın.",
+            "Ziyaret ve güvenlik kayıtlarında IP adresi, tarayıcı / cihaz bilgileri, istenen sayfa ve erişim zamanı gibi teknik bilgiler altyapı sağlayıcıları tarafından işlenebilir."
+          ]
+        ],
+        [
+          "Bilgileri nasıl kullanırız?",
+          [
+            "Başvurunuzu değerlendirmek, size uygun hizmeti belirlemek, talebinize yanıt vermek, teklif hazırlamak ve talep ettiğiniz görüşmeyi yürütmek için kullanırız. İletişim talebi göndermeniz, genel kampanya mesajlarına veya bültene abonelik oluşturmaz.",
+            "Tanıtım amaçlı e-posta, SMS veya diğer ticari elektronik iletiler için gerekli olduğu durumlarda ayrı izin alınır. Böyle bir izni vermemeniz teklif talebinizi engellemez; verdiğiniz izni geri alabilirsiniz."
+          ]
+        ],
+        [
+          "Meta reklam formları",
+          [
+            "Facebook veya Instagram içindeki formu gönderdiğinizde, formdaki bilgiler reklamın sahibi Niodome’a iletilir ve talebiniz için kullanılır. Meta platformundaki kullanım ve teknik kayıtlar bakımından Meta’nın kendi gizlilik kuralları da geçerlidir.",
+            "Telefon doğrulaması kullanılan bir formda doğrulama işlemi ilgili platform veya doğrulama sağlayıcısı üzerinden yürür. Tek kullanımlık doğrulama kodunuzu mesaj alanına yazmayın veya Niodome ekibiyle paylaşmayın. Bu politika kendi başına reklam takibi, müşteri listesi yükleme veya yeniden pazarlama izni oluşturmaz."
+          ]
+        ],
+        [
+          "Hizmet sağlayıcılar ve veri paylaşımı",
+          [
+            "Site Vercel üzerinde barındırılır; içerik altyapısında Sanity kullanılır. Web sitesi form gönderimleri Web3Forms üzerinden hello@niodome.com posta kutusuna iletilir. E-posta hizmeti ve güvenlik altyapıları da bu iletişimin yürütülmesine katılır. Meta formları Meta altyapısında çalışır. Hizmet sağlayıcıları ve yetkili alıcılarla paylaşımın ayrıntıları KVKK metnindedir.",
+            "Bu hizmetler yurt dışındaki altyapıları kullanabilir. Bir gizlilik metni yayımlanması, yurt dışı aktarım için tek başına hukuki dayanak veya açık rıza oluşturmaz. Aktarımlarda 6698 sayılı Kanun’un 9. maddesindeki uygulanabilir şartların sağlanması gerekir."
+          ]
+        ],
+        [
+          "Çerezler ve tercihler",
+          [
+            "Web sitesinde NEXT_LOCALE dil tercihini, template.theme ise açık / koyu görünüm tercihini hatırlamak için kullanılır. Bu tercih kayıtları en fazla bir yıl süreyle ayarlanır. Tema tercihi tarayıcının yerel depolamasında da tutulabilir. Tarayıcı ayarlarınızdan bu kayıtları silebilirsiniz.",
+            "Bu sayfaların yayına alındığı sürümde site koduna Meta Pixel veya Google Analytics reklam / analiz etiketi eklenmemiştir. İleride isteğe bağlı takip araçları kullanılırsa, çalıştırılmadan önce gerekli tercih mekanizması ve bilgilendirme sağlanır. Meta uygulamalarının kendi çerezleri bu sitenin tercih çerezlerinden ayrıdır."
+          ]
+        ],
+        [
+          "Saklama, güvenlik ve haklarınız",
+          [
+            "Bilgiler, talebin yürütülmesi için gerekli süre ve uygulanabilir yasal saklama / hak arama süreleriyle sınırlı tutulur. İşleme şartları ortadan kalkınca silme, yok etme veya anonimleştirme uygulanır. Erişim yetkileri işin gereğiyle sınırlandırılır; internet üzerinden hiçbir aktarım için mutlak güvenlik taahhüdü verilemez.",
+            "Verilerinizle ilgili talepler, silme istekleri veya iletişim izinlerinin geri alınması için hello@niodome.com adresinden bize ulaşabilirsiniz. KVKK kapsamındaki başvuru yöntemleri ve haklarınız ayrı aydınlatma metninde açıklanır."
+          ]
+        ],
+        [
+          "Diğer siteler ve güncellemeler",
+          [
+            "Dış bağlantılardaki platformlar kendi gizlilik kurallarına tabidir. Veri işleme şekli değişirse bu politika ve ilgili aydınlatma metni güncellenir; güncel tarih bu sayfada gösterilir."
+          ]
+        ]
+      ]
+    },
+    "en": {
+      "title": "Privacy Policy",
+      "intro": "How we use information shared through the Niodome website and Facebook / Instagram lead forms. Our KVKK Privacy Notice provides further details about personal data processing.",
+      "sections": [
+        [
+          "Scope and contact",
+          [
+            "Niodome is a brand of Nio Danışmanlık Hizmetleri Limited Şirketi. This policy covers niodome.com, contact and quotation requests, the GEO review form and Niodome’s Meta (Facebook / Instagram) lead forms. Contact hello@niodome.com with privacy questions."
+          ]
+        ],
+        [
+          "Information collected",
+          [
+            "Website forms may collect your name, company, email, optional phone number, website, company type, selected service / package and message. Meta forms collect only the fields displayed in the specific form, such as contact details, company, service needs and project information. Required fields are identified on the form. Do not send sensitive personal data or unnecessary information about other people.",
+            "Infrastructure providers may process technical access and security records, including IP address, browser / device information, requested page and access time."
+          ]
+        ],
+        [
+          "Use of information",
+          [
+            "We assess your enquiry, identify relevant services, respond, prepare a quotation and arrange the discussion you requested. Submitting an enquiry does not subscribe you to newsletters or general marketing messages.",
+            "Where required, promotional emails, SMS and other commercial messages require separate permission. Declining marketing does not prevent an enquiry. You can withdraw permission."
+          ]
+        ],
+        [
+          "Meta lead forms",
+          [
+            "Submitting a Facebook or Instagram lead form shares the displayed form details with Niodome for your enquiry. Meta’s own privacy rules also apply to use of its platform and its technical records.",
+            "Where a form uses phone verification, the platform or verification provider handles that step. Never include one-time codes in a message or share them with the Niodome team. This policy alone does not authorise ad tracking, customer-list uploads or remarketing."
+          ]
+        ],
+        [
+          "Providers and sharing",
+          [
+            "Vercel hosts the website and Sanity supplies the content infrastructure. Website submissions are delivered through Web3Forms to hello@niodome.com. Email and security providers support this communication. Meta hosts its lead forms. The KVKK notice explains recipients and processing purposes.",
+            "These services may use infrastructure outside Türkiye. Publishing a policy is not itself a legal basis or consent for an international transfer. Applicable conditions under Article 9 of Law No. 6698 must be met."
+          ]
+        ],
+        [
+          "Cookies and preferences",
+          [
+            "NEXT_LOCALE remembers language and template.theme remembers light / dark appearance, with cookies configured for up to one year. Theme preferences may also use browser local storage. You can remove these through browser settings.",
+            "At publication of these pages, the site code does not include Meta Pixel or Google Analytics advertising / analytics tags. Any future optional tracking requires appropriate notice and preference controls before activation. Meta’s platform cookies are separate."
+          ]
+        ],
+        [
+          "Retention, security and rights",
+          [
+            "Data is retained for the enquiry and applicable statutory retention or legal-claim periods. When processing grounds cease, data is deleted, destroyed or anonymised. Access should be limited to business need; no internet transmission can be guaranteed absolutely secure.",
+            "Contact hello@niodome.com for privacy, deletion or permission-withdrawal requests. The separate KVKK notice explains applicable rights and request methods."
+          ]
+        ],
+        [
+          "External sites and updates",
+          [
+            "Linked platforms have their own privacy rules. We update this policy and related notices when processing changes; the current revision date is shown on this page."
+          ]
+        ]
+      ]
+    }
+  },
+  "kvkk": {
+    "tr": {
+      "title": "KVKK Aydınlatma Metni",
+      "intro": "Web sitesi iletişim / teklif formları ve Meta reklam başvuruları için, 6698 sayılı Kişisel Verilerin Korunması Kanunu’nun 10. maddesi kapsamında hazırlanmıştır.",
+      "sections": [
+        [
+          "1. Veri sorumlusu",
+          [
+            "Veri sorumlusu Nio Danışmanlık Hizmetleri Limited Şirketi’dir (Niodome). Kayıtlı adres ve başvuru iletişim bilgileri aşağıdadır."
+          ]
+        ],
+        [
+          "2. Verilerin elde edilme yöntemi ve kapsamı",
+          [
+            "Verileriniz niodome.com iletişim ve GEO değerlendirme formları, Meta’nın Facebook / Instagram potansiyel müşteri formları, e-posta ve sizin başlattığınız telefon / mesajlaşma görüşmeleri yoluyla elektronik ortamda; işlem ve güvenlik kayıtları bakımından otomatik yollarla elde edilir.",
+            "Ad soyad ve iletişim bilgileri; şirket / görev / internet sitesi gibi mesleki bilgiler; hizmet ihtiyacı, seçilen paket, bütçe veya takvim gibi ilgili formda sorulan proje bilgileri; mesaj ve görüşme kayıtları ile IP, erişim zamanı ve tarayıcı gibi işlem güvenliği verileri, kullanılan kanal ve talebin kapsamıyla sınırlı olarak işlenebilir. Formda sorulmayan ek bilgiler zorunlu değildir. Özel nitelikli veri talep edilmez."
+          ]
+        ],
+        [
+          "3. Amaçlar ve hukuki sebepler",
+          [
+            "İletişim / teklif talebinizin alınması, ihtiyacın değerlendirilmesi, teklif ve sözleşme öncesi görüşmelerin yürütülmesi, bir sözleşmenin kurulması veya ifasıyla doğrudan ilgili olduğu ölçüde Kanun’un 5/2(c) maddesine dayanır.",
+            "Genel soruların yanıtlanması, başvuruların takibi, mükerrer / kötüye kullanılan taleplerin önlenmesi ve bilgi güvenliğinin sağlanması, temel hak ve özgürlüklerinize zarar vermemek kaydıyla veri sorumlusunun meşru menfaati kapsamında 5/2(f); yasal yükümlülükler 5/2(ç); bir hakkın tesisi, kullanılması veya korunması 5/2(e) kapsamında değerlendirilir.",
+            "Başvurunuzla ilgisiz pazarlama faaliyetleri için gerektiğinde 5/1 uyarınca ayrı açık rıza ve ticari elektronik ileti mevzuatının gerektirdiği izin alınır. Aydınlatma metni açık rıza değildir; formu göndermek genel bir pazarlama izni sayılmaz."
+          ]
+        ],
+        [
+          "4. Alıcılar ve aktarım amaçları",
+          [
+            "Verilere başvuruyu değerlendiren ve yanıtlayan yetkili şirket çalışanları erişebilir. Barındırma / güvenlik için Vercel, içerik altyapısı için Sanity, web formu teslimi için Web3Forms ve e-posta hizmet sağlayıcıları; Meta reklam formu başvurularında Meta, ilgili hizmetin gerektirdiği ölçüde alıcı olabilir. Yetkili kamu kurumları ve hukuki / mali danışmanlarla yalnızca ilgili yükümlülüğün veya hakkın gerektirdiği ölçüde paylaşım yapılabilir.",
+            "Yurt dışında bulunan altyapılarda işleme söz konusu olabilir. Yurt dışı aktarımlar için Kanun’un 9. maddesine uygun uygulanabilir aktarım şartı ve gerekli güvenceler sağlanmalıdır. Bu metin, bir sağlayıcıyla standart sözleşme imzalandığına veya belirli bir aktarım güvencesinin tamamlandığına dair beyan değildir; başvuru göndermeniz de tek başına aktarım rızası oluşturmaz."
+          ]
+        ],
+        [
+          "5. Saklama ve veri minimizasyonu",
+          [
+            "Veriler talep / teklif sürecinin gerektirdiği süre boyunca ve ilgili yasal yükümlülükler veya hak arama süreleriyle sınırlı saklanır. Somut kaydın türüne ve sürecin sonucuna göre süre belirlenir; amaç ve hukuki sebep ortadan kalkınca silinir, yok edilir veya anonimleştirilir. İlgisiz pazarlama için süresiz saklama yapılmaz."
+          ]
+        ],
+        [
+          "6. Kanun’un 11. maddesindeki haklarınız",
+          [
+            "Kişisel verilerinizin işlenip işlenmediğini öğrenme; işlenmişse bilgi talep etme; işleme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme; yurt içinde / dışında aktarıldığı üçüncü kişileri bilme; eksik veya yanlış verilerin düzeltilmesini isteme haklarına sahipsiniz.",
+            "Kanun’un 7. maddesindeki şartlar çerçevesinde silme veya yok etme isteme; düzeltme ve silme / yok etme işlemlerinin verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme; yalnızca otomatik sistemlerle analiz sonucunda aleyhinize bir sonuç doğmasına itiraz etme; kanuna aykırı işleme nedeniyle zarara uğramanız hâlinde giderim talep etme haklarınız da vardır."
+          ]
+        ],
+        [
+          "7. Başvuru",
+          [
+            "Taleplerinizi kayıtlı adresimize yazılı olarak veya daha önce bize bildirdiğiniz ve sistemimizde kayıtlı e-posta adresinizi kullanarak hello@niodome.com adresine “KVKK Başvurusu” konusuyla iletebilirsiniz. Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ’deki diğer başvuru yöntemleri de saklıdır.",
+            "Başvuruda kimliğinizi ve talebinizi doğrulamaya yetecek bilgiler ile Tebliğ’in gerektirdiği unsurlar bulunmalıdır. Gereksiz kimlik belgesi kopyalarını genel teklif formundan göndermeyin. Talebiniz, niteliğine göre en kısa sürede ve en geç 30 gün içinde sonuçlandırılır; ayrıca maliyet gerektiren hâllerde Kurulca belirlenen tarife uygulanabilir."
+          ]
+        ]
+      ]
+    },
+    "en": {
+      "title": "KVKK Privacy Notice",
+      "intro": "Notice under Article 10 of Türkiye’s Law No. 6698 for website contact / quotation forms and Meta advertising enquiries.",
+      "sections": [
+        [
+          "1. Data controller",
+          [
+            "The controller is Nio Danışmanlık Hizmetleri Limited Şirketi (Niodome). Registered address and contact details appear below."
+          ]
+        ],
+        [
+          "2. Collection and categories",
+          [
+            "Data is collected electronically through niodome.com contact and GEO review forms, Facebook / Instagram lead forms, email and calls / messages you initiate. Technical access and security records are collected automatically.",
+            "Depending on the channel and enquiry, data may include name, contact details, company / role / website, the project needs, selected package, budget or timing asked on the form, correspondence, and IP address, access time and browser records. Unrequested additional details are optional. Sensitive personal data is not requested."
+          ]
+        ],
+        [
+          "3. Purposes and legal grounds",
+          [
+            "Receiving and assessing quotation requests and conducting pre-contract discussions rely on Article 5/2(c) to the extent directly related to entering into or performing a contract.",
+            "Responding to general questions, managing enquiries, preventing abuse and securing systems are assessed under legitimate interests (5/2(f)), provided fundamental rights and freedoms are not harmed. Legal obligations rely on 5/2(ç), and establishing, exercising or protecting rights on 5/2(e).",
+            "Unrelated marketing requires separate explicit consent under 5/1 where necessary and any permission required for commercial electronic messages. This notice is not consent. Sending a form is not general marketing permission."
+          ]
+        ],
+        [
+          "4. Recipients and international transfers",
+          [
+            "Authorised staff may access enquiries to assess and respond. Recipients may include Vercel for hosting / security, Sanity for content infrastructure, Web3Forms and email providers for website form delivery, and Meta for Meta lead forms, to the extent required by the service. Public authorities and legal / financial advisers receive data only where required for the relevant obligation or right.",
+            "Infrastructure outside Türkiye may process data. Applicable transfer conditions and safeguards under Article 9 must be met. This notice does not assert that a standard contract or a particular transfer safeguard has been completed. Sending an enquiry does not itself provide transfer consent."
+          ]
+        ],
+        [
+          "5. Retention",
+          [
+            "Data is retained for the enquiry / quotation process and applicable statutory obligations or legal-claim periods. The period depends on the record and outcome. Data is deleted, destroyed or anonymised when its purpose and legal grounds cease; it is not retained indefinitely for unrelated marketing."
+          ]
+        ],
+        [
+          "6. Your rights under Article 11",
+          [
+            "You may learn whether your data is processed, request information, learn the purpose and whether use matches it, identify domestic / foreign recipients, and request correction of incomplete or inaccurate data.",
+            "You may request deletion or destruction under Article 7, notification of correction / deletion to recipients, object to a result against you based solely on automated analysis, and seek compensation for harm caused by unlawful processing."
+          ]
+        ],
+        [
+          "7. Requests",
+          [
+            "Write to our registered address or email hello@niodome.com with “KVKK Request” from an email address previously provided to and recorded by us. Other statutory request methods remain available. Include the information required by the applicable request rules and sufficient information to verify identity and the request. Do not send unnecessary ID copies through the general enquiry form.",
+            "Requests are concluded as soon as appropriate and within 30 days at the latest. Charges under the Board’s tariff may apply where additional costs arise."
+          ]
+        ]
+      ]
+    }
+  }
+}

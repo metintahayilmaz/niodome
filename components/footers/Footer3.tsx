@@ -1,3 +1,4 @@
+import LegalLinks from "@/components/legal/LegalLinks";
 import { getVerifiedSocials } from "@/lib/verifiedSocials";
 import Image from "next/image";
 import BlurSection from "@/components/animations/BlurSection";
@@ -202,6 +203,7 @@ export default function Footer3({ name, settings }: Props) {
         </div>
         {/* Footer Block - Links End */}
       </div>
+      <LegalLinks />
     </BlurSection>
   );
 }

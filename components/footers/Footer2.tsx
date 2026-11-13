@@ -1,3 +1,4 @@
+import LegalLinks from "@/components/legal/LegalLinks";
 import { getVerifiedSocials } from "@/lib/verifiedSocials";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
@@ -445,6 +446,7 @@ export default async function Footer2({ name, settings }: Props) {
         </div>
         {/* Footer Block - Data End */}
       </div>
+      <LegalLinks />
     </BlurSection>
   );
 }
