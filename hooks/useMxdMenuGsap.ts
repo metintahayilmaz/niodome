@@ -82,12 +82,11 @@ function collectElements(
   const divs = compact(dividers.current);
   const ars = compact(arrows.current);
 
+  // Contact, social and footer entries are optional content. Their count must
+  // never prevent binding the menu trigger when those entries change.
   if (
     headerEls.length !== N_HEADER ||
     mainSpans.length !== refs.rowCount * 2 ||
-    contacts.length !== N_CONTACT ||
-    contactRevealEls.length !== N_CONTACT ||
-    footers.length !== N_FOOTER ||
     divs.length !== refs.rowCount + 1 ||
     ars.length !== refs.rowCount
   ) {
