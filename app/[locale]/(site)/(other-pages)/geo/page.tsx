@@ -1,3 +1,4 @@
+import ServiceIntro from "@/components/services/ServiceIntro";
 import type { Metadata } from "next";
 import { getLocale } from "next-intl/server";
 import Link from "@/components/common/LocalizedLink";
@@ -17,7 +18,7 @@ export default async function GeoPage() {
   const locale = await getLocale();
   const t = data[locale === "en" ? "en" : "tr"];
   return <main>
-    <section className={`${styles.section} ${styles.page}`}><p className={styles.eyebrow}>{t.eyebrow}</p><h1>{t.title}</h1><p className={styles.text}>{t.description}</p><div className={styles.actions}><a className={`${styles.button} ${styles.primary}`} href="#geo-review">{t.primary} ↗</a><a className={styles.button} href="#smb">{t.secondary}</a></div></section>
+    <ServiceIntro id="geo" locale={locale} />
     <section className={`${styles.section} ${styles.dark}`}><h2>{t.processTitle}</h2><p className={styles.text}>{t.processText}</p></section>
     <GeoPlans locale={locale}/><GeoLead locale={locale}/><GeoFaq locale={locale}/>
     <section className={styles.section}><h2>{t.bridge}</h2><p className={styles.text}>{t.bridgeText}</p><Link className={styles.button} href="/works">{t.works} ↗</Link></section>

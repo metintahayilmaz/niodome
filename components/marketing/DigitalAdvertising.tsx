@@ -1,3 +1,4 @@
+import ServiceIntro from "@/components/services/ServiceIntro";
 import type { Metadata } from "next";
 import Link from "@/components/common/LocalizedLink";
 import copy from "@/data/digitalAdvertising.json";
@@ -18,7 +19,7 @@ export default function DigitalAdvertising({locale}: {locale:string}) {
   const t = copy[en ? "en" : "tr"];
   const enquiry = "/contact?service=advertising";
   return <main>
-    <section className={`${styles.section} ${styles.page}`}><p className={styles.eyebrow}>{t.label}</p><h1>{t.title}</h1><p className={styles.text}>{t.description}</p><div className={styles.actions}><Link className={`${styles.button} ${styles.primary}`} href={enquiry}>{t.cta} ↗</Link><a className={styles.button} href="#platforms">{en ? "Explore channels" : "Kanalları inceleyin"}</a></div></section>
+    <ServiceIntro id="advertising" locale={locale} />
     <section className={styles.section} id="platforms" aria-labelledby="advertising-platforms-title"><h2 id="advertising-platforms-title">{t.platformTitle}</h2><div className={local.grid}>
       <article className={`${styles.card} ${local.card}`}><h3>{t.googleTitle}</h3><p>{t.googleText}</p><p>{t.googlePrice}</p><p className={styles.note}>{en ? "Excludes VAT and media spend." : "KDV ve reklam bütçesi hariç."}</p><Link className={`${styles.button} ${local.cta}`} href="/google-ads">{t.googleCta} ↗</Link></article>
       <article className={`${styles.card} ${local.card}`}><h3>{t.metaTitle}</h3><p>{t.metaText}</p><p>{t.metaPrice}</p><Link className={`${styles.button} ${local.cta}`} href={`${enquiry}&platform=meta`}>{t.metaCta} ↗</Link></article>

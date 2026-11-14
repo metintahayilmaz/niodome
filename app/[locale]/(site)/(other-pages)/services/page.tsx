@@ -1,8 +1,8 @@
+import ServicesDescriptionStack from "@/components/other-pages/services/ServicesDescriptionStack";
 import ServiceDirectory from "@/components/services/ServiceDirectory";
 import catalog from "@/data/serviceCatalog.json";
 import { Metadata } from "next";
 import InnerHeadline from "@/components/other-pages/services/InnerHeadline";
-import ServicesDescriptionStack from "@/components/other-pages/services/ServicesDescriptionStack";
 import ParallaxDividerImage from "@/components/other-pages/services/ParallaxDividerImage";
 import BlogPreview from "@/components/other-pages/services/BlogPreview";
 import ServicesNarrative from "@/components/other-pages/services/ServicesNarrative";
@@ -139,9 +139,9 @@ export default async function ServicesPage() {
       )}
       <>
         <InnerHeadline />
-        <ServiceDirectory locale={locale} />
         <ServicesNarrative />
         <ServicesDescriptionStack services={sanityServices} />
+        <ServiceDirectory locale={locale} />
         <ParallaxDividerImage />
         <BlogPreview posts={sanityPosts} />
         <ServicesNarrative closing />

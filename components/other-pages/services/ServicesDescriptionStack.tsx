@@ -3,6 +3,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import approvedServices from "@/data/approvedServices.json";
 import Image from "next/image";
+import Link from "@/components/common/LocalizedLink";
 import TextScramble from "@/components/animations/TextScramble";
 import CommonServicesStack, {
   ServicesStackSlot,
@@ -64,11 +65,12 @@ function ServiceCard({
   index,
   imgSrc,
 }: {
-  item: ServiceDetailItem;
+  item: ServiceDetailItem & { href?: string };
   index: number;
   imgSrc: string;
 }) {
   const t = useTranslations("innerContent");
+  const en = useLocale() === "en";
   const orderLabel = String(item.order).padStart(2, "0");
   const subtitle = `${orderLabel} / ${t("services")}`;
 
@@ -85,7 +87,7 @@ function ServiceCard({
                 <div className="services-card__title">
                   <ServicesStackSlot part="title" index={index}>
                     <div className="services-card__title-text">
-                      {item.title}
+                      {item.href ? <Link href={item.href}>{item.title}</Link> : item.title}
                     </div>
                   </ServicesStackSlot>
                 </div>
@@ -107,6 +109,7 @@ function ServiceCard({
               <ServicesStackSlot part="descr" index={index}>
                 <div className="t-large t-bold services-card__descr">
                   <ServicesBodyRenderer body={item.body} />
+                  {item.href && <Link href={item.href} className="service-detail-link">{en ? "Explore the service" : "Hizmeti inceleyin"} ↗</Link>}
                 </div>
               </ServicesStackSlot>
             </div>
@@ -137,12 +140,12 @@ function ServiceCard({
 }
 
 type Props = {
-  services?: ServiceDetailItem[];
+  services?: (ServiceDetailItem & { href?: string })[];
 };
 
 export default function ServicesDescriptionStack({ services }: Props) {
   const locale = useLocale();
-  const resolvedServices: ServiceDetailItem[] =
+  const resolvedServices: (ServiceDetailItem & { href?: string })[] =
     services && services.length > 0
       ? services
       : approvedServices[locale === "en" ? "en" : "tr"].items;

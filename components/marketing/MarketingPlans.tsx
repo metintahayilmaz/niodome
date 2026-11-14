@@ -1,3 +1,4 @@
+import ServiceIntro from "@/components/services/ServiceIntro";
 import type { Metadata } from "next";
 import Link from "@/components/common/LocalizedLink";
 import advertising from "@/data/digitalAdvertising.json";
@@ -37,7 +38,7 @@ export default function MarketingPlans({ service, locale }: { service: Marketing
   const en = lang === "en";
   const money = (amount: number) => new Intl.NumberFormat(en ? "en-GB" : "tr-TR").format(amount);
   return <main>
-    <section className={`${styles.section} ${styles.page}`}><p className={styles.eyebrow}>{t.label}</p><h1>{t.title}</h1><p className={styles.text}>{t.description}</p><div className={styles.actions}><a className={`${styles.button} ${styles.primary}`} href="#plans">{en ? "Explore plans" : "Paketleri inceleyin"}</a><Link className={styles.button} href={`/contact?service=${service}`}>{t.cta} ↗</Link></div></section>
+    <ServiceIntro id={service} locale={locale} />
     <section className={`${styles.section} ${styles.dark}`} aria-label={en ? "Our approach" : "Yaklaşımımız"}><div className={styles.hooks}>{t.process.map((text, i) => <div key={text}><span className={styles.eyebrow}>0{i+1}</span><p>{text}</p></div>)}</div></section>
     <section className={styles.section} id="plans" aria-labelledby="plans-title"><h2 id="plans-title">{t.plansTitle}</h2><p className={styles.text}>{t.included}</p>
       <div className={local.grid}>{t.plans.map((plan, index) => <article className={`${styles.card} ${local.card}`} key={plan.id}>
