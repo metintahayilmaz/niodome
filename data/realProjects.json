@@ -1419,5 +1419,192 @@
         "fit": "cover"
       }
     ]
+  },
+  {
+    "_id": "niodome-project-stantec",
+    "_type": "project",
+    "isDemo": false,
+    "feedbackApproved": false,
+    "title": {
+      "tr": "Stantec",
+      "en": "Stantec"
+    },
+    "titleLines": {
+      "tr": [
+        "Stantec"
+      ],
+      "en": [
+        "Stantec"
+      ]
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "stantec"
+    },
+    "slug_en": {
+      "_type": "slug",
+      "current": "stantec"
+    },
+    "href": "/works/stantec",
+    "clientName": "Stantec",
+    "industries": {
+      "tr": "Enerji / Mühendislik ve danışmanlık",
+      "en": "Energy / Engineering and consulting"
+    },
+    "subtitle": {
+      "tr": "Yoğun veriden anlaşılır bir yayına.",
+      "en": "From complex data to a clear publication."
+    },
+    "tags": {
+      "tr": [
+        "Broşür tasarımı",
+        "Bilgi tasarımı",
+        "Veri görselleştirme"
+      ],
+      "en": [
+        "Brochure design",
+        "Information design",
+        "Data visualisation"
+      ]
+    },
+    "tagsColA": {
+      "tr": [
+        "Broşür tasarımı",
+        "Bilgi tasarımı"
+      ],
+      "en": [
+        "Brochure design",
+        "Information design"
+      ]
+    },
+    "tagsColB": {
+      "tr": [
+        "Veri görselleştirme"
+      ],
+      "en": [
+        "Data visualisation"
+      ]
+    },
+    "cursorText": {
+      "tr": "Projeyi incele",
+      "en": "Explore project"
+    },
+    "overviewLead": {
+      "tr": "Stantec için Türkiye’de atık ısı potansiyelini ele alan çalışmanın broşür tasarımını hazırladık.",
+      "en": "We designed a brochure for Stantec presenting an assessment of waste heat potential in Turkey."
+    },
+    "overviewSpan": {
+      "tr": "Sekiz sayfalık yayın; araştırmanın hedeflerini, sektörel dağılımları, saha incelemelerini ve uygulama yol haritasını ortak bir görsel düzende buluşturuyor.",
+      "en": "The eight-page publication brings together the study objectives, sector breakdowns, audit findings and implementation roadmap within a consistent visual system."
+    },
+    "challengeLead": {
+      "tr": "Yoğun teknik içeriği, farklı okurların takip edebileceği bir hiyerarşiye dönüştürmek.",
+      "en": "Turn dense technical content into a hierarchy that different readers can follow."
+    },
+    "challengeSpan": {
+      "tr": "Grafikler, karşılaştırmalar ve geniş tablolar aynı yayında yer alırken bilgilerin birbiriyle ilişkisini görünür kılmak gerekiyordu.",
+      "en": "Charts, comparisons and extensive tables needed to coexist while making relationships between the information clear."
+    },
+    "solutionLead": {
+      "tr": "Kırmızı başlık alanlarını, turkuaz veri gruplarını ve endüstriyel fotoğrafları birlikte kullandık.",
+      "en": "We combined red headline blocks, turquoise data groups and industrial photography."
+    },
+    "solutionSpan": {
+      "tr": "Pasta grafiklerinden sıcaklık karşılaştırmalarına uzanan görsel dil; tablo düzeni, ikonlar ve sayfa ritmiyle desteklendi. Sunum görselleri özgün broşür sayfalarından hazırlanmış mockuplardır.",
+      "en": "The visual language extends from circular charts to temperature comparisons, supported by tables, icons and page rhythm. Presentation images are mockups made from the original brochure pages."
+    },
+    "services": [
+      {
+        "_key": "service-0",
+        "_type": "object",
+        "name": {
+          "tr": "Broşür tasarımı",
+          "en": "Brochure design"
+        },
+        "description": {
+          "tr": "Kapak, sayfa düzeni ve tipografik hiyerarşi.",
+          "en": "Cover, page layout and typographic hierarchy."
+        }
+      },
+      {
+        "_key": "service-1",
+        "_type": "object",
+        "name": {
+          "tr": "Bilgi ve veri tasarımı",
+          "en": "Information and data design"
+        },
+        "description": {
+          "tr": "Grafikler, sektörel karşılaştırmalar ve teknik tablolar.",
+          "en": "Charts, sector comparisons and technical tables."
+        }
+      }
+    ],
+    "techStack": [],
+    "order": 12,
+    "imageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-325165694945c839fd2bcffa185ada19f575a643-1536x1024-webp"
+      }
+    },
+    "bgImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-325165694945c839fd2bcffa185ada19f575a643-1536x1024-webp"
+      }
+    },
+    "cardImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-325165694945c839fd2bcffa185ada19f575a643-1536x1024-webp"
+      }
+    },
+    "imageAlt": {
+      "tr": "Stantec — atık ısı araştırması broşürü, kapak ve infografik açılımı",
+      "en": "Stantec — waste heat assessment brochure, cover and infographic spread"
+    },
+    "cardImageAlt": {
+      "tr": "Stantec — atık ısı araştırması broşürü, kapak ve infografik açılımı",
+      "en": "Stantec — waste heat assessment brochure, cover and infographic spread"
+    },
+    "galleryImages": [
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-325165694945c839fd2bcffa185ada19f575a643-1536x1024-webp"
+        },
+        "_key": "stantec-0",
+        "alt": {
+          "tr": "Stantec — atık ısı araştırması broşürü, kapak ve infografik açılımı",
+          "en": "Stantec — waste heat assessment brochure, cover and infographic spread"
+        },
+        "caption": {
+          "tr": "Kapak ve infografik açılımı",
+          "en": "Cover and infographic spread"
+        },
+        "fit": "contain"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-85bbff99cd0d4536a4fcd5c6fb5bdf1098ad6eb1-1536x1024-webp"
+        },
+        "_key": "stantec-1",
+        "alt": {
+          "tr": "Stantec — teknik tabloların yakın plan yayın mockupı",
+          "en": "Stantec — close-up publication mockup of technical tables"
+        },
+        "caption": {
+          "tr": "Teknik tablo ve sayfa sistemi — yakın plan",
+          "en": "Technical tables and page system — close-up"
+        },
+        "fit": "contain"
+      }
+    ]
   }
 ]
