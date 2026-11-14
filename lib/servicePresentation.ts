@@ -1,15 +1,8 @@
-import conceptVisuals from "@/data/conceptVisuals.json";
+import artwork from "@/data/serviceArtwork.json";
 import catalog from "@/data/serviceCatalog.json";
 import details from "@/data/serviceDetails.json";
 import type { ServiceDetailItem } from "@/types/serviceDetail";
 
-const images: Record<string, string> = {
-  brand: "/img/services/services-stack/s01.webp",
-  communication: conceptVisuals.visuals["bir-araya-campaign"].url,
-  digital: conceptVisuals.visuals["kiyi-website"].url,
-  growth: "/img/services/services-stack/s03.webp",
-  experience: "/img/works/project-details/details03.webp",
-};
 const extraTags: Record<string, { tr: string[]; en: string[] }> = {
   geo: {
     tr: [
@@ -97,12 +90,7 @@ export function servicePresentation(
     order: catalog.indexOf(item) + 1,
     tagsColA: tags.slice(0, split),
     tagsColB: tags.slice(split),
-    image:
-      id === "packaging"
-        ? conceptVisuals.visuals["mola-packaging"].url
-        : id === "ux" || id === "app"
-          ? conceptVisuals.visuals["kiyi-detail"].url
-          : images[item.category],
+    image: artwork[id as keyof typeof artwork].src,
     body: [
       {
         _type: "block",

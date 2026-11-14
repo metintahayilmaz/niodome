@@ -1,0 +1,97 @@
+{
+  "geo": {
+    "src": "/img/services/originals-v2/geo.webp",
+    "width": 1024,
+    "height": 1300
+  },
+  "web": {
+    "src": "/img/services/originals-v2/web.webp",
+    "width": 1024,
+    "height": 1300
+  },
+  "social": {
+    "src": "/img/services/originals-v2/social.webp",
+    "width": 1024,
+    "height": 1300
+  },
+  "app": {
+    "src": "/img/services/originals-v2/app.webp",
+    "width": 1024,
+    "height": 1300
+  },
+  "ux": {
+    "src": "/img/services/originals-v2/ux.webp",
+    "width": 1024,
+    "height": 1300
+  },
+  "strategy": {
+    "src": "/img/services/originals-v2/strategy.webp",
+    "width": 1024,
+    "height": 1300
+  },
+  "identity": {
+    "src": "/img/services/originals-v2/identity.webp",
+    "width": 1024,
+    "height": 1300
+  },
+  "packaging": {
+    "src": "/img/services/originals-v2/packaging.webp",
+    "width": 1024,
+    "height": 1300
+  },
+  "commerce": {
+    "src": "/img/services/originals-v2/commerce.webp",
+    "width": 1024,
+    "height": 1300
+  },
+  "advertising": {
+    "src": "/img/services/originals-v2/advertising.webp",
+    "width": 1024,
+    "height": 1300
+  },
+  "google": {
+    "src": "/img/services/originals-v2/google.webp",
+    "width": 1024,
+    "height": 1300
+  },
+  "media": {
+    "src": "/img/services/originals-v2/media.webp",
+    "width": 1024,
+    "height": 1300
+  },
+  "seo": {
+    "src": "/img/services/originals-v2/seo.webp",
+    "width": 1024,
+    "height": 1300
+  },
+  "campaign": {
+    "src": "/img/services/originals-v2/campaign.webp",
+    "width": 1024,
+    "height": 1300
+  },
+  "production": {
+    "src": "/img/services/originals-v2/production.webp",
+    "width": 1024,
+    "height": 1300
+  },
+  "editorial": {
+    "src": "/img/services/originals-v2/editorial.webp",
+    "width": 1024,
+    "height": 1300
+  },
+  "spatial": {
+    "src": "/img/services/originals-v2/spatial.webp",
+    "width": 1024,
+    "height": 1300
+  },
+  "communications": {
+    "src": "/img/services/originals-v2/communications.webp",
+    "width": 1200,
+    "height": 1300
+  },
+  "automation": {
+    "src": "/img/services/originals-v2/automation.webp",
+    "width": 1024,
+    "height": 1300
+  }
+}

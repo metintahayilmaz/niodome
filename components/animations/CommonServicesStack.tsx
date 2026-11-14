@@ -308,6 +308,11 @@ export default function CommonServicesStack({
         const imageHost = imageRefs.current[slot];
         const img = imageHost?.querySelector("img");
         if (!img) return;
+        // Product and interface mockups must remain fully visible throughout scroll.
+        if (imageHost?.dataset.preserveFrame === "true") {
+          gsap.set(img, { scale: 1 });
+          return;
+        }
         gsap.set(img, { scale: 1.4 });
         const st = ScrollTrigger.create({
           trigger: card,

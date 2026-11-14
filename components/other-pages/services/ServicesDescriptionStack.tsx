@@ -114,7 +114,7 @@ function ServiceCard({
               </ServicesStackSlot>
             </div>
             <ServicesStackSlot part="image" index={index}>
-              <div className="services-card__image">
+              <div className="services-card__image" data-preserve-frame={imgSrc.includes("/originals-v2/") ? "true" : undefined}>
                 {
                   <Image
                     src={

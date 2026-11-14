@@ -132,3 +132,6 @@ button.main-menu__link--direct { background: none; border: 0; padding: 0; width:
 @media(max-width:600px){ .agency-service-menu .submenu__item { width: 100%; } .agency-service-menu .submenu__item a { font-size: 1.8rem; } }
 
 .services-card__descr .service-detail-link { display:block; width:fit-content; margin-top:2rem; font-size:1.4rem; text-decoration:underline; text-underline-offset:.3em; }
+
+.services-card__image[data-preserve-frame="true"] { background:#090909; }
+.services-card__image[data-preserve-frame="true"] img { object-fit:contain; }
