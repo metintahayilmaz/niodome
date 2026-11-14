@@ -1,97 +1,135 @@
 {
   "geo": {
-    "src": "/img/services/originals-v2/geo.webp",
+    "src": "/img/services/originals-v2/regional-geo.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "SORA / Albania",
+    "kind": "concept"
   },
   "web": {
-    "src": "/img/services/originals-v2/web-nioarch.webp",
+    "src": "/img/services/originals-v2/regional-web.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "McDonald’s / Global",
+    "kind": "concept"
   },
   "social": {
-    "src": "/img/services/originals-v2/social.webp",
+    "src": "/img/services/originals-v2/regional-social.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "IKEA / Greece",
+    "kind": "concept"
   },
   "app": {
-    "src": "/img/services/originals-v2/app.webp",
+    "src": "/img/services/originals-v2/regional-app.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "Wolt / Greece",
+    "kind": "concept"
   },
   "ux": {
-    "src": "/img/services/originals-v2/ux.webp",
+    "src": "/img/services/originals-v2/regional-ux.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "NAVA / Greece",
+    "kind": "concept"
   },
   "strategy": {
-    "src": "/img/services/originals-v2/strategy.webp",
+    "src": "/img/services/originals-v2/regional-strategy.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "DORA / North Macedonia",
+    "kind": "concept"
   },
   "identity": {
-    "src": "/img/services/originals-v2/identity.webp",
+    "src": "/img/services/originals-v2/regional-identity.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "Pandora Plastik / Türkiye",
+    "kind": "concept"
   },
   "packaging": {
-    "src": "/img/services/originals-v2/packaging.webp",
+    "src": "/img/services/originals-v2/regional-packaging.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "Altınkılıç Kefirix / Türkiye",
+    "kind": "concept"
   },
   "commerce": {
-    "src": "/img/services/originals-v2/commerce.webp",
+    "src": "/img/services/originals-v2/regional-commerce.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "LC Waikiki / North Macedonia",
+    "kind": "concept"
   },
   "advertising": {
-    "src": "/img/services/originals-v2/advertising.webp",
+    "src": "/img/services/originals-v2/regional-advertising.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "Coca-Cola / Uzbekistan",
+    "kind": "concept"
   },
   "google": {
-    "src": "/img/services/originals-v2/google.webp",
+    "src": "/img/services/originals-v2/regional-google.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "USTA / North Macedonia",
+    "kind": "concept"
   },
   "media": {
-    "src": "/img/services/originals-v2/media.webp",
+    "src": "/img/services/originals-v2/regional-media.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "SES / Saudi Arabia",
+    "kind": "concept"
   },
   "seo": {
-    "src": "/img/services/originals-v2/seo.webp",
+    "src": "/img/services/originals-v2/regional-seo.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "KÖK / Azerbaijan",
+    "kind": "concept"
   },
   "campaign": {
-    "src": "/img/services/originals-v2/campaign.webp",
+    "src": "/img/services/originals-v2/regional-campaign.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "AEGEAN / Greece",
+    "kind": "concept"
   },
   "production": {
-    "src": "/img/services/originals-v2/production.webp",
+    "src": "/img/services/originals-v2/regional-production.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "VERA / Greece",
+    "kind": "concept"
   },
   "editorial": {
-    "src": "/img/services/originals-v2/editorial.webp",
+    "src": "/img/services/originals-v2/regional-editorial.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "Kronik / Türkiye",
+    "kind": "concept"
   },
   "spatial": {
-    "src": "/img/services/originals-v2/spatial.webp",
+    "src": "/img/services/originals-v2/regional-spatial.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "ELBA / Türkiye",
+    "kind": "concept"
   },
   "communications": {
-    "src": "/img/services/originals-v2/communications.webp",
-    "width": 1200,
-    "height": 1300
+    "src": "/img/services/originals-v2/regional-communications.webp",
+    "width": 1024,
+    "height": 1280,
+    "brand": "KABEV / Türkiye",
+    "kind": "concept"
   },
   "automation": {
-    "src": "/img/services/originals-v2/automation.webp",
+    "src": "/img/services/originals-v2/regional-automation.webp",
     "width": 1024,
-    "height": 1300
+    "height": 1280,
+    "brand": "Aramex / Saudi Arabia",
+    "kind": "concept"
   }
 }
