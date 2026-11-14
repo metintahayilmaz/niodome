@@ -1,11 +1,12 @@
+import conceptVisuals from "@/data/conceptVisuals.json";
 import catalog from "@/data/serviceCatalog.json";
 import details from "@/data/serviceDetails.json";
 import type { ServiceDetailItem } from "@/types/serviceDetail";
 
 const images: Record<string, string> = {
   brand: "/img/services/services-stack/s01.webp",
-  communication: "/img/services/services-stack/s02.webp",
-  digital: "/img/services/services-stack/s04.webp",
+  communication: conceptVisuals.visuals["bir-araya-campaign"].url,
+  digital: conceptVisuals.visuals["kiyi-website"].url,
   growth: "/img/services/services-stack/s03.webp",
   experience: "/img/works/project-details/details03.webp",
 };
@@ -96,7 +97,12 @@ export function servicePresentation(
     order: catalog.indexOf(item) + 1,
     tagsColA: tags.slice(0, split),
     tagsColB: tags.slice(split),
-    image: images[item.category],
+    image:
+      id === "packaging"
+        ? conceptVisuals.visuals["mola-packaging"].url
+        : id === "ux" || id === "app"
+          ? conceptVisuals.visuals["kiyi-detail"].url
+          : images[item.category],
     body: [
       {
         _type: "block",
