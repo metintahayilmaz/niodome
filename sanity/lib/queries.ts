@@ -48,7 +48,7 @@ export const stickyTestimonialsQuery = groq`
  * ProjectShowcase için proje dokümanlarını çeker.
  */
 export const projectsShowcaseQuery = groq`
-  *[_type == "project" && coalesce(isDemo, false) == false && defined(bgImageSrc) && defined(cardImageSrc)] | order(order asc, _createdAt asc) {
+  *[_type == "project" && slug.current != "namli-zeytin" && coalesce(isDemo, false) == false && defined(bgImageSrc) && defined(cardImageSrc)] | order(order asc, _createdAt asc) {
     _id,
     "titleLines": coalesce(select(count(titleLines[$locale][defined(@) && @ != ""]) > 0 => titleLines[$locale]), titleLines.tr),
     bgImageSrc,
@@ -65,7 +65,7 @@ export const projectsShowcaseQuery = groq`
  * ProjectsStack bileşeni için imageSrc dolu projeleri çeker (stack view).
  */
 export const projectsStackQuery = groq`
-  *[_type == "project" && coalesce(isDemo, false) == false && defined(imageSrc)] | order(order asc, _createdAt asc) {
+  *[_type == "project" && slug.current != "namli-zeytin" && coalesce(isDemo, false) == false && defined(imageSrc)] | order(order asc, _createdAt asc) {
     _id,
     "title": coalesce(select(length(title[$locale]) > 0 => title[$locale]), title.tr),
     imageSrc,
@@ -81,7 +81,7 @@ export const projectsStackQuery = groq`
  * ProjectsList bileşeni için tüm projeleri çeker (archive/list view).
  */
 export const projectsListQuery = groq`
-  *[_type == "project" && coalesce(isDemo, false) == false] | order(order asc, _createdAt asc) {
+  *[_type == "project" && slug.current != "namli-zeytin" && coalesce(isDemo, false) == false] | order(order asc, _createdAt asc) {
     _id,
     "titleLines": coalesce(select(count(titleLines[$locale][defined(@) && @ != ""]) > 0 => titleLines[$locale]), titleLines.tr),
     cardImageSrc,
@@ -95,7 +95,7 @@ export const projectsListQuery = groq`
  * Grid showcase bileşenleri için tüm projeleri çeker.
  */
 export const projectsGridQuery = groq`
-  *[_type == "project" && coalesce(isDemo, false) == false] | order(order asc, _createdAt asc) {
+  *[_type == "project" && slug.current != "namli-zeytin" && coalesce(isDemo, false) == false] | order(order asc, _createdAt asc) {
     _id,
     "title": coalesce(select(length(title[$locale]) > 0 => title[$locale]), title.tr),
     href,
@@ -275,7 +275,7 @@ export const serviceDetailsQuery = groq`
  * generateStaticParams için slug tanımlı tüm project dokümanlarını çeker.
  */
 export const projectSlugsQuery = groq`
-  *[_type == "project" && coalesce(isDemo, false) == false && defined(slug.current)] {
+  *[_type == "project" && slug.current != "namli-zeytin" && coalesce(isDemo, false) == false && defined(slug.current)] {
     "slug": coalesce(slug_en.current, slug.current)
   }
 `;
@@ -284,7 +284,7 @@ export const projectSlugsQuery = groq`
  * Sitemap için project slug'larını çeker — TR ve EN ayrı ayrı.
  */
 export const projectSlugsSitemapQuery = groq`
-  *[_type == "project" && coalesce(isDemo, false) == false && defined(slug.current)] {
+  *[_type == "project" && slug.current != "namli-zeytin" && coalesce(isDemo, false) == false && defined(slug.current)] {
     "tr": slug.current,
     "en": coalesce(slug_en.current, slug.current)
   }
@@ -294,7 +294,7 @@ export const projectSlugsSitemapQuery = groq`
  * Tam vaka çalışması — /works/[slug] dinamik rotası için tek proje çeker.
  */
 export const projectBySlugQuery = groq`
-  *[_type == "project" && coalesce(isDemo, false) == false && slug.current == $slug][0] {
+  *[_type == "project" && slug.current != "namli-zeytin" && coalesce(isDemo, false) == false && slug.current == $slug][0] {
     _id,
     "title": coalesce(select(length(title[$locale]) > 0 => title[$locale]), title.tr),
     "slug": coalesce(slug_en.current, slug.current),
@@ -330,7 +330,7 @@ export const projectBySlugQuery = groq`
     feedbackAuthorCompanyUrl,
     feedbackAuthorPhoto,
     order,
-    "nextProject": *[_type == "project" && coalesce(isDemo, false) == false && order == ^.order + 1 && defined(slug.current)][0] {
+    "nextProject": *[_type == "project" && slug.current != "namli-zeytin" && coalesce(isDemo, false) == false && order > ^.order && defined(slug.current)] | order(order asc)[0] {
       "slug": coalesce(slug_en.current, slug.current),
       "title": coalesce(select(length(title[$locale]) > 0 => title[$locale]), title.tr),
       "imageSrc": bgImageSrc,

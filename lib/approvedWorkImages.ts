@@ -14,7 +14,7 @@ export async function getApprovedWorkImages(
     const projects = await client.fetch<
       { title: string; slug: string; images: RawImage[] }[]
     >(
-      `*[_type == "project" && coalesce(isDemo, false) == false && defined(slug.current)] | order(order asc) {
+      `*[_type == "project" && slug.current != "namli-zeytin" && coalesce(isDemo, false) == false && defined(slug.current)] | order(order asc) {
         "title": coalesce(title[$locale], title.tr), "slug": slug.current, "images": galleryImages[0..3]
       }`,
       { locale },
