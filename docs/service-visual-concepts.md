@@ -2,7 +2,7 @@
 
 Bu görseller hizmetleri anlatan konsept sunumlardır; gerçek müşteri teslimi veya kampanya performansı kaydı değildir. Mevcut kimlikler referans alınır. Kullanıcının gerçek iş listesinde geçen markalar için de yeni kurgusal sunumlar oluşturulmuştur.
 
-AEGEAN için onaylanan Atina–İstanbul kolajı kullanılır; alternatif web görseli kullanılmaz. Altınkılıç yalnız kefir ürünüyle ele alınır. Namlı kaldırılmış durumda kalır. Kronik için kullanıcının sağladığı Edebiyati_Pisirmek.pdf içinden 30–31. sayfalar seçilmiş; hareketli mavi menü sayfasından çok yakın bir kitap kesiti hazırlanmıştır. Kapak yeniden tasarlanmamıştır. Pandora Plastik logosu arşivdeki katalogdan, Kefirix serisi kullanıcının sağladığı Ballı Muzlu, Çilekli ve Orman Meyveli referanslarından korunmuştur.
+AEGEAN için onaylanan Atina–İstanbul kolajı kullanılır; alternatif web görseli kullanılmaz. Altınkılıç için yalnız kullanıcının seçtiği Kefirix serisi kullanılır. Namlı kaldırılmış durumda kalır. Kronik için kullanıcının sağladığı Edebiyati_Pisirmek.pdf içinden 30–31. sayfalar seçilmiş; hareketli mavi menü sayfasından çok yakın bir kitap kesiti hazırlanmıştır. Kapak yeniden tasarlanmamıştır. Pandora Plastik logosu arşivdeki katalogdan, Kefirix serisi kullanıcının sağladığı Ballı Muzlu, Çilekli ve Orman Meyveli referanslarından korunmuştur.
 
 | Hizmet kimliği | Marka / bölge | Dosya |
 |---|---|---|
@@ -19,17 +19,17 @@ AEGEAN için onaylanan Atina–İstanbul kolajı kullanılır; alternatif web g�
 | seo | KÖK / Azerbaijan | regional-seo.webp |
 | editorial | Kronik / Türkiye | regional-editorial.webp |
 | production | VERA / Greece | regional-production.webp |
-| communications | KABEV / Türkiye | regional-communications.webp |
+| communications | KABEV / Türkiye | revised-kabev-books.webp |
 | automation | Aramex / Saudi Arabia | regional-automation.webp |
-| spatial | ELBA / Türkiye | regional-spatial.webp |
+| spatial | ELBA / Türkiye | revised-elba-panels.webp |
 | packaging | Altınkılıç Kefirix / Türkiye | regional-packaging.webp |
 | web | McDonald’s / Global | regional-web.webp |
 | campaign | AEGEAN / Greece | regional-campaign.webp |
 
 ## Kaynak ve doğrulama notları
 
-- KABEV kimliği: arşivdeki KABEV Kurumsal Kimlik dosyası, hazırlanmış 030.webp.
-- ELBA kimliği: arşivdeki ELBAKatalog_Mbl.pdf, hazırlanmış 007.webp; https://elbabant.com/
+- KABEV: TEKNİK KİTAPLAR/BASKI PDF içindeki KABEV, Tasarım, Devreye Alma, Ölçme ve Doğrulama, İşletme ve Bakım el kitapları ile KABEV BİNA TİPLERİ/BASKI PDF/İdari Hizmet Binaları.pdf. Altı özgün kapak, numara ve renkleri korunarak kitap serisi mockupına uygulanır; matbaa kesim işaretleri kullanılmaz.
+- ELBA: kullanıcının sağladığı Münih Aralık 2024 1400×1800 mm “spur-los” PDFsi ve Ocak 2024 Fabrika Giris Converted_01–06.pdf. Altı özgün kare pano ve bir fuar panosu, gerçek tasarımlar korunarak kurgusal mekân mockupında gösterilir; gerçek kurulum fotoğrafı iddiası taşımaz.
 - Kronik: arşivde Edebiyati_Pisirmek290626.idml; https://kronikkitap.com/kitap/edebiyati-pisirmek/
 - Altınkılıç: kullanıcının verdiği eski Kefirix serisi referansları (sarı Ballı Muzlu, pembe Çilekli, mor Orman Meyveli). Yeni sade kefir/cow etiketli alternatif kullanılmaz.
 - Bölgesel pazar referansları: https://www.ikea.gr/ , https://explore.wolt.com/en/grc/couriers/learning-center , https://www.lcwaikiki.mk/ , https://www.azercell.com/en/personal/azercell-stores.html , https://www2.aramex.com/sa/en
@@ -39,7 +39,7 @@ AEGEAN için onaylanan Atina–İstanbul kolajı kullanılır; alternatif web g�
 
 19 ayrı optimize WebP. Tüm mockuplarda contain yerleşimi ve sabit ölçek korunur. Açık nötr çerçeve, farklı görsel oranlarında siyah kenar oluşmasını önler. Dosya varlığı ve SHA-256 benzersizliği tests/service-artwork.test.mjs ile denetlenir.
 
-Üretim: yerleşik image_gen. Nihai prompt seti ve PNGler çalışma alanındaki outputs/service-regional-concepts/final-service-manifest.json ve final-*.png dosyalarında saklanır.
+Üretim: yerleşik image_gen. Nihai prompt seti ve PNGler çalışma alanındaki outputs/service-regional-concepts/final-service-manifest.json ve final-*.png dosyalarında saklanır. KABEV ve ELBA revizyonlarının kaynak listesi, promptları ve PNGleri outputs/service-artwork-revisions altında saklanır.
 
 
 Son referanslar: kullanıcı Edebiyati_Pisirmek.pdf (71 sayfalık örnek), kapak ve Kefirix görselleri; Pandora arşiv product catalog 049.webp. Kamuya açık yeni proje veya kampanya sonucu iddiası eklenmedi.
