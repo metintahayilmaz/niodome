@@ -48,7 +48,7 @@ export const stickyTestimonialsQuery = groq`
  * ProjectShowcase için proje dokümanlarını çeker.
  */
 export const projectsShowcaseQuery = groq`
-  *[_type == "project" && slug.current != "namli-zeytin" && coalesce(isDemo, false) == false && defined(bgImageSrc) && defined(cardImageSrc)] | order(order asc, _createdAt asc) {
+  *[_type == "project" && slug.current != "namli-zeytin" && coalesce(isDemo, false) == false && coalesce(homepageFeatured, true) == true && defined(bgImageSrc) && defined(cardImageSrc)] | order(order asc, _createdAt asc) {
     _id,
     "titleLines": coalesce(select(count(titleLines[$locale][defined(@) && @ != ""]) > 0 => titleLines[$locale]), titleLines.tr),
     bgImageSrc,

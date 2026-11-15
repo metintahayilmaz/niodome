@@ -102,7 +102,8 @@ export default function Hero({
   // kullanıcının sürükle-bırakla belirlediği gerçek sıra olduğu için array
   // pozisyonu kullanmak daha güvenilir.
   // Sanity'deki elle girilmiş width/height yanlışsa CDN dosya adındaki gerçek asset ölçüsünü kullan.
-  const galleryImages = local.galleryImages.map((fallback, index) => {
+  // Respect the curated selection; removed slots must not reappear as template images.
+  const galleryImages = (sanityGallery.length ? sanityGallery : local.galleryImages).map((fallback, index) => {
     const sanityImage = sanityGallery[index];
     if (!sanityImage?.src) return { ...fallback, href: undefined };
 

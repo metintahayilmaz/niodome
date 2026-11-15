@@ -721,7 +721,8 @@
         },
         "fit": "cover"
       }
-    ]
+    ],
+    "homepageFeatured": false
   },
   {
     "_id": "niodome-project-biberzade",
@@ -885,7 +886,8 @@
         },
         "fit": "contain"
       }
-    ]
+    ],
+    "homepageFeatured": false
   },
   {
     "_id": "niodome-project-kabev",
@@ -1350,7 +1352,8 @@
         },
         "fit": "cover"
       }
-    ]
+    ],
+    "homepageFeatured": false
   },
   {
     "_id": "niodome-project-stantec",
@@ -1537,6 +1540,7 @@
         },
         "fit": "contain"
       }
-    ]
+    ],
+    "homepageFeatured": false
   }
 ]
