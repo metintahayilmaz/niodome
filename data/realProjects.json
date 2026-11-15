@@ -660,21 +660,21 @@
     "imageSrc": {
       "_type": "image",
       "asset": {
-        "_ref": "image-2b7f491068e3f77fe71e618dac633481c64bbc2a-2200x1467-webp",
+        "_ref": "image-7fb72572447e0376d9a81d21066fe6b93cf297ab-2200x1650-webp",
         "_type": "reference"
       }
     },
     "bgImageSrc": {
       "_type": "image",
       "asset": {
-        "_ref": "image-2b7f491068e3f77fe71e618dac633481c64bbc2a-2200x1467-webp",
+        "_ref": "image-7fb72572447e0376d9a81d21066fe6b93cf297ab-2200x1650-webp",
         "_type": "reference"
       }
     },
     "cardImageSrc": {
       "_type": "image",
       "asset": {
-        "_ref": "image-2b7f491068e3f77fe71e618dac633481c64bbc2a-2200x1467-webp",
+        "_ref": "image-7fb72572447e0376d9a81d21066fe6b93cf297ab-2200x1650-webp",
         "_type": "reference"
       }
     },
@@ -687,23 +687,6 @@
       "en": "Elba — design application"
     },
     "galleryImages": [
-      {
-        "_key": "image-023",
-        "_type": "image",
-        "alt": {
-          "en": "Elba — Shipping box design mockup",
-          "tr": "Elba — Koli tasarımı mockup’ı"
-        },
-        "asset": {
-          "_ref": "image-2b7f491068e3f77fe71e618dac633481c64bbc2a-2200x1467-webp",
-          "_type": "reference"
-        },
-        "caption": {
-          "en": "Shipping box design mockup",
-          "tr": "Koli tasarımı mockup’ı"
-        },
-        "fit": "cover"
-      },
       {
         "_key": "image-025",
         "_type": "image",
