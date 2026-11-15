@@ -57,6 +57,8 @@ export default async function WorksDefaultPage() {
         _id: string;
         title: string | null;
         imageSrc: Parameters<typeof urlFor>[0] | null;
+        imageWidth: number | null;
+        imageHeight: number | null;
         imageAlt: string | null;
         coverClassName: string | null;
         tags: string[] | null;
@@ -70,10 +72,10 @@ export default async function WorksDefaultPage() {
       .map((p) => ({
         _id: p._id,
         title: p.title ?? "",
-        imageSrc: urlFor(p.imageSrc!).width(1920).height(1280).quality(80).auto("format").url(),
+        imageSrc: urlFor(p.imageSrc!).width(1920).quality(80).auto("format").url(),
         imageAlt: p.imageAlt ?? p.title ?? "",
-        imageWidth: 1920,
-        imageHeight: 1280,
+        imageWidth: p.imageWidth ?? 1920,
+        imageHeight: p.imageHeight ?? 1280,
         coverClassName: p.coverClassName ?? undefined,
         tags: p.tags ?? [],
         href: p.slug ? `/works/${p.slug}` : (p.href ?? "/project-details"),

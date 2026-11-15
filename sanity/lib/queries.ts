@@ -69,6 +69,8 @@ export const projectsStackQuery = groq`
     _id,
     "title": coalesce(select(length(title[$locale]) > 0 => title[$locale]), title.tr),
     imageSrc,
+    "imageWidth": imageSrc.asset->metadata.dimensions.width,
+    "imageHeight": imageSrc.asset->metadata.dimensions.height,
     "imageAlt": coalesce(select(length(imageAlt[$locale]) > 0 => imageAlt[$locale]), imageAlt.tr),
     coverClassName,
     "tags": coalesce(select(count(tags[$locale][defined(@) && @ != ""]) > 0 => tags[$locale]), tags.tr),

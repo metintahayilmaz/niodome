@@ -17,6 +17,7 @@ export type StackCardsRefs = {
   cardImageWrappers: HTMLDivElement[];
   cardMedias: StackCardMedia[];
   introMarquee: HTMLDivElement | null;
+  preserveMediaFrame?: boolean;
 };
 
 function marquee(
@@ -158,15 +159,15 @@ export function initStackCardsEffects(refs: StackCardsRefs): () => void {
   let introRevealed = false;
 
   const updateClip = (progress: number) => {
-    const cutY = ((window.innerHeight - baseSize) / 2) * (1 - progress);
-    const cutX = ((window.innerWidth - baseSize) / 2) * (1 - progress);
+    const cutY = Math.max(0, (introImageWrapper.clientHeight - baseSize) / 2) * (1 - progress);
+    const cutX = Math.max(0, (introImageWrapper.clientWidth - baseSize) / 2) * (1 - progress);
     gsap.set(introImageWrapper, {
       clipPath: `inset(${cutY}px ${cutX}px ${cutY}px ${cutX}px)`,
     });
   };
 
   updateClip(0);
-  gsap.set(introImage, { scale: 0.9 });
+  gsap.set(introImage, { scale: refs.preserveMediaFrame ? 1 : 0.9 });
   gsap.set(introCover, { opacity: 0 });
 
   const triggers: ScrollTrigger[] = [];
@@ -180,7 +181,7 @@ export function initStackCardsEffects(refs: StackCardsRefs): () => void {
         lastProgress = self.progress;
         updateClip(lastProgress);
 
-        const innerImgScale = 0.9 + self.progress * 0.1;
+        const innerImgScale = refs.preserveMediaFrame ? 1 : 0.9 + self.progress * 0.1;
         const innerCoverOpacity = self.progress;
         gsap.set(introImage, { scale: innerImgScale });
         gsap.set(introCover, { opacity: innerCoverOpacity });
@@ -250,7 +251,7 @@ export function initStackCardsEffects(refs: StackCardsRefs): () => void {
         start: "top bottom",
         end: "top top",
         onUpdate: (self) => {
-          gsap.set(media, { scale: 2 - self.progress });
+          gsap.set(media, { scale: refs.preserveMediaFrame ? 1 : 2 - self.progress });
         },
       }),
     );
