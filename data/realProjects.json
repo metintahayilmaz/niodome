@@ -660,22 +660,22 @@
     "imageSrc": {
       "_type": "image",
       "asset": {
-        "_type": "reference",
-        "_ref": "image-6472bf1af228f316b6fda2a7a365a9b9d65b9783-2200x1400-webp"
+        "_ref": "image-2b7f491068e3f77fe71e618dac633481c64bbc2a-2200x1467-webp",
+        "_type": "reference"
       }
     },
     "bgImageSrc": {
       "_type": "image",
       "asset": {
-        "_type": "reference",
-        "_ref": "image-6472bf1af228f316b6fda2a7a365a9b9d65b9783-2200x1400-webp"
+        "_ref": "image-2b7f491068e3f77fe71e618dac633481c64bbc2a-2200x1467-webp",
+        "_type": "reference"
       }
     },
     "cardImageSrc": {
       "_type": "image",
       "asset": {
-        "_type": "reference",
-        "_ref": "image-6472bf1af228f316b6fda2a7a365a9b9d65b9783-2200x1400-webp"
+        "_ref": "image-2b7f491068e3f77fe71e618dac633481c64bbc2a-2200x1467-webp",
+        "_type": "reference"
       }
     },
     "imageAlt": {
@@ -688,87 +688,70 @@
     },
     "galleryImages": [
       {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-6472bf1af228f316b6fda2a7a365a9b9d65b9783-2200x1400-webp"
-        },
-        "_key": "image-022",
-        "alt": {
-          "tr": "Elba — Araç giydirme mockup’ı",
-          "en": "Elba — Vehicle graphics mockup"
-        },
-        "caption": {
-          "tr": "Araç giydirme mockup’ı",
-          "en": "Vehicle graphics mockup"
-        },
-        "fit": "cover"
-      },
-      {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-2b7f491068e3f77fe71e618dac633481c64bbc2a-2200x1467-webp"
-        },
         "_key": "image-023",
+        "_type": "image",
         "alt": {
-          "tr": "Elba — Koli tasarımı mockup’ı",
-          "en": "Elba — Shipping box design mockup"
+          "en": "Elba — Shipping box design mockup",
+          "tr": "Elba — Koli tasarımı mockup’ı"
+        },
+        "asset": {
+          "_ref": "image-2b7f491068e3f77fe71e618dac633481c64bbc2a-2200x1467-webp",
+          "_type": "reference"
         },
         "caption": {
-          "tr": "Koli tasarımı mockup’ı",
-          "en": "Shipping box design mockup"
+          "en": "Shipping box design mockup",
+          "tr": "Koli tasarımı mockup’ı"
         },
         "fit": "cover"
       },
       {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-7fb72572447e0376d9a81d21066fe6b93cf297ab-2200x1650-webp"
-        },
         "_key": "image-025",
+        "_type": "image",
         "alt": {
-          "tr": "Elba — Bant tasarımı mockup’ı",
-          "en": "Elba — Tape design mockup"
+          "en": "Elba — Tape design mockup",
+          "tr": "Elba — Bant tasarımı mockup’ı"
+        },
+        "asset": {
+          "_ref": "image-7fb72572447e0376d9a81d21066fe6b93cf297ab-2200x1650-webp",
+          "_type": "reference"
         },
         "caption": {
-          "tr": "Bant tasarımı mockup’ı",
-          "en": "Tape design mockup"
+          "en": "Tape design mockup",
+          "tr": "Bant tasarımı mockup’ı"
         },
         "fit": "cover"
       },
       {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-823593863bd28df1d5895b44e958d463b67f111d-2200x1467-webp"
-        },
         "_key": "image-026",
+        "_type": "image",
         "alt": {
-          "tr": "Elba — Masa takvimi mockup’ı",
-          "en": "Elba — Desk calendar mockup"
+          "en": "Elba — Desk calendar mockup",
+          "tr": "Elba — Masa takvimi mockup’ı"
+        },
+        "asset": {
+          "_ref": "image-823593863bd28df1d5895b44e958d463b67f111d-2200x1467-webp",
+          "_type": "reference"
         },
         "caption": {
-          "tr": "Masa takvimi mockup’ı",
-          "en": "Desk calendar mockup"
+          "en": "Desk calendar mockup",
+          "tr": "Masa takvimi mockup’ı"
         },
         "fit": "cover"
       },
       {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-31953788cf843c38759c3632d7360eb3e49f7eeb-2200x1650-webp"
-        },
         "_key": "image-027",
+        "_type": "image",
         "alt": {
-          "tr": "Elba — Kurumsal kupa mockup’ı",
-          "en": "Elba — Corporate mug mockup"
+          "en": "Elba — Corporate mug mockup",
+          "tr": "Elba — Kurumsal kupa mockup’ı"
+        },
+        "asset": {
+          "_ref": "image-31953788cf843c38759c3632d7360eb3e49f7eeb-2200x1650-webp",
+          "_type": "reference"
         },
         "caption": {
-          "tr": "Kurumsal kupa mockup’ı",
-          "en": "Corporate mug mockup"
+          "en": "Corporate mug mockup",
+          "tr": "Kurumsal kupa mockup’ı"
         },
         "fit": "cover"
       }
@@ -892,22 +875,22 @@
     "imageSrc": {
       "_type": "image",
       "asset": {
-        "_type": "reference",
-        "_ref": "image-1f5a8669661bef3c1ac9a42031cc0cae0d460b52-1200x1600-webp"
+        "_ref": "image-c823e114261e05240b82b81957a5be891afb1eb7-567x578-webp",
+        "_type": "reference"
       }
     },
     "bgImageSrc": {
       "_type": "image",
       "asset": {
-        "_type": "reference",
-        "_ref": "image-1f5a8669661bef3c1ac9a42031cc0cae0d460b52-1200x1600-webp"
+        "_ref": "image-c823e114261e05240b82b81957a5be891afb1eb7-567x578-webp",
+        "_type": "reference"
       }
     },
     "cardImageSrc": {
       "_type": "image",
       "asset": {
-        "_type": "reference",
-        "_ref": "image-1f5a8669661bef3c1ac9a42031cc0cae0d460b52-1200x1600-webp"
+        "_ref": "image-c823e114261e05240b82b81957a5be891afb1eb7-567x578-webp",
+        "_type": "reference"
       }
     },
     "imageAlt": {
@@ -920,36 +903,19 @@
     },
     "galleryImages": [
       {
-        "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-c823e114261e05240b82b81957a5be891afb1eb7-567x578-webp"
-        },
         "_key": "image-028",
-        "alt": {
-          "tr": "Biberzade — Çiğköfte kutusu mockup’ı",
-          "en": "Biberzade — Çiğköfte box mockup"
-        },
-        "caption": {
-          "tr": "Çiğköfte kutusu mockup’ı",
-          "en": "Çiğköfte box mockup"
-        },
-        "fit": "contain"
-      },
-      {
         "_type": "image",
-        "asset": {
-          "_type": "reference",
-          "_ref": "image-1f5a8669661bef3c1ac9a42031cc0cae0d460b52-1200x1600-webp"
-        },
-        "_key": "image-029",
         "alt": {
-          "tr": "Biberzade — Tako ambalajı mockup’ı",
-          "en": "Biberzade — Taco packaging mockup"
+          "en": "Biberzade — Çiğköfte box mockup",
+          "tr": "Biberzade — Çiğköfte kutusu mockup’ı"
+        },
+        "asset": {
+          "_ref": "image-c823e114261e05240b82b81957a5be891afb1eb7-567x578-webp",
+          "_type": "reference"
         },
         "caption": {
-          "tr": "Tako ambalajı mockup’ı",
-          "en": "Taco packaging mockup"
+          "en": "Çiğköfte box mockup",
+          "tr": "Çiğköfte kutusu mockup’ı"
         },
         "fit": "contain"
       }
