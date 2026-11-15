@@ -720,40 +720,6 @@
           "tr": "Bant tasarımı mockup’ı"
         },
         "fit": "cover"
-      },
-      {
-        "_key": "image-026",
-        "_type": "image",
-        "alt": {
-          "en": "Elba — Desk calendar mockup",
-          "tr": "Elba — Masa takvimi mockup’ı"
-        },
-        "asset": {
-          "_ref": "image-823593863bd28df1d5895b44e958d463b67f111d-2200x1467-webp",
-          "_type": "reference"
-        },
-        "caption": {
-          "en": "Desk calendar mockup",
-          "tr": "Masa takvimi mockup’ı"
-        },
-        "fit": "cover"
-      },
-      {
-        "_key": "image-027",
-        "_type": "image",
-        "alt": {
-          "en": "Elba — Corporate mug mockup",
-          "tr": "Elba — Kurumsal kupa mockup’ı"
-        },
-        "asset": {
-          "_ref": "image-31953788cf843c38759c3632d7360eb3e49f7eeb-2200x1650-webp",
-          "_type": "reference"
-        },
-        "caption": {
-          "en": "Corporate mug mockup",
-          "tr": "Kurumsal kupa mockup’ı"
-        },
-        "fit": "cover"
       }
     ]
   },
