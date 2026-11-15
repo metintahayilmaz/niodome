@@ -506,7 +506,8 @@
       "tr": [
         "Becker’s"
       ]
-    }
+    },
+    "homepageFeatured": true
   },
   {
     "_id": "niodome-project-elba",
@@ -1069,7 +1070,8 @@
         },
         "fit": "cover"
       }
-    ]
+    ],
+    "homepageFeatured": true
   },
   {
     "_id": "niodome-project-ambalaj-seckisi",
@@ -1525,5 +1527,185 @@
       }
     ],
     "homepageFeatured": false
+  },
+  {
+    "_id": "niodome-project-hasircizade",
+    "_type": "project",
+    "isDemo": false,
+    "homepageFeatured": true,
+    "feedbackApproved": false,
+    "order": 2.5,
+    "title": {
+      "tr": "Hasırcızade",
+      "en": "Hasırcızade"
+    },
+    "titleLines": {
+      "tr": [
+        "Hasırcızade"
+      ],
+      "en": [
+        "Hasırcızade"
+      ]
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "hasircizade"
+    },
+    "slug_en": {
+      "_type": "slug",
+      "current": "hasircizade"
+    },
+    "href": "/works/hasircizade",
+    "clientName": "Hasırcızade",
+    "industries": {
+      "tr": "Gastronomi / Tatlı ve çikolata",
+      "en": "Gastronomy / Desserts and chocolate"
+    },
+    "subtitle": {
+      "tr": "Bir imza. Bütün bir lezzet dünyası.",
+      "en": "One signature. An entire world of flavour."
+    },
+    "tags": {
+      "tr": [
+        "Logo ve marka kimliği",
+        "Amblem ve desen sistemi",
+        "Marka uygulamaları"
+      ],
+      "en": [
+        "Logo and brand identity",
+        "Emblem and pattern system",
+        "Brand applications"
+      ]
+    },
+    "tagsColA": {
+      "tr": [
+        "Logo ve marka kimliği"
+      ],
+      "en": [
+        "Logo and brand identity"
+      ]
+    },
+    "tagsColB": {
+      "tr": [
+        "Amblem ve desen sistemi",
+        "Marka uygulamaları"
+      ],
+      "en": [
+        "Emblem and pattern system",
+        "Brand applications"
+      ]
+    },
+    "cursorText": {
+      "tr": "Projeyi incele",
+      "en": "Explore project"
+    },
+    "overviewLead": {
+      "tr": "Hasırcızade kimliğinde el yazısı karakterli marka imzasını, geometrik ve bitkisel öğeleri birleştiren bir amblemle buluşturduk.",
+      "en": "For Hasırcızade, we paired a distinctive script wordmark with an emblem combining geometric and botanical forms."
+    },
+    "overviewSpan": {
+      "tr": "Koyu yeşil, altın ve krem renkleri; merkezden yayılan bezeme düzeniyle birlikte markanın farklı yüzeylerde tanınmasını sağlayan bir görsel dil oluşturuyor.",
+      "en": "Deep green, gold and cream form a visual language around a radial ornamental structure, helping the identity remain recognisable across different surfaces."
+    },
+    "challengeLead": {
+      "tr": "Gelenekten beslenen bir lezzet markasına, ayrıntılı ama birlikte çalışan bir görsel karakter vermek.",
+      "en": "Give a tradition-led food brand a detailed yet coherent visual character."
+    },
+    "challengeSpan": {
+      "tr": "Amblemin zenginliği ile marka adının okunurluğunu; küçük baskı yüzeylerinden mağaza cephesine uzanan farklı ölçeklerde dengelemek.",
+      "en": "Balance the richness of the emblem with wordmark legibility, from small printed surfaces to the storefront."
+    },
+    "solutionLead": {
+      "tr": "Amblem, yazı karakteri ve renkleri; tekrar edilebilir bir kimlik sistemi olarak ele aldık.",
+      "en": "We treated the emblem, lettering and colours as a repeatable identity system."
+    },
+    "solutionSpan": {
+      "tr": "Kimlik sunumu özgün logo ve arşivdeki marka uygulamalarından hareketle hazırlandı. Yeni mockuplar, tasarım dilinin farklı temas noktalarına nasıl taşındığını gösteriyor.",
+      "en": "The presentation draws on the original logo and archived brand applications. New mockups show how the design language carries across different touchpoints."
+    },
+    "services": [
+      {
+        "_key": "identity",
+        "_type": "object",
+        "name": {
+          "tr": "Logo ve marka kimliği",
+          "en": "Logo and brand identity"
+        },
+        "description": {
+          "tr": "Marka imzası, bezemeli amblem ve renk sistemi.",
+          "en": "Wordmark, ornamental emblem and colour system."
+        }
+      },
+      {
+        "_key": "applications",
+        "_type": "object",
+        "name": {
+          "tr": "Kimlik uygulamaları",
+          "en": "Identity applications"
+        },
+        "description": {
+          "tr": "Basılı yüzeyler ve mekânsal uygulamalar için ortak marka dili.",
+          "en": "A consistent brand language across printed and spatial applications."
+        }
+      }
+    ],
+    "techStack": [],
+    "imageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-c0bd10f18007015cdeaf8bf0a8f657cd3b0721b5-1536x1024-webp"
+      }
+    },
+    "bgImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-c0bd10f18007015cdeaf8bf0a8f657cd3b0721b5-1536x1024-webp"
+      }
+    },
+    "cardImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-c0bd10f18007015cdeaf8bf0a8f657cd3b0721b5-1536x1024-webp"
+      }
+    },
+    "imageAlt": {
+      "tr": "Hasırcızade — özgün logo ve marka kimliği sunumu",
+      "en": "Hasırcızade — original logo and brand identity presentation"
+    },
+    "cardImageAlt": {
+      "tr": "Hasırcızade — özgün logo ve marka kimliği sunumu",
+      "en": "Hasırcızade — original logo and brand identity presentation"
+    },
+    "galleryImages": [
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-c0bd10f18007015cdeaf8bf0a8f657cd3b0721b5-1536x1024-webp"
+        },
+        "_key": "hasircizade-project-0",
+        "alt": {
+          "tr": "Hasırcızade — özgün logo ve marka kimliği sunumu",
+          "en": "Hasırcızade — original logo and brand identity presentation"
+        },
+        "fit": "contain"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-20ad1fecff61dfae0fdbcc5463e9ca81829fdff8-1800x1414-webp"
+        },
+        "_key": "hasircizade-project-1",
+        "alt": {
+          "tr": "Hasırcızade — arşivdeki mağaza cephe tasarımı",
+          "en": "Hasırcızade — archived storefront design"
+        },
+        "fit": "contain"
+      }
+    ]
   }
 ]

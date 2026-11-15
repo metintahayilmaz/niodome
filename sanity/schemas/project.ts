@@ -14,6 +14,13 @@ export const project = defineType({
       initialValue: false,
     }),
     defineField({
+      name: "homepageFeatured",
+      title: "Ana sayfa seçkisine dahil",
+      description: "Yalnızca sanat yönü veya marka değeri güçlü, seçilmiş işleri açın.",
+      type: "boolean",
+      initialValue: false,
+    }),
+    defineField({
       name: "feedbackApproved",
       title: "Müşteri yorumu onaylandı",
       description: "Yalnızca doğrulanmış ve yayımlama izni olan yorumlarda açın.",

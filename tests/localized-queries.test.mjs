@@ -41,6 +41,18 @@ test("every exported query parses", () => {
   }
 });
 
+test("homepage only includes explicitly selected projects without hiding their detail routes", async () => {
+  const base = { _type: "project", isDemo: false, title: { tr: "Project" }, slug: { current: "sample" }, bgImageSrc: {}, cardImageSrc: {} };
+  const dataset = [
+    { ...base, _id: "selected", homepageFeatured: true },
+    { ...base, _id: "excluded", homepageFeatured: false, slug: { current: "excluded" } },
+    { ...base, _id: "unreviewed" },
+  ];
+  const featured = await run("projectsShowcaseQuery", dataset, { locale: "tr" });
+  assert.deepEqual(featured.map(row => row._id), ["selected"]);
+  assert.equal((await run("projectBySlugQuery", dataset, { locale: "tr", slug: "excluded" }))._id, "excluded");
+});
+
 test("empty and missing English post fields use the populated Turkish fields", async () => {
   for (const en of ["", null, undefined]) {
     const row = { ...post, title: { tr: post.title.tr, en } };
@@ -79,6 +91,7 @@ test("empty project title/tag arrays fall back while meaningful multi-line title
     const row = {
       _id: "project-1",
       _type: "project",
+      homepageFeatured: true,
       bgImageSrc: { _type: "image" },
       cardImageSrc: { _type: "image" },
       titleLines: { tr: ["Noema", "Hotel"], en },

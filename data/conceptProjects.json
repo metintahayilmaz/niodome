@@ -168,7 +168,8 @@
         "Mola",
         ""
       ]
-    }
+    },
+    "homepageFeatured": true
   },
   {
     "_id": "niodome-concept-kiyi-website",
@@ -339,7 +340,8 @@
         "Kıyı",
         ""
       ]
-    }
+    },
+    "homepageFeatured": false
   },
   {
     "_id": "niodome-concept-bir-araya-campaign",
@@ -510,6 +512,191 @@
         "Bir ara",
         "gel."
       ]
-    }
+    },
+    "homepageFeatured": true
+  },
+  {
+    "_id": "niodome-concept-melba",
+    "_type": "project",
+    "isDemo": false,
+    "homepageFeatured": true,
+    "feedbackApproved": false,
+    "order": 1.5,
+    "title": {
+      "tr": "Melba",
+      "en": "Melba"
+    },
+    "titleLines": {
+      "tr": [
+        "Melba"
+      ],
+      "en": [
+        "Melba"
+      ]
+    },
+    "slug": {
+      "_type": "slug",
+      "current": "melba-cikolata-konsepti"
+    },
+    "slug_en": {
+      "_type": "slug",
+      "current": "melba-cikolata-konsepti"
+    },
+    "href": "/works/melba-cikolata-konsepti",
+    "clientName": "Independent concept",
+    "industries": {
+      "tr": "Çikolata / Ambalaj konsepti",
+      "en": "Chocolate / Packaging concept"
+    },
+    "subtitle": {
+      "tr": "Tarihî bir isim. Yeni bir görsel iştah.",
+      "en": "A historic name. A new visual appetite."
+    },
+    "tags": {
+      "tr": [
+        "Bağımsız konsept",
+        "Ambalaj tasarımı",
+        "İllüstrasyon",
+        "Sanat yönetimi"
+      ],
+      "en": [
+        "Independent concept",
+        "Packaging design",
+        "Illustration",
+        "Art direction"
+      ]
+    },
+    "tagsColA": {
+      "tr": [
+        "Bağımsız konsept",
+        "Ambalaj tasarımı"
+      ],
+      "en": [
+        "Independent concept",
+        "Packaging design"
+      ]
+    },
+    "tagsColB": {
+      "tr": [
+        "İllüstrasyon",
+        "Sanat yönetimi"
+      ],
+      "en": [
+        "Illustration",
+        "Art direction"
+      ]
+    },
+    "cursorText": {
+      "tr": "Konsepti incele",
+      "en": "Explore concept"
+    },
+    "overviewLead": {
+      "tr": "Melba adını, karakterli tipografi ve illüstrasyon etrafında yeni bir çikolata serisi için yeniden yorumladık.",
+      "en": "We reimagined the Melba name for a new chocolate range built around distinctive typography and illustration."
+    },
+    "overviewSpan": {
+      "tr": "Bu bağımsız konseptte dört çeşit; ortak bir marka imzası, farklı renk alanları ve her lezzete özel çizimlerle bir araya geliyor. Tarihî marka için hazırlanmış gerçek bir müşteri işi değildir.",
+      "en": "This independent concept unites four varieties through a shared brand signature, distinct colour fields and flavour-specific illustrations. It is not a commissioned project for the historic brand."
+    },
+    "challengeLead": {
+      "tr": "Nostaljiyi eski bir etiketi tekrar etmekten çıkarıp bugünün rafında güçlü bir karaktere dönüştürmek.",
+      "en": "Turn nostalgia into a distinctive contemporary shelf presence rather than repeating an old label."
+    },
+    "challengeSpan": {
+      "tr": "Marka imzası, çeşidi anlatan görseller ve ürün bilgisi; birbirini bastırmadan tek bir ambalaj sisteminde çalışmalıydı.",
+      "en": "The wordmark, flavour imagery and product information needed to coexist within a single packaging system."
+    },
+    "solutionLead": {
+      "tr": "İri harfli marka imzasını, botanik gravürlerden beslenen özgün illüstrasyonlarla eşleştirdik.",
+      "en": "We paired a bold wordmark with original illustrations informed by botanical engraving."
+    },
+    "solutionSpan": {
+      "en": "Hazelnut, sour cherry, blood orange and sea salt each gain their own colour world while pack proportions, information layout and visual rhythm remain consistent.",
+      "tr": "Fındık, vişne, kan portakalı ve deniz tuzu çeşitleri ayrı renk dünyaları kazanırken ambalaj oranı, bilgi düzeni ve görsel ritim ortak tutuldu."
+    },
+    "services": [
+      {
+        "_key": "service-0",
+        "_type": "object",
+        "name": {
+          "tr": "Ambalaj sistemi",
+          "en": "Packaging system"
+        },
+        "description": {
+          "tr": "Dört çeşit için ön yüz, bilgi hiyerarşisi ve seri mantığı.",
+          "en": "Front panels, information hierarchy and range logic for four varieties."
+        }
+      },
+      {
+        "_key": "service-1",
+        "_type": "object",
+        "name": {
+          "tr": "İllüstrasyon ve sanat yönetimi",
+          "en": "Illustration and art direction"
+        },
+        "description": {
+          "tr": "Her çeşide özel çizimler ve grafik sunum sahneleri.",
+          "en": "Variety-specific illustrations and graphic presentation scenes."
+        }
+      }
+    ],
+    "techStack": [],
+    "imageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-fde512fe409ff0f8b9cce314d50f3c9e4d46acac-1536x1024-webp"
+      }
+    },
+    "bgImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-fde512fe409ff0f8b9cce314d50f3c9e4d46acac-1536x1024-webp"
+      }
+    },
+    "cardImageSrc": {
+      "_type": "image",
+      "asset": {
+        "_type": "reference",
+        "_ref": "image-6eb6676000d73f94055bd22261ce13ab45dc025f-1254x1254-webp"
+      }
+    },
+    "imageAlt": {
+      "tr": "Melba — Türk çikolata markası için bağımsız ambalaj konsepti",
+      "en": "Melba — independent packaging concept for a historic Turkish chocolate brand"
+    },
+    "cardImageAlt": {
+      "tr": "Melba — Türk çikolata markası için bağımsız ambalaj konsepti",
+      "en": "Melba — independent packaging concept for a historic Turkish chocolate brand"
+    },
+    "galleryImages": [
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-fde512fe409ff0f8b9cce314d50f3c9e4d46acac-1536x1024-webp"
+        },
+        "_key": "melba-concept-0",
+        "alt": {
+          "tr": "Melba — Türk çikolata markası için bağımsız ambalaj konsepti",
+          "en": "Melba — independent packaging concept for a historic Turkish chocolate brand"
+        },
+        "fit": "contain"
+      },
+      {
+        "_type": "image",
+        "asset": {
+          "_type": "reference",
+          "_ref": "image-a7f67a5531c4d5b013fe4b3ea13ff91d2920ce51-1536x1024-webp"
+        },
+        "_key": "melba-concept-1",
+        "alt": {
+          "tr": "Melba — ambalaj ve çikolata detay sunumu",
+          "en": "Melba — packaging and chocolate detail presentation"
+        },
+        "fit": "contain"
+      }
+    ]
   }
 ]

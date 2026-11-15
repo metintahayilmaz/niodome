@@ -12,7 +12,7 @@ AEGEAN için onaylanan Atina–İstanbul kolajı kullanılır; alternatif web g�
 | ux | NAVA / Greece | regional-ux.webp |
 | identity | Pandora Plastik / Türkiye | regional-identity.webp |
 | app | Wolt / Greece | regional-app.webp |
-| advertising | Coca-Cola / Uzbekistan | regional-advertising.webp |
+| advertising | Coca-Cola / Iraqi Kurdistan | coca-cola-iraqi-kurdistan.webp |
 | commerce | LC Waikiki / North Macedonia | regional-commerce.webp |
 | media | SES / Saudi Arabia | regional-media.webp |
 | google | USTA / North Macedonia | regional-google.webp |
@@ -45,3 +45,5 @@ AEGEAN için onaylanan Atina–İstanbul kolajı kullanılır; alternatif web g�
 Son referanslar: kullanıcı Edebiyati_Pisirmek.pdf (71 sayfalık örnek), kapak ve Kefirix görselleri; Pandora arşiv product catalog 049.webp. Kamuya açık yeni proje veya kampanya sonucu iddiası eklenmedi.
 
 Kronik yakın planı, tüm nesnelerin gösterilmesi kuralının kullanıcının açıkça istediği istisnasıdır; yalnız bu görselde kitap dış kenarları bilinçli biçimde kadraj dışındadır. Diğer ekran ve ürünlerde tam kadraj korunur.
+
+Coca-Cola revizyonu (2026-11-15): Irak Kürdistanı için Soranice başlık ve Erbil/Süleymaniye/Duhok şehir adları. Bağımsız bölgesel konsept; resmî kampanya veya üretilmiş ambalaj iddiası yok. Önceki Özbekçe sürüm kullanılmaz.
