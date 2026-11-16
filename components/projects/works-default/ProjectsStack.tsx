@@ -12,7 +12,6 @@ import {
   type StackCardMedia,
 } from "@/lib/template/stackCardsEffects";
 import type { ProjectStackItem } from "@/types/project";
-import styles from "./ProjectsStack.module.css";
 
 type VideoSources = { type: string; src: string }[];
 
@@ -64,7 +63,6 @@ export default function ProjectsStack({ projects }: Props) {
       cardImageWrappers: cardImageWrapperRefs.current,
       cardMedias: cardMediaRefs.current,
       introMarquee: introMarqueeRef.current,
-      preserveMediaFrame: true,
     });
   }, []);
 
@@ -74,7 +72,7 @@ export default function ProjectsStack({ projects }: Props) {
         <div className="mxd-container fullwidth-container">
           {/* Block - Progects Stack Start */}
           <div className="mxd-block">
-            <div className={`mxd-stack-cards ${styles.stack}`}>
+            <div className="mxd-stack-cards">
               {resolvedProjects.map((card, index) => (
                 <div
                   key={card.key}
