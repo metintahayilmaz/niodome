@@ -121,9 +121,11 @@ export default function Nav({
                 className="menu-logo__image"
                 xmlns="http://www.w3.org/2000/svg"
                 version="1.1"
-                viewBox="0 0 42.4 36"
+                viewBox="-98 -112 196 224"
+                aria-hidden="true"
+                focusable="false"
               >
-                <path d="M25.8,13.8h2.8v5.5h-2.8v-5.5ZM13.8,16.6v2.8h2.8v-5.5h-2.8v2.8ZM32.2,0v2.8h-2.8V0h2.8ZM26.7,5.5h2.8v-2.8h-2.8v2.8ZM21.2,5.5h-5.5v2.8h11.1v-2.8h-5.5ZM12.8,2.8v2.8h2.8v-2.8h-2.8ZM10.1,0v2.8h2.8V0h-2.8ZM7.3,5.5v5.5h2.8V2.8h-2.8v2.8ZM4.5,13.8v2.8H0v2.8h2.8v2.8H0v2.8h2.8v11.1h2.8v-8.3h5.5v-2.8h-5.5v-8.3h1.9v-5.5h-2.9v2.8ZM35,5.5v-2.8h-2.8v8.3h2.8v-5.5ZM42.4,19.4v-2.8h-4.7v-5.5h-2.8v5.5h1.9v8.3h-5.5v2.8h5.5v8.3h2.8v-11.1h2.8v-2.8h-2.8v-2.8h2.8Z" />
+                <path d="M-49 -105h14v14h-14z M35 -105h14v14h-14z M-35 -91h14v14h-14z M21 -91h14v14h-14z M-21 -77h14v14h-14z M-7 -77h14v14h-14z M7 -77h14v14h-14z M-35 -63h14v14h-14z M-21 -63h14v14h-14z M-7 -63h14v14h-14z M7 -63h14v14h-14z M21 -63h14v14h-14z M-21 -49h14v14h-14z M-7 -49h14v14h-14z M7 -49h14v14h-14z M-77 -35h14v14h-14z M-7 -35h14v14h-14z M63 -35h14v14h-14z M-63 -21h14v14h-14z M-21 -21h14v14h-14z M-7 -21h14v14h-14z M7 -21h14v14h-14z M49 -21h14v14h-14z M-49 -7h14v14h-14z M-35 -7h14v14h-14z M-21 -7h14v14h-14z M-7 -7h14v14h-14z M7 -7h14v14h-14z M21 -7h14v14h-14z M35 -7h14v14h-14z M-63 7h14v14h-14z M-21 7h14v14h-14z M-7 7h14v14h-14z M7 7h14v14h-14z M49 7h14v14h-14z M-77 21h14v14h-14z M-7 21h14v14h-14z M63 21h14v14h-14z M-35 35h14v14h-14z M-21 35h14v14h-14z M-7 35h14v14h-14z M7 35h14v14h-14z M21 35h14v14h-14z M-63 49h14v14h-14z M-49 49h14v14h-14z M-35 49h14v14h-14z M-21 49h14v14h-14z M-7 49h14v14h-14z M7 49h14v14h-14z M21 49h14v14h-14z M35 49h14v14h-14z M49 49h14v14h-14z M-77 63h14v14h-14z M-49 63h14v14h-14z M-35 63h14v14h-14z M-21 63h14v14h-14z M-7 63h14v14h-14z M7 63h14v14h-14z M21 63h14v14h-14z M35 63h14v14h-14z M63 63h14v14h-14z M-91 77h14v14h-14z M-35 77h14v14h-14z M-21 77h14v14h-14z M-7 77h14v14h-14z M7 77h14v14h-14z M21 77h14v14h-14z M77 77h14v14h-14z M-21 91h14v14h-14z M-7 91h14v14h-14z M7 91h14v14h-14z" />
               </svg>
               {/* logo text */}
               <div className="menu-logo__text">
