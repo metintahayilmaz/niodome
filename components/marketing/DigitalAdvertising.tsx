@@ -1,5 +1,4 @@
 import ServiceIntro from "@/components/services/ServiceIntro";
-import ServiceWorks from "@/components/services/ServiceWorks";
 import ServiceOutro from "@/components/services/ServiceOutro";
 import type { Metadata } from "next";
 import Link from "@/components/common/LocalizedLink";
@@ -28,7 +27,6 @@ export default function DigitalAdvertising({locale}: {locale:string}) {
       <article className={`${styles.card} ${local.card}`}><h3>{t.otherTitle}</h3><p>{t.otherText}</p><p>{t.otherPrice}</p><div className={styles.actions}><Link className={styles.button} href={`${enquiry}&platform=linkedin`}>LinkedIn ↗</Link><Link className={styles.button} href={`${enquiry}&platform=tiktok`}>TikTok ↗</Link></div></article>
     </div></section>
     <section className={`${styles.section} ${styles.dark}`}><h2>{t.scopeTitle}</h2><div className={styles.grid}>{t.scope.map(([title,text]) => <article key={title}><h3>{title}</h3><p className={styles.text}>{text}</p></article>)}</div></section>
-    <ServiceWorks id="advertising" locale={locale} />
     <section className={styles.section}><h2>{t.costTitle}</h2><p className={styles.text}>{t.costText}</p><p className={styles.note}>{t.costNote}</p><h3>{t.differenceTitle}</h3><p className={styles.text}>{t.differenceText}</p><Link className={styles.button} href="/social-media">{t.socialCta} ↗</Link></section>
     <section className={styles.section}><h2>{t.faqTitle}</h2><div className={styles.faq}>{t.faqs.map(([q,a]) => <details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div></section>
     <ServiceOutro locale={locale} title={t.closingTitle} description={t.closingText} button={t.cta} />

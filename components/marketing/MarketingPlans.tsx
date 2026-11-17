@@ -1,5 +1,4 @@
 import ServiceIntro from "@/components/services/ServiceIntro";
-import ServiceWorks from "@/components/services/ServiceWorks";
 import ServiceOutro from "@/components/services/ServiceOutro";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import type { Metadata } from "next";
@@ -46,7 +45,6 @@ export default function MarketingPlans({ service, locale }: { service: Marketing
     <ServiceIntro id={service} locale={locale} />
     <section className={`${styles.section} ${styles.dark}`} aria-label={en ? "Our approach" : "Yaklaşımımız"}><div className={styles.hooks}>{t.process.map((text, i) => <div key={text}><span className={styles.eyebrow}>0{i+1}</span><p>{text}</p></div>)}</div></section>
     {formats && <section className={styles.section} aria-labelledby="formats-title"><p className={styles.eyebrow}>{formats.eyebrow}</p><h2 id="formats-title">{formats.title}</h2><div className={local.formats}>{formats.items.map(([title, text], i) => <CommonScrollAnimated as="article" animation="inUp" key={title}><span className={styles.eyebrow}>0{i+1}</span><h3>{title}</h3><p>{text}</p></CommonScrollAnimated>)}</div></section>}
-    <ServiceWorks id={service} locale={locale} />
     <section className={styles.section} id="plans" aria-labelledby="plans-title"><h2 id="plans-title">{t.plansTitle}</h2><p className={styles.text}>{t.included}</p>
       <div className={local.grid}>{t.plans.map((plan, index) => <article className={`${styles.card} ${local.card}`} key={plan.id}>
         <h3>{plan.name}</h3><p className={local.who}>{plan.who}</p><p>{plan.summary}</p>
