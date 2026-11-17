@@ -1,6 +1,7 @@
 import ServiceIntro from "@/components/services/ServiceIntro";
 import ServiceWorks from "@/components/services/ServiceWorks";
 import ServiceOutro from "@/components/services/ServiceOutro";
+import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import type { Metadata } from "next";
 import Link from "@/components/common/LocalizedLink";
 import advertising from "@/data/digitalAdvertising.json";
@@ -38,10 +39,13 @@ export default function MarketingPlans({ service, locale }: { service: Marketing
   const lang = locale === "en" ? "en" : "tr";
   const t = data[service][lang];
   const en = lang === "en";
+  type Block = { eyebrow: string; title: string; items: string[][] };
+  const { formats, month } = t as typeof t & { formats?: Block; month?: Block };
   const money = (amount: number) => new Intl.NumberFormat(en ? "en-GB" : "tr-TR").format(amount);
   return <main>
     <ServiceIntro id={service} locale={locale} />
     <section className={`${styles.section} ${styles.dark}`} aria-label={en ? "Our approach" : "Yaklaşımımız"}><div className={styles.hooks}>{t.process.map((text, i) => <div key={text}><span className={styles.eyebrow}>0{i+1}</span><p>{text}</p></div>)}</div></section>
+    {formats && <section className={styles.section} aria-labelledby="formats-title"><p className={styles.eyebrow}>{formats.eyebrow}</p><h2 id="formats-title">{formats.title}</h2><div className={local.formats}>{formats.items.map(([title, text], i) => <CommonScrollAnimated as="article" animation="inUp" key={title}><span className={styles.eyebrow}>0{i+1}</span><h3>{title}</h3><p>{text}</p></CommonScrollAnimated>)}</div></section>}
     <ServiceWorks id={service} locale={locale} />
     <section className={styles.section} id="plans" aria-labelledby="plans-title"><h2 id="plans-title">{t.plansTitle}</h2><p className={styles.text}>{t.included}</p>
       <div className={local.grid}>{t.plans.map((plan, index) => <article className={`${styles.card} ${local.card}`} key={plan.id}>
@@ -55,6 +59,7 @@ export default function MarketingPlans({ service, locale }: { service: Marketing
       </article>)}</div>
       <p className={styles.note}>{t.exclusions}</p><p className={styles.note}>{en ? "Scope changes are agreed before work starts. No sales, follower or ROAS guarantees. The first review period is 90 days; renewal and exit terms are agreed in the contract." : "Kapsam değişikliği işe başlamadan birlikte kararlaştırılır. Satış, takipçi veya ROAS garantisi verilmez. İlk değerlendirme dönemi 90 gündür; yenileme ve ayrılma koşulları sözleşmede belirlenir."}</p>
     </section>
+    {month && <section className={`${styles.section} ${styles.dark}`} aria-labelledby="month-title"><p className={styles.eyebrow}>{month.eyebrow}</p><h2 id="month-title">{month.title}</h2><ol className={local.month}>{month.items.map(([title, text], i) => <CommonScrollAnimated as="li" animation="inUp" key={title}><span className={styles.eyebrow}>{en ? "WEEK" : "HAFTA"} {i+1}</span><h3>{title}</h3><p>{text}</p></CommonScrollAnimated>)}</ol></section>}
     <section className={styles.section}><h2>{en ? "Before we start" : "Başlamadan önce"}</h2><div className={styles.faq}>{t.faqs.map(([q,a]) => <details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div></section>
     <section className={styles.section}><p className={styles.eyebrow}>{en ? "Explore more" : "Diğer hizmetler"}</p><div className={styles.actions}><Link className={styles.button} href="/digital-advertising">{advertising[lang].label} ↗</Link><Link className={styles.button} href={service === "social" ? "/google-ads" : "/social-media"}>{service === "social" ? data.google[lang].label : data.social[lang].label} ↗</Link><Link className={styles.button} href="/geo">GEO ↗</Link></div></section>
     <ServiceOutro locale={locale} title={en ? "Let’s find the right starting point." : "İşinize uygun başlangıcı birlikte belirleyelim."} description={en ? "Start with a 20-minute needs conversation. We’ll review your goals, existing materials and budget before agreeing the scope." : "20 dakikalık ihtiyaç görüşmesiyle başlayalım. Hedefinizi, mevcut malzemelerinizi ve bütçenizi konuşup kapsamı netleştirelim."} button={t.cta} />

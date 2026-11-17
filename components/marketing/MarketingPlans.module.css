@@ -1,3 +1,7 @@
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.4rem;margin-top:4rem}.card{display:flex;flex-direction:column;padding:clamp(2.4rem,3vw,4rem)}.card h3{font-size:clamp(2.8rem,2.7vw,4rem)}.who{font-weight:600}.cost{border-top:1px solid #8886;padding-top:1.6rem;margin-top:1.6rem}.details{border-top:1px solid #8886;margin-block:2rem}.details summary{font-size:1.8rem;line-height:1.5;cursor:pointer;padding-block:1.6rem}.cta{margin-top:auto;align-self:flex-start}.card p{overflow-wrap:anywhere}.details summary:focus-visible{outline:3px solid #749aff;outline-offset:4px}@media(max-width:1100px){.grid{grid-template-columns:1fr}.card{max-width:90rem;width:100%}.cta{margin-top:2rem}}
 
 .price{line-height:1.15!important}.price span{display:block;line-height:1.4;margin-top:.8rem}
+
+.formats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2.4rem;margin-top:4rem}.formats article{border-top:1px solid #8887;padding-top:2.4rem;min-width:0}.formats h3,.month h3{font-size:clamp(2.6rem,2.6vw,3.8rem);margin:1.6rem 0}.formats p,.month p{font-size:1.8rem;line-height:1.55}
+.month{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2.4rem;list-style:none;padding:0;margin:4rem 0 0}.month li{border-top:1px solid #eee6;padding-top:2.4rem;min-width:0}
+@media(max-width:1100px){.formats,.month{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.formats,.month{grid-template-columns:1fr}}

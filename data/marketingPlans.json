@@ -95,7 +95,51 @@
             "Aylık 60 dakika görüşme ve çeyreklik değerlendirme."
           ]
         }
-      ]
+      ],
+      "formats": {
+        "eyebrow": "NELER ÜRETİYORUZ",
+        "title": "Bir ayda masaya ne geliyor?",
+        "items": [
+          [
+            "Görsel ve carousel",
+            "Tek kare görseller ve en fazla beş karelik carousel serileriyle ürününüzü, hizmetinizi ve markanızın bakışını anlatırız."
+          ],
+          [
+            "Kısa video",
+            "Sağladığınız kayıtları otuz saniyeyi geçmeyen videolara dönüştürür, kurguyu ve basit hareketli grafikleri biz hazırlarız."
+          ],
+          [
+            "Story setleri",
+            "Üç kareye kadar story setleriyle günlük akışta görünür kalır, duyuruları ve kısa hatırlatmaları buradan yaparız."
+          ],
+          [
+            "Topluluk yönetimi",
+            "Hafta içi mesai saatlerinde yorum ve mesajları takip eder, ilk yanıtı bir iş günü içinde vermeyi hedefleriz."
+          ]
+        ]
+      },
+      "month": {
+        "eyebrow": "AYLIK DÜZEN",
+        "title": "Bir ay nasıl ilerliyor?",
+        "items": [
+          [
+            "Plan",
+            "Ayın konularını, içerik serilerini ve yayın takvimini hazırlar, onayınıza sunarız."
+          ],
+          [
+            "Üretim",
+            "Onaylanan takvime göre görselleri, metinleri ve paketinizde varsa kısa videoları hazırlarız."
+          ],
+          [
+            "Onay ve yayın",
+            "İçerikleri toplu olarak size gösterir, düzeltmeleri işler ve seçilen kanallarda yayımlarız."
+          ],
+          [
+            "Değerlendirme",
+            "Ay sonunda neyin karşılık bulduğunu raporlar, görüşmede gelecek ayın yönünü birlikte belirleriz."
+          ]
+        ]
+      }
     },
     "en": {
       "label": "Social media management",
@@ -189,7 +233,51 @@
             "Monthly 60-minute meeting and quarterly review."
           ]
         }
-      ]
+      ],
+      "formats": {
+        "eyebrow": "WHAT WE MAKE",
+        "title": "What lands on the table each month?",
+        "items": [
+          [
+            "Images and carousels",
+            "Single images and carousel series of up to five frames that explain your product, your service and your brand’s point of view."
+          ],
+          [
+            "Short video",
+            "We turn the footage you provide into videos of up to thirty seconds, handling the edit and simple motion graphics."
+          ],
+          [
+            "Story sets",
+            "Story sets of up to three frames keep you present in the daily feed and carry announcements and short reminders."
+          ],
+          [
+            "Community management",
+            "We follow comments and messages during weekday working hours and aim to give a first reply within one working day."
+          ]
+        ]
+      },
+      "month": {
+        "eyebrow": "MONTHLY RHYTHM",
+        "title": "How does a month run?",
+        "items": [
+          [
+            "Plan",
+            "We prepare the month’s topics, content series and publishing calendar and share them for your approval."
+          ],
+          [
+            "Production",
+            "We produce the visuals, copy and, where your plan includes them, the short videos on the approved calendar."
+          ],
+          [
+            "Approval and publishing",
+            "We show you the content as one batch, apply the corrections and publish on the chosen channels."
+          ],
+          [
+            "Review",
+            "At month end we report what resonated and agree next month’s direction in the review call."
+          ]
+        ]
+      }
     }
   },
   "google": {
