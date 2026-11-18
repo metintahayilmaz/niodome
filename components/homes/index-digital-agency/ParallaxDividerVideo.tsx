@@ -1,4 +1,4 @@
-import UkiyoParallax from "@/components/animations/UkiyoParallax";
+import StableParallax from "@/components/animations/StableParallax";
 import AutoplayLoopVideo from "@/components/media/AutoplayLoopVideo";
 import BlurSection from "@/components/animations/BlurSection";
 
@@ -9,12 +9,11 @@ export default function ParallaxDividerVideo() {
         <div className="mxd-container fullwidth-container">
           <div className="mxd-divider">
             <div className="mxd-divider__video">
-              <UkiyoParallax
+              <StableParallax
                 className="video parallax-video"
                 scale={1.4}
                 speed={1.5}
-                externalRAF={false}
-                style={{
+                  style={{
                   position: "absolute",
                   inset: 0,
                   width: "100%",
@@ -28,7 +27,7 @@ export default function ParallaxDividerVideo() {
                     { type: "video/webm", src: "video/1280x720_bus.webm" },
                   ]}
                 />
-              </UkiyoParallax>
+              </StableParallax>
             </div>
           </div>
         </div>

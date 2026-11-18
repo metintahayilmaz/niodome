@@ -109,14 +109,27 @@ export default function CommonHero3DImages({
     const coverImg = coverRef.current;
     const introHeader = introRef.current;
     const outroHeader = outroRef.current;
-    const images = imageRefs.current.filter(
-      (node): node is HTMLElement => Boolean(node && node.isConnected),
+    const images = imageRefs.current.filter((node): node is HTMLElement =>
+      Boolean(node && node.isConnected),
     );
-    if (!container || !coverImg || !introHeader || !outroHeader || !images.length) return;
+    if (
+      !container ||
+      !coverImg ||
+      !introHeader ||
+      !outroHeader ||
+      !images.length
+    )
+      return;
 
-    const introActions = container.querySelector<HTMLElement>("[data-hero-actions]");
-    const introHeaderSplit = SplitText.create(introHeader, { type: "words, chars" });
-    const outroHeaderSplit = SplitText.create(outroHeader, { type: "words, chars" });
+    const introActions = container.querySelector<HTMLElement>(
+      "[data-hero-actions]",
+    );
+    const introHeaderSplit = SplitText.create(introHeader, {
+      type: "words, chars",
+    });
+    const outroHeaderSplit = SplitText.create(outroHeader, {
+      type: "words, chars",
+    });
     gsap.set(introHeaderSplit.chars, { opacity: 1 });
     gsap.set(outroHeaderSplit.chars, { opacity: 0 });
     gsap.set(outroHeader, { opacity: 1 });
@@ -146,110 +159,115 @@ export default function CommonHero3DImages({
     };
 
     let runtime = getRuntime();
-    images.forEach((img, index) => gsap.set(img, runtime.startPositions[index]));
+    images.forEach((img, index) =>
+      gsap.set(img, runtime.startPositions[index]),
+    );
     gsap.set(coverImg, { z: -1000, scale: 0, x: 0, y: 0 });
+
+    const renderProgress = (progress: number) => {
+      if (introActions) {
+        gsap.set(introActions, {
+          autoAlpha: Math.max(0, 1 - Math.max(0, progress - 0.55) / 0.1),
+          pointerEvents: progress < 0.65 ? "auto" : "none",
+        });
+      }
+
+      images.forEach((img, index) => {
+        const staggerDelay = index * 0.03;
+        const imageProgress = Math.max(0, (progress - staggerDelay) * 4);
+        const start = runtime.startPositions[index];
+        const end = runtime.endPositions[index];
+
+        gsap.set(img, {
+          z: gsap.utils.interpolate(start.z, end.z, imageProgress),
+          scale: gsap.utils.interpolate(
+            start.scale,
+            end.scale,
+            imageProgress * runtime.scaleMultiplier,
+          ),
+          x: gsap.utils.interpolate(start.x, end.x, imageProgress),
+          y: gsap.utils.interpolate(start.y, end.y, imageProgress),
+        });
+      });
+
+      const coverProgress = Math.max(0, (progress - 0.7) * 4);
+      gsap.set(coverImg, {
+        z: -1000 + 1000 * coverProgress,
+        scale: Math.min(1, coverProgress * 2),
+        x: 0,
+        y: 0,
+      });
+
+      if (introHeaderSplit.chars.length > 0) {
+        if (progress >= 0.6 && progress <= 0.75) {
+          const introFadeProgress = (progress - 0.6) / 0.15;
+          const totalChars = introHeaderSplit.chars.length;
+          introHeaderSplit.chars.forEach((char, index) => {
+            const charFadeProgress = index / totalChars;
+            const fadeRange = 0.1;
+            if (introFadeProgress >= charFadeProgress + fadeRange) {
+              gsap.set(char, { opacity: 0 });
+            } else if (introFadeProgress <= charFadeProgress) {
+              gsap.set(char, { opacity: 1 });
+            } else {
+              gsap.set(char, {
+                opacity: 1 - (introFadeProgress - charFadeProgress) / fadeRange,
+              });
+            }
+          });
+        } else if (progress < 0.6) {
+          gsap.set(introHeaderSplit.chars, { opacity: 1 });
+        } else {
+          gsap.set(introHeaderSplit.chars, { opacity: 0 });
+        }
+      }
+
+      if (outroHeaderSplit.chars.length > 0) {
+        if (progress >= 0.8 && progress <= 0.95) {
+          const outroRevealProgress = (progress - 0.8) / 0.15;
+          const totalChars = outroHeaderSplit.chars.length;
+          outroHeaderSplit.chars.forEach((char, index) => {
+            const charRevealProgress = index / totalChars;
+            const fadeRange = 0.1;
+            if (outroRevealProgress >= charRevealProgress + fadeRange) {
+              gsap.set(char, { opacity: 1 });
+            } else if (outroRevealProgress <= charRevealProgress) {
+              gsap.set(char, { opacity: 0 });
+            } else {
+              gsap.set(char, {
+                opacity: (outroRevealProgress - charRevealProgress) / fadeRange,
+              });
+            }
+          });
+        } else if (progress < 0.8) {
+          gsap.set(outroHeaderSplit.chars, { opacity: 0 });
+        } else {
+          gsap.set(outroHeaderSplit.chars, { opacity: 1 });
+        }
+      }
+    };
 
     const trigger = ScrollTrigger.create({
       trigger: container,
       start: "top top",
-      end: `+=${window.innerHeight * 10}px`,
+      end: () => `+=${window.innerHeight * 10}px`,
       pin: true,
-      pinSpacing: true,
+      pinSpacing: false,
       scrub: 1,
       invalidateOnRefresh: true,
-      onRefresh: () => {
+      onRefresh: (self) => {
         runtime = getRuntime();
-        images.forEach((img, index) => gsap.set(img, runtime.startPositions[index]));
-        gsap.set(coverImg, { z: -1000, scale: 0, x: 0, y: 0 });
+        renderProgress(self.progress);
       },
-      onUpdate: (self) => {
-        const progress = self.progress;
-        if (introActions) {
-          gsap.set(introActions, {
-            autoAlpha: Math.max(0, 1 - Math.max(0, progress - 0.55) / 0.1),
-            pointerEvents: progress < 0.65 ? "auto" : "none",
-          });
-        }
-
-        images.forEach((img, index) => {
-          const staggerDelay = index * 0.03;
-          const imageProgress = Math.max(0, (progress - staggerDelay) * 4);
-          const start = runtime.startPositions[index];
-          const end = runtime.endPositions[index];
-
-          gsap.set(img, {
-            z: gsap.utils.interpolate(start.z, end.z, imageProgress),
-            scale: gsap.utils.interpolate(
-              start.scale,
-              end.scale,
-              imageProgress * runtime.scaleMultiplier,
-            ),
-            x: gsap.utils.interpolate(start.x, end.x, imageProgress),
-            y: gsap.utils.interpolate(start.y, end.y, imageProgress),
-          });
-        });
-
-        const coverProgress = Math.max(0, (progress - 0.7) * 4);
-        gsap.set(coverImg, {
-          z: -1000 + 1000 * coverProgress,
-          scale: Math.min(1, coverProgress * 2),
-          x: 0,
-          y: 0,
-        });
-
-        if (introHeaderSplit.chars.length > 0) {
-          if (progress >= 0.6 && progress <= 0.75) {
-            const introFadeProgress = (progress - 0.6) / 0.15;
-            const totalChars = introHeaderSplit.chars.length;
-            introHeaderSplit.chars.forEach((char, index) => {
-              const charFadeProgress = index / totalChars;
-              const fadeRange = 0.1;
-              if (introFadeProgress >= charFadeProgress + fadeRange) {
-                gsap.set(char, { opacity: 0 });
-              } else if (introFadeProgress <= charFadeProgress) {
-                gsap.set(char, { opacity: 1 });
-              } else {
-                gsap.set(char, {
-                  opacity: 1 - (introFadeProgress - charFadeProgress) / fadeRange,
-                });
-              }
-            });
-          } else if (progress < 0.6) {
-            gsap.set(introHeaderSplit.chars, { opacity: 1 });
-          } else {
-            gsap.set(introHeaderSplit.chars, { opacity: 0 });
-          }
-        }
-
-        if (outroHeaderSplit.chars.length > 0) {
-          if (progress >= 0.8 && progress <= 0.95) {
-            const outroRevealProgress = (progress - 0.8) / 0.15;
-            const totalChars = outroHeaderSplit.chars.length;
-            outroHeaderSplit.chars.forEach((char, index) => {
-              const charRevealProgress = index / totalChars;
-              const fadeRange = 0.1;
-              if (outroRevealProgress >= charRevealProgress + fadeRange) {
-                gsap.set(char, { opacity: 1 });
-              } else if (outroRevealProgress <= charRevealProgress) {
-                gsap.set(char, { opacity: 0 });
-              } else {
-                gsap.set(char, {
-                  opacity: (outroRevealProgress - charRevealProgress) / fadeRange,
-                });
-              }
-            });
-          } else if (progress < 0.8) {
-            gsap.set(outroHeaderSplit.chars, { opacity: 0 });
-          } else {
-            gsap.set(outroHeaderSplit.chars, { opacity: 1 });
-          }
-        }
-      },
+      onUpdate: (self) => renderProgress(self.progress),
     });
 
     return () => {
       trigger.kill();
-      if (introActions) gsap.set(introActions, { clearProps: "opacity,visibility,pointerEvents" });
+      if (introActions)
+        gsap.set(introActions, {
+          clearProps: "opacity,visibility,pointerEvents",
+        });
       introHeaderSplit.revert();
       outroHeaderSplit.revert();
     };
@@ -259,8 +277,10 @@ export default function CommonHero3DImages({
     <Hero3DContext.Provider
       value={{ registerImage, registerCover, registerIntro, registerOutro }}
     >
-      <div {...rest} ref={containerRef}>
-        {children}
+      <div className="hero-3d-stage">
+        <div {...rest} ref={containerRef}>
+          {children}
+        </div>
       </div>
     </Hero3DContext.Provider>
   );
@@ -307,12 +327,18 @@ type CommonHero3DCoverProps = {
   children: ReactNode;
 } & ComponentPropsWithoutRef<"div">;
 
-export function CommonHero3DCover({ children, ...rest }: CommonHero3DCoverProps) {
+export function CommonHero3DCover({
+  children,
+  ...rest
+}: CommonHero3DCoverProps) {
   const context = useContext(Hero3DContext);
   return (
     <div
       {...rest}
-      ref={mergeRefs((rest as { ref?: Ref<HTMLElement> }).ref, context?.registerCover)}
+      ref={mergeRefs(
+        (rest as { ref?: Ref<HTMLElement> }).ref,
+        context?.registerCover,
+      )}
     >
       {children}
     </div>
