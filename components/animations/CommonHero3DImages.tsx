@@ -155,7 +155,21 @@ export default function CommonHero3DImages({
           scale: 1,
         };
       });
-      return { startPositions, endPositions, scaleMultiplier };
+      // Kartların uçuşu pin'in %70'inde bitsin. Önceden sabit 0.03 gecikme ve
+      // 4x hız vardı, son kart %55'te kaybolup geriye boş bir kaydırma
+      // kalıyordu. Gecikme artık görsel sayısına göre hesaplanıyor.
+      const lastStagger = 0.35;
+      const flightEnd = 0.7;
+      const staggerStep =
+        images.length > 1 ? lastStagger / (images.length - 1) : 0;
+      const flightSpeed = 1 / (flightEnd - lastStagger);
+      return {
+        startPositions,
+        endPositions,
+        scaleMultiplier,
+        staggerStep,
+        flightSpeed,
+      };
     };
 
     let runtime = getRuntime();
@@ -167,14 +181,17 @@ export default function CommonHero3DImages({
     const renderProgress = (progress: number) => {
       if (introActions) {
         gsap.set(introActions, {
-          autoAlpha: Math.max(0, 1 - Math.max(0, progress - 0.55) / 0.1),
-          pointerEvents: progress < 0.65 ? "auto" : "none",
+          autoAlpha: Math.max(0, 1 - Math.max(0, progress - 0.35) / 0.1),
+          pointerEvents: progress < 0.45 ? "auto" : "none",
         });
       }
 
       images.forEach((img, index) => {
-        const staggerDelay = index * 0.03;
-        const imageProgress = Math.max(0, (progress - staggerDelay) * 4);
+        const staggerDelay = index * runtime.staggerStep;
+        const imageProgress = Math.max(
+          0,
+          (progress - staggerDelay) * runtime.flightSpeed,
+        );
         const start = runtime.startPositions[index];
         const end = runtime.endPositions[index];
 
@@ -190,7 +207,8 @@ export default function CommonHero3DImages({
         });
       });
 
-      const coverProgress = Math.max(0, (progress - 0.7) * 4);
+      // Kapak, son kartlar kadrajdan çıkarken devreye girsin.
+      const coverProgress = Math.max(0, (progress - 0.5) * 2.6);
       gsap.set(coverImg, {
         z: -1000 + 1000 * coverProgress,
         scale: Math.min(1, coverProgress * 2),
@@ -199,8 +217,8 @@ export default function CommonHero3DImages({
       });
 
       if (introHeaderSplit.chars.length > 0) {
-        if (progress >= 0.6 && progress <= 0.75) {
-          const introFadeProgress = (progress - 0.6) / 0.15;
+        if (progress >= 0.42 && progress <= 0.57) {
+          const introFadeProgress = (progress - 0.42) / 0.15;
           const totalChars = introHeaderSplit.chars.length;
           introHeaderSplit.chars.forEach((char, index) => {
             const charFadeProgress = index / totalChars;
@@ -215,7 +233,7 @@ export default function CommonHero3DImages({
               });
             }
           });
-        } else if (progress < 0.6) {
+        } else if (progress < 0.42) {
           gsap.set(introHeaderSplit.chars, { opacity: 1 });
         } else {
           gsap.set(introHeaderSplit.chars, { opacity: 0 });
@@ -223,8 +241,8 @@ export default function CommonHero3DImages({
       }
 
       if (outroHeaderSplit.chars.length > 0) {
-        if (progress >= 0.8 && progress <= 0.95) {
-          const outroRevealProgress = (progress - 0.8) / 0.15;
+        if (progress >= 0.62 && progress <= 0.85) {
+          const outroRevealProgress = (progress - 0.62) / 0.23;
           const totalChars = outroHeaderSplit.chars.length;
           outroHeaderSplit.chars.forEach((char, index) => {
             const charRevealProgress = index / totalChars;
@@ -239,7 +257,7 @@ export default function CommonHero3DImages({
               });
             }
           });
-        } else if (progress < 0.8) {
+        } else if (progress < 0.62) {
           gsap.set(outroHeaderSplit.chars, { opacity: 0 });
         } else {
           gsap.set(outroHeaderSplit.chars, { opacity: 1 });
@@ -250,7 +268,7 @@ export default function CommonHero3DImages({
     const trigger = ScrollTrigger.create({
       trigger: container,
       start: "top top",
-      end: () => `+=${window.innerHeight * 10}px`,
+      end: () => `+=${window.innerHeight * 5}px`,
       pin: true,
       pinSpacing: false,
       scrub: 1,
