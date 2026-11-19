@@ -135,3 +135,7 @@ button.main-menu__link--direct { background: none; border: 0; padding: 0; width:
 
 .services-card__image[data-preserve-frame="true"] { background:#efebe7; }
 .services-card__image[data-preserve-frame="true"] img { object-fit:contain; }
+
+/* Reserve the hero geometry before hydration; --vh used to be undefined at first paint. */
+:root { --vh: 1svh; }
+.hero-3d-stage { height: calc(var(--vh) * 1100); }
